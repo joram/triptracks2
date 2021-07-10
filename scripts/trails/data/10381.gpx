@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="RoadTrip 2.0.2" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2012-01-04T14:20:32Z</time>
+    <bounds maxlat="45.5253696" maxlon="-75.8219290" minlat="45.4704380" minlon="-75.8863449"/>
+  </metadata>
+
+  <wpt lat="45.5221857" lon="-75.8472919">
+    <time>2012-01-02T20:15:47Z</time>
+    <name>3605</name>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <rte>
+    <name>P5 - Tour par la 1</name>
+    <extensions>
+      <gpxx:RouteExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="45.4964715" lon="-75.8431620">
+      <ele>310.0000000</ele>
+      <time>2012-01-02T20:12:13Z</time>
+      <name>310 M</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>2000F70A490026005F010D20CA00615A2C11</gpxx:Subclass>
+          <gpxx:rpt lat="45.4964594" lon="-75.8431603">
+            <gpxx:Subclass>0600F70A4900A6690000211600000600D001</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4965305" lon="-75.8422709"/>
+          <gpxx:rpt lat="45.4963589" lon="-75.8416271"/>
+          <gpxx:rpt lat="45.4964018" lon="-75.8407688"/>
+          <gpxx:rpt lat="45.4966164" lon="-75.8405542"/>
+          <gpxx:rpt lat="45.4970455" lon="-75.8402967"/>
+          <gpxx:rpt lat="45.4971743" lon="-75.8397818"/>
+          <gpxx:rpt lat="45.4979467" lon="-75.8382368"/>
+          <gpxx:rpt lat="45.4980326" lon="-75.8378506"/>
+          <gpxx:rpt lat="45.4979038" lon="-75.8354044"/>
+          <gpxx:rpt lat="45.4985476" lon="-75.8340311"/>
+          <gpxx:rpt lat="45.4987192" lon="-75.8330011"/>
+          <gpxx:rpt lat="45.4989767" lon="-75.8324862"/>
+          <gpxx:rpt lat="45.4992342" lon="-75.8322716"/>
+          <gpxx:rpt lat="45.4993629" lon="-75.8318853"/>
+          <gpxx:rpt lat="45.4993200" lon="-75.8313704"/>
+          <gpxx:rpt lat="45.4989767" lon="-75.8308554">
+            <gpxx:Subclass>0600F70A4900E10D01001F0204008DCF6200</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4976034" lon="-75.8323574"/>
+          <gpxx:rpt lat="45.4972415" lon="-75.8325385">
+            <gpxx:Subclass>0600F70A4900E10D010021170000EF040000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.4972215" lon="-75.8324564">
+      <time>2012-01-02T20:15:06Z</time>
+      <name>332</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600F70A490045005F010D20CA00A85A3812</gpxx:Subclass>
+          <gpxx:rpt lat="45.4972415" lon="-75.8325385">
+            <gpxx:Subclass>0600F70A4900E10D010021160000EF046300</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4976034" lon="-75.8323574"/>
+          <gpxx:rpt lat="45.4989767" lon="-75.8308554">
+            <gpxx:Subclass>0600F70A4900E10D01001F0004008DCF3600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8300400">
+            <gpxx:Subclass>0600F70A4900E10D01002114000089050000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8300400">
+            <gpxx:Subclass>06004E0B4900CD2E000021150000CB0E8C00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5021954" lon="-75.8289242"/>
+          <gpxx:rpt lat="45.5027067" lon="-75.8282949">
+            <gpxx:Subclass>06004E0B4900CD2E0000211700003F0E0000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5027066" lon="-75.8282949">
+      <time>2012-01-02T20:12:18Z</time>
+      <name>Prom de la Gatineau17</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B490006005B000D20CA00835BE113</gpxx:Subclass>
+          <gpxx:rpt lat="45.5027067" lon="-75.8282949">
+            <gpxx:Subclass>06004E0B4900CD2E0000211600003F0EE201</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5027533" lon="-75.8282375"/>
+          <gpxx:rpt lat="45.5029678" lon="-75.8277225"/>
+          <gpxx:rpt lat="45.5029249" lon="-75.8244610"/>
+          <gpxx:rpt lat="45.5030966" lon="-75.8235168"/>
+          <gpxx:rpt lat="45.5035686" lon="-75.8227015"/>
+          <gpxx:rpt lat="45.5039549" lon="-75.8223152"/>
+          <gpxx:rpt lat="45.5045986" lon="-75.8219719"/>
+          <gpxx:rpt lat="45.5054569" lon="-75.8219290"/>
+          <gpxx:rpt lat="45.5061865" lon="-75.8221865"/>
+          <gpxx:rpt lat="45.5063542" lon="-75.8223729">
+            <gpxx:Subclass>06004E0B4900CD2E000021170000F00C0000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5063541" lon="-75.8223728">
+      <time>2012-01-02T20:12:20Z</time>
+      <name>Prom de la Gatineau18</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B490006005B000D20CA002D5CF514</gpxx:Subclass>
+          <gpxx:rpt lat="45.5063542" lon="-75.8223729">
+            <gpxx:Subclass>06004E0B4900CD2E000021160000F00C9400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5069590" lon="-75.8230448"/>
+          <gpxx:rpt lat="45.5080318" lon="-75.8239031"/>
+          <gpxx:rpt lat="45.5087185" lon="-75.8241177"/>
+          <gpxx:rpt lat="45.5091906" lon="-75.8241606"/>
+          <gpxx:rpt lat="45.5091906" lon="-75.8241606">
+            <gpxx:Subclass>06004E0B4900CD2E00001F000000FF21C100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5100060" lon="-75.8239889"/>
+          <gpxx:rpt lat="45.5121946" lon="-75.8227015"/>
+          <gpxx:rpt lat="45.5131284" lon="-75.8228093">
+            <gpxx:Subclass>06004E0B4900CD2E0000211700009C0B0000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5131283" lon="-75.8228093">
+      <time>2012-01-02T20:12:51Z</time>
+      <name>Prom de la Gatineau19</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B4900030059000D20CA00695DE014</gpxx:Subclass>
+          <gpxx:rpt lat="45.5131284" lon="-75.8228093">
+            <gpxx:Subclass>06004E0B4900CD2E0000211600009C0BD604</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5133104" lon="-75.8228302"/>
+          <gpxx:rpt lat="45.5143404" lon="-75.8235168"/>
+          <gpxx:rpt lat="45.5163145" lon="-75.8271646"/>
+          <gpxx:rpt lat="45.5191040" lon="-75.8293104"/>
+          <gpxx:rpt lat="45.5247688" lon="-75.8361340"/>
+          <gpxx:rpt lat="45.5250692" lon="-75.8369493"/>
+          <gpxx:rpt lat="45.5253267" lon="-75.8383226"/>
+          <gpxx:rpt lat="45.5253696" lon="-75.8395672"/>
+          <gpxx:rpt lat="45.5251551" lon="-75.8406401"/>
+          <gpxx:rpt lat="45.5239964" lon="-75.8436871"/>
+          <gpxx:rpt lat="45.5214643" lon="-75.8486223"/>
+          <gpxx:rpt lat="45.5212498" lon="-75.8493519"/>
+          <gpxx:rpt lat="45.5212069" lon="-75.8502960"/>
+          <gpxx:rpt lat="45.5210352" lon="-75.8504677"/>
+          <gpxx:rpt lat="45.5210352" lon="-75.8504677">
+            <gpxx:Subclass>06004E0B4900CD2E00001F000000321F1F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5204067" lon="-75.8507371">
+            <gpxx:Subclass>06004E0B4900CD2E000021170000A7060000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5204068" lon="-75.8507371">
+      <time>2012-01-02T20:13:04Z</time>
+      <name>Prom de la Gatineau20</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B490006004A000D20CA00BC5ECB0F</gpxx:Subclass>
+          <gpxx:rpt lat="45.5204067" lon="-75.8507371">
+            <gpxx:Subclass>06004E0B4900CD2E000021160000A7067100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5198336" lon="-75.8509827"/>
+          <gpxx:rpt lat="45.5195761" lon="-75.8514118"/>
+          <gpxx:rpt lat="45.5194044" lon="-75.8526993"/>
+          <gpxx:rpt lat="45.5190182" lon="-75.8531713"/>
+          <gpxx:rpt lat="45.5190182" lon="-75.8531713">
+            <gpxx:Subclass>06004E0B4900CD2E00001F000000DA1EC800</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5190182" lon="-75.8539438"/>
+          <gpxx:rpt lat="45.5192327" lon="-75.8542871"/>
+          <gpxx:rpt lat="45.5195332" lon="-75.8545446"/>
+          <gpxx:rpt lat="45.5206060" lon="-75.8550167"/>
+          <gpxx:rpt lat="45.5208206" lon="-75.8552313"/>
+          <gpxx:rpt lat="45.5209923" lon="-75.8555746"/>
+          <gpxx:rpt lat="45.5209923" lon="-75.8560038"/>
+          <gpxx:rpt lat="45.5207348" lon="-75.8563471"/>
+          <gpxx:rpt lat="45.5201340" lon="-75.8563042"/>
+          <gpxx:rpt lat="45.5199960" lon="-75.8562466">
+            <gpxx:Subclass>06004E0B4900CD2E0000211700006F050000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5199962" lon="-75.8562468">
+      <time>2012-01-02T20:13:06Z</time>
+      <name>Prom de la Gatineau21</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B4900040056000D20CA00A95ECA0E</gpxx:Subclass>
+          <gpxx:rpt lat="45.5199960" lon="-75.8562466">
+            <gpxx:Subclass>06004E0B4900CD2E0000211600006F057E04</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5196190" lon="-75.8560896"/>
+          <gpxx:rpt lat="45.5188036" lon="-75.8560467"/>
+          <gpxx:rpt lat="45.5171299" lon="-75.8570337"/>
+          <gpxx:rpt lat="45.5167007" lon="-75.8575487"/>
+          <gpxx:rpt lat="45.5159283" lon="-75.8603382"/>
+          <gpxx:rpt lat="45.5152845" lon="-75.8611965"/>
+          <gpxx:rpt lat="45.5144691" lon="-75.8617544"/>
+          <gpxx:rpt lat="45.5142975" lon="-75.8620977"/>
+          <gpxx:rpt lat="45.5139971" lon="-75.8635998"/>
+          <gpxx:rpt lat="45.5128813" lon="-75.8654881"/>
+          <gpxx:rpt lat="45.5123663" lon="-75.8668613"/>
+          <gpxx:rpt lat="45.5120230" lon="-75.8685350"/>
+          <gpxx:rpt lat="45.5120659" lon="-75.8693933"/>
+          <gpxx:rpt lat="45.5121324" lon="-75.8698186">
+            <gpxx:Subclass>06004E0B4900CD2E000021170000EB020000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5121324" lon="-75.8698184">
+      <time>2012-01-02T20:13:09Z</time>
+      <name>Prom de la Gatineau22</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B4900040056000D20CA003B5D520C</gpxx:Subclass>
+          <gpxx:rpt lat="45.5121324" lon="-75.8698186">
+            <gpxx:Subclass>06004E0B4900CD2E000021160000EB02FB01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5122805" lon="-75.8707666"/>
+          <gpxx:rpt lat="45.5122375" lon="-75.8711958"/>
+          <gpxx:rpt lat="45.5110788" lon="-75.8733416"/>
+          <gpxx:rpt lat="45.5106926" lon="-75.8738136"/>
+          <gpxx:rpt lat="45.5104351" lon="-75.8743286"/>
+          <gpxx:rpt lat="45.5102634" lon="-75.8750582"/>
+          <gpxx:rpt lat="45.5102634" lon="-75.8757019"/>
+          <gpxx:rpt lat="45.5103493" lon="-75.8762598"/>
+          <gpxx:rpt lat="45.5102634" lon="-75.8771181"/>
+          <gpxx:rpt lat="45.5100489" lon="-75.8778048"/>
+          <gpxx:rpt lat="45.5096197" lon="-75.8786201"/>
+          <gpxx:rpt lat="45.5091476" lon="-75.8792210"/>
+          <gpxx:rpt lat="45.5081177" lon="-75.8797789"/>
+          <gpxx:rpt lat="45.5068731" lon="-75.8802509"/>
+          <gpxx:rpt lat="45.5061865" lon="-75.8807659">
+            <gpxx:Subclass>06004E0B49003B0E00001F0600004E1B3100</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5057513" lon="-75.8794038">
+            <gpxx:Subclass>06004E0B49003B0E00002117000031000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5057513" lon="-75.8794035">
+      <time>2012-01-02T20:13:22Z</time>
+      <name>2290</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B4900210056000D20CA00115C930A</gpxx:Subclass>
+          <gpxx:rpt lat="45.5057513" lon="-75.8794038">
+            <gpxx:Subclass>06004E0B49003B0E00002116000031001402</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5051994" lon="-75.8776760"/>
+          <gpxx:rpt lat="45.5048132" lon="-75.8769035"/>
+          <gpxx:rpt lat="45.5033541" lon="-75.8746719"/>
+          <gpxx:rpt lat="45.5032682" lon="-75.8735132"/>
+          <gpxx:rpt lat="45.5033112" lon="-75.8725262"/>
+          <gpxx:rpt lat="45.5032253" lon="-75.8720112"/>
+          <gpxx:rpt lat="45.5024529" lon="-75.8698654"/>
+          <gpxx:rpt lat="45.5020666" lon="-75.8678055"/>
+          <gpxx:rpt lat="45.5009508" lon="-75.8658743"/>
+          <gpxx:rpt lat="45.5006075" lon="-75.8654451">
+            <gpxx:Subclass>06004E0B4900650700001F000000461D1F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5007574" lon="-75.8645080">
+            <gpxx:Subclass>06004E0B4900650700002117000046000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5007574" lon="-75.8645077">
+      <time>2012-01-02T20:13:25Z</time>
+      <name>2294</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B4900050056000D20CA00285B490D</gpxx:Subclass>
+          <gpxx:rpt lat="45.5007574" lon="-75.8645080">
+            <gpxx:Subclass>06004E0B4900650700002116000046006400</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5007792" lon="-75.8643723"/>
+          <gpxx:rpt lat="45.5006933" lon="-75.8631706"/>
+          <gpxx:rpt lat="45.5003500" lon="-75.8622265"/>
+          <gpxx:rpt lat="45.5000067" lon="-75.8617973">
+            <gpxx:Subclass>06004E0B49006507000021140000AA000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8617973">
+            <gpxx:Subclass>0600F70A4900EC1100002115000000002F00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4998779" lon="-75.8603811">
+            <gpxx:Subclass>0600F70A4900EC1100001F000400D6CC2900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4999208" lon="-75.8593512"/>
+          <gpxx:rpt lat="45.5000067" lon="-75.8591366">
+            <gpxx:Subclass>0600F70A4900EC1100002114000058000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8591366">
+            <gpxx:Subclass>06004E0B4900730E00002115000000005600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000496" lon="-75.8589649"/>
+          <gpxx:rpt lat="45.5004358" lon="-75.8589649"/>
+          <gpxx:rpt lat="45.5004787" lon="-75.8582354"/>
+          <gpxx:rpt lat="45.5000067" lon="-75.8572912">
+            <gpxx:Subclass>06004E0B4900730E00002114000056000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8572912">
+            <gpxx:Subclass>0600F70A4900B56A00002115000000007101</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4989767" lon="-75.8569050"/>
+          <gpxx:rpt lat="45.4988480" lon="-75.8565617"/>
+          <gpxx:rpt lat="45.4988909" lon="-75.8560467"/>
+          <gpxx:rpt lat="45.4992342" lon="-75.8546305"/>
+          <gpxx:rpt lat="45.4995775" lon="-75.8527422"/>
+          <gpxx:rpt lat="45.4995775" lon="-75.8514547"/>
+          <gpxx:rpt lat="45.4997921" lon="-75.8505964"/>
+          <gpxx:rpt lat="45.4998350" lon="-75.8499098"/>
+          <gpxx:rpt lat="45.4998350" lon="-75.8490515"/>
+          <gpxx:rpt lat="45.4997063" lon="-75.8486652"/>
+          <gpxx:rpt lat="45.5000067" lon="-75.8474636">
+            <gpxx:Subclass>0600F70A4900B56A00002114000072010000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8474636">
+            <gpxx:Subclass>06004E0B4900810E00002115000000000E00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000496" lon="-75.8472061"/>
+          <gpxx:rpt lat="45.5000067" lon="-75.8470774">
+            <gpxx:Subclass>06004E0B4900810E0000211400000D000000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8470774">
+            <gpxx:Subclass>0600F70A4900DE1100002115000000003401</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4996204" lon="-75.8463478"/>
+          <gpxx:rpt lat="45.4989338" lon="-75.8454895"/>
+          <gpxx:rpt lat="45.4986334" lon="-75.8453178"/>
+          <gpxx:rpt lat="45.4983330" lon="-75.8453608"/>
+          <gpxx:rpt lat="45.4979897" lon="-75.8451033"/>
+          <gpxx:rpt lat="45.4977751" lon="-75.8452749"/>
+          <gpxx:rpt lat="45.4976892" lon="-75.8456182"/>
+          <gpxx:rpt lat="45.4972172" lon="-75.8460903"/>
+          <gpxx:rpt lat="45.4962301" lon="-75.8466053"/>
+          <gpxx:rpt lat="45.4951143" lon="-75.8467340"/>
+          <gpxx:rpt lat="45.4948139" lon="-75.8463907"/>
+          <gpxx:rpt lat="45.4946852" lon="-75.8461332"/>
+          <gpxx:rpt lat="45.4947281" lon="-75.8457899">
+            <gpxx:Subclass>0600F70A4900DE1100001F00040020CE7000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4946423" lon="-75.8451891"/>
+          <gpxx:rpt lat="45.4948568" lon="-75.8440733"/>
+          <gpxx:rpt lat="45.4949856" lon="-75.8437300"/>
+          <gpxx:rpt lat="45.4956839" lon="-75.8429496">
+            <gpxx:Subclass>0600F70A4900DE11000021170000A7010000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.4957198" lon="-75.8430148">
+      <ele>280.0000000</ele>
+      <time>2012-01-02T20:13:34Z</time>
+      <name>280 M</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>2000F70A490028005F010D20CA003E5A3311</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+  <rte>
+    <name>P5 - Tour par la promenade</name>
+    <extensions>
+      <gpxx:RouteExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="45.4967277" lon="-75.8323691">
+      <time>2012-01-02T20:15:38Z</time>
+      <name>3599</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0900F70A490040005F010D20CA006D5A2313</gpxx:Subclass>
+          <gpxx:rpt lat="45.4967276" lon="-75.8323691">
+            <gpxx:Subclass>0900F70A4900BA6C00002116000020001600</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4968309" lon="-75.8324862"/>
+          <gpxx:rpt lat="45.4971743" lon="-75.8325720">
+            <gpxx:Subclass>0600F70A4900E10D01001F0B040009CF9B00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4976034" lon="-75.8323574"/>
+          <gpxx:rpt lat="45.4989767" lon="-75.8308554"/>
+          <gpxx:rpt lat="45.5000067" lon="-75.8300400">
+            <gpxx:Subclass>0600F70A4900E10D01002114000089050000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8300400">
+            <gpxx:Subclass>06004E0B4900CD2E000021150000CB0EB701</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5021954" lon="-75.8289242"/>
+          <gpxx:rpt lat="45.5027533" lon="-75.8282375"/>
+          <gpxx:rpt lat="45.5029678" lon="-75.8277225"/>
+          <gpxx:rpt lat="45.5029249" lon="-75.8244610"/>
+          <gpxx:rpt lat="45.5030966" lon="-75.8235168"/>
+          <gpxx:rpt lat="45.5035686" lon="-75.8227015"/>
+          <gpxx:rpt lat="45.5039549" lon="-75.8223152"/>
+          <gpxx:rpt lat="45.5045986" lon="-75.8219719"/>
+          <gpxx:rpt lat="45.5054569" lon="-75.8219290"/>
+          <gpxx:rpt lat="45.5056651" lon="-75.8220026">
+            <gpxx:Subclass>06004E0B4900CD2E000021170000130D0000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5056650" lon="-75.8220026">
+      <time>2012-01-02T20:15:40Z</time>
+      <name>Prom de la Gatineau23</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B490006005B000D20CA000D5C0615</gpxx:Subclass>
+          <gpxx:rpt lat="45.5056651" lon="-75.8220026">
+            <gpxx:Subclass>06004E0B4900CD2E000021160000130DB700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5061865" lon="-75.8221865"/>
+          <gpxx:rpt lat="45.5069590" lon="-75.8230448"/>
+          <gpxx:rpt lat="45.5080318" lon="-75.8239031"/>
+          <gpxx:rpt lat="45.5087185" lon="-75.8241177"/>
+          <gpxx:rpt lat="45.5091906" lon="-75.8241606"/>
+          <gpxx:rpt lat="45.5091906" lon="-75.8241606">
+            <gpxx:Subclass>06004E0B4900CD2E00001F000000FF211D05</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5100060" lon="-75.8239889"/>
+          <gpxx:rpt lat="45.5121946" lon="-75.8227015"/>
+          <gpxx:rpt lat="45.5133104" lon="-75.8228302"/>
+          <gpxx:rpt lat="45.5143404" lon="-75.8235168"/>
+          <gpxx:rpt lat="45.5163145" lon="-75.8271646"/>
+          <gpxx:rpt lat="45.5191040" lon="-75.8293104"/>
+          <gpxx:rpt lat="45.5247688" lon="-75.8361340"/>
+          <gpxx:rpt lat="45.5250692" lon="-75.8369493"/>
+          <gpxx:rpt lat="45.5253267" lon="-75.8383226"/>
+          <gpxx:rpt lat="45.5253696" lon="-75.8395672"/>
+          <gpxx:rpt lat="45.5251551" lon="-75.8406401"/>
+          <gpxx:rpt lat="45.5239964" lon="-75.8436871"/>
+          <gpxx:rpt lat="45.5221604" lon="-75.8472657">
+            <gpxx:Subclass>06004E0B4900CD2E0000211700003F070000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5221857" lon="-75.8472919">
+      <time>2012-01-02T20:15:47Z</time>
+      <name>3605</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+          <gpxx:rpt lat="45.5221604" lon="-75.8472657">
+            <gpxx:Subclass>06004E0B4900CD2E0000211600003F077900</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5214643" lon="-75.8486223"/>
+          <gpxx:rpt lat="45.5212498" lon="-75.8493519"/>
+          <gpxx:rpt lat="45.5212069" lon="-75.8502960"/>
+          <gpxx:rpt lat="45.5210352" lon="-75.8504677"/>
+          <gpxx:rpt lat="45.5210352" lon="-75.8504677">
+            <gpxx:Subclass>06004E0B4900CD2E00001F000000321FC206</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5198336" lon="-75.8509827"/>
+          <gpxx:rpt lat="45.5195761" lon="-75.8514118"/>
+          <gpxx:rpt lat="45.5194044" lon="-75.8526993"/>
+          <gpxx:rpt lat="45.5190182" lon="-75.8531713"/>
+          <gpxx:rpt lat="45.5190182" lon="-75.8531713"/>
+          <gpxx:rpt lat="45.5190182" lon="-75.8539438"/>
+          <gpxx:rpt lat="45.5192327" lon="-75.8542871"/>
+          <gpxx:rpt lat="45.5195332" lon="-75.8545446"/>
+          <gpxx:rpt lat="45.5206060" lon="-75.8550167"/>
+          <gpxx:rpt lat="45.5208206" lon="-75.8552313"/>
+          <gpxx:rpt lat="45.5209923" lon="-75.8555746"/>
+          <gpxx:rpt lat="45.5209923" lon="-75.8560038"/>
+          <gpxx:rpt lat="45.5207348" lon="-75.8563471"/>
+          <gpxx:rpt lat="45.5201340" lon="-75.8563042"/>
+          <gpxx:rpt lat="45.5196190" lon="-75.8560896"/>
+          <gpxx:rpt lat="45.5188036" lon="-75.8560467"/>
+          <gpxx:rpt lat="45.5171299" lon="-75.8570337"/>
+          <gpxx:rpt lat="45.5167007" lon="-75.8575487"/>
+          <gpxx:rpt lat="45.5159283" lon="-75.8603382"/>
+          <gpxx:rpt lat="45.5152845" lon="-75.8611965"/>
+          <gpxx:rpt lat="45.5144691" lon="-75.8617544"/>
+          <gpxx:rpt lat="45.5142975" lon="-75.8620977"/>
+          <gpxx:rpt lat="45.5139971" lon="-75.8635998"/>
+          <gpxx:rpt lat="45.5128813" lon="-75.8654881"/>
+          <gpxx:rpt lat="45.5123663" lon="-75.8668613"/>
+          <gpxx:rpt lat="45.5120230" lon="-75.8685350"/>
+          <gpxx:rpt lat="45.5120659" lon="-75.8693933"/>
+          <gpxx:rpt lat="45.5122805" lon="-75.8707666"/>
+          <gpxx:rpt lat="45.5122375" lon="-75.8711958"/>
+          <gpxx:rpt lat="45.5110788" lon="-75.8733416"/>
+          <gpxx:rpt lat="45.5106926" lon="-75.8738136"/>
+          <gpxx:rpt lat="45.5104351" lon="-75.8743286"/>
+          <gpxx:rpt lat="45.5102634" lon="-75.8750582"/>
+          <gpxx:rpt lat="45.5102634" lon="-75.8757019"/>
+          <gpxx:rpt lat="45.5103493" lon="-75.8762598"/>
+          <gpxx:rpt lat="45.5102634" lon="-75.8771181"/>
+          <gpxx:rpt lat="45.5100489" lon="-75.8778048"/>
+          <gpxx:rpt lat="45.5096197" lon="-75.8786201"/>
+          <gpxx:rpt lat="45.5091476" lon="-75.8792210"/>
+          <gpxx:rpt lat="45.5081177" lon="-75.8797789"/>
+          <gpxx:rpt lat="45.5068731" lon="-75.8802509"/>
+          <gpxx:rpt lat="45.5061865" lon="-75.8807659"/>
+          <gpxx:rpt lat="45.5057573" lon="-75.8814096"/>
+          <gpxx:rpt lat="45.5047274" lon="-75.8841562"/>
+          <gpxx:rpt lat="45.5030966" lon="-75.8863020"/>
+          <gpxx:rpt lat="45.5029678" lon="-75.8863449">
+            <gpxx:Subclass>06004E0B4900B92E00001F0600000F1B1700</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5029678" lon="-75.8863449"/>
+          <gpxx:rpt lat="45.5029010" lon="-75.8856539">
+            <gpxx:Subclass>06004E0B4900B92E00002117000040100000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.5029009" lon="-75.8856536">
+      <time>2012-01-02T20:15:58Z</time>
+      <name>Prom de la Gatineau24</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>06004E0B4900010056000D20CA008C5B7009</gpxx:Subclass>
+          <gpxx:rpt lat="45.5029010" lon="-75.8856539">
+            <gpxx:Subclass>06004E0B4900B92E0000211600004010CC01</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5028391" lon="-75.8850145"/>
+          <gpxx:rpt lat="45.5029249" lon="-75.8806801"/>
+          <gpxx:rpt lat="45.5027962" lon="-75.8796072"/>
+          <gpxx:rpt lat="45.5025387" lon="-75.8788347"/>
+          <gpxx:rpt lat="45.5014229" lon="-75.8770323"/>
+          <gpxx:rpt lat="45.5008221" lon="-75.8744144"/>
+          <gpxx:rpt lat="45.5000067" lon="-75.8727837">
+            <gpxx:Subclass>06004E0B4900B92E0000211400000C120000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.5000067" lon="-75.8727837">
+            <gpxx:Subclass>0600F70A4900D00D0100211500000000C902</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4994917" lon="-75.8719254"/>
+          <gpxx:rpt lat="45.4992342" lon="-75.8714104"/>
+          <gpxx:rpt lat="45.4991055" lon="-75.8710241"/>
+          <gpxx:rpt lat="45.4988050" lon="-75.8694363"/>
+          <gpxx:rpt lat="45.4983759" lon="-75.8687496"/>
+          <gpxx:rpt lat="45.4980326" lon="-75.8684921"/>
+          <gpxx:rpt lat="45.4977751" lon="-75.8683634"/>
+          <gpxx:rpt lat="45.4974318" lon="-75.8684063"/>
+          <gpxx:rpt lat="45.4971313" lon="-75.8685350"/>
+          <gpxx:rpt lat="45.4966593" lon="-75.8689213"/>
+          <gpxx:rpt lat="45.4955864" lon="-75.8703375"/>
+          <gpxx:rpt lat="45.4952002" lon="-75.8706808"/>
+          <gpxx:rpt lat="45.4948568" lon="-75.8708525"/>
+          <gpxx:rpt lat="45.4942560" lon="-75.8708096"/>
+          <gpxx:rpt lat="45.4931831" lon="-75.8703804"/>
+          <gpxx:rpt lat="45.4927540" lon="-75.8699512"/>
+          <gpxx:rpt lat="45.4924107" lon="-75.8692217"/>
+          <gpxx:rpt lat="45.4921961" lon="-75.8672905"/>
+          <gpxx:rpt lat="45.4922390" lon="-75.8667755"/>
+          <gpxx:rpt lat="45.4925823" lon="-75.8651876"/>
+          <gpxx:rpt lat="45.4924965" lon="-75.8632994"/>
+          <gpxx:rpt lat="45.4925705" lon="-75.8622383">
+            <gpxx:Subclass>0600F70A4900D00D010021170000C9020000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.4925705" lon="-75.8622381">
+      <time>2012-01-02T20:16:02Z</time>
+      <name>Prom de la Gatineau25</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600F70A490001005D010D20CA00AB59B30D</gpxx:Subclass>
+          <gpxx:rpt lat="45.4925705" lon="-75.8622383">
+            <gpxx:Subclass>0600F70A4900D00D010021160000C9022A03</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4926252" lon="-75.8614540"/>
+          <gpxx:rpt lat="45.4924965" lon="-75.8605099"/>
+          <gpxx:rpt lat="45.4924965" lon="-75.8596516"/>
+          <gpxx:rpt lat="45.4928827" lon="-75.8587503"/>
+          <gpxx:rpt lat="45.4931402" lon="-75.8583641"/>
+          <gpxx:rpt lat="45.4934835" lon="-75.8575916"/>
+          <gpxx:rpt lat="45.4938269" lon="-75.8557892"/>
+          <gpxx:rpt lat="45.4943419" lon="-75.8548021"/>
+          <gpxx:rpt lat="45.4944277" lon="-75.8544159"/>
+          <gpxx:rpt lat="45.4944277" lon="-75.8536863"/>
+          <gpxx:rpt lat="45.4943419" lon="-75.8533001"/>
+          <gpxx:rpt lat="45.4939556" lon="-75.8527851"/>
+          <gpxx:rpt lat="45.4936123" lon="-75.8525276"/>
+          <gpxx:rpt lat="45.4932261" lon="-75.8524847"/>
+          <gpxx:rpt lat="45.4929686" lon="-75.8525705"/>
+          <gpxx:rpt lat="45.4927111" lon="-75.8526993"/>
+          <gpxx:rpt lat="45.4924965" lon="-75.8529568"/>
+          <gpxx:rpt lat="45.4921532" lon="-75.8535576"/>
+          <gpxx:rpt lat="45.4918957" lon="-75.8541155"/>
+          <gpxx:rpt lat="45.4913807" lon="-75.8545876"/>
+          <gpxx:rpt lat="45.4910803" lon="-75.8547163"/>
+          <gpxx:rpt lat="45.4902220" lon="-75.8547163"/>
+          <gpxx:rpt lat="45.4898357" lon="-75.8548450"/>
+          <gpxx:rpt lat="45.4895782" lon="-75.8550167"/>
+          <gpxx:rpt lat="45.4893208" lon="-75.8552742"/>
+          <gpxx:rpt lat="45.4891062" lon="-75.8557034"/>
+          <gpxx:rpt lat="45.4885912" lon="-75.8571625"/>
+          <gpxx:rpt lat="45.4882908" lon="-75.8575487"/>
+          <gpxx:rpt lat="45.4879904" lon="-75.8578062"/>
+          <gpxx:rpt lat="45.4876900" lon="-75.8579779"/>
+          <gpxx:rpt lat="45.4875183" lon="-75.8579779"/>
+          <gpxx:rpt lat="45.4863596" lon="-75.8577204"/>
+          <gpxx:rpt lat="45.4856730" lon="-75.8577633">
+            <gpxx:Subclass>0400F70A4900430D01001F00040059CD2102</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4842997" lon="-75.8577633"/>
+          <gpxx:rpt lat="45.4839134" lon="-75.8577204"/>
+          <gpxx:rpt lat="45.4832268" lon="-75.8573771"/>
+          <gpxx:rpt lat="45.4828405" lon="-75.8569908"/>
+          <gpxx:rpt lat="45.4823685" lon="-75.8563900"/>
+          <gpxx:rpt lat="45.4817677" lon="-75.8550596"/>
+          <gpxx:rpt lat="45.4815531" lon="-75.8535147"/>
+          <gpxx:rpt lat="45.4809523" lon="-75.8500385"/>
+          <gpxx:rpt lat="45.4803085" lon="-75.8484936"/>
+          <gpxx:rpt lat="45.4798794" lon="-75.8478498"/>
+          <gpxx:rpt lat="45.4791498" lon="-75.8469486"/>
+          <gpxx:rpt lat="45.4787000" lon="-75.8465269">
+            <gpxx:Subclass>0400F70A4900430D01002117000021020000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.4786999" lon="-75.8465269">
+      <time>2012-01-02T20:16:17Z</time>
+      <name>De la Gatineau Prom2</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0400F70A490033005E010D20CA0025578F10</gpxx:Subclass>
+          <gpxx:rpt lat="45.4787000" lon="-75.8465269">
+            <gpxx:Subclass>0400F70A4900430D01002116000021023603</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4784632" lon="-75.8463049"/>
+          <gpxx:rpt lat="45.4779053" lon="-75.8459187"/>
+          <gpxx:rpt lat="45.4773474" lon="-75.8457041"/>
+          <gpxx:rpt lat="45.4756737" lon="-75.8452749"/>
+          <gpxx:rpt lat="45.4751587" lon="-75.8449316"/>
+          <gpxx:rpt lat="45.4725409" lon="-75.8430433"/>
+          <gpxx:rpt lat="45.4721117" lon="-75.8426142"/>
+          <gpxx:rpt lat="45.4718542" lon="-75.8421850"/>
+          <gpxx:rpt lat="45.4715967" lon="-75.8416700"/>
+          <gpxx:rpt lat="45.4714680" lon="-75.8409834"/>
+          <gpxx:rpt lat="45.4705667" lon="-75.8356190"/>
+          <gpxx:rpt lat="45.4704380" lon="-75.8342886"/>
+          <gpxx:rpt lat="45.4705667" lon="-75.8329153"/>
+          <gpxx:rpt lat="45.4708242" lon="-75.8316278"/>
+          <gpxx:rpt lat="45.4714251" lon="-75.8294821"/>
+          <gpxx:rpt lat="45.4715967" lon="-75.8284521">
+            <gpxx:Subclass>0600F70A4900E10D01001F060600DAC24A00</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4719830" lon="-75.8286238"/>
+          <gpxx:rpt lat="45.4731651" lon="-75.8284887">
+            <gpxx:Subclass>0600F70A4900E10D0100211700004A000000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.4731651" lon="-75.8284887">
+      <time>2012-01-02T20:16:27Z</time>
+      <name>Prom de la Gatineau26</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600F70A490009005E010D20CA002356D813</gpxx:Subclass>
+          <gpxx:rpt lat="45.4731651" lon="-75.8284887">
+            <gpxx:Subclass>0600F70A4900E10D0100211600004A007801</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4734850" lon="-75.8284521"/>
+          <gpxx:rpt lat="45.4740000" lon="-75.8285379"/>
+          <gpxx:rpt lat="45.4762745" lon="-75.8296967"/>
+          <gpxx:rpt lat="45.4769182" lon="-75.8299541"/>
+          <gpxx:rpt lat="45.4775190" lon="-75.8299971"/>
+          <gpxx:rpt lat="45.4787207" lon="-75.8298683"/>
+          <gpxx:rpt lat="45.4801369" lon="-75.8292246"/>
+          <gpxx:rpt lat="45.4809523" lon="-75.8289242">
+            <gpxx:Subclass>0600F70A4900E10D01001F000400A9CFF202</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4809523" lon="-75.8289242"/>
+          <gpxx:rpt lat="45.4842567" lon="-75.8288813"/>
+          <gpxx:rpt lat="45.4849863" lon="-75.8290958"/>
+          <gpxx:rpt lat="45.4858017" lon="-75.8296537"/>
+          <gpxx:rpt lat="45.4864454" lon="-75.8302975"/>
+          <gpxx:rpt lat="45.4884624" lon="-75.8320141"/>
+          <gpxx:rpt lat="45.4889774" lon="-75.8323574"/>
+          <gpxx:rpt lat="45.4894495" lon="-75.8325291"/>
+          <gpxx:rpt lat="45.4901361" lon="-75.8327007"/>
+          <gpxx:rpt lat="45.4909945" lon="-75.8326149"/>
+          <gpxx:rpt lat="45.4918098" lon="-75.8323145"/>
+          <gpxx:rpt lat="45.4932261" lon="-75.8312416"/>
+          <gpxx:rpt lat="45.4938698" lon="-75.8310270"/>
+          <gpxx:rpt lat="45.4945135" lon="-75.8311129"/>
+          <gpxx:rpt lat="45.4960155" lon="-75.8323574">
+            <gpxx:Subclass>0600F70A4900E10D01001F0004003DCF1000</gpxx:Subclass>
+          </gpxx:rpt>
+          <gpxx:rpt lat="45.4963429" lon="-75.8325102">
+            <gpxx:Subclass>0600F70A4900E10D010021170000C4040000</gpxx:Subclass>
+          </gpxx:rpt>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.4963430" lon="-75.8325102">
+      <time>2012-01-02T20:16:34Z</time>
+      <name>Prom de la Gatineau27</name>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>0600F70A490006005F010D20CA005B5A1C13</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

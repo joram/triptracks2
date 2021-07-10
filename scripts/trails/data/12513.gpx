@@ -1,0 +1,2282 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtensions/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2016-08-18T17:39:15Z</time>
+    <bounds maxlat="49.278940027579665" maxlon="-123.22204001247883" minlat="49.258746262639761" minlon="-123.23974996805191" />
+  </metadata>
+
+  <wpt lat="49.258746262639761" lon="-123.22258022613823">
+    <ele>0</ele>
+    <time>2016-08-18T17:35:09Z</time>
+    <name>4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>rice lake route</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>rice lake route</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-08-18T17:35:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.268525512889028" lon="-123.23632570914924">
+    <ele>0</ele>
+    <time>2016-08-18T17:35:09Z</time>
+    <name>Spanish Trail (23), Vancouver, BC V6T 1R5, Canada</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>rice lake route</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>rice lake route</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-08-18T17:35:09Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <rte>
+    <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="49.258750034496188" lon="-123.22257997468114">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.258799990639091" lon="-123.22204001247883">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-1</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-1</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.259399967268109" lon="-123.22296001017094">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-2</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-2</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-2</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.263320015743375" lon="-123.22975002229214">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-3</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-3</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-3</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.263699967414141" lon="-123.23005001060665">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-4</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-4</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-4</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.263699967414141" lon="-123.23028001002967">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-5</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-5</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-5</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.264709986746311" lon="-123.23216996155679">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-6</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-6</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-6</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.265499981120229" lon="-123.23310001753271">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-7</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-7</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.265569970011711" lon="-123.2337099686265">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-8</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-8</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-8</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.266839995980263" lon="-123.2347700279206">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-9</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-9</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-9</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.267529994249344" lon="-123.23570997454226">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-10</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-10</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-10</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.268579995259643" lon="-123.23636996559799">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-11</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-11</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-11</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.270240031182766" lon="-123.23818003758788">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-12</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-12</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-12</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.271149970591068" lon="-123.23819998651743">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-13</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-13</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-13</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.27254999987781" lon="-123.23872997425497">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-14</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-14</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-14</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.273070013150573" lon="-123.23829998262227">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-15</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-15</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-15</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.273820025846362" lon="-123.23816997930408">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-16</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-16</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-16</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.274429976940155" lon="-123.23831004090607">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-17</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-17</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-17</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.274880001321435" lon="-123.23881999589503">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-18</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-18</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-18</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.276169976219535" lon="-123.23924001306295">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-19</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-19</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-19</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.276450015604496" lon="-123.23915996588767">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-20</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-20</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-20</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.277110006660223" lon="-123.23974996805191">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-21</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-21</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-21</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.277300024405122" lon="-123.23953002691269">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-22</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-22</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-22</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.278209963813424" lon="-123.23973999358714">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-23</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-23</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-23</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.278940027579665" lon="-123.23948996141553">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-24</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-24</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-24</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.278459995985031" lon="-123.23711997829378">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-25</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-25</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-25</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.278079960495234" lon="-123.23642000555992">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-26</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-26</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-26</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.278030004352331" lon="-123.23575004003942">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-27</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-27</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-27</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.277739990502596" lon="-123.23552004061639">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-28</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-28</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-28</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.277660027146339" lon="-123.23529004119337">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-29</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-29</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-29</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.277809979394078" lon="-123.23478997685015">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-30</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-30</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-30</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.277539998292923" lon="-123.23393996804953">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-31</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-31</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-31</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.277460034936666" lon="-123.23201003484428">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-32</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-32</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-32</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.276499971747398" lon="-123.23215001262724">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-33</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-33</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-33</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.275590032339096" lon="-123.23258997872472">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-34</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-34</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-34</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.275010004639626" lon="-123.23251001536846">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-35</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-35</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-35</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.274420002475381" lon="-123.23211003094912">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-36</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-36</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-36</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.274129988625646" lon="-123.23212997987866">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-37</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-37</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-37</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.273630008101463" lon="-123.23162999935448">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-38</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-38</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-38</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.273339994251728" lon="-123.23179000988603">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-39</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-39</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-39</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.272830039262772" lon="-123.23155003599823">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-40</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-40</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-40</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.272429971024394" lon="-123.2309400010854">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-41</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-41</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-41</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.271920016035438" lon="-123.23064998723567">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-42</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-42</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-42</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.271599994972348" lon="-123.22955003008246">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-43</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-43</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-43</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.271179977804422" lon="-123.22933997958899">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-44</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-44</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-44</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.270879989489913" lon="-123.22943997569382">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-45</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-45</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-45</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.27052996121347" lon="-123.22861997410655">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-46</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-46</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-46</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.267780026420951" lon="-123.22871997021139">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-47</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-47</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-47</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.267659997567534" lon="-123.22877998463809">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-48</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-48</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-48</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.267720011994243" lon="-123.22975999675691">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-49</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-49</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.26795001141727" lon="-123.23034002445638">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-50</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-50</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.269030019640923" lon="-123.23168003931642">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-51</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-51</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-51</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.269339982420206" lon="-123.23343998752534">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-52</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-52</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-52</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.269639970734715" lon="-123.23428999632597">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-53</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-53</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-53</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.269339982420206" lon="-123.2353799790144">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-54</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-54</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-54</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.268579995259643" lon="-123.23612999171019">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-55</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-55</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-55</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.26853003911674" lon="-123.23632998391986">
+      <time>2016-08-18T17:35:42Z</time>
+      <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-56</name>
+      <cmt>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-56</cmt>
+      <desc>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada-56</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+  <trk>
+    <name>Directions from 4915 W 16th Ave, Greater Vancouver A, BC V6R 3E9, Canada to Spanish Trail (23), Vancouver, BC V6T 1R5, Canada</name>
+    <extensions>
+      <gpxx:TrackExtension>
+        <gpxx:DisplayColor>DarkGray</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="49.258750034496188" lon="-123.22257997468114">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258750034496188" lon="-123.22243999689817">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258750034496188" lon="-123.22233002632856">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258750034496188" lon="-123.2222400046885">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258750034496188" lon="-123.22217999026179">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258750034496188" lon="-123.22214998304844">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258769983425736" lon="-123.22211000137031">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258780041709542" lon="-123.22207999415696">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258799990639091" lon="-123.22204001247883">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258829997852445" lon="-123.22207001969218">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258880037814379" lon="-123.22213003411889">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.258950026705861" lon="-123.22224997915328">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.259069971740246" lon="-123.22243999689817">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.259080030024052" lon="-123.22250001132488">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.25912001170218" lon="-123.22257000021636">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.259280022233725" lon="-123.22282003238797">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.259320003911853" lon="-123.22286998853087">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.259399967268109" lon="-123.22296001017094">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.259930038824677" lon="-123.2239100150764">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.260030034929514" lon="-123.22404999285936">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26008996553719" lon="-123.22411998175085">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.260279983282089" lon="-123.22444997727871">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.260820029303432" lon="-123.2253900077194">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.261020021513104" lon="-123.22575001046062">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.261369965970516" lon="-123.22638996876776">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26227998919785" lon="-123.22794003412127">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263239968568087" lon="-123.22949001565576">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263260001316667" lon="-123.22952999733388">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263269975781441" lon="-123.22956000454724">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263280034065247" lon="-123.22959001176059">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263290008530021" lon="-123.2296500261873">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263320015743375" lon="-123.22975002229214">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263390004634857" lon="-123.22979997843504">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263420011848211" lon="-123.22985001839697">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26345999352634" lon="-123.22992998175323">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263490000739694" lon="-123.23001002892852">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263620004057884" lon="-123.23006995953619">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263699967414141" lon="-123.23005001060665">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263689992949367" lon="-123.23017003946006">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263689992949367" lon="-123.23022997006774">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263699967414141" lon="-123.23028001002967">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263729974627495" lon="-123.23034002445638">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263819996267557" lon="-123.23044002056122">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263880010694265" lon="-123.23050003498793">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263940025120974" lon="-123.23060003109276">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.263980006799102" lon="-123.2307000271976">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264070028439164" lon="-123.23087001219392">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264129959046841" lon="-123.23109003715217">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264189973473549" lon="-123.23123001493514">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264240013435483" lon="-123.23134995996952">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264310002326965" lon="-123.23143998160958">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264389965683222" lon="-123.23153997771442">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26444998010993" lon="-123.23163997381926">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264509994536638" lon="-123.23168003931642">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264530027285218" lon="-123.23172002099454">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264570008963346" lon="-123.2317999843508">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264619965106249" lon="-123.23193996213377">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264709986746311" lon="-123.23216996155679">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.264770001173019" lon="-123.23224003426731">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26487997174263" lon="-123.23234003037214">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265060015022755" lon="-123.23260003700852">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265260007232428" lon="-123.2328499853611">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265420017763972" lon="-123.23300999589264">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265499981120229" lon="-123.23310001753271">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265529988333583" lon="-123.23317998088896">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265529988333583" lon="-123.23329003527761">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265520013868809" lon="-123.23336999863386">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265539962798357" lon="-123.23346002027392">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265559995546937" lon="-123.23357996530831">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265569970011711" lon="-123.2337099686265">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265620009973645" lon="-123.23376998305321">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265669966116548" lon="-123.23382002301514">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265740038827062" lon="-123.23388003744185">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265820002183318" lon="-123.23390996083617">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265899965539575" lon="-123.23395002633333">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.265959979966283" lon="-123.23401004076004">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266019994392991" lon="-123.23411003686488">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266140023246408" lon="-123.23426996357739">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266219986602664" lon="-123.2343400362879">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266249993816018" lon="-123.2343400362879">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266349989920855" lon="-123.23442997410893">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266459960490465" lon="-123.23449996300042">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266549982130527" lon="-123.23458998464048">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26661997102201" lon="-123.23464999906719">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266709992662072" lon="-123.23467003181577">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266779981553555" lon="-123.2347100134939">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.266839995980263" lon="-123.2347700279206">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267000006511807" lon="-123.23497002013028">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267030013725162" lon="-123.23500002734363">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267079969868064" lon="-123.23503003455698">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267139984294772" lon="-123.23510999791324">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.2671799659729" lon="-123.23517001233995">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26722003147006" lon="-123.23524997569621">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267330002039671" lon="-123.23540998622775">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267429998144507" lon="-123.23554996401072">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267490012571216" lon="-123.23564996011555">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267529994249344" lon="-123.23570997454226">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267569975927472" lon="-123.23573000729084">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267759993672371" lon="-123.23586001060903">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267889996990561" lon="-123.23592002503574">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268099963665009" lon="-123.23606997728348">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268319988623261" lon="-123.23622998781502">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268449991941452" lon="-123.2362999767065">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26853003911674" lon="-123.23632998391986">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268579995259643" lon="-123.23636996559799">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268659958615899" lon="-123.23645001277328">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268840001896024" lon="-123.23661999776959">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26896003074944" lon="-123.23677003383636">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269039994105697" lon="-123.23691001161933">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269130015745759" lon="-123.23705996386707">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26939002238214" lon="-123.23730999603868">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269650029018521" lon="-123.23751996271312">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269769974052906" lon="-123.23763001710176">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269769974052906" lon="-123.23763999156654">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269899977371097" lon="-123.23779002763331">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270050013437867" lon="-123.23793000541627">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270159984007478" lon="-123.23806998319924">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270189991220832" lon="-123.23812999762595">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270240031182766" lon="-123.23818003758788">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270319994539022" lon="-123.2382099609822">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270400041714311" lon="-123.23823996819556">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270519986748695" lon="-123.23829000815749">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270580001175404" lon="-123.23829000815749">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270670022815466" lon="-123.23832001537085">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270789967849851" lon="-123.23831004090607">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270900022238493" lon="-123.23823996819556">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270989960059524" lon="-123.23819998651743">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271070007234812" lon="-123.2382099609822">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271149970591068" lon="-123.23819998651743">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271190036088228" lon="-123.2382099609822">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271260024979711" lon="-123.23828003369272">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271369995549321" lon="-123.23839000426233">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271479966118932" lon="-123.23842998594046">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271579962223768" lon="-123.23849997483194">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271739972755313" lon="-123.23852998204529">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271829994395375" lon="-123.2385400403291">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271939964964986" lon="-123.23859997093678">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272020012140274" lon="-123.23862000368536">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272090001031756" lon="-123.23862997815013">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272189997136593" lon="-123.23866995982826">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272269960492849" lon="-123.23869996704161">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272380014881492" lon="-123.23871002532542">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272470036521554" lon="-123.23872997425497">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27252996712923" lon="-123.23872997425497">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27254999987781" lon="-123.23872997425497">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272610014304519" lon="-123.23871002532542">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272670028731227" lon="-123.23866995982826">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272719984874129" lon="-123.23859997093678">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272770024836063" lon="-123.23852000758052">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27284998819232" lon="-123.23842998594046">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272940009832382" lon="-123.23836997151375">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27300002425909" lon="-123.23833996430039">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273030031472445" lon="-123.23832001537085">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273070013150573" lon="-123.23829998262227">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273200016468763" lon="-123.23825002647936">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273319961503148" lon="-123.23819998651743">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273379975929856" lon="-123.23816997930408">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273379975929856" lon="-123.23818003758788">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273400008678436" lon="-123.23825002647936">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273479972034693" lon="-123.23822001926601">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273549960926175" lon="-123.23819001205266">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273630008101463" lon="-123.23818003758788">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.2737300042063" lon="-123.23816997930408">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273820025846362" lon="-123.23816997930408">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27388004027307" lon="-123.23819998651743">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274150021374226" lon="-123.23829000815749">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274220010265708" lon="-123.23829998262227">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27426996640861" lon="-123.23832998983562">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274320006370544" lon="-123.23833996430039">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274389995262027" lon="-123.23832001537085">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274429976940155" lon="-123.23831004090607">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274469958618283" lon="-123.23836997151375">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274519998580217" lon="-123.23843996040523">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274559980258346" lon="-123.23849000036716">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274640027433634" lon="-123.23859997093678">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274800037965178" lon="-123.23875000700355">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274880001321435" lon="-123.23881999589503">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274970022961497" lon="-123.2388299703598">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275059960782528" lon="-123.23884002864361">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275140007957816" lon="-123.23885997757316">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275160040706396" lon="-123.23887003585696">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275200022384524" lon="-123.23889995925128">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275319967418909" lon="-123.23891001753509">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275349974632263" lon="-123.23891001753509">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275409989058971" lon="-123.23894002474844">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275479977950454" lon="-123.23901001363993">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275530017912388" lon="-123.23902996256948">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275560025125742" lon="-123.23904002085328">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27557997405529" lon="-123.23904002085328">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275660021230578" lon="-123.2390199881047">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275730010122061" lon="-123.23910003527999">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275779966264963" lon="-123.23908000253141">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275930002331734" lon="-123.23908997699618">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27600996568799" lon="-123.23905996978283">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276069980114698" lon="-123.23910003527999">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276169976219535" lon="-123.23924001306295">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276250023394823" lon="-123.23918997310102">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276359993964434" lon="-123.23914999142289">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276450015604496" lon="-123.23915996588767">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276540037244558" lon="-123.2392599619925">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276599967852235" lon="-123.23930002748966">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276620000600815" lon="-123.23931000195444">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276670040562749" lon="-123.23934000916779">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276689989492297" lon="-123.23937999084592">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276740029454231" lon="-123.2394499797374">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27678001113236" lon="-123.23948996141553">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276850000023842" lon="-123.23948996141553">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276880007237196" lon="-123.23950001969934">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276900039985776" lon="-123.23953002691269">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276949996128678" lon="-123.23960001580417">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276989977806807" lon="-123.23967997916043">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277029959484935" lon="-123.23970001190901">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277110006660223" lon="-123.23974996805191">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277149988338351" lon="-123.23974996805191">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277200028300285" lon="-123.23967000469565">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277219977229834" lon="-123.23957000859082">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277230035513639" lon="-123.23956003412604">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277259958907962" lon="-123.23954000137746">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277300024405122" lon="-123.23953002691269">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27736003883183" lon="-123.23954997584224">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277400020509958" lon="-123.23957998305559">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277539998292923" lon="-123.23964997194707">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277600012719631" lon="-123.23964997194707">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277630019932985" lon="-123.23960001580417">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277649968862534" lon="-123.23954997584224">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277679976075888" lon="-123.23950999416411">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277739990502596" lon="-123.23953002691269">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277779972180724" lon="-123.23957000859082">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277820037677884" lon="-123.2395900413394">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277849961072206" lon="-123.23957000859082">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277909975498915" lon="-123.23960001580417">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277990022674203" lon="-123.23964997194707">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278039978817105" lon="-123.23970001190901">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278130000457168" lon="-123.23973999358714">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278150033205748" lon="-123.23973001912236">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278169982135296" lon="-123.23973001912236">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278209963813424" lon="-123.23973999358714">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278269978240132" lon="-123.23971996083856">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278399981558323" lon="-123.23957000859082">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278420014306903" lon="-123.23954997584224">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278589999303222" lon="-123.23950999416411">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27865001372993" lon="-123.23950001969934">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278689995408058" lon="-123.23950001969934">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278710028156638" lon="-123.23953002691269">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278750009834766" lon="-123.23954000137746">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278829973191023" lon="-123.23953002691269">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278940027579665" lon="-123.23948996141553">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278929969295859" lon="-123.2394499797374">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278899962082505" lon="-123.23911998420954">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278899962082505" lon="-123.23898998089135">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278870038688183" lon="-123.23889995925128">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278850005939603" lon="-123.23884002864361">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278819998726249" lon="-123.23866995982826">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278810024261475" lon="-123.23845999315381">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278759984299541" lon="-123.23823996819556">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278729977086186" lon="-123.23813997209072">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278669962659478" lon="-123.23795003816485">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278640039265156" lon="-123.23780997656286">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278559992089868" lon="-123.23751996271312">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278520010411739" lon="-123.23741996660829">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278469970449805" lon="-123.23717999272048">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278459995985031" lon="-123.23711997829378">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278420014306903" lon="-123.23700003325939">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278309959918261" lon="-123.2368599716574">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278269978240132" lon="-123.23675000108778">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278209963813424" lon="-123.23657004162669">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278180040419102" lon="-123.23651002719998">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278150033205748" lon="-123.23648001998663">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278109967708588" lon="-123.23645001277328">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278079960495234" lon="-123.23642000555992">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278030004352331" lon="-123.2362500205636">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278050037100911" lon="-123.23616997338831">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278090018779039" lon="-123.23612001724541">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278099993243814" lon="-123.2360600028187">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278090018779039" lon="-123.23600996285677">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278050037100911" lon="-123.23592999950051">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278030004352331" lon="-123.23583000339568">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.278030004352331" lon="-123.23575004003942">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277960015460849" lon="-123.23566001839936">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277869993820786" lon="-123.23564996011555">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277830012142658" lon="-123.23562003672123">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277739990502596" lon="-123.23552004061639">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277679976075888" lon="-123.2353900372982">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277660027146339" lon="-123.23529004119337">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277670001611114" lon="-123.23516003787518">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277679976075888" lon="-123.23497002013028">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27779003046453" lon="-123.23484001681209">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277809979394078" lon="-123.23478997685015">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277800004929304" lon="-123.23468000628054">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277679976075888" lon="-123.23447003960609">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277630019932985" lon="-123.23436995968223">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277639994397759" lon="-123.23425998911262">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277619961649179" lon="-123.23416996747255">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277570005506277" lon="-123.23405999690294">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277549972757697" lon="-123.23399000801146">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277539998292923" lon="-123.23393996804953">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277539998292923" lon="-123.23382002301514">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277530023828149" lon="-123.23362003080547">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277509991079569" lon="-123.23349002748728">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277489958330989" lon="-123.23336002416909">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277470009401441" lon="-123.23311996646225">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277470009401441" lon="-123.23298996314406">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277470009401441" lon="-123.23283003643155">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277479983866215" lon="-123.23268997482955">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277479983866215" lon="-123.23257002979517">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277449976652861" lon="-123.23235997930169">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277460034936666" lon="-123.23201003484428">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277379987761378" lon="-123.23205999098718">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277289966121316" lon="-123.23208999820054">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277089973911643" lon="-123.23211003094912">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.277000036090612" lon="-123.23215998709202">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276900039985776" lon="-123.2321800198406">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276770036667585" lon="-123.23215998709202">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276650007814169" lon="-123.2321800198406">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276589993387461" lon="-123.23215998709202">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276499971747398" lon="-123.23215001262724">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276440041139722" lon="-123.23219996877015">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276359993964434" lon="-123.23229996487498">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276220016181469" lon="-123.23238998651505">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.276139969006181" lon="-123.23235997930169">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27605003118515" lon="-123.23239996097982">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275969984009862" lon="-123.23239996097982">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275909969583154" lon="-123.23242996819317">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275850038975477" lon="-123.23247003369033">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275700002908707" lon="-123.23255997151136">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275590032339096" lon="-123.23258997872472">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27549003623426" lon="-123.23255997151136">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275249978527427" lon="-123.23257002979517">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275100026279688" lon="-123.23252996429801">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.275010004639626" lon="-123.23251001536846">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274910008534789" lon="-123.2324199937284">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274829961359501" lon="-123.23235000483692">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274810012429953" lon="-123.23231002315879">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27461002022028" lon="-123.23224003426731">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274550005793571" lon="-123.23219996877015">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274459984153509" lon="-123.23215998709202">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274420002475381" lon="-123.23211003094912">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274329980835319" lon="-123.23212000541389">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274239959195256" lon="-123.23212997987866">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274129988625646" lon="-123.23212997987866">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274059999734163" lon="-123.23206996545196">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.274009959772229" lon="-123.2320399582386">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273899989202619" lon="-123.23196996934712">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273830000311136" lon="-123.23180995881557">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273669989779592" lon="-123.23166998103261">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273630008101463" lon="-123.23162999935448">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273569993674755" lon="-123.23162999935448">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273490030318499" lon="-123.23169998824596">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273449964821339" lon="-123.23179000988603">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273339994251728" lon="-123.23179000988603">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27327997982502" lon="-123.23172999545932">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273189958184958" lon="-123.23169998824596">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.273060038685799" lon="-123.23163997381926">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27300002425909" lon="-123.23162999935448">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272900028154254" lon="-123.23159999214113">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272830039262772" lon="-123.23155003599823">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272800032049417" lon="-123.23147996328771">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272789973765612" lon="-123.23142003268003">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272670028731227" lon="-123.23126999661326">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272600039839745" lon="-123.23122004047036">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27257003262639" lon="-123.23111996054649">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272510018199682" lon="-123.23104997165501">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272429971024394" lon="-123.2309400010854">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272259986028075" lon="-123.23084997944534">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.272129982709885" lon="-123.23076004162431">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.2720100376755" lon="-123.23077001608908">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271980030462146" lon="-123.23074000887573">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271920016035438" lon="-123.23064998723567">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271850027143955" lon="-123.2305100094527">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271829994395375" lon="-123.23044002056122">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271850027143955" lon="-123.23022997006774">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271780038252473" lon="-123.23011999949813">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271709965541959" lon="-123.23004003614187">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271690016612411" lon="-123.22992000728846">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271620027720928" lon="-123.2296999823302">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271599994972348" lon="-123.22956000454724">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271599994972348" lon="-123.22955003008246">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271550038829446" lon="-123.22955003008246">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271509973332286" lon="-123.22952999733388">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271390028297901" lon="-123.22940996848047">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271290032193065" lon="-123.22936998680234">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271179977804422" lon="-123.22933997958899">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.271060032770038" lon="-123.22933000512421">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270979985594749" lon="-123.22935003787279">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270879989489913" lon="-123.22943000122905">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270879989489913" lon="-123.22943997569382">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27070003002882" lon="-123.22897997684777">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27065996453166" lon="-123.22890998795629">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270640015602112" lon="-123.22884997352958">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.27052996121347" lon="-123.22861997410655">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270389983430505" lon="-123.22863003239036">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270299961790442" lon="-123.22863003239036">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.270020006224513" lon="-123.228600025177">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269959991797805" lon="-123.22861997410655">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269920010119677" lon="-123.22860999964178">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269829988479614" lon="-123.22861997410655">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269720017910004" lon="-123.2286499813199">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269650029018521" lon="-123.2286499813199">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269430004060268" lon="-123.2286499813199">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26939002238214" lon="-123.22866003960371">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269309975206852" lon="-123.2286499813199">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269279967993498" lon="-123.22864000685513">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269200004637241" lon="-123.22866003960371">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269100008532405" lon="-123.22866003960371">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268979979678988" lon="-123.22867001406848">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268849976360798" lon="-123.22867001406848">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26878996193409" lon="-123.22867998853326">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268679991364479" lon="-123.2286499813199">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26848997361958" lon="-123.22870999574661">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268459966406226" lon="-123.22870002128184">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268319988623261" lon="-123.22870999574661">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268249999731779" lon="-123.22870002128184">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268159978091717" lon="-123.22871997021139">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268020000308752" lon="-123.22870002128184">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267969960346818" lon="-123.22870002128184">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267780026420951" lon="-123.22871997021139">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267669972032309" lon="-123.22877998463809">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267659997567534" lon="-123.22877998463809">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267680030316114" lon="-123.22893999516964">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267659997567534" lon="-123.22920997627079">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267659997567534" lon="-123.22933997958899">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267669972032309" lon="-123.22956997901201">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267720011994243" lon="-123.22975999675691">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267780026420951" lon="-123.22992000728846">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.267880022525787" lon="-123.2301299739629">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26792997866869" lon="-123.23025000281632">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26795001141727" lon="-123.23034002445638">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268050007522106" lon="-123.23045996949077">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268099963665009" lon="-123.23054001666605">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268210018053651" lon="-123.23064001277089">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268249999731779" lon="-123.23068996891379">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268329963088036" lon="-123.23076004162431">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268429959192872" lon="-123.23086003772914">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268479999154806" lon="-123.23090999387205">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268559962511063" lon="-123.23106002993882">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268649984151125" lon="-123.23120998218656">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268749980255961" lon="-123.23133998550475">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26880999468267" lon="-123.23142003268003">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268840001896024" lon="-123.23146001435816">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268909990787506" lon="-123.23152002878487">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268970005214214" lon="-123.23159999214113">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269030019640923" lon="-123.23168003931642">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269039994105697" lon="-123.23172002099454">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269049968570471" lon="-123.23182001709938">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269100008532405" lon="-123.23201003484428">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269160022959113" lon="-123.23215998709202">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269179971888661" lon="-123.23221002705395">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269200004637241" lon="-123.23244002647698">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269200004637241" lon="-123.2326100114733">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269209979102015" lon="-123.23268000036478">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269220037385821" lon="-123.23274998925626">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269230011850595" lon="-123.23281997814775">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269269993528724" lon="-123.23294000700116">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269279967993498" lon="-123.23300999589264">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269290026277304" lon="-123.23316003195941">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269330007955432" lon="-123.23329003527761">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269339982420206" lon="-123.23343998752534">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269439978525043" lon="-123.23365003801882">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269460011273623" lon="-123.23369001969695">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269490018486977" lon="-123.23379999026656">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269539974629879" lon="-123.23399000801146">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269590014591813" lon="-123.23409997858107">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269609963521361" lon="-123.23412998579443">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269639970734715" lon="-123.23428999632597">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269639970734715" lon="-123.23435998521745">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269650029018521" lon="-123.23444003239274">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269609963521361" lon="-123.23455997742712">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269560007378459" lon="-123.2347100134939">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269509967416525" lon="-123.23487002402544">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269450036808848" lon="-123.23507999069989">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269409971311688" lon="-123.23514997959137">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269379964098334" lon="-123.23517998680472">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269350040704012" lon="-123.23530001565814">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269339982420206" lon="-123.2353799790144">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269230011850595" lon="-123.23556002229452">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269149964675307" lon="-123.23566001839936">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.269070001319051" lon="-123.23576998896897">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268890041857958" lon="-123.23593997396529">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268860034644604" lon="-123.23596000671387">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268819969147444" lon="-123.23598003946245">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268730031326413" lon="-123.23602002114058">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268659958615899" lon="-123.23605002835393">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268579995259643" lon="-123.23612999171019">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.268549988046288" lon="-123.23622001335025">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.26853003911674" lon="-123.23632998391986">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

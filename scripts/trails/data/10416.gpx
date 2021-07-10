@@ -1,0 +1,71 @@
+<?xml version="1.0" ?>
+<gpx
+ version="1.1"
+ creator="TrailRepository - http://trail.brijn.nu"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://www.topografix.com/GPX/1/1"
+ xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+ <metadata>
+  <name>Mt. Cheam</name>
+  <desc>Beautiful hike to an awesome viewpoint</desc>
+  <author><name>TheShadow</name></author>
+  <link href="http://trail.brijn.nu/"></link>
+  <time>2012-02-26T03:17:55Z</time>
+ </metadata>
+ <wpt lat="49.168" lon="-121.694222">
+  <ele>0</ele>
+  <name>Parking lot</name>
+ </wpt>
+ <wpt lat="49.186778" lon="-121.682083">
+  <ele>0</ele>
+  <name>Cheam summit</name>
+ </wpt>
+ <wpt lat="49.174361" lon="-121.679833">
+  <ele>0</ele>
+  <name>Spoon Lake</name>
+ </wpt>
+ <rte>
+  <desc>From Highway to Parking lot Mt Cheam</desc>
+ <rtept lat="49.144876599" lon="-121.962200487">
+  <ele>0</ele>
+  <name>EXIT119</name>
+  <cmt>Hwy 1, Exit 119, Vedder Rd</cmt>
+ </rtept>
+ <rtept lat="49.097465873" lon="-121.963852728">
+  <ele>0</ele>
+  <name>CWLKRD</name>
+  <cmt>Turn left onto Chilliwack lake road just befor river</cmt>
+ </rtept>
+ <rtept lat="49.099992514" lon="-121.625529611">
+  <ele>0</ele>
+  <name>CWFFSR</name>
+  <cmt>Turn left onto Chilliwack Foley FSR</cmt>
+ </rtept>
+ <rtept lat="49.11149919" lon="-121.631382192">
+  <ele>0</ele>
+  <name>GOLEFT</name>
+  <cmt>Go left at the T junction</cmt>
+ </rtept>
+ <rtept lat="49.10605967" lon="-121.647722209">
+  <ele>0</ele>
+  <name>GORIGHT</name>
+  <cmt>Follow the road to the right, Chipmunk Creek FSR</cmt>
+ </rtept>
+ <rtept lat="49.144324064" lon="-121.695036376">
+  <ele>0</ele>
+  <name>GORIGHT</name>
+  <cmt>Go right on a very steep and rough road</cmt>
+ </rtept>
+ <rtept lat="49.161162972" lon="-121.692284429">
+  <ele>0</ele>
+  <name>GORIGHT</name>
+  <cmt>Follow road to the right</cmt>
+ </rtept>
+ <rtept lat="49.168002605" lon="-121.694199527">
+  <ele>0</ele>
+  <name>CHPKPRK</name>
+  <cmt>Cheam Peak Parking lot</cmt>
+ </rtept>
+ </rte>
+</gpx>
+

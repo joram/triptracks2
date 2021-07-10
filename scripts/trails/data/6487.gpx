@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.13.7" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2009-11-30T21:40:11Z</time>
+    <bounds maxlat="44.3975974" maxlon="-64.1825892" minlat="44.3506250" minlon="-64.2350360"/>
+  </metadata>
+
+  <wpt lat="44.3975974" lon="-64.2088543">
+    <time>2009-08-03T19:12:10Z</time>
+    <name>Beach and calm water</name>
+    <cmt>Intertidal Zone Border</cmt>
+    <desc>Intertidal Zone Border</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.3543370" lon="-64.2346771">
+    <time>2009-08-01T19:07:28Z</time>
+    <name>Emergency return</name>
+    <cmt>Land, Non-Urban</cmt>
+    <desc>Land, Non-Urban</desc>
+    <sym>Waypoint</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.3838771" lon="-64.2117026">
+    <time>2009-08-03T19:19:43Z</time>
+    <name>Gravel beach</name>
+    <cmt>1.8 m max depth</cmt>
+    <desc>1.8 m max depth</desc>
+    <sym>Pin, Red</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="44.3537331" lon="-64.2348704">
+    <time>2009-08-03T19:23:01Z</time>
+    <name>Point de départ</name>
+    <cmt>Road</cmt>
+    <desc>Road</desc>
+    <sym>Flag, Green</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <rte>
+    <name>Main Route</name>
+    <extensions>
+      <gpxx:RouteExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="44.3534980" lon="-64.2350360">
+      <time>2009-08-01T18:49:05Z</time>
+      <name>IntertidalZoneB</name>
+      <cmt>Intertidal Zone Border</cmt>
+      <desc>Intertidal Zone Border</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43383c3776000680e0010d1fd2004e8a5e52</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3514285" lon="-64.2327010">
+      <time>2009-08-01T18:49:17Z</time>
+      <name>1.8mdepth</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43083c3776000d80cd010d1fd200ee89cb52</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3506250" lon="-64.2255143">
+      <time>2009-08-01T18:49:56Z</time>
+      <name>1.8mdepth1</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43083c3776000180db010d1fd200c8891a54</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3506934" lon="-64.2207428">
+      <time>2009-08-01T18:50:07Z</time>
+      <name>5.5mmaxdepth</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83203c3776000880e001031fd200cc89f854</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3517610" lon="-64.2199107">
+      <time>2009-08-01T19:09:17Z</time>
+      <name>1.8mdepth2</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43082f3776000b8094010d1fd200fd891f55</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3517848" lon="-64.2157284">
+      <time>2009-08-01T19:09:29Z</time>
+      <name>5.5mmaxdepth1</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760007808d01031fd200fe89e255</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3517561" lon="-64.2126665">
+      <time>2009-08-01T19:09:47Z</time>
+      <name>5.5mmaxdepth9</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760007808d01031fd200fd897056</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3514472" lon="-64.2081614">
+      <time>2009-08-01T19:10:32Z</time>
+      <name>5.5mmaxdepth10</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760007808d01031fd200ef894257</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3509242" lon="-64.2046755">
+      <time>2009-08-01T19:10:58Z</time>
+      <name>5.5mmaxdepth11</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760003808701031fd200d689e557</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3527147" lon="-64.1995745">
+      <time>2009-08-01T18:50:39Z</time>
+      <name>5.5mmaxdepth2</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83203c3776001180ee01031fd2002a8ad258</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3557117" lon="-64.2003657">
+      <time>2009-08-01T19:11:52Z</time>
+      <name>5.5mmaxdepth12</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760006808801031fd200b58aae58</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3590029" lon="-64.1939836">
+      <time>2009-08-01T18:50:56Z</time>
+      <name>5.5mmaxdepth4</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83203c3776000980e801031fd2004f8bd759</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3628554" lon="-64.1825892">
+      <time>2009-08-01T19:12:47Z</time>
+      <name>IntertidalZone</name>
+      <cmt>Intertidal Zone</cmt>
+      <desc>Intertidal Zone</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83082f37760001805b01031fd200028cea5b</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3972293" lon="-64.2098531">
+      <time>2009-08-03T19:05:40Z</time>
+      <name>1.8mdepth3</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>430837357600088032010d1fd2004492f356</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3975974" lon="-64.2088543">
+      <time>2009-08-03T19:11:37Z</time>
+      <name>IntertidalZone1</name>
+      <cmt>Intertidal Zone Border</cmt>
+      <desc>Intertidal Zone Border</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>433837357600018034010d1fd20056922257</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3970018" lon="-64.2105891">
+      <time>2009-08-03T19:06:03Z</time>
+      <name>1.8m-5.5m</name>
+      <cmt>1.8 m - 5.5 m</cmt>
+      <desc>1.8 m - 5.5 m</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83203735760007803201031fd2003a92d156</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3927838" lon="-64.2189608">
+      <time>2009-08-03T19:10:32Z</time>
+      <name>1.8mdepth6</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>430837357600078012010d1fd20075914b55</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3891056" lon="-64.2182902">
+      <time>2009-08-03T19:10:40Z</time>
+      <name>1.8mdepth7</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>4308373576000d80ee000d1fd200ca906a55</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3857920" lon="-64.2139449">
+      <time>2009-08-03T19:10:53Z</time>
+      <name>1.8mmaxdepth1</name>
+      <cmt>1.8 m max depth</cmt>
+      <desc>1.8 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>8318373576000a80f400031fd2002f903556</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3845658" lon="-64.2111382">
+      <time>2009-08-03T19:18:40Z</time>
+      <name>1.8mmaxdepth</name>
+      <cmt>1.8 m max depth</cmt>
+      <desc>1.8 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>8318373576000a80f400031fd200f68fb856</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3838786" lon="-64.2117038">
+      <time>2009-08-03T19:18:30Z</time>
+      <name>1.8mmaxdepth2</name>
+      <cmt>1.8 m max depth</cmt>
+      <desc>1.8 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83183735760005801401031fd200d68f9d56</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3839191" lon="-64.2122317">
+      <time>2009-08-03T19:18:47Z</time>
+      <name>1.8mmaxdepth3</name>
+      <cmt>1.8 m max depth</cmt>
+      <desc>1.8 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83183735760005801401031fd200d88f8556</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3822343" lon="-64.2120808">
+      <time>2009-08-03T19:19:05Z</time>
+      <name>1.8mmaxdepth4</name>
+      <cmt>1.8 m max depth</cmt>
+      <desc>1.8 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>8318373576000480f100031fd2008a8f8c56</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3790530" lon="-64.2093001">
+      <time>2009-08-03T19:19:14Z</time>
+      <name>1.8mdepth8</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>4308373576000d80ee000d1fd200f58e0d57</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3760951" lon="-64.2057007">
+      <time>2009-08-03T19:19:20Z</time>
+      <name>IntertidalZone5</name>
+      <cmt>Intertidal Zone Border</cmt>
+      <desc>Intertidal Zone Border</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43382f3776000380c8010d1fd2006b8eb557</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3735218" lon="-64.2040586">
+      <time>2009-08-03T19:09:13Z</time>
+      <name>IntertidalZone3</name>
+      <cmt>Intertidal Zone Border</cmt>
+      <desc>Intertidal Zone Border</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43382f3776000480c8010d1fd200f48d0258</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3722056" lon="-64.2045928">
+      <time>2009-08-03T19:09:05Z</time>
+      <name>5.5mmaxdepth13</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f3776000880cb01031fd200b68de957</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3690056" lon="-64.2032168">
+      <time>2009-08-03T19:08:28Z</time>
+      <name>5.5mmaxdepth5</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760008807201031fd200218d2958</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3675913" lon="-64.2076655">
+      <time>2009-08-03T19:07:56Z</time>
+      <name>5.5mmaxdepth6</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760002808001031fd200df8c5957</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3655095" lon="-64.2110205">
+      <time>2009-08-03T19:07:40Z</time>
+      <name>5.5mmaxdepth3</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760005808101031fd2007e8cbd56</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3632727" lon="-64.2123022">
+      <time>2009-08-03T19:07:47Z</time>
+      <name>IntertidalZone4</name>
+      <cmt>Intertidal Zone</cmt>
+      <desc>Intertidal Zone</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83082f37760003808101031fd200168c8156</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3616772" lon="-64.2144442">
+      <time>2009-08-03T19:06:37Z</time>
+      <name>IntertidalZone2</name>
+      <cmt>Intertidal Zone Border</cmt>
+      <desc>Intertidal Zone Border</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43382f377600018091010d1fd200cc8b1e56</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3603462" lon="-64.2150857">
+      <time>2009-08-03T19:06:44Z</time>
+      <name>1.8mdepth4</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43082f3776000f808e010d1fd2008d8b0056</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3585303" lon="-64.2165698">
+      <time>2009-08-03T19:07:16Z</time>
+      <name>1.8mdepth5</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43082f3776000f808e010d1fd200398bba55</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3570549" lon="-64.2181263">
+      <time>2009-08-03T19:07:09Z</time>
+      <name>5.5mmaxdepth7</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83202f37760007808e01031fd200f48a7255</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3565391" lon="-64.2208326">
+      <time>2009-08-01T18:51:57Z</time>
+      <name>IntertidalZone8</name>
+      <cmt>Intertidal Zone Border</cmt>
+      <desc>Intertidal Zone Border</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43383c3776000280e1010d1fd200dc8af454</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3554115" lon="-64.2231560">
+      <time>2009-08-01T18:52:00Z</time>
+      <name>IntertidalZone9</name>
+      <cmt>Intertidal Zone Border</cmt>
+      <desc>Intertidal Zone Border</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43383c3776000680e1010d1fd200a88a8854</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3533886" lon="-64.2254562">
+      <time>2009-08-01T18:52:17Z</time>
+      <name>5.5mmaxdepth8</name>
+      <cmt>5.5 m max depth</cmt>
+      <desc>5.5 m max depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>83203c3776000880e001031fd200498a1c54</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3514285" lon="-64.2327010">
+      <time>2009-08-01T18:49:17Z</time>
+      <name>1.8mdepth</name>
+      <cmt>1.8 m depth</cmt>
+      <desc>1.8 m depth</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>43083c3776000d80cd010d1fd200ee89cb52</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.3537331" lon="-64.2348704">
+      <time>2009-08-03T19:23:01Z</time>
+      <name>Point de départ</name>
+      <cmt>Road</cmt>
+      <desc>Road</desc>
+      <sym>Flag, Green</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>001800000000ffffffffffffffffffffffff</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

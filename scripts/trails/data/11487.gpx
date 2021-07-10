@@ -1,0 +1,1336 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtensions/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2014-06-11T09:48:03Z</time>
+    <bounds maxlat="45.076211616396904" maxlon="-64.350081123411655" minlat="45.07434044033289" minlon="-64.355876035988331" />
+  </metadata>
+
+  <rte>
+    <name>ACTIVE LOG 057 1</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="45.075393291190267" lon="-64.355466580018401">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 0571</name>
+      <cmt>ACTIVE LOG 057</cmt>
+      <desc>ACTIVE LOG 057</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075393794104457" lon="-64.355465993285179">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-13</name>
+      <cmt>ACTIVE LOG 057-1</cmt>
+      <desc>ACTIVE LOG 057-1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075397146865726" lon="-64.355438500642776">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-21</name>
+      <cmt>ACTIVE LOG 057-2</cmt>
+      <desc>ACTIVE LOG 057-2</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075362864881754" lon="-64.355403129011393">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-31</name>
+      <cmt>ACTIVE LOG 057-3</cmt>
+      <desc>ACTIVE LOG 057-3</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075277201831341" lon="-64.355378486216068">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-41</name>
+      <cmt>ACTIVE LOG 057-4</cmt>
+      <desc>ACTIVE LOG 057-4</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075185084715486" lon="-64.355347724631429">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-51</name>
+      <cmt>ACTIVE LOG 057-5</cmt>
+      <desc>ACTIVE LOG 057-5</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074969166889787" lon="-64.355271197855473">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-61</name>
+      <cmt>ACTIVE LOG 057-6</cmt>
+      <desc>ACTIVE LOG 057-6</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074853412806988" lon="-64.355210261419415">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-71</name>
+      <cmt>ACTIVE LOG 057-7</cmt>
+      <desc>ACTIVE LOG 057-7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074892556294799" lon="-64.355117976665497">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-81</name>
+      <cmt>ACTIVE LOG 057-8</cmt>
+      <desc>ACTIVE LOG 057-8</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074908984825015" lon="-64.355053519830108">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-91</name>
+      <cmt>ACTIVE LOG 057-9</cmt>
+      <desc>ACTIVE LOG 057-9</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074915857985616" lon="-64.355035750195384">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-101</name>
+      <cmt>ACTIVE LOG 057-10</cmt>
+      <desc>ACTIVE LOG 057-10</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074893394485116" lon="-64.354799715802073">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-111</name>
+      <cmt>ACTIVE LOG 057-11</cmt>
+      <desc>ACTIVE LOG 057-11</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074884174391627" lon="-64.354791752994061">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-121</name>
+      <cmt>ACTIVE LOG 057-12</cmt>
+      <desc>ACTIVE LOG 057-12</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074892472475767" lon="-64.354784125462174">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-131</name>
+      <cmt>ACTIVE LOG 057-13</cmt>
+      <desc>ACTIVE LOG 057-13</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074928095564246" lon="-64.354602489620447">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-14</name>
+      <cmt>ACTIVE LOG 057-14</cmt>
+      <desc>ACTIVE LOG 057-14</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075013674795628" lon="-64.354409873485565">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-15</name>
+      <cmt>ACTIVE LOG 057-15</cmt>
+      <desc>ACTIVE LOG 057-15</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075070755556226" lon="-64.354266291484237">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-16</name>
+      <cmt>ACTIVE LOG 057-16</cmt>
+      <desc>ACTIVE LOG 057-16</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075124986469746" lon="-64.354034699499607">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-17</name>
+      <cmt>ACTIVE LOG 057-17</cmt>
+      <desc>ACTIVE LOG 057-17</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075192041695118" lon="-64.35379346832633">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-18</name>
+      <cmt>ACTIVE LOG 057-18</cmt>
+      <desc>ACTIVE LOG 057-18</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075231604278088" lon="-64.353509489446878">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-19</name>
+      <cmt>ACTIVE LOG 057-19</cmt>
+      <desc>ACTIVE LOG 057-19</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075248787179589" lon="-64.353402704000473">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-20</name>
+      <cmt>ACTIVE LOG 057-20</cmt>
+      <desc>ACTIVE LOG 057-20</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075317602604628" lon="-64.353272952139378">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-211</name>
+      <cmt>ACTIVE LOG 057-21</cmt>
+      <desc>ACTIVE LOG 057-21</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075334450230002" lon="-64.353205226361752">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-22</name>
+      <cmt>ACTIVE LOG 057-22</cmt>
+      <desc>ACTIVE LOG 057-22</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075274771079421" lon="-64.353040186688304">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-23</name>
+      <cmt>ACTIVE LOG 057-23</cmt>
+      <desc>ACTIVE LOG 057-23</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075218696147203" lon="-64.353035911917686">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-24</name>
+      <cmt>ACTIVE LOG 057-24</cmt>
+      <desc>ACTIVE LOG 057-24</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075224144384265" lon="-64.353005569428205">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-25</name>
+      <cmt>ACTIVE LOG 057-25</cmt>
+      <desc>ACTIVE LOG 057-25</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075227916240692" lon="-64.352827789261937">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-26</name>
+      <cmt>ACTIVE LOG 057-26</cmt>
+      <desc>ACTIVE LOG 057-26</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075244260951877" lon="-64.352615894749761">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-27</name>
+      <cmt>ACTIVE LOG 057-27</cmt>
+      <desc>ACTIVE LOG 057-27</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075325733050704" lon="-64.352401150390506">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-28</name>
+      <cmt>ACTIVE LOG 057-28</cmt>
+      <desc>ACTIVE LOG 057-28</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075415838509798" lon="-64.352257903665304">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-29</name>
+      <cmt>ACTIVE LOG 057-29</cmt>
+      <desc>ACTIVE LOG 057-29</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075476858764887" lon="-64.35198993422091">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-30</name>
+      <cmt>ACTIVE LOG 057-30</cmt>
+      <desc>ACTIVE LOG 057-30</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075521869584918" lon="-64.351909384131432">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-311</name>
+      <cmt>ACTIVE LOG 057-31</cmt>
+      <desc>ACTIVE LOG 057-31</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075603257864714" lon="-64.3517089728266">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-32</name>
+      <cmt>ACTIVE LOG 057-32</cmt>
+      <desc>ACTIVE LOG 057-32</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075681209564209" lon="-64.35151400975883">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-33</name>
+      <cmt>ACTIVE LOG 057-33</cmt>
+      <desc>ACTIVE LOG 057-33</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.07574968971312" lon="-64.351298091933131">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-34</name>
+      <cmt>ACTIVE LOG 057-34</cmt>
+      <desc>ACTIVE LOG 057-34</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075779194012284" lon="-64.35120664536953">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-35</name>
+      <cmt>ACTIVE LOG 057-35</cmt>
+      <desc>ACTIVE LOG 057-35</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.07584105245769" lon="-64.35111285187304">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-36</name>
+      <cmt>ACTIVE LOG 057-36</cmt>
+      <desc>ACTIVE LOG 057-36</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075960159301758" lon="-64.350836835801601">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-37</name>
+      <cmt>ACTIVE LOG 057-37</cmt>
+      <desc>ACTIVE LOG 057-37</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076025119051337" lon="-64.350655283778906">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-38</name>
+      <cmt>ACTIVE LOG 057-38</cmt>
+      <desc>ACTIVE LOG 057-38</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.0760477501899" lon="-64.350540032610297">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-39</name>
+      <cmt>ACTIVE LOG 057-39</cmt>
+      <desc>ACTIVE LOG 057-39</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076083624735475" lon="-64.350442048162222">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-40</name>
+      <cmt>ACTIVE LOG 057-40</cmt>
+      <desc>ACTIVE LOG 057-40</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076085468754172" lon="-64.350412711501122">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-411</name>
+      <cmt>ACTIVE LOG 057-41</cmt>
+      <desc>ACTIVE LOG 057-41</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076084965839982" lon="-64.350310117006302">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-42</name>
+      <cmt>ACTIVE LOG 057-42</cmt>
+      <desc>ACTIVE LOG 057-42</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076110027730465" lon="-64.350240882486105">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-43</name>
+      <cmt>ACTIVE LOG 057-43</cmt>
+      <desc>ACTIVE LOG 057-43</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076211616396904" lon="-64.350081123411655">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-44</name>
+      <cmt>ACTIVE LOG 057-44</cmt>
+      <desc>ACTIVE LOG 057-44</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076197367161512" lon="-64.350142311304808">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-45</name>
+      <cmt>ACTIVE LOG 057-45</cmt>
+      <desc>ACTIVE LOG 057-45</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076093263924122" lon="-64.350343896076083">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-46</name>
+      <cmt>ACTIVE LOG 057-46</cmt>
+      <desc>ACTIVE LOG 057-46</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076088989153504" lon="-64.350444730371237">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-47</name>
+      <cmt>ACTIVE LOG 057-47</cmt>
+      <desc>ACTIVE LOG 057-47</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076077422127128" lon="-64.350479515269399">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-48</name>
+      <cmt>ACTIVE LOG 057-48</cmt>
+      <desc>ACTIVE LOG 057-48</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.076021011918783" lon="-64.35058563016355">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-49</name>
+      <cmt>ACTIVE LOG 057-49</cmt>
+      <desc>ACTIVE LOG 057-49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075948759913445" lon="-64.350777575746179">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-50</name>
+      <cmt>ACTIVE LOG 057-50</cmt>
+      <desc>ACTIVE LOG 057-50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075923530384898" lon="-64.350843373686075">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-511</name>
+      <cmt>ACTIVE LOG 057-51</cmt>
+      <desc>ACTIVE LOG 057-51</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.07585521787405" lon="-64.350988380610943">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-52</name>
+      <cmt>ACTIVE LOG 057-52</cmt>
+      <desc>ACTIVE LOG 057-52</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075827641412616" lon="-64.351114695891738">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-53</name>
+      <cmt>ACTIVE LOG 057-53</cmt>
+      <desc>ACTIVE LOG 057-53</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075735943391919" lon="-64.351293230429292">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-54</name>
+      <cmt>ACTIVE LOG 057-54</cmt>
+      <desc>ACTIVE LOG 057-54</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075694033876061" lon="-64.35145148076117">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-55</name>
+      <cmt>ACTIVE LOG 057-55</cmt>
+      <desc>ACTIVE LOG 057-55</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075643490999937" lon="-64.351545525714755">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-56</name>
+      <cmt>ACTIVE LOG 057-56</cmt>
+      <desc>ACTIVE LOG 057-56</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075555983930826" lon="-64.351811064407229">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-57</name>
+      <cmt>ACTIVE LOG 057-57</cmt>
+      <desc>ACTIVE LOG 057-57</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075432350859046" lon="-64.352012146264315">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-58</name>
+      <cmt>ACTIVE LOG 057-58</cmt>
+      <desc>ACTIVE LOG 057-58</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075348112732172" lon="-64.352260669693351">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-59</name>
+      <cmt>ACTIVE LOG 057-59</cmt>
+      <desc>ACTIVE LOG 057-59</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075328582897782" lon="-64.352349182590842">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-60</name>
+      <cmt>ACTIVE LOG 057-60</cmt>
+      <desc>ACTIVE LOG 057-60</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075262114405632" lon="-64.352613463997841">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-611</name>
+      <cmt>ACTIVE LOG 057-61</cmt>
+      <desc>ACTIVE LOG 057-61</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075251804664731" lon="-64.352916553616524">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-62</name>
+      <cmt>ACTIVE LOG 057-62</cmt>
+      <desc>ACTIVE LOG 057-62</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075239315629005" lon="-64.353002049028873">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-63</name>
+      <cmt>ACTIVE LOG 057-63</cmt>
+      <desc>ACTIVE LOG 057-63</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075162788853049" lon="-64.353227270767093">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-64</name>
+      <cmt>ACTIVE LOG 057-64</cmt>
+      <desc>ACTIVE LOG 057-64</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075029851868749" lon="-64.353375127539039">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-65</name>
+      <cmt>ACTIVE LOG 057-65</cmt>
+      <desc>ACTIVE LOG 057-65</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074960198253393" lon="-64.353456180542707">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-66</name>
+      <cmt>ACTIVE LOG 057-66</cmt>
+      <desc>ACTIVE LOG 057-66</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074950391426682" lon="-64.353459114208817">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-67</name>
+      <cmt>ACTIVE LOG 057-67</cmt>
+      <desc>ACTIVE LOG 057-67</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074931867420673" lon="-64.353444697335362">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-68</name>
+      <cmt>ACTIVE LOG 057-68</cmt>
+      <desc>ACTIVE LOG 057-68</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074929436668754" lon="-64.353453749790788">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-69</name>
+      <cmt>ACTIVE LOG 057-69</cmt>
+      <desc>ACTIVE LOG 057-69</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074881073087454" lon="-64.353608228266239">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-70</name>
+      <cmt>ACTIVE LOG 057-70</cmt>
+      <desc>ACTIVE LOG 057-70</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074833715334535" lon="-64.353810818865895">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-711</name>
+      <cmt>ACTIVE LOG 057-71</cmt>
+      <desc>ACTIVE LOG 057-71</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074819047003984" lon="-64.35399916023016">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-72</name>
+      <cmt>ACTIVE LOG 057-72</cmt>
+      <desc>ACTIVE LOG 057-72</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074801025912166" lon="-64.354049954563379">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-73</name>
+      <cmt>ACTIVE LOG 057-73</cmt>
+      <desc>ACTIVE LOG 057-73</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074750231578946" lon="-64.354149531573057">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-74</name>
+      <cmt>ACTIVE LOG 057-74</cmt>
+      <desc>ACTIVE LOG 057-74</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074702790006995" lon="-64.354258580133319">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-75</name>
+      <cmt>ACTIVE LOG 057-75</cmt>
+      <desc>ACTIVE LOG 057-75</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074705639854074" lon="-64.354328569024801">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-76</name>
+      <cmt>ACTIVE LOG 057-76</cmt>
+      <desc>ACTIVE LOG 057-76</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074639171361923" lon="-64.354646913707256">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-77</name>
+      <cmt>ACTIVE LOG 057-77</cmt>
+      <desc>ACTIVE LOG 057-77</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074545545503497" lon="-64.354835003614426">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-78</name>
+      <cmt>ACTIVE LOG 057-78</cmt>
+      <desc>ACTIVE LOG 057-78</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074501372873783" lon="-64.354889905080199">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-79</name>
+      <cmt>ACTIVE LOG 057-79</cmt>
+      <desc>ACTIVE LOG 057-79</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074455942958593" lon="-64.354948243126273">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-80</name>
+      <cmt>ACTIVE LOG 057-80</cmt>
+      <desc>ACTIVE LOG 057-80</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074392408132553" lon="-64.355175141245127">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-811</name>
+      <cmt>ACTIVE LOG 057-81</cmt>
+      <desc>ACTIVE LOG 057-81</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074362568557262" lon="-64.355457359924912">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-82</name>
+      <cmt>ACTIVE LOG 057-82</cmt>
+      <desc>ACTIVE LOG 057-82</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074358377605677" lon="-64.355834377929568">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-83</name>
+      <cmt>ACTIVE LOG 057-83</cmt>
+      <desc>ACTIVE LOG 057-83</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.07434044033289" lon="-64.355876035988331">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-84</name>
+      <cmt>ACTIVE LOG 057-84</cmt>
+      <desc>ACTIVE LOG 057-84</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074409088119864" lon="-64.355812249705195">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-85</name>
+      <cmt>ACTIVE LOG 057-85</cmt>
+      <desc>ACTIVE LOG 057-85</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074514700099826" lon="-64.355781739577651">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-86</name>
+      <cmt>ACTIVE LOG 057-86</cmt>
+      <desc>ACTIVE LOG 057-86</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074514867737889" lon="-64.355776961892843">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-87</name>
+      <cmt>ACTIVE LOG 057-87</cmt>
+      <desc>ACTIVE LOG 057-87</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074511766433716" lon="-64.355766149237752">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-88</name>
+      <cmt>ACTIVE LOG 057-88</cmt>
+      <desc>ACTIVE LOG 057-88</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074509670957923" lon="-64.355762545019388">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-89</name>
+      <cmt>ACTIVE LOG 057-89</cmt>
+      <desc>ACTIVE LOG 057-89</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074509754776955" lon="-64.355750726535916">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-90</name>
+      <cmt>ACTIVE LOG 057-90</cmt>
+      <desc>ACTIVE LOG 057-90</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074609331786633" lon="-64.355555009096861">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-911</name>
+      <cmt>ACTIVE LOG 057-91</cmt>
+      <desc>ACTIVE LOG 057-91</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074652750045061" lon="-64.355457024648786">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-92</name>
+      <cmt>ACTIVE LOG 057-92</cmt>
+      <desc>ACTIVE LOG 057-92</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074688540771604" lon="-64.355405475944281">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-93</name>
+      <cmt>ACTIVE LOG 057-93</cmt>
+      <desc>ACTIVE LOG 057-93</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.07475039921701" lon="-64.355253847315907">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-94</name>
+      <cmt>ACTIVE LOG 057-94</cmt>
+      <desc>ACTIVE LOG 057-94</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074902111664414" lon="-64.355207160115242">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-95</name>
+      <cmt>ACTIVE LOG 057-95</cmt>
+      <desc>ACTIVE LOG 057-95</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.074915355071425" lon="-64.355208417400718">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-96</name>
+      <cmt>ACTIVE LOG 057-96</cmt>
+      <desc>ACTIVE LOG 057-96</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075030019506812" lon="-64.355240017175674">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-97</name>
+      <cmt>ACTIVE LOG 057-97</cmt>
+      <desc>ACTIVE LOG 057-97</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075131189078093" lon="-64.355279412120581">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-98</name>
+      <cmt>ACTIVE LOG 057-98</cmt>
+      <desc>ACTIVE LOG 057-98</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075374180451035" lon="-64.355343198403716">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-99</name>
+      <cmt>ACTIVE LOG 057-99</cmt>
+      <desc>ACTIVE LOG 057-99</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="45.075396811589599" lon="-64.355357280001044">
+      <time>2014-06-11T09:46:28Z</time>
+      <name>ACTIVE LOG 057-100</name>
+      <cmt>ACTIVE LOG 057-100</cmt>
+      <desc>ACTIVE LOG 057-100</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

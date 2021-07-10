@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.14.1" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2010-08-21T20:02:10Z</time>
+    <bounds maxlat="49.2257306" maxlon="-55.3014500" minlat="49.2245808" minlon="-55.3044109"/>
+  </metadata>
+
+  <wpt lat="49.2256946" lon="-55.3043007">
+    <ele>15.2400000</ele>
+    <time>2010-08-21T20:00:32Z</time>
+    <name>WWIIguns</name>
+    <cmt>50 ft</cmt>
+    <desc>50 ft</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <trk>
+    <name>Track 002</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>White</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="49.2256049" lon="-55.3043891"/>
+      <trkpt lat="49.2252635" lon="-55.3037969"/>
+      <trkpt lat="49.2248503" lon="-55.3034349"/>
+      <trkpt lat="49.2248503" lon="-55.3034240"/>
+      <trkpt lat="49.2245808" lon="-55.3029963"/>
+      <trkpt lat="49.2246975" lon="-55.3022725"/>
+      <trkpt lat="49.2246886" lon="-55.3019326"/>
+      <trkpt lat="49.2246975" lon="-55.3019106"/>
+      <trkpt lat="49.2248952" lon="-55.3014500"/>
+      <trkpt lat="49.2246796" lon="-55.3019326"/>
+      <trkpt lat="49.2247065" lon="-55.3022725"/>
+      <trkpt lat="49.2245898" lon="-55.3030182"/>
+      <trkpt lat="49.2248592" lon="-55.3034349"/>
+      <trkpt lat="49.2252186" lon="-55.3037420"/>
+      <trkpt lat="49.2255419" lon="-55.3032595"/>
+      <trkpt lat="49.2255240" lon="-55.3026563"/>
+      <trkpt lat="49.2257306" lon="-55.3021080"/>
+      <trkpt lat="49.2255061" lon="-55.3026783"/>
+      <trkpt lat="49.2255600" lon="-55.3032814"/>
+      <trkpt lat="49.2252275" lon="-55.3037749"/>
+      <trkpt lat="49.2250839" lon="-55.3041149"/>
+      <trkpt lat="49.2252456" lon="-55.3037639"/>
+      <trkpt lat="49.2256139" lon="-55.3044109"/>
+    </trkseg>
+  </trk>
+
+</gpx>

@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtensions/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2014-02-04T04:49:23Z</time>
+    <bounds maxlat="54.00395798496902" maxlon="-106.89077096991241" minlat="53.993864161893725" minlon="-106.92138226702809" />
+  </metadata>
+
+  <rte>
+    <name>Little Red Willow Bush Path</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="53.993918895721436" lon="-106.92138226702809">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path</name>
+      <cmt>Little Red Willow Bush Path</cmt>
+      <desc>Little Red Willow Bush Path</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2014-01-25T16:47:53Z</trp:DepartureTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.994430024176836" lon="-106.91950513981283">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-1</name>
+      <cmt>Little Red Willow Bush Path-1</cmt>
+      <desc>Little Red Willow Bush Path-1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.994827745482326" lon="-106.91802430897951">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-2</name>
+      <cmt>Little Red Willow Bush Path-2</cmt>
+      <desc>Little Red Willow Bush Path-2</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.995194034650922" lon="-106.91753229126334">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-3</name>
+      <cmt>Little Red Willow Bush Path-3</cmt>
+      <desc>Little Red Willow Bush Path-3</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.995487317442894" lon="-106.91730287857354">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-4</name>
+      <cmt>Little Red Willow Bush Path-4</cmt>
+      <desc>Little Red Willow Bush Path-4</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.998980475589633" lon="-106.91467607393861">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-5</name>
+      <cmt>Little Red Willow Bush Path-5</cmt>
+      <desc>Little Red Willow Bush Path-5</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.99954080581665" lon="-106.91409428603947">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-6</name>
+      <cmt>Little Red Willow Bush Path-6</cmt>
+      <desc>Little Red Willow Bush Path-6</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.999967947602272" lon="-106.9132105819881">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-7</name>
+      <cmt>Little Red Willow Bush Path-7</cmt>
+      <desc>Little Red Willow Bush Path-7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.000092502683401" lon="-106.91269584931433">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-8</name>
+      <cmt>Little Red Willow Bush Path-8</cmt>
+      <desc>Little Red Willow Bush Path-8</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.000004073604941" lon="-106.91210157237947">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-9</name>
+      <cmt>Little Red Willow Bush Path-9</cmt>
+      <desc>Little Red Willow Bush Path-9</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.99973870255053" lon="-106.91030373796821">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-10</name>
+      <cmt>Little Red Willow Bush Path-10</cmt>
+      <desc>Little Red Willow Bush Path-10</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.999823862686753" lon="-106.90781640820205">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-11</name>
+      <cmt>Little Red Willow Bush Path-11</cmt>
+      <desc>Little Red Willow Bush Path-11</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.000818626955152" lon="-106.90493261441588">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-12</name>
+      <cmt>Little Red Willow Bush Path-12</cmt>
+      <desc>Little Red Willow Bush Path-12</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.000933710485697" lon="-106.90425745211542">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-13</name>
+      <cmt>Little Red Willow Bush Path-13</cmt>
+      <desc>Little Red Willow Bush Path-13</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.001551037654281" lon="-106.90217773430049">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-14</name>
+      <cmt>Little Red Willow Bush Path-14</cmt>
+      <desc>Little Red Willow Bush Path-14</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.001661678776145" lon="-106.89979777671397">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-15</name>
+      <cmt>Little Red Willow Bush Path-15</cmt>
+      <desc>Little Red Willow Bush Path-15</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.001999469473958" lon="-106.89870620146394">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-16</name>
+      <cmt>Little Red Willow Bush Path-16</cmt>
+      <desc>Little Red Willow Bush Path-16</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002731209620833" lon="-106.89567270688713">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-17</name>
+      <cmt>Little Red Willow Bush Path-17</cmt>
+      <desc>Little Red Willow Bush Path-17</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002819219604135" lon="-106.8951266258955">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-18</name>
+      <cmt>Little Red Willow Bush Path-18</cmt>
+      <desc>Little Red Willow Bush Path-18</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.00285467505455" lon="-106.89446001313627">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-19</name>
+      <cmt>Little Red Willow Bush Path-19</cmt>
+      <desc>Little Red Willow Bush Path-19</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002637499943376" lon="-106.8935295380652">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-20</name>
+      <cmt>Little Red Willow Bush Path-20</cmt>
+      <desc>Little Red Willow Bush Path-20</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002396939322352" lon="-106.89261540770531">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-21</name>
+      <cmt>Little Red Willow Bush Path-21</cmt>
+      <desc>Little Red Willow Bush Path-21</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002430634573102" lon="-106.89204736612737">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-22</name>
+      <cmt>Little Red Willow Bush Path-22</cmt>
+      <desc>Little Red Willow Bush Path-22</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002812262624502" lon="-106.8912963476032">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-23</name>
+      <cmt>Little Red Willow Bush Path-23</cmt>
+      <desc>Little Red Willow Bush Path-23</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.003224987536669" lon="-106.89094330184162">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-24</name>
+      <cmt>Little Red Willow Bush Path-24</cmt>
+      <desc>Little Red Willow Bush Path-24</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.003465631976724" lon="-106.8908475805074">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-25</name>
+      <cmt>Little Red Willow Bush Path-25</cmt>
+      <desc>Little Red Willow Bush Path-25</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.003678197041154" lon="-106.89077096991241">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-26</name>
+      <cmt>Little Red Willow Bush Path-26</cmt>
+      <desc>Little Red Willow Bush Path-26</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.00395798496902" lon="-106.89128201454878">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-32</name>
+      <cmt>Little Red Willow Bush Path-32</cmt>
+      <desc>Little Red Willow Bush Path-32</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002353772521019" lon="-106.8920389842242">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-33</name>
+      <cmt>Little Red Willow Bush Path-33</cmt>
+      <desc>Little Red Willow Bush Path-33</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002403561025858" lon="-106.89282084815204">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-34</name>
+      <cmt>Little Red Willow Bush Path-34</cmt>
+      <desc>Little Red Willow Bush Path-34</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002622747793794" lon="-106.89353825524449">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-35</name>
+      <cmt>Little Red Willow Bush Path-35</cmt>
+      <desc>Little Red Willow Bush Path-35</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002841264009476" lon="-106.89430184662342">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-36</name>
+      <cmt>Little Red Willow Bush Path-36</cmt>
+      <desc>Little Red Willow Bush Path-36</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.002230307087302" lon="-106.89774697646499">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-37</name>
+      <cmt>Little Red Willow Bush Path-37</cmt>
+      <desc>Little Red Willow Bush Path-37</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.001608369871974" lon="-106.89990883693099">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-38</name>
+      <cmt>Little Red Willow Bush Path-38</cmt>
+      <desc>Little Red Willow Bush Path-38</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.001608537510037" lon="-106.90146510489285">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-39</name>
+      <cmt>Little Red Willow Bush Path-39</cmt>
+      <desc>Little Red Willow Bush Path-39</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.001401085406542" lon="-106.90254863351583">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-40</name>
+      <cmt>Little Red Willow Bush Path-40</cmt>
+      <desc>Little Red Willow Bush Path-40</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.00052291341126" lon="-106.90588253550231">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-41</name>
+      <cmt>Little Red Willow Bush Path-41</cmt>
+      <desc>Little Red Willow Bush Path-41</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.999782623723149" lon="-106.90787457861006">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-42</name>
+      <cmt>Little Red Willow Bush Path-42</cmt>
+      <desc>Little Red Willow Bush Path-42</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.99971573613584" lon="-106.91040859557688">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-43</name>
+      <cmt>Little Red Willow Bush Path-43</cmt>
+      <desc>Little Red Willow Bush Path-43</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.000083282589912" lon="-106.91250097006559">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-44</name>
+      <cmt>Little Red Willow Bush Path-44</cmt>
+      <desc>Little Red Willow Bush Path-44</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="54.000008180737495" lon="-106.91317311488092">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-45</name>
+      <cmt>Little Red Willow Bush Path-45</cmt>
+      <desc>Little Red Willow Bush Path-45</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.999547343701124" lon="-106.91410266794264">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-46</name>
+      <cmt>Little Red Willow Bush Path-46</cmt>
+      <desc>Little Red Willow Bush Path-46</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.999092122539878" lon="-106.9145557936281">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-47</name>
+      <cmt>Little Red Willow Bush Path-47</cmt>
+      <desc>Little Red Willow Bush Path-47</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.996083689853549" lon="-106.9169298838824">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-48</name>
+      <cmt>Little Red Willow Bush Path-48</cmt>
+      <desc>Little Red Willow Bush Path-48</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.99510158225894" lon="-106.91763832233846">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-49</name>
+      <cmt>Little Red Willow Bush Path-49</cmt>
+      <desc>Little Red Willow Bush Path-49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.994845934212208" lon="-106.9179870095104">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-50</name>
+      <cmt>Little Red Willow Bush Path-50</cmt>
+      <desc>Little Red Willow Bush Path-50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.994640242308378" lon="-106.91864725202322">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-51</name>
+      <cmt>Little Red Willow Bush Path-51</cmt>
+      <desc>Little Red Willow Bush Path-51</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.993864161893725" lon="-106.92125041969121">
+      <time>2014-02-04T04:44:44Z</time>
+      <name>Little Red Willow Bush Path-52</name>
+      <cmt>Little Red Willow Bush Path-52</cmt>
+      <desc>Little Red Willow Bush Path-52</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:ArrivalTime>2014-01-25T21:39:25Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

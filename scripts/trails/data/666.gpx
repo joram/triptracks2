@@ -1,0 +1,36 @@
+Version 2:G7T
+#Thu May 29 21:14:35 2003 GMT
+#Sinnotts Radius=6371.0 km
+D Canada_Mean_(NAD27)
+M UTM
+Z 0.000000
+A Feet ->Altitude/Depth units for this file
+! -r cblack -r tt -r sn
+! -w coblack -w ctblue -w sovs -w stvs -w ane
+! -t cblack -t wt -t sn
+! -p ly -p fn -p cblack -p wt -p ablack -p sn
+W  2               10U  461795.0  5383135.7 Wed May 28 21:18:00 2003 28-MAY-03 21:18                                   ^   18^Black       ^S+N^0
+cA    2|||||
+cB    |||103
+cC    1e25|1e25|FF|00|00|00|00|00|00|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|12.738 S mi
+
+W  3               10U  461746.6  5382476.5 Wed May 28 21:18:00 2003 28-MAY-03 21:18                                   ^   18^Black       ^S+N^0
+cA    3|||||
+cB    |||103
+cC    1e25|1e25|FF|00|00|00|00|00|00|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|12.357 S mi
+
+W  4               10U  461774.4  5381732.1 Wed May 28 21:18:00 2003 28-MAY-03 21:18                                   ^   18^Black       ^S+N^0
+cA    4|||||
+cB    |||103
+cC    1e25|1e25|FF|00|00|00|00|00|00|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|11.913 S mi
+
+W  MILL            10U  461705.3  5381648.5 Wed May 28 21:20:00 2003 28-MAY-03 21:20                                   ^   18^Black       ^S+N^0
+cA    MILL|||||
+cB    |||103
+cC    1e25|1e25|FF|00|00|00|00|00|00|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|11.878 S mi
+
+W  STRT            10U  461722.0  5383567.4 Wed May 28 21:18:00 2003 28-MAY-03 21:18                                   ^   18^Black       ^S+N^0
+cA    STRT|||||
+cB    |||103
+cC    1e25|1e25|FF|00|00|00|00|00|00|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|FF|13.007 S mi
+

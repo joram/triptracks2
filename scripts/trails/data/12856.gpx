@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx
+xmlns="http://www.topografix.com/GPX/1/1"
+xmlns:gpxx = "http://www.garmin.com/xmlschemas/GpxExtensions/v3"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd
+http://www.garmin.com/xmlschemas/GpxExtensions/v3
+http://www8.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd"
+version="1.1"
+creator="gpx-poi.com">
+   <wpt lat="50.372401" lon="-114.814854">
+      <time>2017-09-05T20:26:29Z</time>
+      <name>Lake Carnarvon</name>
+      <extensions>
+         <gpxx:WaypointExtension>
+            <gpxx:Address>
+               <gpxx:StreetAddress>202, 10620 79 AVE NW</gpxx:StreetAddress>
+               <gpxx:City>EDMONTON</gpxx:City>
+               <gpxx:State>AB</gpxx:State>
+               <gpxx:Country>Canada</gpxx:Country>
+               <gpxx:PostalCode>T6E1S1</gpxx:PostalCode>
+            </gpxx:Address>
+            <gpxx:PhoneNumber Category="Phone">7807290692</gpxx:PhoneNumber>
+            <gpxx:PhoneNumber Category="Email">misskyrstyn@gmail.com</gpxx:PhoneNumber>
+         </gpxx:WaypointExtension>
+      </extensions>
+   </wpt>
+</gpx>

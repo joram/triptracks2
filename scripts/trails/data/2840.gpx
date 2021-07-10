@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx
+  version="1.0"
+  creator="GPSBabel - http://www.gpsbabel.org"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://www.topografix.com/GPX/1/0"
+  xsi:schemaLocation="http://www.topografix.com/GPX/1/0 http://www.topografix.com/GPX/1/0/gpx.xsd">
+<time>2009-05-22T04:12:40Z</time>
+<bounds minlat="53.258888759" minlon="-120.460557122" maxlat="53.321389317" maxlon="-120.223610487"/>
+<wpt lat="53.321389317" lon="-120.223610487">
+  <ele>724.000000</ele>
+  <time>2006-12-26T17:00:00Z</time>
+  <name>01YLWHEAD</name>
+  <cmt>YELLOWHEAD</cmt>
+  <desc>YELLOWHEAD</desc>
+  <sym>Car</sym>
+</wpt>
+<wpt lat="53.264166772" lon="-120.289999580">
+  <ele>884.000000</ele>
+  <time>2006-12-26T17:00:00Z</time>
+  <name>02FORK</name>
+  <cmt>FORK</cmt>
+  <desc>FORK</desc>
+  <sym>Waypoint</sym>
+</wpt>
+<wpt lat="53.258888759" lon="-120.406945201">
+  <ele>1291.000000</ele>
+  <time>2006-12-26T17:00:00Z</time>
+  <name>03TURN</name>
+  <cmt>TURN</cmt>
+  <desc>TURN</desc>
+  <sym>Waypoint</sym>
+</wpt>
+<wpt lat="53.296388907" lon="-120.460557122">
+  <ele>1726.000000</ele>
+  <time>2006-12-26T17:00:00Z</time>
+  <name>04HUT</name>
+  <cmt>OZALENKA HUT</cmt>
+  <desc>OZALENKA HUT</desc>
+  <sym>Building</sym>
+</wpt>
+<rte>
+  <name>OZALENKA</name>
+  <rtept lat="53.321389317" lon="-120.223610487">
+    <ele>724.000000</ele>
+    <time>2006-12-26T17:00:00Z</time>
+    <name>01YLWHEAD</name>
+    <cmt>YELLOWHEAD</cmt>
+    <desc>YELLOWHEAD</desc>
+    <sym>Car</sym>
+  </rtept>
+  <rtept lat="53.264166772" lon="-120.289999580">
+    <ele>884.000000</ele>
+    <time>2006-12-26T17:00:00Z</time>
+    <name>02FORK</name>
+    <cmt>FORK</cmt>
+    <desc>FORK</desc>
+    <sym>Waypoint</sym>
+  </rtept>
+  <rtept lat="53.258888759" lon="-120.406945201">
+    <ele>1291.000000</ele>
+    <time>2006-12-26T17:00:00Z</time>
+    <name>03TURN</name>
+    <cmt>TURN</cmt>
+    <desc>TURN</desc>
+    <sym>Waypoint</sym>
+  </rtept>
+  <rtept lat="53.296388907" lon="-120.460557122">
+    <ele>1726.000000</ele>
+    <time>2006-12-26T17:00:00Z</time>
+    <name>04HUT</name>
+    <cmt>OZALENKA HUT</cmt>
+    <desc>OZALENKA HUT</desc>
+    <sym>Building</sym>
+  </rtept>
+</rte>
+</gpx>

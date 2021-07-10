@@ -1,0 +1,1352 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1" creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2018-06-27T18:05:49Z</time>
+    <bounds maxlat="53.092727931216359" maxlon="-119.121045945212245" minlat="53.072255467996001" minlon="-119.184472728520632"/>
+  </metadata>
+
+  <rte>
+    <name>Mount Robson Patterson approach</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Yellow</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+      <trp:Trip>
+        <trp:TransportationMode>Mountaineering</trp:TransportationMode>
+      </trp:Trip>
+    </extensions>
+    <rtept lat="53.076000669971108" lon="-119.184472728520632">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 1</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076159004122019" lon="-119.18383645825088">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 2</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076670216396451" lon="-119.183112094178796">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 3</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076874064281583" lon="-119.181992523372173">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 4</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077767491340637" lon="-119.181453734636307">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 5</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077501952648163" lon="-119.181033885106444">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 6</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078181138262153" lon="-119.181337142363191">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 7</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078357661142945" lon="-119.181236810982227">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 8</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078172923997045" lon="-119.180858116596937">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 9</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078961074352264" lon="-119.18096574023366">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 10</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079033577814698" lon="-119.180262163281441">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 11</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078595288097858" lon="-119.179624300450087">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 12</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077635811641812" lon="-119.178708996623755">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 13</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076982693746686" lon="-119.177700821310282">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 14</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076737690716982" lon="-119.177250294014812">
+      <time>2018-06-27T17:59:16Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 15</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076414233073592" lon="-119.175989823415875">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 16</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.075723480433226" lon="-119.175471486523747">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 17</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.074476504698396" lon="-119.173781611025333">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 18</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.073137830942869" lon="-119.172469424083829">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 19</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.072665762156248" lon="-119.171702647581697">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 20</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.072491837665439" lon="-119.171130247414112">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 21</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.072255467996001" lon="-119.169496446847916">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 22</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.072360157966614" lon="-119.168389951810241">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 23</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.072700463235378" lon="-119.167268788442016">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 24</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.072835579514503" lon="-119.166216775774956">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 25</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.073928579688072" lon="-119.162951773032546">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 26</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.074442557990551" lon="-119.161091409623623">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 27</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.07465797290206" lon="-119.159751394763589">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 28</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.074824772775173" lon="-119.158209208399057">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 29</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.074705498293042" lon="-119.157502111047506">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 30</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.07361769489944" lon="-119.156586304306984">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 31</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.07357712648809" lon="-119.15600661188364">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 32</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.074163608253002" lon="-119.154205927625299">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 33</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.075835881754756" lon="-119.150191750377417">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 34</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.075955491513014" lon="-119.149588253349066">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 35</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076024726033211" lon="-119.147328156977892">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 36</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.075790703296661" lon="-119.146835803985596">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 37</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.075256021693349" lon="-119.146506814286113">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 38</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.075172454118729" lon="-119.14588613435626">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 39</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.075286950916052" lon="-119.145150706171989">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 40</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076425129547715" lon="-119.143045172095299">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 41</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076893677935004" lon="-119.141739271581173">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 42</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076813714578748" lon="-119.140254836529493">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 43</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077119821682572" lon="-119.138545515015721">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 44</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077114541083574" lon="-119.137302897870541">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 45</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076374335214496" lon="-119.136113254353404">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 46</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076264448463917" lon="-119.135456113144755">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 47</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076760740950704" lon="-119.135391321033239">
+      <time>2018-06-27T17:59:17Z</time>
+      <name>Patterson Spur - Kinney Lake to Headwall 48</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.076938772574067" lon="-119.135715365409851">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 1</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077152678743005" lon="-119.135809661820531">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 2</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077309001237154" lon="-119.134805677458644">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 3</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.07748518884182" lon="-119.134928975254297">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 4</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077400699257851" lon="-119.134486326947808">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 5</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077608905732632" lon="-119.134639715775847">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 6</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077475884929299" lon="-119.134089443832636">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 7</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077857261523604" lon="-119.134421367198229">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 8</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.077850975096226" lon="-119.133675964549184">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 9</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078065970912576" lon="-119.13363866508007">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 10</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078152975067496" lon="-119.133350746706128">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 11</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.07900139130652" lon="-119.133748300373554">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 12</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.078993847593665" lon="-119.133418388664722">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 13</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079284364357591" lon="-119.133482342585921">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 14</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.07919492945075" lon="-119.13310213945806">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 15</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079479830339551" lon="-119.133009938523173">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 16</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079156540334225" lon="-119.131858935579658">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 17</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079543365165591" lon="-119.131497424095869">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 18</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079233318567276" lon="-119.131130548194051">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 19</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079616455361247" lon="-119.130325382575393">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 20</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079698262736201" lon="-119.12789823487401">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 21</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.07923742569983" lon="-119.126961976289749">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 22</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079616706818342" lon="-119.12643919698894">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 23</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.080254234373569" lon="-119.126393599435687">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 24</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079368351027369" lon="-119.12449149414897">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 25</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079780237749219" lon="-119.124083882197738">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 26</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.079845616593957" lon="-119.123305538669229">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 27</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.080058181658387" lon="-119.123417269438505">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 28</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.080399744212627" lon="-119.12253599613905">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 29</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.080248199403286" lon="-119.121200758963823">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 30</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.080705851316452" lon="-119.121144684031606">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 31</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.08177831582725" lon="-119.123192047700286">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 32</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.082010997459292" lon="-119.125336892902851">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 33</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.082860838621855" lon="-119.125918680801988">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 34</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.083557626232505" lon="-119.127806453034282">
+      <time>2018-06-27T17:59:40Z</time>
+      <name>ROBSON PS LOWER HEADWALL 35</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.083617221564054" lon="-119.127844674512744">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 1</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.083643456920981" lon="-119.128434592857957">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 2</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.083795756101608" lon="-119.128633914515376">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 3</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.084433870390058" lon="-119.128777077421546">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 4</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.084945417940617" lon="-119.128120522946119">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 5</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.085266193374991" lon="-119.127169847488403">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 6</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.085406003519893" lon="-119.127059625461698">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 7</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.085975972935557" lon="-119.127633534371853">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 8</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.086367659270763" lon="-119.128852682188153">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 9</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.087064195424318" lon="-119.129633959382772">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 10</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.087535090744495" lon="-119.129585511982441">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 11</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.088093409314752" lon="-119.130317000672221">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 12</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.088797740638256" lon="-119.129918608814478">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 13</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.089057328179479" lon="-119.130460750311613">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 14</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.090067682787776" lon="-119.130642805248499">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 15</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.090245462954044" lon="-119.130497295409441">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 16</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.090419806540012" lon="-119.129881979897618">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 17</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.090116968378425" lon="-119.129605460911989">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 18</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.089999286457896" lon="-119.129306226968765">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 19</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.089920748025179" lon="-119.128512125462294">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 20</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.090040776878595" lon="-119.127648621797562">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 21</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.089770041406155" lon="-119.127281242981553">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 22</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.08975663036108" lon="-119.126380523666739">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 23</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.089295122772455" lon="-119.125097841024399">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 24</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.088610656559467" lon="-119.124364256858826">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 25</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.088575284928083" lon="-119.123675432056189">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 26</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.088114866986871" lon="-119.123382652178407">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 27</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.088527340441942" lon="-119.12299775518477">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 28</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.088868819177151" lon="-119.122032327577472">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 29</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.089429149404168" lon="-119.122069794684649">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 30</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.089869953691959" lon="-119.121747426688671">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 31</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.09034981764853" lon="-119.121924452483654">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 32</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.091310299932957" lon="-119.121102774515748">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 33</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.092151926830411" lon="-119.121045945212245">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 34</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.092279834672809" lon="-119.121435284614563">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 35</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="53.092727931216359" lon="-119.121678778901696">
+      <time>2018-06-27T17:59:50Z</time>
+      <name>ROBSON PS UPPER HEADWALL 36</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

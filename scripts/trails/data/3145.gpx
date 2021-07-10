@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.13.7" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2008-10-06T02:38:46Z</time>
+    <bounds maxlat="52.3143862" maxlon="-113.8019440" minlat="52.3056995" minlon="-113.8071013"/>
+  </metadata>
+
+  <wpt lat="52.3057118" lon="-113.8066850">
+    <ele>869.0000000</ele>
+    <time>2008-10-06T02:29:11Z</time>
+    <name>ParkEntrance</name>
+    <cmt>869 m</cmt>
+    <desc>869 m</desc>
+    <sym>Information</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <trk>
+    <name>Track 001</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>White</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="52.3056995" lon="-113.8067337"/>
+      <trkpt lat="52.3057354" lon="-113.8067043"/>
+      <trkpt lat="52.3086459" lon="-113.8051763"/>
+      <trkpt lat="52.3096161" lon="-113.8019440"/>
+      <trkpt lat="52.3116733" lon="-113.8020469"/>
+      <trkpt lat="52.3143862" lon="-113.8071013"/>
+    </trkseg>
+  </trk>
+
+</gpx>

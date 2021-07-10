@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtensions/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2016-07-20T20:29:30Z</time>
+    <bounds maxlat="49.360510027036071" maxlon="-123.10577999800444" minlat="49.347150027751923" minlon="-123.11435996554792" />
+  </metadata>
+
+  <wpt lat="49.347162768244743" lon="-123.1109728384763">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>1298 Eldon Rd, North Vancouver, BC V7R 1T7, Canada</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.359353659674525" lon="-123.10584093444049">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>5159 Nancy Greene Way, North Vancouver, BC V7R 4N2, Canada</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.359197337180376" lon="-123.10613622888923">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>5159 Nancy Greene Way, North Vancouver, BC V7R 4N2, Canada1</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.359196498990059" lon="-123.10613606125116">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>5159 Nancy Greene Way, North Vancouver, BC V7R 4N2, Canada2</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.352862713858485" lon="-123.11310787685215">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>Coho Loop, North Vancouver, BC V7R 4L2, Canada</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.352897834032774" lon="-123.11314743943512">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>Coho Loop, North Vancouver, BC V7R 4L2, Canada1</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.360251193866134" lon="-123.11233062297106">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>Palisades Trail, West Vancouver, BC V7S 1A5, Canada</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.360244404524565" lon="-123.11231344006956">
+    <ele>0</ele>
+    <time>2016-07-20T20:27:12Z</time>
+    <name>Palisades Trail, West Vancouver, BC V7S 1A5, Canada1</name>
+    <sym>Flag, Blue</sym>
+    <type>user</type>
+    <extensions>
+      <gpxx:WaypointExtension>
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+        <gpxx:Categories>
+          <gpxx:Category>7/14/2016 1:54:09 PM</gpxx:Category>
+        </gpxx:Categories>
+      </gpxx:WaypointExtension>
+      <wptx1:WaypointExtension>
+        <wptx1:DisplayMode>SymbolAndName</wptx1:DisplayMode>
+        <wptx1:Categories>
+          <wptx1:Category>7/14/2016 1:54:09 PM</wptx1:Category>
+        </wptx1:Categories>
+      </wptx1:WaypointExtension>
+      <ctx:CreationTimeExtension>
+        <ctx:CreationTime>2016-07-20T20:27:12Z</ctx:CreationTime>
+      </ctx:CreationTimeExtension>
+    </extensions>
+  </wpt>
+
+  <trk>
+    <name>Directions from 5159 Nancy Greene Way, North Vancouver, BC V7R 4N2, Canada to 5159 Nancy Greene Way, North Vancouver, BC V7R 4N2, Canada</name>
+    <extensions>
+      <gpxx:TrackExtension>
+        <gpxx:DisplayColor>DarkGray</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="49.35934997163713" lon="-123.10584001243114">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359170012176037" lon="-123.10613002628088">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359200019389391" lon="-123.10614000074565">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+  <trk>
+    <name>Directions from 5159 Nancy Greene Way, North Vancouver, BC V7R 4N2, Canada to Palisades Trail, West Vancouver, BC V7S 1A5, Canada</name>
+    <extensions>
+      <gpxx:TrackExtension>
+        <gpxx:DisplayColor>DarkGray</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="49.359200019389391" lon="-123.10614000074565">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359240001067519" lon="-123.10614000074565">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359270008280873" lon="-123.10613002628088">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359300015494227" lon="-123.10611996799707">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359699999913573" lon="-123.10577999800444">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359769988805056" lon="-123.10594000853598">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359790021553636" lon="-123.10597999021411">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35979999601841" lon="-123.10601997189224">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35979999601841" lon="-123.1060600373894">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35979999601841" lon="-123.10610001906753">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35979999601841" lon="-123.10614000074565">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35979999601841" lon="-123.10617998242378">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35979999601841" lon="-123.10621996410191">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359809970483184" lon="-123.10626002959907">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35982002876699" lon="-123.10629003681242">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360029995441437" lon="-123.10663998126984">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360039969906211" lon="-123.10669002123177">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360050028190017" lon="-123.10673997737467">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360039969906211" lon="-123.10679001733661">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360039969906211" lon="-123.10680996626616">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360020020976663" lon="-123.10682999901474">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35990996658802" lon="-123.10699000954628">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359899992123246" lon="-123.10700995847583">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359890017658472" lon="-123.10703996568918">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359879959374666" lon="-123.10705999843776">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359869984909892" lon="-123.10709998011589">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359879959374666" lon="-123.10712001286447">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359890017658472" lon="-123.1071599945426">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35990996658802" lon="-123.10722000896931">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35990996658802" lon="-123.10725999064744">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359920024871826" lon="-123.10731003060937">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35990996658802" lon="-123.10735998675227">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359899992123246" lon="-123.10741002671421">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359890017658472" lon="-123.10747004114091">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10752997174859">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359850035980344" lon="-123.10755997896194">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359699999913573" lon="-123.10775997117162">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359750039875507" lon="-123.1078299600631">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35977996326983" lon="-123.10788000002503">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35982002876699" lon="-123.10793003998697">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359850035980344" lon="-123.10798997059464">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359869984909892" lon="-123.10804001055658">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359899992123246" lon="-123.10810002498329">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359920024871826" lon="-123.10816003941">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359939973801374" lon="-123.10823002830148">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35995003208518" lon="-123.10830001719296">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359960006549954" lon="-123.10837998054922">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359960006549954" lon="-123.10843999497592">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359960006549954" lon="-123.10850998386741">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359969981014729" lon="-123.10857997275889">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359960006549954" lon="-123.10864996165037">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359960006549954" lon="-123.10872003436089">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35995003208518" lon="-123.10879999771714">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359939973801374" lon="-123.10886998660862">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359920024871826" lon="-123.10893000103533">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35990996658802" lon="-123.10899001546204">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359879959374666" lon="-123.10905002988875">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10909998603165">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359839977696538" lon="-123.10916000045836">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359830003231764" lon="-123.10918003320694">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359830003231764" lon="-123.10919000767171">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35982002876699" lon="-123.10919998213649">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35982002876699" lon="-123.10921004042029">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35982002876699" lon="-123.10922998934984">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35982002876699" lon="-123.10923996381462">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359830003231764" lon="-123.1092599965632">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359839977696538" lon="-123.10926997102797">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359850035980344" lon="-123.10928002931178">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359850035980344" lon="-123.10929997824132">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359850035980344" lon="-123.1093200109899">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10935999266803">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10939997434616">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10942998155951">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10945998877287">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10948002152145">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359860010445118" lon="-123.10948999598622">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359850035980344" lon="-123.1095100287348">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359839977696538" lon="-123.10955001041293">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359969981014729" lon="-123.10984999872744">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360080035403371" lon="-123.11008997261524">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360109958797693" lon="-123.11018996872008">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360210038721561" lon="-123.11049004085362">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360259994864464" lon="-123.11064996756613">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360290002077818" lon="-123.11080997809768">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.36033995822072" lon="-123.11099999584258">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360410030931234" lon="-123.11139000579715">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360429979860783" lon="-123.11149000190198">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360510027036071" lon="-123.11211001127958">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360280027613044" lon="-123.11231000348926">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.36025002039969" lon="-123.11233003623784">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+  <trk>
+    <name>Directions from Coho Loop, North Vancouver, BC V7R 4L2, Canada to 1298 Eldon Rd, North Vancouver, BC V7R 1T7, Canada</name>
+    <extensions>
+      <gpxx:TrackExtension>
+        <gpxx:DisplayColor>DarkGray</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="49.352900013327599" lon="-123.11315003782511">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353049965575337" lon="-123.11332002282143">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353279964998364" lon="-123.11338003724813">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353529997169971" lon="-123.1133299972862">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353739963844419" lon="-123.11339998617768">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353509964421391" lon="-123.11369000002742">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353149961680174" lon="-123.11388001777232">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.352559959515929" lon="-123.11369997449219">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.351520016789436" lon="-123.11319001950324">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.351320024579763" lon="-123.11306001618505">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.351269984617829" lon="-123.11306001618505">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.351090025156736" lon="-123.11313000507653">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.349859980866313" lon="-123.11376996338367">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.349039979279041" lon="-123.11421001330018">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348549973219633" lon="-123.11435996554792">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348539998754859" lon="-123.11434999108315">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348519966006279" lon="-123.11434001661837">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348509991541505" lon="-123.11431998386979">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348400020971894" lon="-123.11408000998199">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348389962688088" lon="-123.11407003551722">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348379988223314" lon="-123.11405997723341">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348029959946871" lon="-123.11424999497831">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348019985482097" lon="-123.11424999497831">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.348019985482097" lon="-123.11424002051353">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347989978268743" lon="-123.11418000608683">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347659982740879" lon="-123.11355999670923">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347290005534887" lon="-123.11263002455235">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347209958359599" lon="-123.1125199701637">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347180034965277" lon="-123.11240002512932">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347150027751923" lon="-123.11224998906255">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347150027751923" lon="-123.11130995862186">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.347160002216697" lon="-123.11096998862922">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+  <trk>
+    <name>Directions from Palisades Trail, West Vancouver, BC V7S 1A5, Canada to Coho Loop, North Vancouver, BC V7R 4L2, Canada</name>
+    <extensions>
+      <gpxx:TrackExtension>
+        <gpxx:DisplayColor>DarkGray</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="49.360239962115884" lon="-123.11231000348926">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.360020020976663" lon="-123.11234998516738">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359809970483184" lon="-123.11247998848557">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359560022130609" lon="-123.11257998459041">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359430018812418" lon="-123.11269003897905">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.359240001067519" lon="-123.11263999901712">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.358859965577722" lon="-123.11276002787054">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.358540028333664" lon="-123.11267998069525">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.358229981735349" lon="-123.11277997680008">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.357920018956065" lon="-123.11277997680008">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.357400005683303" lon="-123.11316001228988">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356949981302023" lon="-123.11326998285949">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356800029054284" lon="-123.11330996453762">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356220001354814" lon="-123.11333997175097">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355920013040304" lon="-123.11329999007285">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355590017512441" lon="-123.11319999396801">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35530997812748" lon="-123.11302003450692">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355209982022643" lon="-123.11276002787054">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355790009722114" lon="-123.11231000348926">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356080023571849" lon="-123.1120400223881">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356110030785203" lon="-123.11197003349662">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356240034103394" lon="-123.11156996525824">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356120005249977" lon="-123.11148002743721">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355750028043985" lon="-123.11126997694373">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355490021407604" lon="-123.11107995919883">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355290029197931" lon="-123.11103000305593">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355390025302768" lon="-123.11060001142323">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355390025302768" lon="-123.11059003695846">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355469988659024" lon="-123.11044997535646">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355709962546825" lon="-123.11040001921356">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355839965865016" lon="-123.11053002253175">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355929987505078" lon="-123.11049004085362">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355980027467012" lon="-123.11050001531839">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356020009145141" lon="-123.11047998256981">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356080023571849" lon="-123.11040999367833">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356110030785203" lon="-123.11036003753543">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356140037998557" lon="-123.11026004143059">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.356159986928105" lon="-123.1101300381124">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355850024148822" lon="-123.10991998761892">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355829991400242" lon="-123.10991998761892">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355820016935468" lon="-123.11001998372376">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355829991400242" lon="-123.11014998704195">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355839965865016" lon="-123.11026004143059">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355859998613596" lon="-123.11037998646498">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35586997307837" lon="-123.11040001921356">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355929987505078" lon="-123.11049004085362">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355839965865016" lon="-123.11053002253175">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355709962546825" lon="-123.11040001921356">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355469988659024" lon="-123.11044997535646">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355390025302768" lon="-123.11059003695846">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.355190033093095" lon="-123.11040001921356">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.354970008134842" lon="-123.11036003753543">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.354800023138523" lon="-123.11038996092975">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.354519983753562" lon="-123.1103700120002">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.3544299621135" lon="-123.11063001863658">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35415000654757" lon="-123.11053002253175">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.354050010442734" lon="-123.11076999641955">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353759996592999" lon="-123.11082003638148">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353550029918551" lon="-123.110979963094">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353409968316555" lon="-123.11139998026192">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353179968893528" lon="-123.11169996857643">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.353009983897209" lon="-123.11191001906991">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.352970002219081" lon="-123.11241997405887">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.352779984474182" lon="-123.1127099879086">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35283999890089" lon="-123.11307996511459">
+        <ele>0</ele>
+      </trkpt>
+      <trkpt lat="49.35286003164947" lon="-123.11310997232795">
+        <ele>0</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>

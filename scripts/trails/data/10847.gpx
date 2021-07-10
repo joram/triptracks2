@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.15.6" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2012-12-31T22:10:35Z</time>
+    <bounds maxlat="44.5589690" maxlon="-77.1082098" minlat="44.5571064" minlon="-77.1167500"/>
+  </metadata>
+
+  <wpt lat="44.5571064" lon="-77.1165492">
+    <time>2012-12-31T22:07:12Z</time>
+    <name>Mellon lake</name>
+    <sym>Parking Area</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolOnly</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <trk>
+    <name>Mellon lake</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayColor>Red</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="44.5573261" lon="-77.1167500"/>
+      <trkpt lat="44.5575042" lon="-77.1163322"/>
+      <trkpt lat="44.5576410" lon="-77.1153295"/>
+      <trkpt lat="44.5575315" lon="-77.1124548"/>
+      <trkpt lat="44.5584488" lon="-77.1102153"/>
+      <trkpt lat="44.5584488" lon="-77.1101987"/>
+      <trkpt lat="44.5586267" lon="-77.1098811"/>
+      <trkpt lat="44.5585993" lon="-77.1093797"/>
+      <trkpt lat="44.5588595" lon="-77.1088950"/>
+      <trkpt lat="44.5589690" lon="-77.1082098"/>
+    </trkseg>
+  </trk>
+
+</gpx>

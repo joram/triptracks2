@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1" creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2018-06-27T17:39:03Z</time>
+    <bounds maxlat="50.790779963135719" maxlon="-115.304569965228438" minlat="50.721850041300058" minlon="-115.373650006949902"/>
+  </metadata>
+
+  <rte>
+    <name>West Ridge  ascent of Mount Sir Douglas</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+      <trp:Trip>
+        <trp:TransportationMode>Mountaineering</trp:TransportationMode>
+      </trp:Trip>
+    </extensions>
+    <rtept lat="50.790779963135719" lon="-115.304569965228438">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 1</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.788699993863702" lon="-115.306820003315806">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 2</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.787610011175275" lon="-115.306889992207289">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 3</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.788579965010285" lon="-115.317569961771369">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 4</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.787180019542575" lon="-115.321339974179864">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 5</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.783730028197169" lon="-115.323980022221804">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 6</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.782710034400225" lon="-115.326979989185929">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 7</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.782989989966154" lon="-115.328949987888336">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 8</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.781890032812953" lon="-115.332190012559295">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 9</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.778109962120652" lon="-115.338039994239807">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 10</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.777569999918342" lon="-115.339749986305833">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 11</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.775999985635281" lon="-115.340999979525805">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 12</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.775319961830974" lon="-115.343489991500974">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 13</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.7731600292027" lon="-115.347459996119142">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 14</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.772449998185039" lon="-115.351009983569384">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 15</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.773409977555275" lon="-115.353760002180934">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 16</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.773190036416054" lon="-115.355630004778504">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 17</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.773690016940236" lon="-115.357600003480911">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 18</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.772419990971684" lon="-115.362610034644604">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 19</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.76821998693049" lon="-115.368070006370544">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 20</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.763380024582148" lon="-115.369770023971796">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 21</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.760520035400987" lon="-115.369700035080314">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 22</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.76115001924336" lon="-115.371570037677884">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 23</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.758320037275553" lon="-115.373650006949902">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 24</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.756320031359792" lon="-115.373450014740229">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 25</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.753270024433732" lon="-115.37109000608325">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 26</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.748359989374876" lon="-115.365809993818402">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 27</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.745729999616742" lon="-115.365630034357309">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 28</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.744470031931996" lon="-115.361489960923791">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 29</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.742990039288998" lon="-115.359470006078482">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 30</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.741560002788901" lon="-115.358120016753674">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 31</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.739339971914887" lon="-115.357879959046841">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 32</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.739099998027086" lon="-115.35688997246325">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 33</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.73728003539145" lon="-115.355420038104057">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 34</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.736979963257909" lon="-115.352410012856126">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 35</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.737720001488924" lon="-115.34936998039484">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 36</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.736600011587143" lon="-115.351330004632473">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 37</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.732560018077493" lon="-115.353179974481463">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 38</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.731979990378022" lon="-115.354689974337816">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 39</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.729069961234927" lon="-115.354919973760843">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 40</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.728469984605908" lon="-115.355829996988177">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 41</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.728019960224628" lon="-115.353130018338561">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 42</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.725059974938631" lon="-115.349109973758459">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 43</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.724399983882904" lon="-115.347450021654367">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 44</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.721939979121089" lon="-115.349899968132377">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 45</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.722239967435598" lon="-115.345440041273832">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 46</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.721850041300058" lon="-115.344579974189401">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 47</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.722489999607205" lon="-115.342950029298663">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 48</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.721939979121089" lon="-115.339970011264086">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 49</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint/>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.722369970753789" lon="-115.338890003040433">
+      <time>2018-06-27T17:38:14Z</time>
+      <name>West Ridge ascent of Mount Sir Douglas  - 10:06:00 50</name>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>ShorterDistance</trp:CalculationMode>
+          <trp:ElevationMode>Standard</trp:ElevationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

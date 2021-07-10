@@ -1,0 +1,778 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2012-09-28T22:08:44Z</time>
+    <bounds maxlat="49.313034005463123" maxlon="-122.82018299214542" minlat="49.301021983847022" minlon="-122.83017698675394" />
+  </metadata>
+
+  <rte>
+    <name>Heritage Mountain Tower Loop</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="49.301478965207934" lon="-122.82650001347065">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-14T23:52:12Z</trp:DepartureTime>
+          <trp:StopDuration>PT1M52S</trp:StopDuration>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.301021983847022" lon="-122.82643103040755">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM1</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-14T23:52:27Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-14T23:52:27Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.301047967746854" lon="-122.82489001750946">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM2</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-14T23:53:54Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-14T23:53:54Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.301089961081743" lon="-122.82458500005305">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM3</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-14T23:54:09Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-14T23:54:09Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.30116699077189" lon="-122.82270804047585">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM4</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-14T23:55:45Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-14T23:55:45Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.307747036218643" lon="-122.82266998663545">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM5</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:09:37Z</trp:DepartureTime>
+          <trp:StopDuration>PT3M18S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:06:19Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.309700019657612" lon="-122.82018299214542">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM6</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:13:43Z</trp:DepartureTime>
+          <trp:StopDuration>PT1M48S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:11:55Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.309962959960103" lon="-122.82160900533199">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM7</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:13:53Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:13:53Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.310509040951729" lon="-122.82241802662611">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM8</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:16:19Z</trp:DepartureTime>
+          <trp:StopDuration>PT1M18S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:15:01Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.31092101149261" lon="-122.82363901846111">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM9</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:16:44Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:16:44Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.311165008693933" lon="-122.8239590395242">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM10</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:17:17Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:17:17Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.31163003668189" lon="-122.82460796646774">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM11</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:18:12Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:18:12Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.31180203333497" lon="-122.82496604137123">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM12</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:18:36Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:18:36Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312321040779352" lon="-122.8254390321672">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM13</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:19:29Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:19:29Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312622034922242" lon="-122.82621796242893">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM14</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:20:19Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:20:19Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312465963885188" lon="-122.82669103704393">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM15</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:20:54Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:20:54Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312031026929617" lon="-122.82806399278343">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM16</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:22:27Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:22:27Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312064973637462" lon="-122.82834596000612">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM17</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:23:56Z</trp:DepartureTime>
+          <trp:StopDuration>PT1M9S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:22:47Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312695041298866" lon="-122.8280789963901">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM18</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:24:20Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:24:20Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313034005463123" lon="-122.82882699742913">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM19</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:25:19Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:25:19Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312996035441756" lon="-122.82985696569085">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM20</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:26:23Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:26:23Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312713984400034" lon="-122.82987196929753">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM21</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:27:22Z</trp:DepartureTime>
+          <trp:StopDuration>PT33S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:26:49Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312308970838785" lon="-122.83017698675394">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM22</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:32:44Z</trp:DepartureTime>
+          <trp:StopDuration>PT5M4S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:27:40Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.310630997642875" lon="-122.82985696569085">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM23</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:37:26Z</trp:DepartureTime>
+          <trp:StopDuration>PT4M27S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:32:59Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.309830022975802" lon="-122.82844503410161">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM24</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:43:12Z</trp:DepartureTime>
+          <trp:StopDuration>PT5M30S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:37:42Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.308060016483068" lon="-122.82833900302649">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM25</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:43:35Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:43:35Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.308033026754856" lon="-122.82841502688825">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM26</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:43:39Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:43:39Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.307624995708466" lon="-122.82859004102647">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM27</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:44:20Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:44:20Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.307563975453377" lon="-122.82861300744116">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM28</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:44:25Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:44:25Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.306969027966261" lon="-122.82834596000612">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM29</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:45:11Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:45:11Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.306037966161966" lon="-122.82772100530565">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM30</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:46:21Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:46:21Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.305709982290864" lon="-122.82780499197543">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM31</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:46:50Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:46:50Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.304955024272203" lon="-122.82794999890029">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM32</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:47:59Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:47:59Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.303833022713661" lon="-122.8279270324856">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM33</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:49:41Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:49:41Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.303486011922359" lon="-122.82762100920081">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM34</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:50:11Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:50:11Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.303390961140394" lon="-122.82726301811635">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM35</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:50:28Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:50:28Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.303233968093991" lon="-122.82667502760887">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM36</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:51:04Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:51:04Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.302916964516044" lon="-122.82585100270808">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM37</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:51:53Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:51:53Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.302817974239588" lon="-122.82581303268671">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM38</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:52:04Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:52:04Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.30265000090003" lon="-122.82585896551609">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM39</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:52:18Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:52:18Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.302006019279361" lon="-122.82495103776455">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM40</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:53:31Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:53:31Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.301861012354493" lon="-122.82489001750946">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM41</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:53:45Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:53:45Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.301799992099404" lon="-122.8251800313592">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM42</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:54:03Z</trp:DepartureTime>
+          <trp:ArrivalTime>2012-08-15T00:54:03Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.301514001563191" lon="-122.82579802908003">
+      <time>2012-09-28T22:06:03Z</time>
+      <name>14-AUG-12 05:56:41 PM43</name>
+      <cmt>14-AUG-12 05:56:41 PM</cmt>
+      <desc>14-AUG-12 05:56:41 PM</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:DepartureTime>2012-08-15T00:56:41Z</trp:DepartureTime>
+          <trp:StopDuration>PT1M51S</trp:StopDuration>
+          <trp:ArrivalTime>2012-08-15T00:54:50Z</trp:ArrivalTime>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

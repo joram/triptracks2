@@ -1,0 +1,1831 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2015-04-04T21:09:34Z</time>
+    <bounds maxlat="49.341078428551555" maxlon="-122.74428552947938" minlat="49.31199255399406" minlon="-122.75471278466284" />
+  </metadata>
+
+  <rte>
+    <name>Sawblade Falls</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="49.31199255399406" lon="-122.74938457645476">
+      <ele>281.8828125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track</name>
+      <cmt>Track</cmt>
+      <desc>Track</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312371164560318" lon="-122.74970040656626">
+      <ele>282.703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-1</name>
+      <cmt>Track-1</cmt>
+      <desc>Track-1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312580041587353" lon="-122.74936957284808">
+      <ele>287.265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-2</name>
+      <cmt>Track-2</cmt>
+      <desc>Track-2</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312736950814724" lon="-122.74937175214291">
+      <ele>288.65625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-3</name>
+      <cmt>Track-3</cmt>
+      <desc>Track-3</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313773708418012" lon="-122.74902675300837">
+      <ele>301.0703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-4</name>
+      <cmt>Track-4</cmt>
+      <desc>Track-4</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.314346527680755" lon="-122.74774482473731">
+      <ele>318.4140625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-5</name>
+      <cmt>Track-5</cmt>
+      <desc>Track-5</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.314667973667383" lon="-122.7476610057056">
+      <ele>322.44140625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-6</name>
+      <cmt>Track-6</cmt>
+      <desc>Track-6</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.314839132130146" lon="-122.74721399880946">
+      <ele>328.5234375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-7</name>
+      <cmt>Track-7</cmt>
+      <desc>Track-7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.315127301961184" lon="-122.74644361808896">
+      <ele>339.15625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-8</name>
+      <cmt>Track-8</cmt>
+      <desc>Track-8</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.315769104287028" lon="-122.74545648135245">
+      <ele>356.3359375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-9</name>
+      <cmt>Track-9</cmt>
+      <desc>Track-9</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.315767595544457" lon="-122.74480168707669">
+      <ele>363.09375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-10</name>
+      <cmt>Track-10</cmt>
+      <desc>Track-10</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.315961301326752" lon="-122.74451728910208">
+      <ele>368.390625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-11</name>
+      <cmt>Track-11</cmt>
+      <desc>Track-11</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.31621384806931" lon="-122.74452910758555">
+      <ele>371.3203125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-12</name>
+      <cmt>Track-12</cmt>
+      <desc>Track-12</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.317905735224485" lon="-122.7452774439007">
+      <ele>383.02734375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-13</name>
+      <cmt>Track-13</cmt>
+      <desc>Track-13</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.318097848445177" lon="-122.74556477554142">
+      <ele>381.85546875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-14</name>
+      <cmt>Track-14</cmt>
+      <desc>Track-14</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.318127688020468" lon="-122.74563778191805">
+      <ele>381.32421875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-15</name>
+      <cmt>Track-15</cmt>
+      <desc>Track-15</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.31921155191958" lon="-122.74680227972567">
+      <ele>379.01953125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-16</name>
+      <cmt>Track-16</cmt>
+      <desc>Track-16</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.320053346455097" lon="-122.74716462939978">
+      <ele>383.2109375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-17</name>
+      <cmt>Track-17</cmt>
+      <desc>Track-17</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.320400021970272" lon="-122.74717678315938">
+      <ele>386.65625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-18</name>
+      <cmt>Track-18</cmt>
+      <desc>Track-18</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.322897410020232" lon="-122.74777919054031">
+      <ele>403.578125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-19</name>
+      <cmt>Track-19</cmt>
+      <desc>Track-19</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.323386494070292" lon="-122.74819158017635">
+      <ele>402.1640625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-20</name>
+      <cmt>Track-20</cmt>
+      <desc>Track-20</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.323665779083967" lon="-122.74826047942042">
+      <ele>403.81640625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-21</name>
+      <cmt>Track-21</cmt>
+      <desc>Track-21</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.324745200574398" lon="-122.74912616237998">
+      <ele>400.26953125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-22</name>
+      <cmt>Track-22</cmt>
+      <desc>Track-22</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.326296774670482" lon="-122.75064253248274">
+      <ele>388.37109375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-23</name>
+      <cmt>Track-23</cmt>
+      <desc>Track-23</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.326777476817369" lon="-122.75160511024296">
+      <ele>375.4375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-28</name>
+      <cmt>Track-28</cmt>
+      <desc>Track-28</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.327768301591277" lon="-122.75183561258018">
+      <ele>375.25</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-29</name>
+      <cmt>Track-29</cmt>
+      <desc>Track-29</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.328615376725793" lon="-122.75232100859284">
+      <ele>367.03125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-30</name>
+      <cmt>Track-30</cmt>
+      <desc>Track-30</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.328659968450665" lon="-122.75241170078516">
+      <ele>365.40625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-31</name>
+      <cmt>Track-31</cmt>
+      <desc>Track-31</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.329689852893353" lon="-122.75168716907501">
+      <ele>379.4609375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-32</name>
+      <cmt>Track-32</cmt>
+      <desc>Track-32</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.330129064619541" lon="-122.75198564864695">
+      <ele>374.2265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-33</name>
+      <cmt>Track-33</cmt>
+      <desc>Track-33</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.330588560551405" lon="-122.75210886262357">
+      <ele>372.22265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-34</name>
+      <cmt>Track-34</cmt>
+      <desc>Track-34</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.330667434260249" lon="-122.75207013823092">
+      <ele>373.01171875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-35</name>
+      <cmt>Track-35</cmt>
+      <desc>Track-35</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.330873796716332" lon="-122.75204859673977">
+      <ele>373.55859375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-36</name>
+      <cmt>Track-36</cmt>
+      <desc>Track-36</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.332305090501904" lon="-122.75166043080389">
+      <ele>382.08984375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-37</name>
+      <cmt>Track-37</cmt>
+      <desc>Track-37</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.332639444619417" lon="-122.75162422098219">
+      <ele>383.06640625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-38</name>
+      <cmt>Track-38</cmt>
+      <desc>Track-38</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.332775734364986" lon="-122.75161969475448">
+      <ele>383.265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-39</name>
+      <cmt>Track-39</cmt>
+      <desc>Track-39</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.33363881893456" lon="-122.75084260851145">
+      <ele>399.41796875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-40</name>
+      <cmt>Track-40</cmt>
+      <desc>Track-40</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.334020027890801" lon="-122.75068880058825">
+      <ele>402.90625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-41</name>
+      <cmt>Track-41</cmt>
+      <desc>Track-41</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.33419487439096" lon="-122.7503080945462">
+      <ele>410.7265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-42</name>
+      <cmt>Track-42</cmt>
+      <desc>Track-42</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.334141481667757" lon="-122.75018990971148">
+      <ele>413.02734375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-43</name>
+      <cmt>Track-43</cmt>
+      <desc>Track-43</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.334174254909158" lon="-122.74975765496492">
+      <ele>421.734375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-44</name>
+      <cmt>Track-44</cmt>
+      <desc>Track-44</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.334553619846702" lon="-122.74950033053756">
+      <ele>427.45703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-45</name>
+      <cmt>Track-45</cmt>
+      <desc>Track-45</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.334743553772569" lon="-122.74941626004875">
+      <ele>429.4453125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-46</name>
+      <cmt>Track-46</cmt>
+      <desc>Track-46</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.335338417440653" lon="-122.75018722750247">
+      <ele>414.62890625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-47</name>
+      <cmt>Track-47</cmt>
+      <desc>Track-47</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.335918948054314" lon="-122.75000140070915">
+      <ele>419.203125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-48</name>
+      <cmt>Track-48</cmt>
+      <desc>Track-48</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.336101170629263" lon="-122.75028822943568">
+      <ele>413.52734375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-49</name>
+      <cmt>Track-49</cmt>
+      <desc>Track-49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.336922848597169" lon="-122.75051152333617">
+      <ele>409.87890625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-50</name>
+      <cmt>Track-50</cmt>
+      <desc>Track-50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.337877044454217" lon="-122.75129447691143">
+      <ele>394.39453125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-51</name>
+      <cmt>Track-51</cmt>
+      <desc>Track-51</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.338116180151701" lon="-122.75133202783763">
+      <ele>393.8125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-52</name>
+      <cmt>Track-52</cmt>
+      <desc>Track-52</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.33827250264585" lon="-122.7507256809622">
+      <ele>406.90625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-53</name>
+      <cmt>Track-53</cmt>
+      <desc>Track-53</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.338699141517282" lon="-122.75038378313184">
+      <ele>414.734375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-54</name>
+      <cmt>Track-54</cmt>
+      <desc>Track-54</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.339014384895563" lon="-122.74989754892886">
+      <ele>425.625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-55</name>
+      <cmt>Track-55</cmt>
+      <desc>Track-55</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.339299034327269" lon="-122.7486121840775">
+      <ele>453.8984375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-56</name>
+      <cmt>Track-56</cmt>
+      <desc>Track-56</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.339960785582662" lon="-122.74829886853695">
+      <ele>461.94921875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-57</name>
+      <cmt>Track-57</cmt>
+      <desc>Track-57</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340336127206683" lon="-122.74902247823775">
+      <ele>446.72265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-58</name>
+      <cmt>Track-58</cmt>
+      <desc>Track-58</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.34020696207881" lon="-122.74780299514532">
+      <ele>473.3203125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-59</name>
+      <cmt>Track-59</cmt>
+      <desc>Track-59</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340417180210352" lon="-122.74774465709925">
+      <ele>475.0390625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-60</name>
+      <cmt>Track-60</cmt>
+      <desc>Track-60</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340518265962601" lon="-122.74739454500377">
+      <ele>482.9765625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-61</name>
+      <cmt>Track-61</cmt>
+      <desc>Track-61</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340928224846721" lon="-122.74742907844484">
+      <ele>483.11328125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-62</name>
+      <cmt>Track-62</cmt>
+      <desc>Track-62</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340933840721846" lon="-122.74688970297575">
+      <ele>495.109375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-63</name>
+      <cmt>Track-63</cmt>
+      <desc>Track-63</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.341078428551555" lon="-122.74684192612767">
+      <ele>496.51171875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-87</name>
+      <cmt>Track-87</cmt>
+      <desc>Track-87</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340908024460077" lon="-122.74717963300645">
+      <ele>488.609375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-88</name>
+      <cmt>Track-88</cmt>
+      <desc>Track-88</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.3406374566257" lon="-122.74728583171964">
+      <ele>485.64453125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-89</name>
+      <cmt>Track-89</cmt>
+      <desc>Track-89</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340365044772625" lon="-122.74762747809291">
+      <ele>477.51171875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-90</name>
+      <cmt>Track-90</cmt>
+      <desc>Track-90</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340234706178308" lon="-122.74799267761409">
+      <ele>469.20703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-91</name>
+      <cmt>Track-91</cmt>
+      <desc>Track-91</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.340089950710535" lon="-122.7482186537236">
+      <ele>463.95703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-92</name>
+      <cmt>Track-92</cmt>
+      <desc>Track-92</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.339168611913919" lon="-122.74871863424778">
+      <ele>451.36328125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-93</name>
+      <cmt>Track-93</cmt>
+      <desc>Track-93</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.339482514187694" lon="-122.74917771108449">
+      <ele>441.9296875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-94</name>
+      <cmt>Track-94</cmt>
+      <desc>Track-94</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.339466169476509" lon="-122.74905910715461">
+      <ele>444.484375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-95</name>
+      <cmt>Track-95</cmt>
+      <desc>Track-95</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.339139945805073" lon="-122.74926513433456">
+      <ele>439.48046875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-96</name>
+      <cmt>Track-96</cmt>
+      <desc>Track-96</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.33909585699439" lon="-122.7494859136641">
+      <ele>434.63671875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-97</name>
+      <cmt>Track-97</cmt>
+      <desc>Track-97</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.338930314406753" lon="-122.75003626942635">
+      <ele>422.515625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-98</name>
+      <cmt>Track-98</cmt>
+      <desc>Track-98</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.338293457403779" lon="-122.75080648250878">
+      <ele>405.203125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-99</name>
+      <cmt>Track-99</cmt>
+      <desc>Track-99</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.338171668350697" lon="-122.75123412720859">
+      <ele>395.95703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-100</name>
+      <cmt>Track-100</cmt>
+      <desc>Track-100</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.337080428376794" lon="-122.75035310536623">
+      <ele>413.39453125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-101</name>
+      <cmt>Track-101</cmt>
+      <desc>Track-101</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.336251625791192" lon="-122.75015261024237">
+      <ele>416.5234375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-102</name>
+      <cmt>Track-102</cmt>
+      <desc>Track-102</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.335894053801894" lon="-122.74986192584038">
+      <ele>422.04296875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-103</name>
+      <cmt>Track-103</cmt>
+      <desc>Track-103</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.335178574547172" lon="-122.75074286386371">
+      <ele>403.10546875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-104</name>
+      <cmt>Track-104</cmt>
+      <desc>Track-104</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.335010182112455" lon="-122.75091628544033">
+      <ele>399.39453125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-105</name>
+      <cmt>Track-105</cmt>
+      <desc>Track-105</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.33493860065937" lon="-122.75098107755184">
+      <ele>398.0078125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-106</name>
+      <cmt>Track-106</cmt>
+      <desc>Track-106</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.334902055561543" lon="-122.75289198383689">
+      <ele>359.23828125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-107</name>
+      <cmt>Track-107</cmt>
+      <desc>Track-107</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.334171740338206" lon="-122.75332172401249">
+      <ele>350.3203125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-108</name>
+      <cmt>Track-108</cmt>
+      <desc>Track-108</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.333658516407013" lon="-122.75320982560515">
+      <ele>352.40234375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-109</name>
+      <cmt>Track-109</cmt>
+      <desc>Track-109</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.333170354366302" lon="-122.75330001488328">
+      <ele>350.47265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-110</name>
+      <cmt>Track-110</cmt>
+      <desc>Track-110</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.333203211426735" lon="-122.75379102677107">
+      <ele>340.79296875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-111</name>
+      <cmt>Track-111</cmt>
+      <desc>Track-111</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.332775566726923" lon="-122.75415178388357">
+      <ele>333.67578125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-112</name>
+      <cmt>Track-112</cmt>
+      <desc>Track-112</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.332767520099878" lon="-122.75434733368456">
+      <ele>329.84375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-113</name>
+      <cmt>Track-113</cmt>
+      <desc>Track-113</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.332320680841804" lon="-122.75416016578674">
+      <ele>333.5078125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-114</name>
+      <cmt>Track-114</cmt>
+      <desc>Track-114</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.332120688632131" lon="-122.75411096401513">
+      <ele>334.46484375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-115</name>
+      <cmt>Track-115</cmt>
+      <desc>Track-115</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.331729002296925" lon="-122.75374341756105">
+      <ele>341.52734375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-116</name>
+      <cmt>Track-116</cmt>
+      <desc>Track-116</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.331739228218794" lon="-122.75363193824887">
+      <ele>343.67578125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-117</name>
+      <cmt>Track-117</cmt>
+      <desc>Track-117</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.330595098435879" lon="-122.75384073145688">
+      <ele>339.53125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-118</name>
+      <cmt>Track-118</cmt>
+      <desc>Track-118</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.329891353845596" lon="-122.75319683365524">
+      <ele>351.46484375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-119</name>
+      <cmt>Track-119</cmt>
+      <desc>Track-119</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.329386344179511" lon="-122.75357494130731">
+      <ele>344.30859375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-120</name>
+      <cmt>Track-120</cmt>
+      <desc>Track-120</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.329194398596883" lon="-122.75416377000511">
+      <ele>333.421875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-121</name>
+      <cmt>Track-121</cmt>
+      <desc>Track-121</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.328800700604916" lon="-122.75442721322179">
+      <ele>328.59765625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-122</name>
+      <cmt>Track-122</cmt>
+      <desc>Track-122</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.328672206029296" lon="-122.75452301837504">
+      <ele>326.859375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-123</name>
+      <cmt>Track-123</cmt>
+      <desc>Track-123</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.328411361202598" lon="-122.75471278466284">
+      <ele>323.44140625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-124</name>
+      <cmt>Track-124</cmt>
+      <desc>Track-124</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.327298160642385" lon="-122.75363218970597">
+      <ele>342.8828125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-125</name>
+      <cmt>Track-125</cmt>
+      <desc>Track-125</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.326507244259119" lon="-122.75117863900959">
+      <ele>380.796875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-126</name>
+      <cmt>Track-126</cmt>
+      <desc>Track-126</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.325973149389029" lon="-122.75055469013751">
+      <ele>387.22265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-127</name>
+      <cmt>Track-127</cmt>
+      <desc>Track-127</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.323620265349746" lon="-122.74823189713061">
+      <ele>403.81640625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-128</name>
+      <cmt>Track-128</cmt>
+      <desc>Track-128</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.322905205190182" lon="-122.74764315225184">
+      <ele>405.69140625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-129</name>
+      <cmt>Track-129</cmt>
+      <desc>Track-129</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.322348143905401" lon="-122.74779276922345">
+      <ele>397.890625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-130</name>
+      <cmt>Track-130</cmt>
+      <desc>Track-130</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.321211725473404" lon="-122.74767047725618">
+      <ele>388.234375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-131</name>
+      <cmt>Track-131</cmt>
+      <desc>Track-131</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.320509992539883" lon="-122.74725808762014">
+      <ele>386.70703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-132</name>
+      <cmt>Track-132</cmt>
+      <desc>Track-132</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.319077106192708" lon="-122.74688165634871">
+      <ele>376.59765625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-133</name>
+      <cmt>Track-133</cmt>
+      <desc>Track-133</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.318312760442495" lon="-122.74622644297779">
+      <ele>376.375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-134</name>
+      <cmt>Track-134</cmt>
+      <desc>Track-134</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.317972958087921" lon="-122.74560425430536">
+      <ele>379.95703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-135</name>
+      <cmt>Track-135</cmt>
+      <desc>Track-135</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.317471468821168" lon="-122.74530141614377">
+      <ele>377.703125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-136</name>
+      <cmt>Track-136</cmt>
+      <desc>Track-136</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.317080620676279" lon="-122.74504560045898">
+      <ele>376.03515625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-137</name>
+      <cmt>Track-137</cmt>
+      <desc>Track-137</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.316767556592822" lon="-122.74492758326232">
+      <ele>373.64453125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-138</name>
+      <cmt>Track-138</cmt>
+      <desc>Track-138</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.316711649298668" lon="-122.74478835985065">
+      <ele>374.5078125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-139</name>
+      <cmt>Track-139</cmt>
+      <desc>Track-139</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.316445607692003" lon="-122.74483135901392">
+      <ele>370.8671875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-140</name>
+      <cmt>Track-140</cmt>
+      <desc>Track-140</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.316251901909709" lon="-122.74474955163896">
+      <ele>369.4296875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-141</name>
+      <cmt>Track-141</cmt>
+      <desc>Track-141</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.315510606393218" lon="-122.74463907815516">
+      <ele>361.6875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-142</name>
+      <cmt>Track-142</cmt>
+      <desc>Track-142</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.315324695780873" lon="-122.74464662186801">
+      <ele>359.3671875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-143</name>
+      <cmt>Track-143</cmt>
+      <desc>Track-143</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.315231740474701" lon="-122.74455500766635">
+      <ele>359.16796875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-144</name>
+      <cmt>Track-144</cmt>
+      <desc>Track-144</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313045321032405" lon="-122.74438225664198">
+      <ele>334.2109375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-145</name>
+      <cmt>Track-145</cmt>
+      <desc>Track-145</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312929902225733" lon="-122.74428552947938">
+      <ele>333.625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-148</name>
+      <cmt>Track-148</cmt>
+      <desc>Track-148</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.31332997046411" lon="-122.74463622830808">
+      <ele>335.4609375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-149</name>
+      <cmt>Track-149</cmt>
+      <desc>Track-149</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313461817800999" lon="-122.74504023604095">
+      <ele>333.47265625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-150</name>
+      <cmt>Track-150</cmt>
+      <desc>Track-150</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313582433387637" lon="-122.74524961598217">
+      <ele>333.02734375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-151</name>
+      <cmt>Track-151</cmt>
+      <desc>Track-151</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313881248235703" lon="-122.74720938876271">
+      <ele>318.63671875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-152</name>
+      <cmt>Track-152</cmt>
+      <desc>Track-152</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313594670966268" lon="-122.74834756739438">
+      <ele>305.4921875</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-153</name>
+      <cmt>Track-153</cmt>
+      <desc>Track-153</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.313505906611681" lon="-122.7486431133002">
+      <ele>302.015625</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-154</name>
+      <cmt>Track-154</cmt>
+      <desc>Track-154</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312325902283192" lon="-122.74995890446007">
+      <ele>280.2109375</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-155</name>
+      <cmt>Track-155</cmt>
+      <desc>Track-155</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312305534258485" lon="-122.74976796470582">
+      <ele>281.58203125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-156</name>
+      <cmt>Track-156</cmt>
+      <desc>Track-156</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.312232695519924" lon="-122.74984683841467">
+      <ele>280.3125</ele>
+      <time>2015-04-04T20:55:09Z</time>
+      <name>Track-157</name>
+      <cmt>Track-157</cmt>
+      <desc>Track-157</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

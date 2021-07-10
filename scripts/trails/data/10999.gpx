@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.16.3" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2013-05-27T07:39:11Z</time>
+    <bounds maxlat="50.296666687354445" maxlon="-117.67888887785375" minlat="50.268611116334796" minlon="-117.76444447226822"/>
+  </metadata>
+
+  <wpt lat="50.26944444514811" lon="-117.7591666392982">
+    <ele>760</ele>
+    <time>2013-05-27T07:29:24Z</time>
+    <name>1 K Trail Begins</name>
+    <cmt>760 m height</cmt>
+    <desc>760 m height</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.276666628196836" lon="-117.73861111141741">
+    <ele>800</ele>
+    <time>2013-05-27T07:30:18Z</time>
+    <name>2 K Bluffs viewpoint</name>
+    <cmt>800 m height</cmt>
+    <desc>800 m height</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.286944434046745" lon="-117.71944446489215">
+    <ele>960</ele>
+    <time>2013-05-27T07:31:43Z</time>
+    <name>3 K Halfway rest stop</name>
+    <cmt>960 m height</cmt>
+    <desc>960 m height</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.293888924643397" lon="-117.68638892099261">
+    <ele>560</ele>
+    <time>2013-05-27T07:32:23Z</time>
+    <name>4 K View of Hotsprings</name>
+    <cmt>560 m height</cmt>
+    <desc>560 m height</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.296666687354445" lon="-117.67888887785375">
+    <time>2013-05-27T07:33:07Z</time>
+    <name>5 K Trail junction</name>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="50.268611116334796" lon="-117.76444447226822">
+    <ele>1890</ele>
+    <time>2013-05-27T07:28:14Z</time>
+    <name>Kuskanax Parking</name>
+    <cmt>1890 m height</cmt>
+    <desc>1890 m height</desc>
+    <sym>Parking Area</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <trk>
+    <name>Track</name>
+    <trkseg>
+      <trkpt lat="50.268741957843304" lon="-117.7644248586148"/>
+      <trkpt lat="50.269307903945446" lon="-117.75912732817233"/>
+      <trkpt lat="50.276162037625909" lon="-117.73907261900604"/>
+      <trkpt lat="50.286600440740585" lon="-117.71977471187711"/>
+      <trkpt lat="50.293391710147262" lon="-117.68704388290644"/>
+      <trkpt lat="50.296158576384187" lon="-117.67938148230314"/>
+    </trkseg>
+  </trk>
+
+</gpx>

@@ -1,0 +1,2097 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2017-06-18T05:27:05Z</time>
+    <bounds maxlat="50.150333661586046" maxlon="-125.25685521773994" minlat="50.139120519161224" minlon="-125.27605623006821" />
+  </metadata>
+
+  <rte>
+    <name>Chinese Mountains and Beech's Mountain</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="50.141334179788828" lon="-125.25853235274553">
+      <ele>112.84375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain</name>
+      <cmt>Chinese Mountains and Beech's Mountain</cmt>
+      <desc>Chinese Mountains and Beech's Mountain</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.141588822007179" lon="-125.25863201357424">
+      <ele>114.91015625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-1</name>
+      <cmt>Chinese Mountains and Beech's Mountain-1</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142098441720009" lon="-125.25794947519898">
+      <ele>114.7421875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-2</name>
+      <cmt>Chinese Mountains and Beech's Mountain-2</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-2</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142564978450537" lon="-125.25780421681702">
+      <ele>116.8125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-3</name>
+      <cmt>Chinese Mountains and Beech's Mountain-3</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-3</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142973344773054" lon="-125.25685521773994">
+      <ele>114.2578125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-4</name>
+      <cmt>Chinese Mountains and Beech's Mountain-4</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-4</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143181467428803" lon="-125.25689419358969">
+      <ele>115.640625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-5</name>
+      <cmt>Chinese Mountains and Beech's Mountain-5</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-5</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143245840445161" lon="-125.25787278078496">
+      <ele>121.25390625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-6</name>
+      <cmt>Chinese Mountains and Beech's Mountain-6</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-6</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143818072974682" lon="-125.25972124189138">
+      <ele>135</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-7</name>
+      <cmt>Chinese Mountains and Beech's Mountain-7</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144095262512565" lon="-125.26076638139784">
+      <ele>142.79296875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-8</name>
+      <cmt>Chinese Mountains and Beech's Mountain-8</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-8</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144591387361288" lon="-125.26176935993135">
+      <ele>152.18359375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-9</name>
+      <cmt>Chinese Mountains and Beech's Mountain-9</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-9</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145111065357924" lon="-125.26232382282615">
+      <ele>159.41796875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-10</name>
+      <cmt>Chinese Mountains and Beech's Mountain-10</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-10</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145805086940527" lon="-125.26240663602948">
+      <ele>165.25390625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-11</name>
+      <cmt>Chinese Mountains and Beech's Mountain-11</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-11</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146172717213631" lon="-125.26268600486219">
+      <ele>169.8828125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-12</name>
+      <cmt>Chinese Mountains and Beech's Mountain-12</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-12</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146174058318138" lon="-125.26289806701243">
+      <ele>171.26171875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-13</name>
+      <cmt>Chinese Mountains and Beech's Mountain-13</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-13</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146469017490745" lon="-125.26262397877872">
+      <ele>171.78125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-14</name>
+      <cmt>Chinese Mountains and Beech's Mountain-14</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-14</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146826673299074" lon="-125.26242725551128">
+      <ele>173.24609375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-15</name>
+      <cmt>Chinese Mountains and Beech's Mountain-15</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-15</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146678816527128" lon="-125.26206423528492">
+      <ele>169.6953125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-16</name>
+      <cmt>Chinese Mountains and Beech's Mountain-16</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-16</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146109433844686" lon="-125.2620499022305">
+      <ele>165.30078125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-17</name>
+      <cmt>Chinese Mountains and Beech's Mountain-17</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-17</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145912542939186" lon="-125.2611677069217">
+      <ele>158.20703125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-18</name>
+      <cmt>Chinese Mountains and Beech's Mountain-18</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-18</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145461764186621" lon="-125.26093586347997">
+      <ele>153.515625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-19</name>
+      <cmt>Chinese Mountains and Beech's Mountain-19</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-19</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14538012444973" lon="-125.260891020298">
+      <ele>152.65234375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-20</name>
+      <cmt>Chinese Mountains and Beech's Mountain-20</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-20</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145141491666436" lon="-125.26073411107063">
+      <ele>150</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-21</name>
+      <cmt>Chinese Mountains and Beech's Mountain-21</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-21</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145887397229671" lon="-125.26115915738046">
+      <ele>157.96875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-22</name>
+      <cmt>Chinese Mountains and Beech's Mountain-22</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-22</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.1462122797966" lon="-125.26206163689494">
+      <ele>166.15234375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-23</name>
+      <cmt>Chinese Mountains and Beech's Mountain-23</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-23</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146815441548824" lon="-125.26217496022582">
+      <ele>171.46875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-24</name>
+      <cmt>Chinese Mountains and Beech's Mountain-24</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-24</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146846370771527" lon="-125.26250839233398">
+      <ele>173.94140625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-25</name>
+      <cmt>Chinese Mountains and Beech's Mountain-25</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-25</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146654928103089" lon="-125.26263009756804">
+      <ele>173.26953125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-26</name>
+      <cmt>Chinese Mountains and Beech's Mountain-26</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-26</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146018993109465" lon="-125.2625628747046">
+      <ele>167.89453125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-27</name>
+      <cmt>Chinese Mountains and Beech's Mountain-27</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-27</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145093882456422" lon="-125.2623001858592">
+      <ele>159.140625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-28</name>
+      <cmt>Chinese Mountains and Beech's Mountain-28</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-28</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144861033186316" lon="-125.26204026304185">
+      <ele>155.80859375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-29</name>
+      <cmt>Chinese Mountains and Beech's Mountain-29</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-29</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144468592479825" lon="-125.26151991449296">
+      <ele>149.8203125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-30</name>
+      <cmt>Chinese Mountains and Beech's Mountain-30</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-30</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144455851987004" lon="-125.26145369745791">
+      <ele>149.33984375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-31</name>
+      <cmt>Chinese Mountains and Beech's Mountain-31</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-31</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144339259713888" lon="-125.26189299300313">
+      <ele>151.01953125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-32</name>
+      <cmt>Chinese Mountains and Beech's Mountain-32</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-32</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14467210508883" lon="-125.26288758963346">
+      <ele>159.37890625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-33</name>
+      <cmt>Chinese Mountains and Beech's Mountain-33</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-33</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144351413473487" lon="-125.26339368894696">
+      <ele>159.78125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-34</name>
+      <cmt>Chinese Mountains and Beech's Mountain-34</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-34</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144489547237754" lon="-125.26358161121607">
+      <ele>161.98828125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-35</name>
+      <cmt>Chinese Mountains and Beech's Mountain-35</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-35</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143875908106565" lon="-125.26337306946516">
+      <ele>155.8359375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-36</name>
+      <cmt>Chinese Mountains and Beech's Mountain-36</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-36</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144036086276174" lon="-125.26392845436931">
+      <ele>160.265625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-37</name>
+      <cmt>Chinese Mountains and Beech's Mountain-37</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-37</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144165167585015" lon="-125.26391135528684">
+      <ele>161.234375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-38</name>
+      <cmt>Chinese Mountains and Beech's Mountain-38</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-38</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14421571046114" lon="-125.2642326336354">
+      <ele>163.4921875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-39</name>
+      <cmt>Chinese Mountains and Beech's Mountain-39</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-39</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143758645281196" lon="-125.2643433585763">
+      <ele>160.28125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-40</name>
+      <cmt>Chinese Mountains and Beech's Mountain-40</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-40</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143293868750334" lon="-125.26406398974359">
+      <ele>154.87109375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-41</name>
+      <cmt>Chinese Mountains and Beech's Mountain-41</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-41</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142872175201774" lon="-125.26404253207147">
+      <ele>151.2578125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-42</name>
+      <cmt>Chinese Mountains and Beech's Mountain-42</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-42</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142622981220484" lon="-125.26400959119201">
+      <ele>149.01953125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-43</name>
+      <cmt>Chinese Mountains and Beech's Mountain-43</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-43</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142201203852892" lon="-125.26361061260104">
+      <ele>143.5390625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-44</name>
+      <cmt>Chinese Mountains and Beech's Mountain-44</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-44</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142372949048877" lon="-125.26370516046882">
+      <ele>145.4140625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-45</name>
+      <cmt>Chinese Mountains and Beech's Mountain-45</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-45</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142485769465566" lon="-125.26388553902507">
+      <ele>147.25390625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-46</name>
+      <cmt>Chinese Mountains and Beech's Mountain-46</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-46</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142801934853196" lon="-125.26497426442802">
+      <ele>155.51953125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-47</name>
+      <cmt>Chinese Mountains and Beech's Mountain-47</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-47</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.1430728379637" lon="-125.26576417498291">
+      <ele>162.05078125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-48</name>
+      <cmt>Chinese Mountains and Beech's Mountain-48</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-48</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143887139856815" lon="-125.26589409448206">
+      <ele>170.05078125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-49</name>
+      <cmt>Chinese Mountains and Beech's Mountain-49</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144027369096875" lon="-125.26712346822023">
+      <ele>178.265625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-50</name>
+      <cmt>Chinese Mountains and Beech's Mountain-50</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144368428736925" lon="-125.26650823652744">
+      <ele>177.92578125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-51</name>
+      <cmt>Chinese Mountains and Beech's Mountain-51</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-51</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144571270793676" lon="-125.26663388125598">
+      <ele>180.53125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-52</name>
+      <cmt>Chinese Mountains and Beech's Mountain-52</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-52</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14463790692389" lon="-125.26662248186767">
+      <ele>181.08203125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-53</name>
+      <cmt>Chinese Mountains and Beech's Mountain-53</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-53</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144758187234402" lon="-125.26661292649806">
+      <ele>182.140625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-54</name>
+      <cmt>Chinese Mountains and Beech's Mountain-54</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-54</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144932195544243" lon="-125.26682197116315">
+      <ele>185</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-55</name>
+      <cmt>Chinese Mountains and Beech's Mountain-55</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-55</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144800012931228" lon="-125.26727995835245">
+      <ele>186.48828125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-56</name>
+      <cmt>Chinese Mountains and Beech's Mountain-56</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-56</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144867654889822" lon="-125.26735665276647">
+      <ele>187.58984375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-57</name>
+      <cmt>Chinese Mountains and Beech's Mountain-57</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-57</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145224221050739" lon="-125.2676035836339">
+      <ele>192.4921875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-58</name>
+      <cmt>Chinese Mountains and Beech's Mountain-58</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-58</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145670138299465" lon="-125.26794925332069">
+      <ele>198.94921875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-59</name>
+      <cmt>Chinese Mountains and Beech's Mountain-59</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-59</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145875662565231" lon="-125.26815159246325">
+      <ele>202.23046875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-60</name>
+      <cmt>Chinese Mountains and Beech's Mountain-60</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-60</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145805338397622" lon="-125.2684582863003">
+      <ele>203.4765625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-61</name>
+      <cmt>Chinese Mountains and Beech's Mountain-61</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-61</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145813468843699" lon="-125.26932246051729">
+      <ele>209.01953125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-62</name>
+      <cmt>Chinese Mountains and Beech's Mountain-62</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-62</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146501790732145" lon="-125.26950594037771">
+      <ele>217.2890625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-63</name>
+      <cmt>Chinese Mountains and Beech's Mountain-63</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-63</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146858440712094" lon="-125.27010641992092">
+      <ele>224.99609375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-64</name>
+      <cmt>Chinese Mountains and Beech's Mountain-64</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-64</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146702034398913" lon="-125.27081611566246">
+      <ele>228.06640625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-65</name>
+      <cmt>Chinese Mountains and Beech's Mountain-65</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-65</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146563816815615" lon="-125.27105273678899">
+      <ele>228.1328125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-66</name>
+      <cmt>Chinese Mountains and Beech's Mountain-66</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-66</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146496510133147" lon="-125.27092482894659">
+      <ele>226.55859375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-67</name>
+      <cmt>Chinese Mountains and Beech's Mountain-67</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-67</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146740507334471" lon="-125.27171750552952">
+      <ele>234.48828125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-68</name>
+      <cmt>Chinese Mountains and Beech's Mountain-68</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-68</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146833546459675" lon="-125.27193727903068">
+      <ele>236.99609375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-69</name>
+      <cmt>Chinese Mountains and Beech's Mountain-69</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-69</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.147599149495363" lon="-125.27237079106271">
+      <ele>248.62109375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-70</name>
+      <cmt>Chinese Mountains and Beech's Mountain-70</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-70</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14806317165494" lon="-125.27319582179189">
+      <ele>259.80859375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-71</name>
+      <cmt>Chinese Mountains and Beech's Mountain-71</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-71</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148633811622858" lon="-125.27331593446434">
+      <ele>267.3671875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-72</name>
+      <cmt>Chinese Mountains and Beech's Mountain-72</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-72</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148966321721673" lon="-125.2739879116416">
+      <ele>276.3046875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-73</name>
+      <cmt>Chinese Mountains and Beech's Mountain-73</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-73</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149237811565399" lon="-125.27393694967031">
+      <ele>279.171875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-74</name>
+      <cmt>Chinese Mountains and Beech's Mountain-74</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-74</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149506283923984" lon="-125.27393208816648">
+      <ele>282.34765625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-75</name>
+      <cmt>Chinese Mountains and Beech's Mountain-75</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-75</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149529334157705" lon="-125.27392529882491">
+      <ele>282.5703125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-76</name>
+      <cmt>Chinese Mountains and Beech's Mountain-76</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-76</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149407126009464" lon="-125.27384290471673">
+      <ele>280.48046875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-77</name>
+      <cmt>Chinese Mountains and Beech's Mountain-77</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-77</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149288102984428" lon="-125.27405722998083">
+      <ele>280.6875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-78</name>
+      <cmt>Chinese Mountains and Beech's Mountain-78</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-78</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149327078834176" lon="-125.27430801652372">
+      <ele>283.06640625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-79</name>
+      <cmt>Chinese Mountains and Beech's Mountain-79</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-79</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14919045381248" lon="-125.27484940364957">
+      <ele>285.51171875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-80</name>
+      <cmt>Chinese Mountains and Beech's Mountain-80</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-80</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14897596091032" lon="-125.27504595927894">
+      <ele>284.34765625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-81</name>
+      <cmt>Chinese Mountains and Beech's Mountain-81</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-81</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148982666432858" lon="-125.27575020678341">
+      <ele>289.7109375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-82</name>
+      <cmt>Chinese Mountains and Beech's Mountain-82</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-82</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149411233142018" lon="-125.27593351900578">
+      <ele>296.53515625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-83</name>
+      <cmt>Chinese Mountains and Beech's Mountain-83</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-83</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149766961112618" lon="-125.27563445270061">
+      <ele>298.7265625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-84</name>
+      <cmt>Chinese Mountains and Beech's Mountain-84</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-84</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.150035601109266" lon="-125.27605623006821">
+      <ele>305.43359375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-85</name>
+      <cmt>Chinese Mountains and Beech's Mountain-85</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-85</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.150333661586046" lon="-125.2760237082839">
+      <ele>308.9765625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-86</name>
+      <cmt>Chinese Mountains and Beech's Mountain-86</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-86</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149717004969716" lon="-125.27562933973968">
+      <ele>298.0546875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-87</name>
+      <cmt>Chinese Mountains and Beech's Mountain-87</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-87</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149501170963049" lon="-125.27586394920945">
+      <ele>297.140625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-88</name>
+      <cmt>Chinese Mountains and Beech's Mountain-88</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-88</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149144604802132" lon="-125.27589512988925">
+      <ele>292.85546875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-89</name>
+      <cmt>Chinese Mountains and Beech's Mountain-89</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-89</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148984175175428" lon="-125.2757821418345">
+      <ele>289.96484375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-90</name>
+      <cmt>Chinese Mountains and Beech's Mountain-90</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-90</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148976715281606" lon="-125.27506071142852">
+      <ele>284.46484375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-91</name>
+      <cmt>Chinese Mountains and Beech's Mountain-91</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-91</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149249881505966" lon="-125.27474664151669">
+      <ele>285.46484375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-92</name>
+      <cmt>Chinese Mountains and Beech's Mountain-92</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-92</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149308471009135" lon="-125.27463792823255">
+      <ele>285.35546875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-93</name>
+      <cmt>Chinese Mountains and Beech's Mountain-93</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-93</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.149244517087936" lon="-125.2739514503628">
+      <ele>279.36328125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-94</name>
+      <cmt>Chinese Mountains and Beech's Mountain-94</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-94</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148938409984112" lon="-125.2739844750613">
+      <ele>275.94140625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-95</name>
+      <cmt>Chinese Mountains and Beech's Mountain-95</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-95</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148532642051578" lon="-125.27335138991475">
+      <ele>266.4375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-96</name>
+      <cmt>Chinese Mountains and Beech's Mountain-96</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-96</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148387970402837" lon="-125.27343453839421">
+      <ele>265.33984375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-97</name>
+      <cmt>Chinese Mountains and Beech's Mountain-97</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-97</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.148051604628563" lon="-125.27309792116284">
+      <ele>258.97265625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-98</name>
+      <cmt>Chinese Mountains and Beech's Mountain-98</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-98</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.147956470027566" lon="-125.27268469333649">
+      <ele>254.921875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-99</name>
+      <cmt>Chinese Mountains and Beech's Mountain-99</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-99</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.147612057626247" lon="-125.27246567420661">
+      <ele>249.4296875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-100</name>
+      <cmt>Chinese Mountains and Beech's Mountain-100</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-100</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.147175863385201" lon="-125.27212008833885">
+      <ele>242.08984375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-101</name>
+      <cmt>Chinese Mountains and Beech's Mountain-101</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-101</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146632213145494" lon="-125.2716532163322">
+      <ele>232.85546875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-102</name>
+      <cmt>Chinese Mountains and Beech's Mountain-102</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-102</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146573875099421" lon="-125.27111836709082">
+      <ele>228.67578125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-103</name>
+      <cmt>Chinese Mountains and Beech's Mountain-103</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-103</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146638499572873" lon="-125.27101216837764">
+      <ele>228.67578125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-104</name>
+      <cmt>Chinese Mountains and Beech's Mountain-104</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-104</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146860117092729" lon="-125.27017381042242">
+      <ele>225.46484375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-105</name>
+      <cmt>Chinese Mountains and Beech's Mountain-105</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-105</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.146606396883726" lon="-125.26974876411259">
+      <ele>219.97265625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-106</name>
+      <cmt>Chinese Mountains and Beech's Mountain-106</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-106</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145776504650712" lon="-125.26916848495603">
+      <ele>207.671875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-107</name>
+      <cmt>Chinese Mountains and Beech's Mountain-107</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-107</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145777175202966" lon="-125.26853908784688">
+      <ele>203.7109375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-108</name>
+      <cmt>Chinese Mountains and Beech's Mountain-108</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-108</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145907262340188" lon="-125.26842132210732">
+      <ele>204.2578125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-109</name>
+      <cmt>Chinese Mountains and Beech's Mountain-109</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-109</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145911956205964" lon="-125.2681408636272">
+      <ele>202.51953125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-110</name>
+      <cmt>Chinese Mountains and Beech's Mountain-110</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-110</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.145211145281792" lon="-125.26757977902889">
+      <ele>192.21875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-111</name>
+      <cmt>Chinese Mountains and Beech's Mountain-111</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-111</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144837563857436" lon="-125.26718934997916">
+      <ele>186.3046875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-112</name>
+      <cmt>Chinese Mountains and Beech's Mountain-112</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-112</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144827924668789" lon="-125.26675323955715">
+      <ele>183.6171875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-113</name>
+      <cmt>Chinese Mountains and Beech's Mountain-113</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-113</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144686019048095" lon="-125.26657587848604">
+      <ele>181.25</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-114</name>
+      <cmt>Chinese Mountains and Beech's Mountain-114</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-114</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144251082092524" lon="-125.26665098033845">
+      <ele>177.6640625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-115</name>
+      <cmt>Chinese Mountains and Beech's Mountain-115</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-115</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.144031727686524" lon="-125.26707904413342">
+      <ele>178.0546875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-116</name>
+      <cmt>Chinese Mountains and Beech's Mountain-116</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-116</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143693098798394" lon="-125.26730275712907">
+      <ele>176.1015625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-117</name>
+      <cmt>Chinese Mountains and Beech's Mountain-117</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-117</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143248355016112" lon="-125.26744223199785">
+      <ele>172.625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-118</name>
+      <cmt>Chinese Mountains and Beech's Mountain-118</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-118</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143176522105932" lon="-125.26763845235109">
+      <ele>172.984375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-119</name>
+      <cmt>Chinese Mountains and Beech's Mountain-119</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-119</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143858306109905" lon="-125.26871552690864">
+      <ele>185.57421875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-120</name>
+      <cmt>Chinese Mountains and Beech's Mountain-120</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-120</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143558653071523" lon="-125.26894778944552">
+      <ele>183.83984375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-121</name>
+      <cmt>Chinese Mountains and Beech's Mountain-121</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-121</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.143490424379706" lon="-125.2689316123724">
+      <ele>183.0625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-122</name>
+      <cmt>Chinese Mountains and Beech's Mountain-122</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-122</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.142425503581762" lon="-125.26890152134001">
+      <ele>172.140625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-123</name>
+      <cmt>Chinese Mountains and Beech's Mountain-123</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-123</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.141983861103654" lon="-125.26877570897341">
+      <ele>167.06640625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-124</name>
+      <cmt>Chinese Mountains and Beech's Mountain-124</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-124</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.141857294365764" lon="-125.26933595538139">
+      <ele>168.51171875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-125</name>
+      <cmt>Chinese Mountains and Beech's Mountain-125</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-125</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.141570884734392" lon="-125.26860924437642">
+      <ele>162.12890625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-126</name>
+      <cmt>Chinese Mountains and Beech's Mountain-126</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-126</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.141178360208869" lon="-125.26822225190699">
+      <ele>156.421875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-127</name>
+      <cmt>Chinese Mountains and Beech's Mountain-127</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-127</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140600930899382" lon="-125.26811144314706">
+      <ele>150.25</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-128</name>
+      <cmt>Chinese Mountains and Beech's Mountain-128</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-128</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140795726329088" lon="-125.26819501072168">
+      <ele>152.53515625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-129</name>
+      <cmt>Chinese Mountains and Beech's Mountain-129</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-129</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140905445441604" lon="-125.26816383004189">
+      <ele>153.4765625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-130</name>
+      <cmt>Chinese Mountains and Beech's Mountain-130</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-130</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14093654230237" lon="-125.26801337487996">
+      <ele>153.1015625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-131</name>
+      <cmt>Chinese Mountains and Beech's Mountain-131</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-131</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140776950865984" lon="-125.26776879094541">
+      <ele>150.453125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-132</name>
+      <cmt>Chinese Mountains and Beech's Mountain-132</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-132</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140653569251299" lon="-125.26758371852338">
+      <ele>148.4453125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-133</name>
+      <cmt>Chinese Mountains and Beech's Mountain-133</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-133</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140001541003585" lon="-125.26579828932881">
+      <ele>134.75</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-134</name>
+      <cmt>Chinese Mountains and Beech's Mountain-134</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-134</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139544811099768" lon="-125.26485498994589">
+      <ele>126.8984375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-135</name>
+      <cmt>Chinese Mountains and Beech's Mountain-135</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-135</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139543218538165" lon="-125.26499672792852">
+      <ele>127.453125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-136</name>
+      <cmt>Chinese Mountains and Beech's Mountain-136</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-136</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139120519161224" lon="-125.26415141299367">
+      <ele>120.5546875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-137</name>
+      <cmt>Chinese Mountains and Beech's Mountain-137</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-137</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139298802241683" lon="-125.26418577879667">
+      <ele>122.17578125</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-138</name>
+      <cmt>Chinese Mountains and Beech's Mountain-138</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-138</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139320343732834" lon="-125.26379149407148">
+      <ele>120.81640625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-139</name>
+      <cmt>Chinese Mountains and Beech's Mountain-139</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-139</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139433164149523" lon="-125.2628839854151">
+      <ele>118.15234375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-140</name>
+      <cmt>Chinese Mountains and Beech's Mountain-140</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-140</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139540117233992" lon="-125.26272129267454">
+      <ele>118.34765625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-141</name>
+      <cmt>Chinese Mountains and Beech's Mountain-141</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-141</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.139735918492079" lon="-125.26104424148798">
+      <ele>113.0625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-142</name>
+      <cmt>Chinese Mountains and Beech's Mountain-142</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-142</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140156941488385" lon="-125.260457592085">
+      <ele>113.609375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-143</name>
+      <cmt>Chinese Mountains and Beech's Mountain-143</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-143</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140231875702739" lon="-125.26024745777249">
+      <ele>113.2421875</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-144</name>
+      <cmt>Chinese Mountains and Beech's Mountain-144</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-144</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.14037218876183" lon="-125.2599813323468">
+      <ele>113.0625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-145</name>
+      <cmt>Chinese Mountains and Beech's Mountain-145</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-145</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.140394400805235" lon="-125.2598499879241">
+      <ele>112.6484375</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-146</name>
+      <cmt>Chinese Mountains and Beech's Mountain-146</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-146</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="50.141156148165464" lon="-125.25859865359962">
+      <ele>112.03515625</ele>
+      <time>2017-06-18T01:01:23Z</time>
+      <name>Chinese Mountains and Beech's Mountain-147</name>
+      <cmt>Chinese Mountains and Beech's Mountain-147</cmt>
+      <desc>Chinese Mountains and Beech's Mountain-147</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

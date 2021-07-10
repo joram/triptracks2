@@ -1,0 +1,1635 @@
+﻿<?xml version="1.0" encoding="utf-8"?><gpx creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd http://www.garmin.com/xmlschemas/PressureExtension/v1 http://www.garmin.com/xmlschemas/PressureExtensionv1.xsd http://www.garmin.com/xmlschemas/TripExtensions/v1 http://www.garmin.com/xmlschemas/TripExtensionsv1.xsd http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1 http://www.garmin.com/xmlschemas/TripMetaDataExtensionsv1.xsd http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1 http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensionsv1.xsd http://www.garmin.com/xmlschemas/CreationTimeExtension/v1 http://www.garmin.com/xmlschemas/CreationTimeExtensionsv1.xsd http://www.garmin.com/xmlschemas/AccelerationExtension/v1 http://www.garmin.com/xmlschemas/AccelerationExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.garmin.com/xmlschemas/VideoExtension/v1 http://www.garmin.com/xmlschemas/VideoExtensionv1.xsd" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" xmlns:prs="http://www.garmin.com/xmlschemas/PressureExtension/v1" xmlns:tmd="http://www.garmin.com/xmlschemas/TripMetaDataExtensions/v1" xmlns:vptm="http://www.garmin.com/xmlschemas/ViaPointTransportationModeExtensions/v1" xmlns:ctx="http://www.garmin.com/xmlschemas/CreationTimeExtension/v1" xmlns:gpxacc="http://www.garmin.com/xmlschemas/AccelerationExtension/v1" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:vidx1="http://www.garmin.com/xmlschemas/VideoExtension/v1">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2017-05-02T20:37:20Z</time>
+    <bounds maxlat="44.76234664209187" maxlon="-63.512676106765866" minlat="44.742361670359969" minlon="-63.546541426330805" />
+  </metadata>
+
+  <rte>
+    <name>Route West Brook, Lake Major</name>
+    <extensions>
+      <gpxx:RouteExtension>
+        <gpxx:IsAutoNamed>false</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="44.742385223507881" lon="-63.546351743862033">
+      <ele>76.66015625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017</name>
+      <cmt>West Brook, Lake Major April 29, 2017</cmt>
+      <desc>West Brook, Lake Major April 29, 2017</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.742796523496509" lon="-63.546336069703102">
+      <ele>79.38671875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-1</name>
+      <cmt>West Brook, Lake Major April 29, 2017-1</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-1</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.743291474878788" lon="-63.544088462367654">
+      <ele>89.37890625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-2</name>
+      <cmt>West Brook, Lake Major April 29, 2017-2</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-2</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.743296336382627" lon="-63.544088210910559">
+      <ele>89.3984375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-3</name>
+      <cmt>West Brook, Lake Major April 29, 2017-3</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-3</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.743739990517497" lon="-63.542148303240538">
+      <ele>97.0703125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-4</name>
+      <cmt>West Brook, Lake Major April 29, 2017-4</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-4</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.743952052667737" lon="-63.541303994134068">
+      <ele>96.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-5</name>
+      <cmt>West Brook, Lake Major April 29, 2017-5</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-5</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.745769668370485" lon="-63.538859244436026">
+      <ele>96.01171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-6</name>
+      <cmt>West Brook, Lake Major April 29, 2017-6</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-6</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.747076826170087" lon="-63.538515586405993">
+      <ele>98.08984375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-7</name>
+      <cmt>West Brook, Lake Major April 29, 2017-7</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-7</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.747652160003781" lon="-63.537857187911868">
+      <ele>95.4921875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-8</name>
+      <cmt>West Brook, Lake Major April 29, 2017-8</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-8</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.748073518276215" lon="-63.537165345624089">
+      <ele>93.41015625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-9</name>
+      <cmt>West Brook, Lake Major April 29, 2017-9</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-9</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.748024651780725" lon="-63.536651032045484">
+      <ele>93.78515625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-10</name>
+      <cmt>West Brook, Lake Major April 29, 2017-10</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-10</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.748543323948979" lon="-63.536057760939002">
+      <ele>93.54296875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-11</name>
+      <cmt>West Brook, Lake Major April 29, 2017-11</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-11</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.74838113412261" lon="-63.535593738779426">
+      <ele>95.31640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-12</name>
+      <cmt>West Brook, Lake Major April 29, 2017-12</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-12</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.74854139611125" lon="-63.535223007202148">
+      <ele>93.91015625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-13</name>
+      <cmt>West Brook, Lake Major April 29, 2017-13</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-13</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.749248158186674" lon="-63.534522531554103">
+      <ele>88.65234375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-14</name>
+      <cmt>West Brook, Lake Major April 29, 2017-14</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-14</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.74939945153892" lon="-63.534111315384507">
+      <ele>87.48828125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-15</name>
+      <cmt>West Brook, Lake Major April 29, 2017-15</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-15</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.749617548659444" lon="-63.533791629597545">
+      <ele>87.4765625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-16</name>
+      <cmt>West Brook, Lake Major April 29, 2017-16</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-16</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.749948466196656" lon="-63.533654334023595">
+      <ele>87.4765625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-17</name>
+      <cmt>West Brook, Lake Major April 29, 2017-17</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-17</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.750123899430037" lon="-63.533473536372185">
+      <ele>87.59375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-18</name>
+      <cmt>West Brook, Lake Major April 29, 2017-18</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-18</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.750201851129532" lon="-63.532559825107455">
+      <ele>87.72265625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-19</name>
+      <cmt>West Brook, Lake Major April 29, 2017-19</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-19</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.750765282660723" lon="-63.532088343054056">
+      <ele>87.2265625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-20</name>
+      <cmt>West Brook, Lake Major April 29, 2017-20</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-20</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.752021813765168" lon="-63.53014818392694">
+      <ele>85.0390625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-21</name>
+      <cmt>West Brook, Lake Major April 29, 2017-21</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-21</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.752147793769836" lon="-63.528378009796143">
+      <ele>85.265625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-22</name>
+      <cmt>West Brook, Lake Major April 29, 2017-22</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-22</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.752539983019233" lon="-63.527891859412193">
+      <ele>85.0390625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-23</name>
+      <cmt>West Brook, Lake Major April 29, 2017-23</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-23</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.752680798992515" lon="-63.527356339618564">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-24</name>
+      <cmt>West Brook, Lake Major April 29, 2017-24</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-24</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.753030827268958" lon="-63.526962390169501">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-25</name>
+      <cmt>West Brook, Lake Major April 29, 2017-25</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-25</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.75310224108398" lon="-63.526868596673012">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-26</name>
+      <cmt>West Brook, Lake Major April 29, 2017-26</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-26</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.753110874444246" lon="-63.526857867836952">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-27</name>
+      <cmt>West Brook, Lake Major April 29, 2017-27</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-27</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.753313045948744" lon="-63.52650742046535">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-28</name>
+      <cmt>West Brook, Lake Major April 29, 2017-28</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-28</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.753828030079603" lon="-63.525720024481416">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-31</name>
+      <cmt>West Brook, Lake Major April 29, 2017-31</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-31</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.753797519952059" lon="-63.525383239611983">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-32</name>
+      <cmt>West Brook, Lake Major April 29, 2017-32</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-32</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.754395820200443" lon="-63.524833889678121">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-33</name>
+      <cmt>West Brook, Lake Major April 29, 2017-33</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-33</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.755027145147324" lon="-63.523538634181023">
+      <ele>87.12890625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-34</name>
+      <cmt>West Brook, Lake Major April 29, 2017-34</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-34</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.755814289674163" lon="-63.522493913769722">
+      <ele>84.890625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-35</name>
+      <cmt>West Brook, Lake Major April 29, 2017-35</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-35</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.75631644949317" lon="-63.522002315148711">
+      <ele>82.90234375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-36</name>
+      <cmt>West Brook, Lake Major April 29, 2017-36</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-36</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.756722804158926" lon="-63.522126954048872">
+      <ele>81.88671875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-37</name>
+      <cmt>West Brook, Lake Major April 29, 2017-37</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-37</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.757039472460747" lon="-63.52204673923552">
+      <ele>80.46875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-38</name>
+      <cmt>West Brook, Lake Major April 29, 2017-38</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-38</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.757830305024981" lon="-63.52200030349195">
+      <ele>79.38671875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-39</name>
+      <cmt>West Brook, Lake Major April 29, 2017-39</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-39</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758175052702427" lon="-63.521715151146054">
+      <ele>78.02734375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-40</name>
+      <cmt>West Brook, Lake Major April 29, 2017-40</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-40</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758243281394243" lon="-63.521455395966768">
+      <ele>78.02734375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-41</name>
+      <cmt>West Brook, Lake Major April 29, 2017-41</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-41</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758788608014584" lon="-63.520894814282656">
+      <ele>75.89453125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-42</name>
+      <cmt>West Brook, Lake Major April 29, 2017-42</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-42</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758753068745136" lon="-63.520568087697029">
+      <ele>74.75</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-43</name>
+      <cmt>West Brook, Lake Major April 29, 2017-43</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-43</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758445788174868" lon="-63.519646162167192">
+      <ele>74.9609375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-44</name>
+      <cmt>West Brook, Lake Major April 29, 2017-44</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-44</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758584005758166" lon="-63.519388418644667">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-45</name>
+      <cmt>West Brook, Lake Major April 29, 2017-45</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-45</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.759129751473665" lon="-63.519167471677065">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-46</name>
+      <cmt>West Brook, Lake Major April 29, 2017-46</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-46</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.75922035984695" lon="-63.518865471705794">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-47</name>
+      <cmt>West Brook, Lake Major April 29, 2017-47</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-47</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.759449688717723" lon="-63.518082685768604">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-48</name>
+      <cmt>West Brook, Lake Major April 29, 2017-48</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-48</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.760365998372436" lon="-63.518470348790288">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-49</name>
+      <cmt>West Brook, Lake Major April 29, 2017-49</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-49</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.76047764532268" lon="-63.518733708187938">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-50</name>
+      <cmt>West Brook, Lake Major April 29, 2017-50</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-50</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761066641658545" lon="-63.518305895850062">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-51</name>
+      <cmt>West Brook, Lake Major April 29, 2017-51</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-51</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761077035218477" lon="-63.518498679623008">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-52</name>
+      <cmt>West Brook, Lake Major April 29, 2017-52</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-52</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761017942801118" lon="-63.517468459904194">
+      <ele>70.50390625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-53</name>
+      <cmt>West Brook, Lake Major April 29, 2017-53</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-53</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761222880333662" lon="-63.517359914258122">
+      <ele>69.796875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-54</name>
+      <cmt>West Brook, Lake Major April 29, 2017-54</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-54</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761201925575733" lon="-63.517032014206052">
+      <ele>69.40234375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-55</name>
+      <cmt>West Brook, Lake Major April 29, 2017-55</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-55</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.76145975291729" lon="-63.516661785542965">
+      <ele>67.6640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-56</name>
+      <cmt>West Brook, Lake Major April 29, 2017-56</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-56</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761572908610106" lon="-63.516295664012432">
+      <ele>65.828125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-57</name>
+      <cmt>West Brook, Lake Major April 29, 2017-57</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-57</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.762015305459499" lon="-63.515865420922637">
+      <ele>59.12109375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-58</name>
+      <cmt>West Brook, Lake Major April 29, 2017-58</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-58</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761880524456501" lon="-63.515495443716645">
+      <ele>57.3125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-59</name>
+      <cmt>West Brook, Lake Major April 29, 2017-59</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-59</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761410802602768" lon="-63.515745811164379">
+      <ele>62.84765625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-60</name>
+      <cmt>West Brook, Lake Major April 29, 2017-60</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-60</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761254228651524" lon="-63.515387736260891">
+      <ele>59.80078125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-61</name>
+      <cmt>West Brook, Lake Major April 29, 2017-61</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-61</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761274848133326" lon="-63.515071989968419">
+      <ele>54.73046875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-73</name>
+      <cmt>West Brook, Lake Major April 29, 2017-73</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-73</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761741803959012" lon="-63.514624312520027">
+      <ele>45.28515625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-74</name>
+      <cmt>West Brook, Lake Major April 29, 2017-74</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-74</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.76202268153429" lon="-63.514400850981474">
+      <ele>40.57421875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-75</name>
+      <cmt>West Brook, Lake Major April 29, 2017-75</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-75</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.76234664209187" lon="-63.512676106765866">
+      <ele>20.12109375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-76</name>
+      <cmt>West Brook, Lake Major April 29, 2017-76</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-76</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761973144486547" lon="-63.514516605064273">
+      <ele>42.41796875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-77</name>
+      <cmt>West Brook, Lake Major April 29, 2017-77</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-77</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761677598580718" lon="-63.514695642516017">
+      <ele>46.796875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-78</name>
+      <cmt>West Brook, Lake Major April 29, 2017-78</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-78</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.761226484552026" lon="-63.515338031575084">
+      <ele>59.0859375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-79</name>
+      <cmt>West Brook, Lake Major April 29, 2017-79</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-79</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.760537575930357" lon="-63.516846355050802">
+      <ele>71.625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-80</name>
+      <cmt>West Brook, Lake Major April 29, 2017-80</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-80</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.759973054751754" lon="-63.517284225672483">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-81</name>
+      <cmt>West Brook, Lake Major April 29, 2017-81</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-81</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.759841877967119" lon="-63.517500143498182">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-82</name>
+      <cmt>West Brook, Lake Major April 29, 2017-82</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-82</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.759341394528747" lon="-63.518114620819688">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-83</name>
+      <cmt>West Brook, Lake Major April 29, 2017-83</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-83</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758996814489365" lon="-63.51909396238625">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-84</name>
+      <cmt>West Brook, Lake Major April 29, 2017-84</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-84</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758925987407565" lon="-63.519353466108441">
+      <ele>74.06640625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-85</name>
+      <cmt>West Brook, Lake Major April 29, 2017-85</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-85</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758435059338808" lon="-63.519410630688071">
+      <ele>75.04296875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-86</name>
+      <cmt>West Brook, Lake Major April 29, 2017-86</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-86</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758636811748147" lon="-63.521101679652929">
+      <ele>75.7265625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-87</name>
+      <cmt>West Brook, Lake Major April 29, 2017-87</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-87</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758451152592897" lon="-63.521461011841893">
+      <ele>76.75</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-88</name>
+      <cmt>West Brook, Lake Major April 29, 2017-88</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-88</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.758077571168542" lon="-63.521909024566412">
+      <ele>78.02734375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-89</name>
+      <cmt>West Brook, Lake Major April 29, 2017-89</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-89</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.757281709462404" lon="-63.522083954885602">
+      <ele>80.16015625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-90</name>
+      <cmt>West Brook, Lake Major April 29, 2017-90</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-90</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.75696193985641" lon="-63.521993514150381">
+      <ele>80.9609375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-91</name>
+      <cmt>West Brook, Lake Major April 29, 2017-91</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-91</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.756332961842418" lon="-63.521916568279266">
+      <ele>82.90234375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-92</name>
+      <cmt>West Brook, Lake Major April 29, 2017-92</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-92</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.755951417610049" lon="-63.522336166352034">
+      <ele>83.765625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-93</name>
+      <cmt>West Brook, Lake Major April 29, 2017-93</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-93</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.754969142377377" lon="-63.523597810417414">
+      <ele>87.13671875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-94</name>
+      <cmt>West Brook, Lake Major April 29, 2017-94</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-94</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.754515765234828" lon="-63.52462861686945">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-95</name>
+      <cmt>West Brook, Lake Major April 29, 2017-95</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-95</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.753820570185781" lon="-63.525395477190614">
+      <ele>87.171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-96</name>
+      <cmt>West Brook, Lake Major April 29, 2017-96</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-96</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.752367902547121" lon="-63.528150608763099">
+      <ele>85.0390625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-97</name>
+      <cmt>West Brook, Lake Major April 29, 2017-97</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-97</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.752082750201225" lon="-63.52880640886724">
+      <ele>85.0390625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-98</name>
+      <cmt>West Brook, Lake Major April 29, 2017-98</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-98</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.752069339156151" lon="-63.529989514499903">
+      <ele>85.0390625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-99</name>
+      <cmt>West Brook, Lake Major April 29, 2017-99</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-99</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.751571621745825" lon="-63.531093411147594">
+      <ele>85.7109375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-100</name>
+      <cmt>West Brook, Lake Major April 29, 2017-100</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-100</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.751394176855683" lon="-63.531039096415043">
+      <ele>85.48828125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-101</name>
+      <cmt>West Brook, Lake Major April 29, 2017-101</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-101</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.751199716702104" lon="-63.531506136059761">
+      <ele>87.4765625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-102</name>
+      <cmt>West Brook, Lake Major April 29, 2017-102</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-102</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.75018760189414" lon="-63.532504085451365">
+      <ele>87.83203125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-103</name>
+      <cmt>West Brook, Lake Major April 29, 2017-103</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-103</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.750194894149899" lon="-63.532958468422294">
+      <ele>87.77734375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-104</name>
+      <cmt>West Brook, Lake Major April 29, 2017-104</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-104</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.750140327960253" lon="-63.533451240509748">
+      <ele>87.6328125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-105</name>
+      <cmt>West Brook, Lake Major April 29, 2017-105</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-105</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.749369947239757" lon="-63.534089270979166">
+      <ele>87.71484375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-106</name>
+      <cmt>West Brook, Lake Major April 29, 2017-106</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-106</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.749208008870482" lon="-63.534578774124384">
+      <ele>88.9609375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-107</name>
+      <cmt>West Brook, Lake Major April 29, 2017-107</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-107</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.74868455901742" lon="-63.534954534843564">
+      <ele>93.16015625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-108</name>
+      <cmt>West Brook, Lake Major April 29, 2017-108</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-108</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.748335452750325" lon="-63.53536332026124">
+      <ele>95.07421875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-109</name>
+      <cmt>West Brook, Lake Major April 29, 2017-109</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-109</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.748357078060508" lon="-63.535618968307972">
+      <ele>95.5</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-110</name>
+      <cmt>West Brook, Lake Major April 29, 2017-110</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-110</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.74853552877903" lon="-63.535966649651527">
+      <ele>93.9140625</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-111</name>
+      <cmt>West Brook, Lake Major April 29, 2017-111</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-111</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.748317766934633" lon="-63.53634886443615">
+      <ele>93.24609375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-112</name>
+      <cmt>West Brook, Lake Major April 29, 2017-112</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-112</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.748073266819119" lon="-63.536502420902252">
+      <ele>93.51953125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-113</name>
+      <cmt>West Brook, Lake Major April 29, 2017-113</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-113</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.747972851619124" lon="-63.536805091425776">
+      <ele>93.875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-114</name>
+      <cmt>West Brook, Lake Major April 29, 2017-114</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-114</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.747934127226472" lon="-63.537568598985672">
+      <ele>93.875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-115</name>
+      <cmt>West Brook, Lake Major April 29, 2017-115</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-115</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.747922392562032" lon="-63.537608999758959">
+      <ele>93.875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-116</name>
+      <cmt>West Brook, Lake Major April 29, 2017-116</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-116</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.747188137844205" lon="-63.53841626085341">
+      <ele>98.14453125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-117</name>
+      <cmt>West Brook, Lake Major April 29, 2017-117</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-117</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.746327567845583" lon="-63.538466384634376">
+      <ele>96.01171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-118</name>
+      <cmt>West Brook, Lake Major April 29, 2017-118</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-118</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.745532125234604" lon="-63.53901095688343">
+      <ele>96.01171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-119</name>
+      <cmt>West Brook, Lake Major April 29, 2017-119</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-119</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.744932483881712" lon="-63.539895918220282">
+      <ele>96.01171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-120</name>
+      <cmt>West Brook, Lake Major April 29, 2017-120</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-120</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.744776664301753" lon="-63.540078978985548">
+      <ele>96.48828125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-121</name>
+      <cmt>West Brook, Lake Major April 29, 2017-121</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-121</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.744400987401605" lon="-63.54054182767868">
+      <ele>96.01171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-122</name>
+      <cmt>West Brook, Lake Major April 29, 2017-122</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-122</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.744163108989596" lon="-63.540583150461316">
+      <ele>96.01171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-123</name>
+      <cmt>West Brook, Lake Major April 29, 2017-123</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-123</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.744077362120152" lon="-63.540567560121417">
+      <ele>95.6328125</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-124</name>
+      <cmt>West Brook, Lake Major April 29, 2017-124</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-124</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.74278244189918" lon="-63.546541426330805">
+      <ele>79.27734375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-125</name>
+      <cmt>West Brook, Lake Major April 29, 2017-125</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-125</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.742363933473825" lon="-63.546352749690413">
+      <ele>76.6171875</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-126</name>
+      <cmt>West Brook, Lake Major April 29, 2017-126</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-126</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ShapingPoint />
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="44.742361670359969" lon="-63.546349396929145">
+      <ele>76.62109375</ele>
+      <time>2017-05-01T15:55:31Z</time>
+      <name>West Brook, Lake Major April 29, 2017-127</name>
+      <cmt>West Brook, Lake Major April 29, 2017-127</cmt>
+      <desc>West Brook, Lake Major April 29, 2017-127</desc>
+      <sym>Waypoint</sym>
+      <extensions>
+        <trp:ViaPoint>
+          <trp:CalculationMode>Direct</trp:CalculationMode>
+        </trp:ViaPoint>
+        <gpxx:RoutePointExtension>
+          <gpxx:Subclass>000000000000FFFFFFFFFFFFFFFFFFFFFFFF</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

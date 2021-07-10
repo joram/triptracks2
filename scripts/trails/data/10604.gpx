@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="no"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wptx1="http://www.garmin.com/xmlschemas/WaypointExtension/v1" xmlns:gpxtrx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:trp="http://www.garmin.com/xmlschemas/TripExtensions/v1" xmlns:adv="http://www.garmin.com/xmlschemas/AdventuresExtensions/v1" creator="Garmin Desktop App" version="1.1" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/WaypointExtension/v1 http://www8.garmin.com/xmlschemas/WaypointExtensionv1.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www8.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/ActivityExtension/v1 http://www8.garmin.com/xmlschemas/ActivityExtensionv1.xsd http://www.garmin.com/xmlschemas/AdventuresExtensions/v1 http://www8.garmin.com/xmlschemas/AdventuresExtensionv1.xsd">
+    <metadata>
+        <link href="http://www.garmin.com">
+            <text>Garmin International</text>
+        </link>
+        <time>2012-07-28T17:15:04Z</time>
+        <bounds maxlat="52.05658002756536" maxlon="-116.414163038134575" minlat="52.05410803668201" minlon="-116.419918974861503"></bounds>
+    </metadata>
+    <wpt lat="52.05658002756536" lon="-116.419918974861503">
+        <ele>1380</ele>
+        <time>2012-07-28T16:34:28Z</time>
+        <name>Kootenay Cliffs - Kids Anchors</name>
+        <cmt>11-JUL-12 1:34:49PM</cmt>
+        <desc>11-JUL-12 1:34:49PM</desc>
+        <sym>Circle with X</sym>
+        <extensions>
+            <gpxx:WaypointExtension>
+                <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+                <gpxx:Categories>
+                    <gpxx:Category>Climbing</gpxx:Category>
+                </gpxx:Categories>
+            </gpxx:WaypointExtension>
+        </extensions>
+    </wpt>
+    <wpt lat="52.05410803668201" lon="-116.414163038134575">
+        <ele>1340</ele>
+        <time>2012-07-28T16:32:09Z</time>
+        <name>Kootenay Cliffs Parking</name>
+        <cmt>11-JUL-12 12:57:45PM</cmt>
+        <desc>11-JUL-12 12:57:45PM</desc>
+        <sym>Parking Area</sym>
+        <extensions>
+            <gpxx:WaypointExtension>
+                <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+                <gpxx:Categories>
+                    <gpxx:Category>Climbing</gpxx:Category>
+                </gpxx:Categories>
+            </gpxx:WaypointExtension>
+        </extensions>
+    </wpt>
+</gpx>

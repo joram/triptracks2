@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.14.1" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2009-06-14T02:52:07Z</time>
+    <bounds maxlat="49.6469749" maxlon="-116.8548189" minlat="49.6252424" minlon="-116.8757076"/>
+  </metadata>
+
+  <wpt lat="49.6357726" lon="-116.8652632">
+    <ele>560.5700684</ele>
+    <name>Pb Bch</name>
+    <cmt>17-MAY-09 4:18:27PM</cmt>
+    <desc>17-MAY-09 4:18:27PM</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.6252424" lon="-116.8548189">
+    <ele>599.2631836</ele>
+    <name>Pb Boom</name>
+    <cmt>17-MAY-09 3:06:56PM</cmt>
+    <desc>17-MAY-09 3:06:56PM</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.6469749" lon="-116.8757076">
+    <ele>579.3156738</ele>
+    <name>Pb Head</name>
+    <cmt>17-MAY-09 5:01:12PM</cmt>
+    <desc>17-MAY-09 5:01:12PM</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="49.6405838" lon="-116.8639199">
+    <ele>599.7436523</ele>
+    <name>Pb Saw</name>
+    <cmt>17-MAY-09 2:27:07PM</cmt>
+    <desc>17-MAY-09 2:27:07PM</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <rte>
+    <name>Pb Head to Pb Boom</name>
+    <extensions>
+      <gpxx:RouteExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+        <gpxx:IsAutoNamed>true</gpxx:IsAutoNamed>
+        <gpxx:DisplayColor>Magenta</gpxx:DisplayColor>
+      </gpxx:RouteExtension>
+    </extensions>
+    <rtept lat="49.6469749" lon="-116.8757076">
+      <ele>579.3156738</ele>
+      <name>Pb Head</name>
+      <cmt>17-MAY-09 5:01:12PM</cmt>
+      <desc>17-MAY-09 5:01:12PM</desc>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000ffffffffffffffffffffffff</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.6405838" lon="-116.8639199">
+      <ele>599.7436523</ele>
+      <name>Pb Saw</name>
+      <cmt>17-MAY-09 2:27:07PM</cmt>
+      <desc>17-MAY-09 2:27:07PM</desc>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000ffffffffffffffffffffffff</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.6357726" lon="-116.8652632">
+      <ele>560.5700684</ele>
+      <name>Pb Bch</name>
+      <cmt>17-MAY-09 4:18:27PM</cmt>
+      <desc>17-MAY-09 4:18:27PM</desc>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000ffffffffffffffffffffffff</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+    <rtept lat="49.6252424" lon="-116.8548189">
+      <ele>599.2631836</ele>
+      <name>Pb Boom</name>
+      <cmt>17-MAY-09 3:06:56PM</cmt>
+      <desc>17-MAY-09 3:06:56PM</desc>
+      <sym>Flag, Blue</sym>
+      <extensions>
+        <gpxx:RoutePointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3">
+          <gpxx:Subclass>000000000000ffffffffffffffffffffffff</gpxx:Subclass>
+        </gpxx:RoutePointExtension>
+      </extensions>
+    </rtept>
+  </rte>
+
+</gpx>

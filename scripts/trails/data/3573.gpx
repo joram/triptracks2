@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="MapSource 6.11.6" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+  <metadata>
+    <link href="http://www.garmin.com">
+      <text>Garmin International</text>
+    </link>
+    <time>2008-02-17T00:53:05Z</time>
+    <bounds maxlat="48.365327" maxlon="-123.784275" minlat="48.361710" minlon="-123.804288"/>
+  </metadata>
+
+  <wpt lat="48.361738" lon="-123.804224">
+    <ele>4.932373</ele>
+    <name>End</name>
+    <cmt>16-FEB-08 5:27:13PM</cmt>
+    <desc>16-FEB-08 5:27:13PM</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <wpt lat="48.365327" lon="-123.784275">
+    <ele>9.000000</ele>
+    <name>Parking/Start</name>
+    <cmt>16-FEB-08 4:48:08PM</cmt>
+    <desc>16-FEB-08 4:48:08PM</desc>
+    <sym>Flag, Blue</sym>
+    <extensions>
+      <gpxx:WaypointExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+        <gpxx:DisplayMode>SymbolAndName</gpxx:DisplayMode>
+      </gpxx:WaypointExtension>
+    </extensions>
+  </wpt>
+
+  <trk>
+    <name>Otter Point Beach</name>
+    <extensions>
+      <gpxx:TrackExtension xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensions/v3/GpxExtensionsv3.xsd">
+        <gpxx:DisplayColor>DarkGreen</gpxx:DisplayColor>
+      </gpxx:TrackExtension>
+    </extensions>
+    <trkseg>
+      <trkpt lat="48.365300" lon="-123.784317">
+        <ele>12.634399</ele>
+      </trkpt>
+      <trkpt lat="48.365081" lon="-123.784751">
+        <ele>16.960449</ele>
+      </trkpt>
+      <trkpt lat="48.364310" lon="-123.786628">
+        <ele>8.308594</ele>
+      </trkpt>
+      <trkpt lat="48.364484" lon="-123.787454">
+        <ele>8.789185</ele>
+      </trkpt>
+      <trkpt lat="48.364368" lon="-123.789028">
+        <ele>-0.824097</ele>
+      </trkpt>
+      <trkpt lat="48.364460" lon="-123.791139">
+        <ele>1.579346</ele>
+      </trkpt>
+      <trkpt lat="48.364091" lon="-123.793379">
+        <ele>-5.149902</ele>
+      </trkpt>
+      <trkpt lat="48.364080" lon="-123.798213">
+        <ele>-2.746704</ele>
+      </trkpt>
+      <trkpt lat="48.362816" lon="-123.800647">
+        <ele>1.098633</ele>
+      </trkpt>
+      <trkpt lat="48.362709" lon="-123.801003">
+        <ele>0.137451</ele>
+      </trkpt>
+      <trkpt lat="48.362397" lon="-123.804067">
+        <ele>3.982666</ele>
+      </trkpt>
+      <trkpt lat="48.361942" lon="-123.804229">
+        <ele>2.540649</ele>
+      </trkpt>
+      <trkpt lat="48.361800" lon="-123.804267">
+        <ele>2.060059</ele>
+      </trkpt>
+      <trkpt lat="48.361714" lon="-123.804288">
+        <ele>4.943848</ele>
+      </trkpt>
+      <trkpt lat="48.361710" lon="-123.804282">
+        <ele>5.424561</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+
+</gpx>
