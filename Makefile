@@ -4,10 +4,14 @@ build_trails:
 start:
 	cd triptracks; yarn start
 
-deploy_build:
+_deploy_build:
 	cd triptracks; yarn build
 
-deploy_push:
+_deploy_push_all:
 	aws s3 sync ./triptracks/build s3://app2.triptracks.io
 
-deploy:	deploy_build deploy_push
+_deploy_push_code:
+	aws s3 sync ./triptracks/build s3://app2.triptracks.io --exclude "*trails*"
+
+deploy:	_deploy_build _deploy_push_all
+deploy_code:	_deploy_build _deploy_push_code
