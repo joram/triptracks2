@@ -6,7 +6,7 @@ import gpxpy
 
 
 class Trail:
-    def __init__(self, title, description, directions, photos, source_url, stats, gpx_filepath):
+    def __init__(self, title, description, directions, photos, source_url, stats, geohash, gpx_filepath):
         self.title = title.replace("/", "-")
         self.description = description
         self.directions = directions
@@ -14,6 +14,7 @@ class Trail:
         self.source_url = source_url
         self.stats = stats
         self.gpx_filepath = gpx_filepath
+        self.geohash = geohash
         self._gpx_content = None
 
     @property
@@ -21,6 +22,7 @@ class Trail:
         return {
             "title": self.title,
             "waypoints": list(self.waypoints),
+            "geohash": self.geohash,
         }
 
     @property
@@ -60,13 +62,17 @@ class Trail:
             gpx_filepath = filepath.replace(".json", ".gpx")
             f = open(filepath)
             data = json.loads(f.read())
-            trail = Trail(
-                title=data["title"],
-                description=data["description"],
-                directions=data["directions"],
-                photos=data["photos"],
-                source_url=data["source_url"],
-                stats=data["stats"],
-                gpx_filepath=gpx_filepath,
-            )
-            yield trail
+            try:
+                trail = Trail(
+                    title=data["title"],
+                    description=data["description"],
+                    directions=data["directions"],
+                    photos=data["photos"],
+                    source_url=data["source_url"],
+                    stats=data["stats"],
+                    geohash=data["geohash"],
+                    gpx_filepath=gpx_filepath,
+                )
+                yield trail
+            except:
+                continue
