@@ -38,7 +38,7 @@ class Trails extends Component {
 
     componentDidMount() {
 
-        fetch("/trails/manifest.json").then(res => res.json()).then((result) => {
+        fetch("/trails.manifest.json").then(res => res.json()).then((result) => {
             let state = this.state;
             state.isLoaded = true
             state.manifest = result
@@ -85,7 +85,7 @@ class Trails extends Component {
             let trails = [];
             if (node.items !== undefined) {
                 node.items.forEach(filename => {
-                    trails.push(`${prefix}/${filename}`)
+                    trails.push(`trails/${filename}`)
                 })
             }
             Object.keys(node).forEach(c => {
@@ -101,6 +101,7 @@ class Trails extends Component {
     render() {
         let trails = {};
         this.getTrails().forEach(filepath => {
+            console.log(filepath)
             trails[filepath] = <Trail filepath={filepath} key={filepath} />;
         })
         return <GoogleMap
