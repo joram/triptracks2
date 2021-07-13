@@ -1,5 +1,5 @@
-build_trails:
-	python3 ./scripts/build_trails.py
+build_data:
+	python3 ./scripts/build.py
 
 start:
 	cd triptracks; yarn start
