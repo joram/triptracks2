@@ -34,6 +34,10 @@ class Trail extends Component {
         })
     }
 
+    onClick(){
+
+    }
+
     render() {
         let lines = [];
         let i = 0;
@@ -48,6 +52,7 @@ class Trail extends Component {
                         strokeWeight: 2,
                     }}
                     key={`${this.state.title}_${i}`}
+                    onClick={this.onClick.bind(this)}
                 />)
                 i += 1
             })
