@@ -96,8 +96,15 @@ class Trails extends Component {
             })
             return trails
         }
-        return recursive_get_trails(node, basePrefix)
+
+
+        let trails = recursive_get_trails(node, basePrefix)
+        if(trails.length > 100){
+            return trails.slice(0,100)
+        }
+        return trails
     }
+
     render() {
         let trails = {};
         this.getTrails().forEach(filepath => {
