@@ -67,7 +67,7 @@ class Trails extends Component {
         this.setState(state)
     }
 
-    getTrails(){
+    getTrails(limit=1024){
 
         // get node
         let basePrefix = "trails";
@@ -99,8 +99,8 @@ class Trails extends Component {
 
 
         let trails = recursive_get_trails(node, basePrefix)
-        if(trails.length > 100){
-            return trails.slice(0,100)
+        if(trails.length > limit){
+            return trails.slice(0, limit)
         }
         return trails
     }
