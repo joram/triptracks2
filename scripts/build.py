@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import time
 
+import pygeohash
 from trails import Peak, Trail
 import json
 import os
@@ -90,5 +91,19 @@ def process_peaks():
     print(trail_count, most_trails_peak.geohash)
 
 
-process_trails()
-process_peaks()
+def build_heatmap():
+    trails_directory = f"./triptracks/public/trails"
+    with open(f"{trails_directory}/../../src/trails.heatmap.jsx", "w") as f:
+        f.write("let trailHeatmap = [\n")
+        for filename in os.listdir(trails_directory):
+            if filename.endswith(".json"):
+                geohash = filename.split(".")[0]
+                print(geohash)
+                (lat, lng) = pygeohash.decode(geohash)
+                f.write(f"  new window.map.LatLng({lat}, {lng}),\n")
+        f.write(f"]\n")
+        f.write(f"export default trailHeatmap;\n")
+
+build_heatmap()
+# process_trails()
+# process_peaks()

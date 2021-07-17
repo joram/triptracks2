@@ -6,6 +6,7 @@ class Trail extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            polylines: [],
             trail: {
                 waypoints: [],
                 title: "",
@@ -20,29 +21,16 @@ class Trail extends Component {
         };
     }
 
-    componentDidMount() {
-        fetch(this.props.filepath).then(res => res.json()).then((trail) => {
-            let state = this.state;
-            state.trail = trail
-            this.setState(state);
-            fetch(`/peaks/${trail.nearest_peak_geohash}.json`).then(res => res.json()).then((peak) => {
-                let state = this.state;
-                state.peak = peak
-                this.setState(state);
-                console.log(state)
-            })
+    hide(){
+        this.state.polylines.forEach(polyline => {
+            polyline.setMap(null)
         })
     }
-
-    onClick(){
-
-    }
-
-    render() {
+    buildPolylines(trail){
         let lines = [];
         let i = 0;
-        if(this.state.trail.waypoints !== undefined){
-            this.state.trail.waypoints.forEach(segment => {
+        if(trail.waypoints !== undefined){
+            trail.waypoints.forEach(segment => {
                 lines.push(<Polyline
                     path={segment}
                     geodesic={true}
@@ -57,7 +45,28 @@ class Trail extends Component {
                 i += 1
             })
         }
-        return <>{lines}</>
+        return lines
+    }
+    componentDidMount() {
+        fetch(this.props.filepath).then(res => res.json()).then((trail) => {
+            let state = this.state;
+            state.trail = trail
+            state.polylines = this.buildPolylines(trail)
+            this.setState(state);
+            fetch(`/peaks/${trail.nearest_peak_geohash}.json`).then(res => res.json()).then((peak) => {
+                let state = this.state;
+                state.peak = peak
+                this.setState(state);
+            })
+        })
+    }
+
+    onClick(){
+
+    }
+
+    render() {
+        return <>{this.state.polylines}</>
     }
 }
 
