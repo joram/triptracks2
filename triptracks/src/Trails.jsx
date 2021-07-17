@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import {GoogleMap, withGoogleMap, withScriptjs,} from "react-google-maps";
 import Geohash from 'latlon-geohash';
 import Trail from "./Trail";
+import trailHeatmap from "./trails.heatmap";
+import MarkerClusterer from "react-google-maps/lib/components/addons/MarkerClusterer";
+import Marker from "react-google-maps/lib/components/Marker";
 
 
 function longestCommonPrefix(strs) {
@@ -18,6 +21,8 @@ function longestCommonPrefix(strs) {
 
     return '';
 };
+
+let trails = {};
 
 class Trails extends Component {
 
@@ -48,7 +53,12 @@ class Trails extends Component {
 
     onIdle() {
         this.updateGeohash()
-        console.log(this.state.geohash)
+        if(window.map !== null && window.map !== undefined){
+            let state = this.state
+            state.zoom = window.map.getZoom()
+            this.setState(state)
+        }
+        console.log(this.state.geohash, this.state.zoom)
     }
 
     updateGeohash(){
@@ -97,32 +107,42 @@ class Trails extends Component {
             return trails
         }
 
-
         let trails = recursive_get_trails(node, basePrefix)
-        if(trails.length > limit){
+        if(trails.length>limit){
             return trails.slice(0, limit)
         }
         return trails
     }
 
     render() {
-        let trails = {};
-        this.getTrails().forEach(filepath => {
-            console.log(filepath)
-            trails[filepath] = <Trail filepath={filepath} key={filepath} />;
-        })
+
+        let content;
+        if(this.state.zoom > 10) {
+            this.getTrails().forEach(filepath => {
+                trails[filepath] = <Trail visibleZoom={10} filepath={filepath} key={filepath}/>;
+            })
+            content = Object.values(trails)
+        } else {
+            let trailMarkers = [];
+            let i = 0;
+            trailHeatmap(window.google.maps).forEach(point => {
+                trailMarkers.push(<Marker position={point} key={`trail_${i}`}/>)
+                i += 1
+            })
+            content = <MarkerClusterer>{ trailMarkers }</MarkerClusterer>
+            Object.values(trails).forEach( (trail) => {
+                trail.hide()
+            })
+        }
+
         return <GoogleMap
             defaultZoom={14}
-            defaultCenter={{
-                lat:49.22333244,
-                lng:-124.59499762,
-            }}
-            zoom={14}
+            defaultCenter={this.state.center}
             mapTypeId={'terrain'}
             ref={map => { window.map = map }}
             onIdle={this.onIdle.bind(this)}
         >
-            {Object.values(trails)}
+            {content}
         </GoogleMap>
     }
 }

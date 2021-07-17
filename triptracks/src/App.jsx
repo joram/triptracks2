@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Trails
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAntpb0h6GbbKCowtWxK6kes6RCxEQv7o0"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyAntpb0h6GbbKCowtWxK6kes6RCxEQv7o0&libraries=visualization"
             loadingElement={<div style={{ height: `100%` }} />}
             containerElement={<div  className="fullscreen" />}
             mapElement={<div style={{ height: `100%` }} />}
