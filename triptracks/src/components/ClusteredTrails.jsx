@@ -15,7 +15,7 @@ const extentFeatures = (features, resolution) => {
 };
 
 
-export default function ClusteredTrails() {
+export default function ClusteredTrails(props) {
   const trailsLayer = React.useRef();
   return (
       <RLayerCluster
@@ -23,6 +23,7 @@ export default function ClusteredTrails() {
         distance={20}
         format={reader}
         url="/trails.heatmap.geojson"
+        maxZoom={props.maxZoom}
       >
         <RStyle
           cacheSize={1024}
@@ -34,6 +35,7 @@ export default function ClusteredTrails() {
             []
           )}
           render={useCallback((feature, resolution) => {
+            console.log(props)
             const size = feature.get("features").length;
             if (size > 1) {
               const radius = extentFeatures(
