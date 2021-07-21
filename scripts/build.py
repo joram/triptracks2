@@ -5,7 +5,7 @@ import time
 from typing import Optional
 
 import pygeohash
-from geojson import Feature, FeatureCollection, dump, Polygon, MultiPoint
+from geojson import Feature, FeatureCollection, dump, MultiLineString
 from trails import Peak, Trail
 
 manifest = {}
@@ -24,7 +24,7 @@ def geojson_from_trail(trail: Trail) -> Optional[FeatureCollection]:
         coordinates.append(points)
 
     features = []
-    features.append(Feature(geometry=MultiPoint(coordinates=coordinates)))
+    features.append(Feature(geometry=MultiLineString(coordinates=coordinates)))
     feature_collection = FeatureCollection(features, id="foo")
     return feature_collection
 
