@@ -1,13 +1,32 @@
 #!/usr/bin/env python3
-import time
-
-import pygeohash
-from trails import Peak, Trail
 import json
 import os
+import time
+from typing import Optional
+
+import pygeohash
+from geojson import Feature, FeatureCollection, dump, Polygon, MultiPoint
+from trails import Peak, Trail
 
 manifest = {}
 trails_per_peak = {}
+
+
+def geojson_from_trail(trail: Trail) -> Optional[FeatureCollection]:
+    if len(list(trail.waypoints)) == 0:
+        return None
+
+    coordinates = []
+    for leg in trail.waypoints:
+        points = []
+        for coord in leg:
+            points.append([coord["lng"], coord["lat"]])
+        coordinates.append(points)
+
+    features = []
+    features.append(Feature(geometry=MultiPoint(coordinates=coordinates)))
+    feature_collection = FeatureCollection(features, id="foo")
+    return feature_collection
 
 
 def add_trail_to_manifest(trail:Trail):
@@ -25,28 +44,25 @@ def add_trail_to_manifest(trail:Trail):
         return d
 
     global manifest
-    manifest = _rec(manifest, trail.geohash, trail.center_geohash+".json")
+    manifest = _rec(manifest, trail.geohash, trail.center_geohash+".geojson")
 
 
 def process_trails():
     i = 0
     total = Trail.count()
     for trail in Trail.load_all():
-        try:
-            if len(list(trail.waypoints)) > 0:
-                directory = f"./triptracks/public/trails"
-                if not os.path.exists(directory):
-                    os.makedirs(directory)
-                filepath = f"{directory}/{trail.center_geohash}.json"
-                print(f"{i}/{total} {filepath}")
-                f = open(filepath, "w")
-                data = trail.json
-                f.write(json.dumps(data, sort_keys=True, indent=2))
-                add_trail_to_manifest(trail)
-                i += 1
-            time.sleep(0)
-        except Exception as e:
-            print(e)
+        if len(list(trail.waypoints)) > 0:
+            directory = f"./triptracks/public/trails"
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+            filepath = f"{directory}/{trail.center_geohash}.geojson"
+            print(f"{i}/{total} {filepath}")
+            f = open(filepath, "w")
+            data = geojson_from_trail(trail)
+            dump(data, f)
+            add_trail_to_manifest(trail)
+            i += 1
+        time.sleep(0)
     f = open("./triptracks/public/trails.manifest.json", "w")
     f.write(json.dumps(manifest, sort_keys=True, indent=2))
 
@@ -96,7 +112,7 @@ def build_heatmap():
     with open(f"{trails_directory}/../../src/trails.heatmap.jsx", "w") as f:
         f.write("let trailHeatmap = [\n")
         for filename in os.listdir(trails_directory):
-            if filename.endswith(".json"):
+            if filename.endswith(".geojson"):
                 geohash = filename.split(".")[0]
                 print(geohash)
                 (lat, lng) = pygeohash.decode(geohash)
@@ -104,6 +120,27 @@ def build_heatmap():
         f.write(f"]\n")
         f.write(f"export default trailHeatmap;\n")
 
-build_heatmap()
-# process_trails()
+
+def build_heatmap_geojson():
+    trails_directory = f"./triptracks/public/trails"
+    with open(f"./triptracks/public/trails.heatmap.geojson", "w") as f:
+        f.write("""{
+    "type": "FeatureCollection",
+    "name": "trails",
+    "features": [\n""")
+        first = True
+        for filename in os.listdir(trails_directory):
+            if filename.endswith(".geojson"):
+                if not first:
+                    f.write(",\n")
+                first = False
+                geohash = filename.split(".")[0]
+                print(geohash)
+                (lat, lng) = pygeohash.decode(geohash)
+                f.write(json.dumps({"type": "Feature", "id": geohash, "geometry": {"type": "Point", "coordinates": [lng, lat]}}))
+        f.write("]\n}")
+
+
+process_trails()
+build_heatmap_geojson()
 # process_peaks()
