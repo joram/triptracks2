@@ -35,6 +35,7 @@ def add_trail_to_manifest(trail:Trail):
             if "items" not in d:
                 d["items"] = []
             d["items"].append(val)
+            d["items"] = list(set(d["items"]))
             return d
 
         c = path[0]
