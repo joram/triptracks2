@@ -73,7 +73,7 @@ class Trails extends Component {
     }
 
     render() {
-        let trails = []
+        let trails = {}
         let filenames = this.getTrails()
         console.log(filenames)
 
@@ -81,9 +81,9 @@ class Trails extends Component {
             if(trails.length >= this.props.maxTrails){
                 return
             }
-            trails.push(<Trail key={filename} url={filename}/>)
+            trails[filename] = (<Trail key={filename} url={filename}/>)
         })
-        return trails
+        return Object.values(trails)
     }
 }
 
