@@ -51,9 +51,9 @@ export default function Map() {
       updateViewGeohash(e)
   }
 
-  let content = <ClusteredTrails />
+  let polylineTrails = null;
   if(zoom >= 10){
-      content = <Trails viewGeohash={viewGeohash} maxTrails={100} />
+      polylineTrails = <Trails viewGeohash={viewGeohash} maxTrails={100} />
   }
   return (
     <React.Fragment>
@@ -66,7 +66,8 @@ export default function Map() {
         onMoveEnd={onChange}
       >
         <LayersControl />
-        {content}
+        <ClusteredTrails maxZoom={10} />
+        {polylineTrails}
       </RMap>
     </React.Fragment>
   );

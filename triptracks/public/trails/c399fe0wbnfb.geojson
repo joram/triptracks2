@@ -1,1 +1,1 @@
-{"type": "FeatureCollection", "id": "foo", "features": [{"type": "Feature", "geometry": {"type": "LineString", "coordinates": [[[-121.535633, 53.741483]], [[-121.494483, 53.779833]], [[-121.564417, 53.765567]], [[-121.565659, 53.765183]], [[-121.530883, 53.7841]]]}, "properties": {}}]}
+{"type": "FeatureCollection", "id": "foo", "features": [{"type": "Feature", "geometry": {"type": "MultiLineString", "coordinates": [[[-121.535633, 53.741483]], [[-121.494483, 53.779833]], [[-121.564417, 53.765567]], [[-121.565659, 53.765183]], [[-121.530883, 53.7841]]]}, "properties": {}}]}
