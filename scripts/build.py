@@ -2,34 +2,17 @@
 import json
 import os
 import time
-from typing import Optional
 
 import pygeohash
-from geojson import Feature, FeatureCollection, dump, MultiLineString
+from geojson import dump
 from trails import Peak, Trail
 
 manifest = {}
 trails_per_peak = {}
+trail_search = []
 
 
-def geojson_from_trail(trail: Trail) -> Optional[FeatureCollection]:
-    if len(list(trail.waypoints)) == 0:
-        return None
-
-    coordinates = []
-    for leg in trail.waypoints:
-        points = []
-        for coord in leg:
-            points.append([coord["lng"], coord["lat"]])
-        coordinates.append(points)
-
-    features = []
-    features.append(Feature(geometry=MultiLineString(coordinates=coordinates)))
-    feature_collection = FeatureCollection(features, id="foo")
-    return feature_collection
-
-
-def add_trail_to_manifest(trail:Trail):
+def _create_trail_manifest(trail: Trail):
     def _rec(d, path, val):
         if len(path) == 0:
             if "items" not in d:
@@ -48,24 +31,51 @@ def add_trail_to_manifest(trail:Trail):
     manifest = _rec(manifest, trail.geohash, trail.center_geohash+".geojson")
 
 
+def _create_geojson(trail: Trail):
+    directory = f"./triptracks/public/trails"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    filepath = f"{directory}/{trail.center_geohash}.geojson"
+    with open(filepath, "w") as f:
+        dump(trail.geojson(), f)
+
+
+def _create_json_details(trail: Trail):
+    directory = f"./triptracks/public/trail_details"
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+    filepath = f"{directory}/{trail.center_geohash}.json"
+    data = trail.json(skinny=True)
+    with open(filepath, "w") as f:
+        f.write(json.dumps(data, sort_keys=True, indent=2))
+
+
+def _create_trail_search(trail: Trail):
+    trail_search.append({
+        "title": trail.title,
+        "image": trail.photos[0] if len(trail.photos) > 0 else None,
+        "url": f"/trail/{trail.center_geohash}",
+    })
+
+
 def process_trails():
     i = 0
     total = Trail.count()
     for trail in Trail.load_all():
         if len(list(trail.waypoints)) > 0:
-            directory = f"./triptracks/public/trails"
-            if not os.path.exists(directory):
-                os.makedirs(directory)
-            filepath = f"{directory}/{trail.center_geohash}.geojson"
-            print(f"{i}/{total} {filepath}")
-            f = open(filepath, "w")
-            data = geojson_from_trail(trail)
-            dump(data, f)
-            add_trail_to_manifest(trail)
+            _create_geojson(trail)
+            _create_json_details(trail)
+            _create_trail_search(trail)
+            _create_trail_manifest(trail)
+            print(f"{i}/{total} {trail.title}")
             i += 1
         time.sleep(0)
-    f = open("./triptracks/public/trails.manifest.json", "w")
-    f.write(json.dumps(manifest, sort_keys=True, indent=2))
+
+    with open("./triptracks/public/trails.manifest.json", "w") as f:
+        f.write(json.dumps(manifest, sort_keys=True, indent=2))
+
+    with open("./triptracks/public/trails.search.json", "w") as f:
+        f.write(json.dumps(trail_search, sort_keys=True, indent=2))
 
 
 def process_peaks():

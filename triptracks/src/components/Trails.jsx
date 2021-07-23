@@ -1,13 +1,22 @@
 import GeoJSON from "ol/format/GeoJSON";
 import {RLayerVector, RStyle} from "rlayers";
 import {Component} from "react";
+import {Redirect} from "react-router-dom";
+
+let redirectTo = null
 
 class Trail extends Component {
+
+    onClick(e){
+        e.stopPropagation()
+        redirectTo = this.props.geohash
+    }
     render() {
         return <RLayerVector
             zIndex={5}
             format={new GeoJSON({featureProjection: "EPSG:3857"})}
             url={this.props.url}
+            onClick={this.onClick.bind(this)}
         >
             <RStyle.RStyle>
                 <RStyle.RStroke color="green" width={3}/>
@@ -73,15 +82,18 @@ class Trails extends Component {
     }
 
     render() {
+        if(redirectTo !== null){
+            return <Redirect to={`/trail/${redirectTo}`} />
+        }
         let trails = {}
         let filenames = this.getTrails()
-        console.log(filenames)
 
         filenames.forEach(filename => {
-            if(trails.length >= this.props.maxTrails){
+            if(trails[filename] !== undefined || trails.length >= this.props.maxTrails){
                 return
             }
-            trails[filename] = (<Trail key={filename} url={filename}/>)
+            let geohash = filename.replace("trails/", "").replace(".geojson", "")
+            trails[filename] = (<Trail key={filename} url={filename} geohash={geohash} />)
         })
         return Object.values(trails)
     }
