@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 import json
 import os
-import time
 
 import pygeohash
-from geojson import dump
-from trails import Peak, Trail
 
 trail_search = []
 
