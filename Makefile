@@ -4,6 +4,9 @@ build_data:
 build_search:
 	python3 ./scripts/build_search.py
 
+build_packing:
+	python3.9 ./scripts/build_packing.py
+
 start:
 	cd triptracks; yarn start
 
