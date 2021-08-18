@@ -32,7 +32,7 @@ def _create_trail_manifest(trail: Trail):
 
 
 def _create_geojson(trail: Trail):
-    directory = f"./triptracks/public/trails"
+    directory = f"./web/public/trails"
     if not os.path.exists(directory):
         os.makedirs(directory)
     filepath = f"{directory}/{trail.center_geohash}.geojson"
@@ -41,7 +41,7 @@ def _create_geojson(trail: Trail):
 
 
 def _create_json_details(trail: Trail):
-    directory = f"./triptracks/public/trail_details"
+    directory = f"./web/public/trail_details"
     if not os.path.exists(directory):
         os.makedirs(directory)
     filepath = f"{directory}/{trail.center_geohash}.json"
@@ -71,17 +71,17 @@ def process_trails():
             i += 1
         time.sleep(0)
 
-    with open("./triptracks/public/trails.manifest.json", "w") as f:
+    with open("./web/public/trails.manifest.json", "w") as f:
         f.write(json.dumps(manifest, sort_keys=True, indent=2))
 
-    with open("./triptracks/public/trails.search.json", "w") as f:
+    with open("./web/public/trails.search.json", "w") as f:
         f.write(json.dumps(trail_search, sort_keys=True, indent=2))
 
 
 def process_peaks():
 
     peak_trails = {}
-    trails_directory = f"./triptracks/public/trails"
+    trails_directory = f"./web/public/trails"
     for filename in os.listdir(trails_directory):
         path = os.path.join(trails_directory, filename)
         with open(path) as f:
@@ -100,7 +100,7 @@ def process_peaks():
     i = 0
     peaks = list(Peak.all_peaks())
     for peak in peaks:
-        directory = f"./triptracks/public/peaks"
+        directory = f"./web/public/peaks"
         if not os.path.exists(directory):
             os.makedirs(directory)
         filepath = f"{directory}/{peak.geohash}.json"
@@ -119,7 +119,7 @@ def process_peaks():
 
 
 def build_heatmap():
-    trails_directory = f"./triptracks/public/trails"
+    trails_directory = f"./web/public/trails"
     with open(f"{trails_directory}/../../src/trails.heatmap.jsx", "w") as f:
         f.write("let trailHeatmap = [\n")
         for filename in os.listdir(trails_directory):
@@ -133,8 +133,8 @@ def build_heatmap():
 
 
 def build_heatmap_geojson():
-    trails_directory = f"./triptracks/public/trails"
-    with open(f"./triptracks/public/trails.heatmap.geojson", "w") as f:
+    trails_directory = f"./web/public/trails"
+    with open(f"./web/public/trails.heatmap.geojson", "w") as f:
         f.write("""{
     "type": "FeatureCollection",
     "name": "trails",

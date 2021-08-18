@@ -1,18 +1,18 @@
 #!/usr/bin/env python3
 import json
 
-from items.product import Product
+from items import Item
 
 items = []
-for product in Product.load_mec():
-    if product.weight:
-        data = product.json()
+for item in Item.load_mec():
+    if item.weight:
+        data = item.json()
         items.append({
-            "weight": product.weight,
-            "name": product.name,
-            "image": product.img_urls["low"][0],
+            "weight": item.weight,
+            "name": item.name,
+            "image": item.img_urls["low"][0],
         })
-        print(product.name)
+        print(item.name)
 
-with open("./triptracks/public/packing.search.mec.json", "w") as f:
+with open("./web/public/packing.search.mec.json", "w") as f:
     f.write(json.dumps(items, indent=2, sort_keys=True))

@@ -17,7 +17,7 @@ def _create_trail_search(trail: dict):
 
 def process_trails():
     i = 0
-    directory = "./triptracks/public/trail_details/"
+    directory = "./web/public/trail_details/"
     filenames = os.listdir(directory)
     for filename in filenames:
         with open(os.path.join(directory, filename)) as f:
@@ -26,7 +26,7 @@ def process_trails():
             print(f"{i}/{len(filenames)} {data['title']}")
             i += 1
 
-    with open("./triptracks/public/trails.search.json", "w") as f:
+    with open("./web/public/trails.search.json", "w") as f:
         f.write(json.dumps(trail_search, sort_keys=True, indent=2))
 
 
