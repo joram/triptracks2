@@ -12,11 +12,15 @@ export const DraggableItem = function DraggableItem({ name, image_url, weight })
         }),
     }));
     const opacity = isDragging ? 0.4 : 1;
-    return (<Segment key={name} as={"div"} ref={drag} role="DraggableItem" style={{ opacity }} data-testid={`box-${name}`}>
-            <Card>
-            <Image src={image_url} wrapped ui={false} />
-            <Card.Description>{name}</Card.Description>
-            <Card.Meta>{weight}g</Card.Meta>
+    return (
+        <span ref={drag} style={{padding:"5px"}}>
+            <Card key={name} role="DraggableItem" style={{ opacity }} data-testid={`box-${name}`}>
+                <Card.Content>
+                    <Image src={image_url} style={{maxHeight:"200px"}}/>
+                </Card.Content>
+                <Card.Description>{name}</Card.Description>
+                <Card.Meta>{weight}g</Card.Meta>
             </Card>
-    </Segment>);
+        </span>
+    );
 };
