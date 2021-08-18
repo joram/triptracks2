@@ -1,8 +1,24 @@
-import React, { memo } from 'react';
+import React, {memo} from 'react';
 import {useDrop} from 'react-dnd';
 import {DraggableItem} from "./draggableItem";
 
 const items = {};
+
+export function getTotalWeight(key){
+    if(items[key]===undefined)
+        return 0
+    let total = 0
+    items[key].forEach(item => {
+        total += item.weight
+    })
+    return total
+}
+
+export function getItemCount(key){
+    if(items[key]===undefined)
+        return 0
+    return items[key].length
+}
 
 function DraggableTarget(props) {
     function droppedOnMe(propss, monitor, component){
@@ -23,8 +39,8 @@ function DraggableTarget(props) {
         }
     });
     const isActive = isOver && canDrop;
-    let backgroundColor = '#2222';
-    if (isActive) { backgroundColor = 'darkgreen' }
+    let backgroundColor = '';
+    if (isActive) { backgroundColor = 'green' }
     else if (canDrop) { backgroundColor = 'darkkhaki' }
 
     let itemCards = [];
@@ -37,6 +53,7 @@ function DraggableTarget(props) {
 
     return (<div ref={drop} role="DraggableTarget" style={{width:"100%", height:"80vh", backgroundColor:backgroundColor}}>
 			{isActive ? 'Release to drop' : ``}
+        total weight is {getTotalWeight(props.name)}g
         {itemCards}
 		</div>);
 }
