@@ -6,6 +6,7 @@ from google.oauth2 import id_token
 from pydantic import BaseModel
 
 from .app import app
+from .settings import GOOGLE_CLIENT_ID
 
 
 class AccessKeyRequest(BaseModel):
@@ -23,7 +24,7 @@ async def create_access_key(request: AccessKeyRequest):
     global ACCESS_KEYS_BY_EMAIL
     global EMAIL_BY_ACCESS_KEYS
     try:
-        idinfo = id_token.verify_oauth2_token(request.token, requests.Request(), request.client_id)
+        idinfo = id_token.verify_oauth2_token(request.token, requests.Request(), GOOGLE_CLIENT_ID)
         email = idinfo["email"]
 
         if email in ACCESS_KEYS_BY_EMAIL:

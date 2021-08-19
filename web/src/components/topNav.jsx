@@ -9,7 +9,6 @@ const responseGoogle = (response) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         token: response.tokenId,
-        client_id:"965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com",
       })
     }).then(response => response.json())
     .then(access_key => {

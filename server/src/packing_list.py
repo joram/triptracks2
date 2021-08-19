@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import Optional, List, Dict
 
 from fastapi import Depends
 from pydantic import BaseModel
@@ -19,7 +19,7 @@ class PackingList(BaseModel):
 
 
 @app.get("/api/v0/packing_lists")
-async def list_packing_lists(email: str = Depends(verify_access_key)) -> dict[str, PackingList]:
+async def list_packing_lists(email: str = Depends(verify_access_key)) -> Dict[str, PackingList]:
     print(f"{email} is authed")
     items = {"regular": PackingList(items=[Item(
         name="regular",
@@ -31,5 +31,5 @@ async def list_packing_lists(email: str = Depends(verify_access_key)) -> dict[st
 
 
 @app.post("/api/v0/packing_lists")
-async def create_items(items: dict[str, PackingList]) -> None:
+async def create_items(items: Dict[str, PackingList]) -> None:
     return None
