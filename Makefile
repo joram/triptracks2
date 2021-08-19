@@ -7,6 +7,10 @@ build_search:
 build_packing:
 	python3.9 ./scripts/build_packing.py
 
+build_server:
+	cd server; docker build . -t joram87/triptracks2:latest
+	docker push joram87/triptracks2:latest
+
 start_web:
 	cd web; yarn start
 
