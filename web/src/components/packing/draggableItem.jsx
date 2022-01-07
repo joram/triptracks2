@@ -1,5 +1,5 @@
-import { useDrag } from 'react-dnd';
-import {Card, Image, Segment} from "semantic-ui-react";
+import {useDrag} from 'react-dnd';
+import {Card, Image} from "semantic-ui-react";
 
 export const DraggableItem = function DraggableItem({ name, image_url, weight }) {
     const [{ isDragging }, drag] = useDrag(() => ({

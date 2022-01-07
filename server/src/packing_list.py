@@ -9,27 +9,35 @@ from .app import app
 
 class Item(BaseModel):
     name: str
-    description: Optional[str] = None
-    weight_grams: int
+    weight: int
     image_url: str
 
 
 class PackingList(BaseModel):
+    name: str
     items: List[Item]
 
 
+PACKING_LISTS = {}
+
+
 @app.get("/api/v0/packing_lists")
-async def list_packing_lists(email: str = Depends(verify_access_key)) -> Dict[str, PackingList]:
+async def get_packing_lists(email: str = Depends(verify_access_key)) -> Dict[str, PackingList]:
     print(f"{email} is authed")
-    items = {"regular": PackingList(items=[Item(
-        name="regular",
-        description="my regular packing list",
-        weight_grams=25,
-        image_url="https://placecage.com/256x256",
-    )])}
-    return items
+    if email not in PACKING_LISTS:
+        PACKING_LISTS[email] = {}
+    return PACKING_LISTS[email]
 
 
-@app.post("/api/v0/packing_lists")
-async def create_items(items: Dict[str, PackingList]) -> None:
-    return None
+@app.post("/api/v0/packing_list")
+async def set_packing_list(packing_list: PackingList, email: str = Depends(verify_access_key)) -> Dict[str, PackingList]:
+    print(f"{email} is authed")
+
+    if email not in PACKING_LISTS:
+        PACKING_LISTS[email] = {}
+    if packing_list.name not in PACKING_LISTS[email]:
+        PACKING_LISTS[email][packing_list.name] = []
+
+    PACKING_LISTS[email][packing_list.name] = packing_list.items
+
+    return PACKING_LISTS[email]

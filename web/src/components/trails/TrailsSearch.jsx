@@ -6,7 +6,6 @@ import {withRouter} from "react-router-dom";
 let source = []
 fetch("/trails.search.json").then(r => r.json()).then(data => {
   source = data
-  console.log(source)
 })
 
 const initialState = {

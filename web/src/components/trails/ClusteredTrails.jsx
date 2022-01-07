@@ -35,7 +35,6 @@ export default function ClusteredTrails(props) {
             []
           )}
           render={useCallback((feature, resolution) => {
-            console.log(props)
             const size = feature.get("features").length;
             if (size > 1) {
               const radius = extentFeatures(
