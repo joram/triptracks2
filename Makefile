@@ -12,7 +12,7 @@ build_server:
 	docker push joram87/triptracks2:latest
 
 start_web:
-	cd web; yarn start
+	cd web; REACT_APP_ENVIRONMENT=local yarn start
 
 start_server:
 	cd ./server/; uvicorn src:app --reload

@@ -7,10 +7,9 @@ import {Tab} from "semantic-ui-react";
 class TrailImageCarousel extends Component {
     render() {
         let images = []
-        console.log(this.props.trail)
         this.props.trail.photos.forEach(image => {
             images.push(<div key={image}>
-                <img src={image} />
+                <img src={image} alt={"trail"}/>
             </div>)
         })
         return <Carousel dynamicHeight={true}>{images}</Carousel>
