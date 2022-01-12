@@ -81,6 +81,7 @@ class AccountMenu extends Component {
                 <GoogleLogin
                     clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
                     buttonText="Login"
+                    autoLoad={true}
                     onSuccess={this.loginSuccess.bind(this)}
                     cookiePolicy={'single_host_origin'}
                 />

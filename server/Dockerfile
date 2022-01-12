@@ -10,4 +10,6 @@ ADD ./src /src
 WORKDIR /
 
 EXPOSE 8000
+RUN mkdir /config
+ENV TT_CONFIG_DIR=/config
 ENTRYPOINT ["uvicorn", "--host", "0.0.0.0", "src:app"]

@@ -1,57 +1,56 @@
-import uuid
-
 from fastapi import Header, HTTPException, Depends
 from google.auth.transport import requests
 from google.oauth2 import id_token
 from pydantic import BaseModel
+from sqlalchemy.testing import db
 
 from .app import app
+from .db.database import get_session
+from .db.models import User, AccessToken
 from .settings import GOOGLE_CLIENT_ID
 
 
 class AccessKeyRequest(BaseModel):
     token: str
 
-ACCESS_KEYS = []
-ACCESS_KEYS_BY_EMAIL = {}
-EMAIL_BY_ACCESS_KEYS = {}
-USERINFO_BY_EMAIL = {}
-
 
 @app.post("/api/v0/access_key")
 async def create_access_key(request: AccessKeyRequest):
-    global ACCESS_KEYS
-    global ACCESS_KEYS_BY_EMAIL
-    global EMAIL_BY_ACCESS_KEYS
-    global USERINFO_BY_EMAIL
-    try:
-        idinfo = id_token.verify_oauth2_token(request.token, requests.Request(), GOOGLE_CLIENT_ID)
-        email = idinfo["email"]
 
-        if email in ACCESS_KEYS_BY_EMAIL:
-            return ACCESS_KEYS_BY_EMAIL.get(email)
+    userinfo = id_token.verify_oauth2_token(request.token, requests.Request(), GOOGLE_CLIENT_ID)
+    email = userinfo["email"]
 
-        access_key = str(uuid.uuid4())
-        ACCESS_KEYS.append(access_key)
-        ACCESS_KEYS_BY_EMAIL[email] = access_key
-        EMAIL_BY_ACCESS_KEYS[access_key] = email
-        USERINFO_BY_EMAIL[email] = idinfo
-        return access_key
+    # upsert user_id
+    session = get_session()
+    qs = session.query(User).filter(User.email == email)
+    if qs.count() >= 1:
+        user = qs.first()
+    else:
+        user = User.new(email=email, google_userinfo=userinfo)
+        session.add(user)
 
-    except ValueError:
-        return None
+    # upsert access key
+    qs = session.query(AccessToken).filter(AccessToken.user_id == user.id)
+    if qs.count() >= 1:
+        access_token = qs.first()
+    else:
+        access_token = AccessToken.new(user=user)
+        session.add(access_token)
+
+    session.commit()
+    return access_token.token
 
 
-async def verify_access_key(access_key: str = Header(...)):
-    if access_key not in ACCESS_KEYS:
+async def verify_access_key(access_key: str = Header(...)) -> User:
+    qs = get_session().query(AccessToken).filter(AccessToken.token == access_key)
+    print(f"access_key {access_key} exist?")
+    if qs.count() == 0:
+        print("nope")
         raise HTTPException(status_code=400, detail="Access-Key header invalid")
-    return EMAIL_BY_ACCESS_KEYS.get(access_key)
-
+    user_id = qs.first().user_id
+    return get_session().query(User).filter(User.id==user_id).first()
 
 @app.get("/api/v0/userinfo")
-async def userinfo(email: str = Depends(verify_access_key)):
-    try:
-        info = USERINFO_BY_EMAIL[email]
-        return info
-    except ValueError:
-        return None
+async def userinfo(user: User = Depends(verify_access_key)):
+    print(user)
+    return user.google_userinfo
