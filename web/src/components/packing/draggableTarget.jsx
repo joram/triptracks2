@@ -1,48 +1,53 @@
-import React, {memo} from 'react';
+import React, {memo, useState} from 'react';
 import {useDrop} from 'react-dnd';
 import {DraggableItem} from "./draggableItem";
-import {getAccessKey, url} from "../topNav";
+import {url} from "../topNav";
+import {AccessKeyContext} from "../../context";
+import {CardGroup} from "semantic-ui-react";
 
-const items = {};
 
-export function getTotalWeight(key){
-    if(items[key]===undefined)
-        return 0
-    let total = 0
-    items[key].forEach(item => {
-        total += item.weight
-    })
-    return total
-}
-
-export function getItemCount(key){
-    if(items[key]===undefined)
-        return 0
-    return items[key].length
-}
-
-function setPackingList(name, items){
-  let body = {
-      name: name,
-      items: items,
-  }
-  fetch(url("/api/v0/packing_list"), {
-      method: "POST",
-      headers: {
-          'Content-Type': 'application/json',
-          'Access-Key': getAccessKey(),
-      },
-      body: body
-  })
-}
 
 function DraggableTarget(props) {
+
+    function getTotalWeight(){
+        if(props.items===undefined)
+            return 0
+        let total = 0
+        props.items.forEach(item => {
+            total += item.weight
+        })
+        return total
+    }
+
+    function removeItem(i, id, name){
+        items.splice(i, 1)
+        return setPackingList(id, name, items)
+    }
+
+    function setPackingList(id, name){
+      let body = {
+          name: name,
+          contents: items,
+      }
+      let accessKey = AccessKeyContext.accessKey
+      return fetch(url("/api/v0/packing_list/"+id), {
+          method: "POST",
+          headers: {
+              'Content-Type': 'application/json',
+              'Access-Key': accessKey,
+          },
+          body: JSON.stringify(body)
+      })
+    }
+
+    let [refresh, setRefresh] = useState(1)
+    let [items, setItems] = useState([])
+    if(items!==props.items && props.items !== undefined){
+        setItems(props.items)
+    }
     function droppedOnMe(propss, monitor, component){
-        if(items[props.name]===undefined){
-            items[props.name] = []
-        }
-        items[props.name].push(monitor.getItem())
-        setPackingList(props.name, items[props.name])
+        items.push(monitor.getItem())
+        setPackingList(props.id, props.name)
     }
 
     const [{ isOver, canDrop }, drop] = useDrop({
@@ -62,22 +67,24 @@ function DraggableTarget(props) {
     else if (canDrop) { backgroundColor = 'darkkhaki' }
 
     let itemCards = [];
-    if(items[props.name]===undefined){
-        items[props.name] = []
-    }
-    if(props.items !== undefined && props.items.items !== undefined){
-        items[props.name] = props.items.items
-    }
-
-    items[props.name].forEach(item => {
-        itemCards.push(<DraggableItem key={item.name} name={item.name} weight={item.weight} image_url={item.image_url}/>)
+    items.map((item, i) => {
+        return itemCards.push(<DraggableItem
+            remove={()=>{
+                removeItem(i, props.id, props.name).then(r => setRefresh(refresh+1))
+            }}
+            key={i}
+            name={item.name}
+            weight={item.weight}
+            deletable={true}
+            image_url={item.image_url}
+        />)
     })
 
-    return (<div ref={drop} role={DraggableTarget} style={{width:"100%", height:"80vh", backgroundColor:backgroundColor}}>
-			{isActive ? 'Release to drop' : ``}
-        total weight is {getTotalWeight(props.name)}g
-        {itemCards}
-		</div>);
+    return (<div ref={drop} role={DraggableTarget} style={{width:"100%", backgroundColor:backgroundColor}}>
+                <div style={{paddingBottom:"10px"}}>total weight is {getTotalWeight(props.name)}g</div>
+            <CardGroup itemsPerRow={4}>{itemCards}</CardGroup>
+        </div>
+    );
 }
 
 export default memo(DraggableTarget);

@@ -1,8 +1,22 @@
-import {Container, Dropdown, Header, Image, Menu, Segment} from "semantic-ui-react";
+import {Button, Container, Dropdown, Header, Image, Menu, Segment} from "semantic-ui-react";
 import TrailsSearch from "./trails/TrailsSearch";
-import GoogleLogin, {GoogleLogout} from 'react-google-login';
+import GoogleLogin from 'react-google-login';
 import {Component} from "react";
-import {Link} from "react-router-dom";
+import Cookies from 'universal-cookie';
+import {AccessKeyContext, UserinfoContext} from "../context";
+import {withRouter} from "react-router-dom";
+
+const cookies = new Cookies();
+
+let accessKey = cookies.get("accessKey")
+if(accessKey !== undefined){
+    AccessKeyContext.accessKey = accessKey
+}
+
+let userinfo = cookies.get("userinfo")
+if(userinfo !== undefined){
+    UserinfoContext.userinfo = userinfo
+}
 
 function url(path){
     let base = "https://triptracks2.oram.ca"
@@ -12,67 +26,87 @@ function url(path){
     return base+path
 }
 
+function updateAccessKey(token){
+    let accessKeyContext = AccessKeyContext
+    return fetch(url("/api/v0/access_key"), {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({token: token})
+    }).then(response => {
+        return response.json()
+    }).then(newAccessKey => {
+        handleApiErrors(newAccessKey)
+        cookies.set("accessKey", newAccessKey)
+        accessKeyContext.accessKey = newAccessKey
+        return newAccessKey
+    });
+}
+
+function handleApiErrors(response){
+    let accessKeyContext = AccessKeyContext
+    let userinfoContext = UserinfoContext
+    if(response["detail"] !== undefined){
+        console.log("api error, logging out:", response["detail"])
+        accessKeyContext.accessKey = undefined
+        userinfoContext.userinfo = undefined
+        return true
+    }
+    return false
+}
+
+function updateUserInfo(){
+    let accessKey = AccessKeyContext.accessKey
+    let userinfoContext = UserinfoContext
+    return fetch(url("/api/v0/userinfo"), {
+        method: "GET",
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Key': accessKey,
+        },
+    }).then(response => {
+        return response.json()
+    }).then(newuserinfo => {
+        if(!handleApiErrors(newuserinfo)){
+            userinfoContext.userinfo = newuserinfo
+            cookies.set("userinfo", newuserinfo)
+            return newuserinfo
+        }
+    });
+}
+
 
 class AccountMenu extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          userinfo: null,
-          accessKey: null,
-          isLoggedIn: false
-        }
-      }
+
+    isLoggedIn(){
+        let accessKey = AccessKeyContext.accessKey
+        let userinfo = UserinfoContext.userinfo
+        return (accessKey !== undefined && userinfo !== undefined)
+    }
 
     loginSuccess(response) {
-        fetch(url("/api/v0/access_key"), {
-          method: "POST",
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            token: response.tokenId,
-          })
-        }).then(response => {
-            return response.json()
-        }).then(access_key => {
-          console.log("Request complete! response:", access_key)
-          let state = this.state
-          state.accessKey = access_key
-          state.isLoggedIn = true
-          this.setState(state)
-          this.updateUserinfo()
-        });
+        updateAccessKey(response.tokenId).then(_ => {
+            updateUserInfo().then(_ => {
+                this.setState({isLoggedIn: true})
+            })
+        })
     }
 
     logoutSuccess(resp){
-        console.log("logout success ", resp)
-        let state = this.state
-        state.accessKey = null
-        state.userinfo = null
-        state.isLoggedIn = false
-        this.setState(state)
-    }
-
-    updateUserinfo(){
-        fetch(url("/api/v0/userinfo"), {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Key': this.state.accessKey,
-            },
-        }).then(response => {
-            return response.json()
-        }).then(userinfo => {
-            if(userinfo["detail"] === "Access-Key header invalid"){
-                this.logoutSuccess()
-            }
-            let state = this.state
-            state.userinfo = userinfo
-            this.setState(state);
-        });
+        UserinfoContext.userinfo = undefined
+        AccessKeyContext.accessKey = undefined
+        cookies.remove("userinfo", { path: '/' })
+        cookies.remove("accessKey", { path: '/' })
+        this.props.history.push("/")
+        this.setState({isLoggedIn: false})
     }
 
     render() {
-        console.log(this.state)
-        if (this.state.isLoggedIn === false) {
+        let userinfo = UserinfoContext.userinfo
+        let accessKey = AccessKeyContext.accessKey
+        console.log("context accessKey", accessKey)
+        console.log("context userinfo", userinfo)
+
+        if (this.isLoggedIn() === false) {
             console.log("showing login button")
             return <div style={{
                 marginTop: "15px",
@@ -81,32 +115,27 @@ class AccountMenu extends Component {
                 <GoogleLogin
                     clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
                     buttonText="Login"
-                    autoLoad={true}
                     onSuccess={this.loginSuccess.bind(this)}
                     cookiePolicy={'single_host_origin'}
                 />
             </div>
         }
 
-        let userinfo = this.state.userinfo
-        if (userinfo !== null) {
-            let link_style = {color: "black"}
-            console.log(userinfo)
+        if (userinfo !== undefined) {
             let menuTitle = <Dropdown.Header style={{marginTop: "30px"}}>
                 <Image avatar src={userinfo.picture}/>
                 {userinfo.name}
             </Dropdown.Header>;
             return <Dropdown text={menuTitle}>
                 <Dropdown.Menu>
-                    <Dropdown.Item><Link to="/routes" style={link_style}>My Routes</Link></Dropdown.Item>
-                    <Dropdown.Item><Link to="/plans" style={link_style}>My Plans</Link></Dropdown.Item>
-                    <Dropdown.Item><Link to="/settings" style={link_style}>Settings</Link></Dropdown.Item>
+                    {/*<Dropdown.Item><Link to="/routes" style={link_style}>My Routes</Link></Dropdown.Item>*/}
+                    {/*<Dropdown.Item><Link to="/plans" style={link_style}>My Plans</Link></Dropdown.Item>*/}
+                    {/*<Dropdown.Item><Link to="/settings" style={link_style}>Settings</Link></Dropdown.Item>*/}
                     <Dropdown.Item>
-                        <GoogleLogout
-                            buttonText="Logout"
-                            onLogoutSuccess={this.logoutSuccess.bind(this)}
-                            render={renderProps => (<div onClick={renderProps.onClick}>Logout</div>)}
-                        />
+                        <Button
+                            onClick={this.logoutSuccess.bind(this)}
+                            // render={renderProps => (<div onClick={renderProps.onClick}>Logout</div>)}
+                        >logout</Button>
                     </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
@@ -116,6 +145,8 @@ class AccountMenu extends Component {
         return <></>
     }
 }
+
+let AccountMenuWithRouter = withRouter(AccountMenu)
 
 const TopNav = ({ fixed }) => {
     return <Segment
@@ -138,17 +169,14 @@ const TopNav = ({ fixed }) => {
                         Triptracks
                     </Header>
                 </Menu.Item>
-                <Menu.Item as='a' active={window.location.pathname==="/trails/"} href="/trails/">Trails</Menu.Item>
-                <Menu.Item as='a' active={window.location.pathname==="/packing/"} href="/packing/">Packing</Menu.Item>
+                <Menu.Item as='a' active={window.location.pathname==="/"} href="/">Trails</Menu.Item>
+                <Menu.Item as='a' active={window.location.pathname==="/packing/list"} href="/packing/list">Packing</Menu.Item>
                 <Menu.Item position="right"><TrailsSearch/></Menu.Item>
-                <AccountMenu/>
+                <AccountMenuWithRouter/>
             </Container>
         </Menu>
     </Segment>
 }
 
-function getAccessKey(){
-    return localStorage.getItem("access_key")
-}
 
-export {getAccessKey, url, TopNav}
+export {url, TopNav, handleApiErrors}

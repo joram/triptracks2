@@ -148,7 +148,7 @@ def build_heatmap_geojson():
                 geohash = filename.split(".")[0]
                 print(geohash)
                 (lat, lng) = pygeohash.decode(geohash)
-                f.write(json.dumps({"type": "Feature", "id": geohash, "geometry": {"type": "Point", "coordinates": [lng, lat]}}))
+                f.write(json.dumps({"type": "Feature", "packing_list_id": geohash, "geometry": {"type": "Point", "coordinates": [lng, lat]}}))
         f.write("]\n}")
 
 
