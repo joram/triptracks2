@@ -5,6 +5,8 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import TrailDetails from "./components/trails/TrailDetails";
 import Packing from "./components/packing/packing";
 import {TopNav} from "./components/topNav";
+import PackingList from "./components/packing/list";
+import PackingCreate from "./components/packing/create";
 
 function App() {
   return (
@@ -12,7 +14,13 @@ function App() {
       <BrowserRouter>
         <TopNav/>
       <Switch>
-        <Route path="/packing">
+        <Route path="/packing/list">
+            <PackingList/>
+        </Route>
+        <Route path="/packing/create">
+            <PackingCreate/>
+        </Route>
+        <Route path="/packing/:id">
             <Packing/>
         </Route>
         <Route path="/trail/:geohash">

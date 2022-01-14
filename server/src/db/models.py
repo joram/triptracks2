@@ -31,6 +31,19 @@ class User(Base):
             return qs.first()
 
 
+class PackingList(Base):
+    __tablename__ = "packing_lists"
+
+    id = Column(String, primary_key=True, index=True)
+    user_id = Column(String, ForeignKey("users.id"))
+    name = Column(String)
+    contents = Column(JSON)
+
+    @staticmethod
+    def new(name:str, contents: dict, user: User) -> "PackingList":
+        return PackingList(id=prefixed_id("packinglist"), user_id=user.id, name=name, contents=contents)
+
+
 class AccessToken(Base):
     __tablename__ = "access_tokens"
 

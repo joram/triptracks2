@@ -34,10 +34,19 @@ class ItemSearch extends Component {
     render() {
         let itemCards = [];
         this.state.results.forEach(item => {
-            itemCards.push(<DraggableItem key={item.name} name={item.name} weight={item.weight} image_url={item.image}/>)
+            itemCards.push(<DraggableItem
+                deletable={false}
+                key={item.name}
+                name={item.name}
+                weight={item.weight}
+                image_url={item.image}
+            />)
         })
         return <>
+            <br/>
             <Input placeholder='Search...' onChange={this.onChange.bind(this)}/>
+            <br/>
+            <br/>
             <CardGroup>{itemCards}</CardGroup>
         </>
     }
