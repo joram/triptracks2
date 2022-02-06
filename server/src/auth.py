@@ -1,10 +1,7 @@
-import pprint
-
 from fastapi import Header, HTTPException, Depends
 from google.auth.transport import requests
 from google.oauth2 import id_token
 from pydantic import BaseModel
-from sqlalchemy.testing import db
 
 from .app import app
 from .db.database import get_session
