@@ -40,8 +40,30 @@ class PackingList(Base):
     contents = Column(JSON)
 
     @staticmethod
-    def new(name:str, contents: dict, user: User) -> "PackingList":
+    def new(name: str, contents: dict, user: User) -> "PackingList":
         return PackingList(id=prefixed_id("packinglist"), user_id=user.id, name=name, contents=contents)
+
+
+class TripPlan(Base):
+    __tablename__ = "trip_plans"
+
+    id = Column(String, primary_key=True, index=True)
+    user_id = Column(String, ForeignKey("users.id"))
+    name = Column(String)
+    packing_lists = Column(JSON)
+    people = Column(JSON)
+    trails = Column(JSON)
+
+    @staticmethod
+    def new(name: str, user: User) -> "TripPlan":
+        return TripPlan(
+            id=prefixed_id("tripplan"),
+            user_id=user.id,
+            name=name,
+            packing_lists=[],
+            people=[],
+            trails=[],
+        )
 
 
 class AccessToken(Base):
