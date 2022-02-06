@@ -2,7 +2,7 @@ import React, {memo, useState} from 'react';
 import {useDrop} from 'react-dnd';
 import {DraggableItem} from "./draggableItem";
 import {url} from "../topNav";
-import {AccessKeyContext} from "../../context";
+import {AccessKeyContext} from "../../utils/context";
 import {CardGroup} from "semantic-ui-react";
 
 

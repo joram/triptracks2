@@ -1,13 +1,12 @@
 import React, {useState} from "react";
-import {Container, Grid, Segment} from "semantic-ui-react";
+import {Grid, Segment} from "semantic-ui-react";
 import ItemSearch from "./search";
 import {DndProvider} from 'react-dnd'
 import {HTML5Backend} from 'react-dnd-html5-backend'
 import DraggableTarget from "./draggableTarget";
-import 'react-tabs/style/react-tabs.css';
 import {useParams} from 'react-router-dom'
 import {handleApiErrors, url} from "../topNav";
-import {AccessKeyContext} from "../../context";
+import {AccessKeyContext} from "../../utils/context";
 
 async function getPackingList(id){
   let accessKey = AccessKeyContext.accessKey

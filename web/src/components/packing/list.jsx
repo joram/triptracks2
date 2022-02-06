@@ -2,7 +2,8 @@ import React, {Component} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
 import {handleApiErrors, url} from "../topNav";
 import {Link} from "react-router-dom";
-import {AccessKeyContext, UserinfoContext} from "../../context";
+import {AccessKeyContext} from "../../utils/context";
+import {isLoggedIn} from "../../utils/auth";
 
 async function getPackingLists() {
     let accessKey = AccessKeyContext.accessKey
@@ -35,17 +36,10 @@ async function removePackingList(packing_list_id) {
     })
 }
 
-function isLoggedIn(){
-    let accessKey = AccessKeyContext.accessKey
-    let userinfo = UserinfoContext.userinfo
-    console.log("is logged in?", accessKey, userinfo)
-    return (accessKey !== undefined && userinfo !== undefined)
-}
-
-
 class PackingList extends Component {
     state = {
-        packing_lists: []
+        packing_lists: [],
+        is_logged_in: isLoggedIn(),
     }
 
     refreshList() {
@@ -57,7 +51,7 @@ class PackingList extends Component {
     }
 
     componentDidMount() {
-        if(isLoggedIn()){
+        if(this.state.is_logged_in){
             this.refreshList()
         }
     }
@@ -70,7 +64,7 @@ class PackingList extends Component {
 
 
     render() {
-        if(!isLoggedIn()){
+        if(!this.state.is_logged_in){
             return <Container>you must be logged in before you can create a packing list</Container>
         }
         let rows = []
