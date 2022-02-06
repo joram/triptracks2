@@ -3,7 +3,7 @@ import TrailsSearch from "./trails/TrailsSearch";
 import GoogleLogin from 'react-google-login';
 import {Component} from "react";
 import Cookies from 'universal-cookie';
-import {AccessKeyContext, UserinfoContext} from "../context";
+import {AccessKeyContext, UserinfoContext} from "../utils/context";
 import {withRouter} from "react-router-dom";
 
 const cookies = new Cookies();
@@ -20,9 +20,8 @@ if(userinfo !== undefined){
 
 function url(path){
     let base = "https://triptracks2.oram.ca"
-    if (process.env.REACT_APP_ENVIRONMENT==="local"){
+    if (process.env.REACT_APP_ENVIRONMENT==="local")
         base = "http://localhost:8000"
-    }
     return base+path
 }
 
@@ -170,7 +169,8 @@ const TopNav = ({ fixed }) => {
                     </Header>
                 </Menu.Item>
                 <Menu.Item as='a' active={window.location.pathname==="/"} href="/">Trails</Menu.Item>
-                <Menu.Item as='a' active={window.location.pathname==="/packing/list"} href="/packing/list">Packing</Menu.Item>
+                <Menu.Item as='a' active={window.location.pathname.startsWith("/packing")} href="/packing/list">Packing</Menu.Item>
+                <Menu.Item as='a' active={window.location.pathname.startsWith("/plan")} href="/plan/list">Trip Plans</Menu.Item>
                 <Menu.Item position="right"><TrailsSearch/></Menu.Item>
                 <AccountMenuWithRouter/>
             </Container>

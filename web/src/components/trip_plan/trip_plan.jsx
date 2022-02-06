@@ -2,10 +2,11 @@ import React, {useState} from "react";
 import {useParams} from 'react-router-dom'
 import {handleApiErrors, url} from "../topNav";
 import {AccessKeyContext} from "../../utils/context";
+import {Tab} from "semantic-ui-react";
 
-async function getPackingList(id){
+async function getTripPlan(id){
   let accessKey = AccessKeyContext.accessKey
-  return fetch(url("/api/v0/packing_list/"+id), {
+  return fetch(url("/api/v0/trip_plan/"+id), {
       method: "GET",
       headers: {
           'Content-Type': 'application/json',
@@ -20,21 +21,28 @@ async function getPackingList(id){
 }
 
 
-function Packing () {
-    let [packing_list, setPackingList] = useState({Group: []})
+function TripPlan() {
+    let [trip_plan, setTripPlan] = useState({Group: []})
     let [fetched, setFetched] = useState(false)
     let {id} = useParams()
 
     if(!fetched){
-        getPackingList(id).then(packing_list => {
+        getTripPlan(id).then(packing_list => {
             setFetched(true)
-            setPackingList(packing_list)
+            setTripPlan(packing_list)
         })
     }
 
+    console.log(trip_plan)
+    const panes = [
+      { menuItem: 'Trails', render: () => <Tab.Pane>Tab 1 Content</Tab.Pane> },
+      { menuItem: 'Packing Lists', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
+      { menuItem: 'Timing', render: () => <Tab.Pane>Tab 3 Content</Tab.Pane> },
+      { menuItem: 'People', render: () => <Tab.Pane>Tab 4 Content</Tab.Pane> },
+    ]
     return <>
-
+        <Tab panes={panes}/>
     </>
 }
 
-export default Packing;
+export default TripPlan;

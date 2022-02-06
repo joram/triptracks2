@@ -1,3 +1,5 @@
+test:
+	pytest ./server -vv
 build_data:
 	python3 ./scripts/build.py
 

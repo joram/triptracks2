@@ -5,7 +5,24 @@ import {Redirect} from "react-router-dom";
 
 let redirectTo = null
 
+
+async function getData(url){
+    console.log("getting cached ", url)
+    return fetch(url).then(response => {return response.text()})
+}
+
 class Trail extends Component {
+
+    state = {features: null}
+    getFeatures(){
+        getData(this.props.url).then(jsonDataString => {
+            let features = new GeoJSON({featureProjection: "EPSG:3857"}).readFeatures(jsonDataString)
+            let state = this.state
+            state.features = features
+            this.setState(state)
+        })
+        return this.state.features
+    }
 
     onClick(e){
         e.stopPropagation()
@@ -15,7 +32,7 @@ class Trail extends Component {
         return <RLayerVector
             zIndex={5}
             format={new GeoJSON({featureProjection: "EPSG:3857"})}
-            url={this.props.url}
+            features={this.getFeatures()}
             onClick={this.onClick.bind(this)}
         >
             <RStyle.RStyle>
@@ -44,12 +61,12 @@ class Trails extends Component {
     }
 
 
-    getTrails(limit=1024){
+    getTrails(limit=1){
 
         // get node
         let basePrefix = "trails";
         let node = this.state.manifest;
-        for (var i = 0; i < this.props.viewGeohash.length; i++) {
+        for (let i = 0; i < this.props.viewGeohash.length; i++) {
             let c = this.props.viewGeohash.charAt(i)
             node = node[c]
             basePrefix = basePrefix+"/"+c;

@@ -1,18 +1,18 @@
 import React, {Component} from "react";
 import {url} from "../topNav";
 import {Redirect} from "react-router-dom";
-import {AccessKeyContext} from "../../context";
+import {AccessKeyContext} from "../../utils/context";
 
 
-class PackingCreate extends Component {
+class TripPlanCreate extends Component {
     state = {
         creating: true
     }
     render() {
         if(!this.state.creating){
-            return <Redirect to={"/packing/" + this.state.id}/>
+            return <Redirect to={"/plan/" + this.state.id}/>
         }
-        fetch(url("/api/v0/packing_list"), {
+        fetch(url("/api/v0/trip_plan"), {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
@@ -21,14 +21,15 @@ class PackingCreate extends Component {
             body: ""
         }
         ).then(response => response.json()).then(response => {
+            console.log("response:", response)
             this.setState({
                 creating: false,
                 id: response,
             })
         })
 
-        return <>creating a new packing list, please hold</>
+        return <>creating a new tripPlan list, please hold</>
     }
 }
 
-export default PackingCreate;
+export default TripPlanCreate;

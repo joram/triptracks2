@@ -2,11 +2,12 @@ import React, {Component} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
 import {handleApiErrors, url} from "../topNav";
 import {Link} from "react-router-dom";
-import {AccessKeyContext, UserinfoContext} from "../../context";
+import {AccessKeyContext} from "../../utils/context";
+import {isLoggedIn} from "../../utils/auth";
 
-async function getPackingLists() {
+async function getTripPlans() {
     let accessKey = AccessKeyContext.accessKey
-    return await fetch(url("/api/v0/packing_lists"), {
+    return await fetch(url("/api/v0/trip_plans"), {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',
@@ -14,18 +15,18 @@ async function getPackingLists() {
         },
     })
         .then(response => response.json())
-        .then(packing_lists => {
-            handleApiErrors(packing_lists)
-            if(packing_lists.detail !== undefined){
+        .then(trip_plans => {
+            handleApiErrors(trip_plans)
+            if(trip_plans.detail !== undefined){
                 return []
             }
-            return packing_lists
+            return trip_plans
         })
 }
 
-async function removePackingList(packing_list_id) {
+async function removeTripPlan(trip_plan_id) {
     let accessKey = AccessKeyContext.accessKey
-    return await fetch(url("/api/v0/packing_list/"+packing_list_id), {
+    return await fetch(url("/api/v0/trip_plan/"+trip_plan_id), {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json',
@@ -35,67 +36,66 @@ async function removePackingList(packing_list_id) {
     })
 }
 
-function isLoggedIn(){
-    let accessKey = AccessKeyContext.accessKey
-    let userinfo = UserinfoContext.userinfo
-    console.log("is logged in?", accessKey, userinfo)
-    return (accessKey !== undefined && userinfo !== undefined)
-}
-
-
-class PackingList extends Component {
+class TripPlanList extends Component {
     state = {
-        packing_lists: []
+        trip_plans: [],
+        is_logged_in: isLoggedIn(),
     }
 
     refreshList() {
-        getPackingLists().then(packing_lists => {
+        getTripPlans().then(trip_plans => {
             let state = this.state;
-            state.packing_lists = packing_lists
+            state.trip_plans = trip_plans
             this.setState(state)
         })
     }
 
     componentDidMount() {
-        if(isLoggedIn()){
+        if(this.state.is_logged_in){
             this.refreshList()
         }
     }
 
-    removePackingList(id){
-        removePackingList(id).then(()=> {
+    removeTripPlanList(id){
+        removeTripPlan(id).then(()=> {
             this.refreshList()
         })
     }
 
 
     render() {
-        if(!isLoggedIn()){
-            return <Container>you must be logged in before you can create a packing list</Container>
+        console.log(this.state)
+        if(!this.state.is_logged_in){
+            return <Container>you must be logged in before you can create a trip plan list</Container>
         }
         let rows = []
-        rows.push(<Table.Row key="headers">
-            <Table.HeaderCell>Name</Table.HeaderCell>
-            <Table.HeaderCell># Items</Table.HeaderCell>
-            <Table.HeaderCell>Weight</Table.HeaderCell>
-            <Table.HeaderCell>Remove</Table.HeaderCell>
-        </Table.Row>)
-        this.state.packing_lists.map((packing_list, i) => {
-            rows.push(<Table.Row key={"packing_list_"+i}>
-                <Table.Cell><Link to={"/packing/"+packing_list.id}>{packing_list.name}</Link></Table.Cell>
-                <Table.Cell>{packing_list.contents.length}</Table.Cell>
-                <Table.Cell>{packing_list.weight/1000}kg</Table.Cell>
-                <Table.Cell><Button onClick={()=>{this.removePackingList(packing_list.id)}}>Remove</Button></Table.Cell>
+        this.state.trip_plans.map((trip_plan, i) => {
+            rows.push(<Table.Row key={"tripplan_"+i}>
+                <Table.Cell>Date</Table.Cell>
+                <Table.Cell><Link to={"/plan/"+trip_plan.id}>{trip_plan.name}</Link></Table.Cell>
+                <Table.Cell># ppl</Table.Cell>
+                <Table.Cell># trails</Table.Cell>
+                <Table.Cell># packing lists</Table.Cell>
+                <Table.Cell><Button onClick={()=>{this.removeTripPlanList(trip_plan.id)}}>Remove</Button></Table.Cell>
             </Table.Row>)
             return ""
         })
         return <>
             <Container>
-                <Table celled striped>{rows}</Table>
-                <Button as={Link} to="/packing/create">Create New Packing List</Button>
+                <Table celled striped>
+                    <Table.Header key="headers">
+                        <Table.HeaderCell>Date</Table.HeaderCell>
+                        <Table.HeaderCell>Name</Table.HeaderCell>
+                        <Table.HeaderCell># people</Table.HeaderCell>
+                        <Table.HeaderCell># trails</Table.HeaderCell>
+                        <Table.HeaderCell># packing lists</Table.HeaderCell>
+                        <Table.HeaderCell>Remove</Table.HeaderCell>
+                    </Table.Header>
+                    <Table.Body>{rows}</Table.Body></Table>
+                <Button as={Link} to="/plan/create">Create New Trip Plan</Button>
             </Container>
         </>
     }
 }
 
-export default PackingList;
+export default TripPlanList;
