@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {url} from "../topNav";
 import {Redirect} from "react-router-dom";
-import {AccessKeyContext} from "../../utils/context";
+import {getAccessKey} from "../../utils/auth";
 
 
 class TripPlanCreate extends Component {
@@ -16,7 +16,7 @@ class TripPlanCreate extends Component {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Key': AccessKeyContext.accessKey,
+                'Access-Key': getAccessKey(),
             },
             body: ""
         }

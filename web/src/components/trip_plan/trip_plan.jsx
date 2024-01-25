@@ -1,16 +1,15 @@
 import React, {useState} from "react";
 import {useParams} from 'react-router-dom'
 import {handleApiErrors, url} from "../topNav";
-import {AccessKeyContext} from "../../utils/context";
 import {Tab} from "semantic-ui-react";
+import {getAccessKey} from "../../utils/auth";
 
 async function getTripPlan(id){
-  let accessKey = AccessKeyContext.accessKey
   return fetch(url("/api/v0/trip_plan/"+id), {
       method: "GET",
       headers: {
           'Content-Type': 'application/json',
-          'Access-Key': accessKey,
+          'Access-Key': getAccessKey(),
       },
   }).then(response => {
       return response.json()

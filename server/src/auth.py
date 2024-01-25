@@ -43,7 +43,6 @@ async def create_access_key(request: AccessKeyRequest):
 
 async def verify_access_key(access_key: str = Header(...)) -> User:
     qs = get_session().query(AccessToken).filter(AccessToken.token == access_key)
-    print(f"access_key {access_key} exist?")
     if qs.count() == 0:
         raise HTTPException(status_code=400, detail="invalid Access-Key")
     user_id = qs.first().user_id
@@ -52,4 +51,4 @@ async def verify_access_key(access_key: str = Header(...)) -> User:
 
 @app.get("/api/v0/userinfo")
 async def userinfo(user: User = Depends(verify_access_key)):
-    return user.google_userinfo
+    return user

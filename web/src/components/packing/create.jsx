@@ -1,34 +1,33 @@
 import React, {Component} from "react";
 import {url} from "../topNav";
 import {Redirect} from "react-router-dom";
-import {AccessKeyContext} from "../../utils/context";
+import {getAccessKey} from "../../utils/auth";
 
 
-class PackingCreate extends Component {
-    state = {
-        creating: true
-    }
-    render() {
-        if(!this.state.creating){
-            return <Redirect to={"/packing/" + this.state.id}/>
-        }
+function PackingCreate() {
+    let [creating, setCreating] = React.useState(true)
+    let [id, setId] = React.useState(undefined)
+
+    React.useEffect(() => {
         fetch(url("/api/v0/packing_list"), {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Key': AccessKeyContext.accessKey,
-            },
-            body: ""
-        }
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Key': getAccessKey(),
+                },
+                body: ""
+            }
         ).then(response => response.json()).then(response => {
-            this.setState({
-                creating: false,
-                id: response,
-            })
+            setId(response)
+            setCreating(false)
         })
+    })
 
-        return <>creating a new packing list, please hold</>
+    if(!creating){
+        return <Redirect to={"/packing/" + id}/>
     }
+
+    return <>creating a new packing list, please hold</>
 }
 
 export default PackingCreate;

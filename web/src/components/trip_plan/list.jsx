@@ -2,16 +2,14 @@ import React, {Component} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
 import {handleApiErrors, url} from "../topNav";
 import {Link} from "react-router-dom";
-import {AccessKeyContext} from "../../utils/context";
-import {isLoggedIn} from "../../utils/auth";
+import {getAccessKey, isLoggedIn} from "../../utils/auth";
 
 async function getTripPlans() {
-    let accessKey = AccessKeyContext.accessKey
     return await fetch(url("/api/v0/trip_plans"), {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',
-            'Access-Key': accessKey,
+            'Access-Key': getAccessKey(),
         },
     })
         .then(response => response.json())
@@ -25,12 +23,11 @@ async function getTripPlans() {
 }
 
 async function removeTripPlan(trip_plan_id) {
-    let accessKey = AccessKeyContext.accessKey
     return await fetch(url("/api/v0/trip_plan/"+trip_plan_id), {
         method: "DELETE",
         headers: {
             'Content-Type': 'application/json',
-            'Access-Key': accessKey,
+            'Access-Key': getAccessKey(),
         },
         body: "{}"
     })
