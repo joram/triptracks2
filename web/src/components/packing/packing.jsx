@@ -19,6 +19,9 @@ import {handleApiErrors, url} from "../topNav";
 import {getAccessKey, getUserInfo} from "../../utils/auth";
 import {indexOf} from "lodash/array";
 
+// HINTS:
+// FOOD: On a typical day you will burn between 3,000 and 5,000 calories. Generally this amounts to about 1½ pounds of food. Your food weight distribution should optimally be around 55 to 65% carbohydrates, 15 to 20 % protein, and less than 25% fat.
+// WEIGHT: max 20% body weight
 
 function stringToGrams(s){
     let value = s.split(" ")[0];
