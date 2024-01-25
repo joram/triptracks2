@@ -10,32 +10,39 @@ import Packing from "./components/packing/packing";
 import TripPlanList from "./components/trip_plan/list";
 import TripPlanCreate from "./components/trip_plan/create";
 import TripPlan from "./components/trip_plan/trip_plan";
+import {useState} from "react";
 
 function App() {
+  let [loggedIn, setIsLoggedIn] = useState(false)
+  function onLoginChange(loggedIn){
+    setIsLoggedIn(loggedIn)
+    window.location.reload(true);
+  }
+
   return (
     <div className="App">
       <BrowserRouter>
-        <TopNav/>
-      <Switch>
+        <TopNav onLoginChange={onLoginChange}/>
+        <Switch>
 
-        {/* TRAILS */}
-        <Route path="/trail/:geohash"><TrailDetails/></Route>
-        <Route path="/trails"><Map /></Route>
+          {/* TRAILS */}
+          <Route path="/trail/:geohash"><TrailDetails/></Route>
+          <Route path="/trails"><Map /></Route>
 
-        {/* PACKING */}
-        <Route path="/packing/list"><PackingList/></Route>
-        <Route path="/packing/create"><PackingCreate/></Route>
-        <Route path="/packing/:id"><Packing/></Route>
+          {/* PACKING */}
+          <Route path="/packing/list"><PackingList loggedIn={loggedIn}/></Route>
+          <Route path="/packing/create"><PackingCreate loggedIn={loggedIn}/></Route>
+          <Route path="/packing/:id"><Packing loggedIn={loggedIn}/></Route>
 
-        {/* PLAN */}
-        <Route path="/plan/list"><TripPlanList/></Route>
-        <Route path="/plan/create"><TripPlanCreate/></Route>
-        <Route path="/plan/:id"><TripPlan/></Route>
+          {/* PLAN */}
+          <Route path="/plan/list"><TripPlanList/></Route>
+          <Route path="/plan/create"><TripPlanCreate/></Route>
+          <Route path="/plan/:id"><TripPlan/></Route>
 
-        {/* DEFAULT */}
-        <Route path="/"><Map /></Route>
-      </Switch>
-    </BrowserRouter>
+          {/* DEFAULT */}
+          <Route path="/"><Map /></Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }

@@ -6,23 +6,27 @@ from sqlalchemy.orm import sessionmaker
 
 from src import settings
 
-db_filepath = f"{settings.CONFIG_DIR}/database.db"
-db_url = f"sqlite:///{settings.CONFIG_DIR}/database.db"
+root_db_dir = settings.CONFIG_DIR
+if os.path.exists("/data"):
+    root_db_dir = "/data"
 
-engine = create_engine(db_url)
+db_filepath = f"{root_db_dir}/database.db"
+db_url = f"sqlite:///{db_filepath}"
+
+engine = create_engine(db_url, pool_size=50, max_overflow=50)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 
 def get_session():
     if not os.path.exists(db_filepath):
-        print("creating db")
+        print(f"creating db at {db_filepath}")
         Base.metadata.create_all(engine)
     return SessionLocal()
 
 
 def get_object_session(o):
     if not os.path.exists(db_filepath):
-        print("creating db")
+        print(f"creating db at {db_filepath}")
         Base.metadata.create_all(engine)
     return SessionLocal().object_session(o)

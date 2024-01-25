@@ -1,95 +1,90 @@
-import React, {Component} from "react";
+import React, {Component, useEffect, useState} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
 import {handleApiErrors, url} from "../topNav";
 import {Link} from "react-router-dom";
-import {AccessKeyContext} from "../../utils/context";
-import {isLoggedIn} from "../../utils/auth";
+import {getAccessKey} from "../../utils/auth";
 
-async function getPackingLists() {
-    let accessKey = AccessKeyContext.accessKey
-    return await fetch(url("/api/v0/packing_lists"), {
-        method: "GET",
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Key': accessKey,
-        },
-    })
-        .then(response => response.json())
-        .then(packing_lists => {
-            handleApiErrors(packing_lists)
-            if(packing_lists.detail !== undefined){
-                return []
-            }
-            return packing_lists
-        })
-}
+function PackingList({isLoggedIn}){
+    let [packingLists, setPackingLists] = useState([])
 
-async function removePackingList(packing_list_id) {
-    let accessKey = AccessKeyContext.accessKey
-    return await fetch(url("/api/v0/packing_list/"+packing_list_id), {
-        method: "DELETE",
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Key': accessKey,
-        },
-        body: "{}"
-    })
-}
-
-class PackingList extends Component {
-    state = {
-        packing_lists: [],
-        is_logged_in: isLoggedIn(),
-    }
-
-    refreshList() {
+    useEffect(() => {
         getPackingLists().then(packing_lists => {
-            let state = this.state;
-            state.packing_lists = packing_lists
-            this.setState(state)
+            setPackingLists(packing_lists)
+        })
+    }, []);
+
+
+    async function getPackingLists() {
+        return await fetch(url("/api/v0/packing_lists"), {
+            method: "GET",
+            headers: {
+                'Access-Control-Allow-Origin':'triptracks2.oram.ca',
+                'Content-Type': 'application/json',
+                'Access-Key': getAccessKey(),
+            },
+        })
+            .then(response => response.json())
+            .then(packing_lists => {
+                handleApiErrors(packing_lists)
+                if(packing_lists.detail !== undefined){
+                    return []
+                }
+                return packing_lists
+            }).catch(exception => {
+                console.log("exception", exception)
+                return []
+            })
+    }
+
+    async function removePackingList(packing_list_id) {
+        return await fetch(url("/api/v0/packing_list/"+packing_list_id), {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Key': getAccessKey(),
+            },
+            body: "{}"
+        }).then(response => {
+            let newPackingLists = packingLists.filter(packing_list => {
+                return packing_list.id !== packing_list_id
+            })
+            setPackingLists(newPackingLists)
         })
     }
 
-    componentDidMount() {
-        if(this.state.is_logged_in){
-            this.refreshList()
-        }
-    }
-
-    removePackingList(id){
+    function remove(id){
         removePackingList(id).then(()=> {
-            this.refreshList()
+            getPackingLists().then(packing_lists => {
+                setPackingLists(packing_lists)
+            })
         })
     }
 
 
-    render() {
-        if(!this.state.is_logged_in){
-            return <Container>you must be logged in before you can create a packing list</Container>
-        }
-        let rows = []
-        rows.push(<Table.Row key="headers">
-            <Table.HeaderCell>Name</Table.HeaderCell>
-            <Table.HeaderCell># Items</Table.HeaderCell>
-            <Table.HeaderCell>Weight</Table.HeaderCell>
-            <Table.HeaderCell>Remove</Table.HeaderCell>
+    let rows = []
+    rows.push(<Table.Row key="headers">
+        <Table.HeaderCell>Name</Table.HeaderCell>
+        <Table.HeaderCell># Items</Table.HeaderCell>
+        <Table.HeaderCell>Remove</Table.HeaderCell>
+    </Table.Row>)
+    packingLists.map((packing_list, i) => {
+        rows.push(<Table.Row key={"packing_list_"+i}>
+            <Table.Cell><Link to={"/packing/"+packing_list.id}>{packing_list.name}</Link></Table.Cell>
+            <Table.Cell>{packing_list.contents.length}</Table.Cell>
+            <Table.Cell><Button onClick={()=>{remove(packing_list.id)}}>Remove</Button></Table.Cell>
         </Table.Row>)
-        this.state.packing_lists.map((packing_list, i) => {
-            rows.push(<Table.Row key={"packing_list_"+i}>
-                <Table.Cell><Link to={"/packing/"+packing_list.id}>{packing_list.name}</Link></Table.Cell>
-                <Table.Cell>{packing_list.contents.length}</Table.Cell>
-                <Table.Cell>{packing_list.weight/1000}kg</Table.Cell>
-                <Table.Cell><Button onClick={()=>{this.removePackingList(packing_list.id)}}>Remove</Button></Table.Cell>
-            </Table.Row>)
-            return ""
-        })
-        return <>
-            <Container>
-                <Table celled striped>{rows}</Table>
-                <Button as={Link} to="/packing/create">Create New Packing List</Button>
-            </Container>
-        </>
-    }
+        return ""
+    })
+    return <>
+        <Container>
+            <Table celled striped>
+                <Table.Body>
+                    {rows}
+                </Table.Body>
+            </Table>
+            <Button as={Link} to="/packing/create">Create New Packing List</Button>
+        </Container>
+    </>
 }
 
 export default PackingList;
