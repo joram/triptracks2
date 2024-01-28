@@ -1,20 +1,7 @@
 import React, {useEffect} from "react";
 import {useParams} from 'react-router-dom'
-import {
-    Button,
-    ButtonGroup,
-    Container,
-    Dropdown,
-    Form,
-    Icon,
-    Input,
-    Label,
-    Search,
-    Segment,
-    Table
-} from "semantic-ui-react";
+import {Button, Container, Dropdown, Form, Icon, Input, Search, Segment, Table} from "semantic-ui-react";
 import product_manifest from "./products_manifest.json";
-import * as PropTypes from "prop-types";
 import {handleApiErrors, url} from "../topNav";
 import {getAccessKey, getUserInfo} from "../../utils/auth";
 import {indexOf} from "lodash/array";
@@ -35,10 +22,23 @@ function stringToGrams(s){
 }
 
 function stringToWeightString(grams){
+    if(typeof grams === "string") {
+        grams = stringToGrams(grams)
+    }
     if(grams >= 1000){
         return `${grams/1000}kg`
     }
     return `${grams}g`
+}
+function productToWeightStrings(product){
+    let weightString = "";
+    if(product.weights.length > 0){
+        weightString = product.weights[product.weightIndex].value;
+    } else {
+        weightString = product.customWeight+"g";
+    }
+    const totalWeight = stringToWeightString(stringToGrams(weightString)*product.quantity);
+    return {weightString, totalWeight}
 }
 
 async function getPackingList(id){
@@ -72,7 +72,7 @@ function setPackingList(id, name, contents){
   })
 }
 
-function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack}) {
+function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack, sortItems}) {
     let newProducts = [];
     if (products === undefined) {
         return null
@@ -110,14 +110,8 @@ function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onCha
                 value: weight.value,
             }
         });
+        const {weightString, totalWeight} = productToWeightStrings(product);
 
-        let weightString = "";
-        if(product.weights.length > 0){
-            weightString = product.weights[product.weightIndex].value;
-        } else {
-            weightString = product.customWeight+"g";
-        }
-        const totalWeight = stringToWeightString(stringToGrams(weightString)*quantity);
 
         let weightInput = <Dropdown
             placeholder='Select Weight Type'
@@ -192,15 +186,25 @@ function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onCha
     }
 
 
-   return <Segment basic>
-        <Table striped stackable>
+    function SortableHeaderCell({column, direction, itemKey, collapsing}) {
+        return <Table.HeaderCell
+            collapsing={collapsing}
+            sorted={column === column ? direction : null}
+            onClick={() => sortItems({ type: 'CHANGE_SORT', column: itemKey || column })}
+        >
+            {column}
+        </Table.HeaderCell>
+    }
+
+    return <Segment basic>
+        <Table striped stackable sortable>
             <Table.Header>
                 <Table.Row>
-                    <Table.HeaderCell>Item</Table.HeaderCell>
-                    <Table.HeaderCell collapsing>Weight</Table.HeaderCell>
-                    <Table.HeaderCell collapsing>Quantity</Table.HeaderCell>
-                    <Table.HeaderCell collapsing>Total Weight</Table.HeaderCell>
-                    <Table.HeaderCell collapsing>In Pack</Table.HeaderCell>
+                    <SortableHeaderCell column={"Item"} itemKey={"friendlyName"} />
+                    <SortableHeaderCell column={"Weight"} collapsing />
+                    <SortableHeaderCell column={"Quantity"} collapsing />
+                    <SortableHeaderCell column={"Total Weight"} collapsing />
+                    <SortableHeaderCell column={"In Pack"} collapsing />
                     <Table.HeaderCell></Table.HeaderCell>
                 </Table.Row>
             </Table.Header>
@@ -295,22 +299,16 @@ function ReadOnlyProductsTable({products}) {
             </Table.Header>
             <Table.Body>
                 {products.map(product => {
-                    let weight = "Unknown";
-                    let totalWeight = undefined;
-                    if (product.weights.length > 0) {
-                        const weightString = product.weights[product.weightIndex].value;
-                        weight = stringToGrams(weightString);
-                        totalWeight = product.quantity * weight;
-                    }
+                    const {weightString, totalWeight} = productToWeightStrings(product);
                     let inPack = "No";
                     if(product.inPack){
                         inPack = "Yes";
                     }
                     return <Table.Row key={"row_"+indexOf(products, product)}>
                         <Table.Cell>{product.friendlyName}</Table.Cell>
-                        <Table.Cell>{weight}g</Table.Cell>
+                        <Table.Cell>{weightString}</Table.Cell>
                         <Table.Cell>{product.quantity}</Table.Cell>
-                        <Table.Cell>{totalWeight}g</Table.Cell>
+                        <Table.Cell>{totalWeight}</Table.Cell>
                         <Table.Cell>{inPack}</Table.Cell>
                     </Table.Row>
                 })}
@@ -347,6 +345,25 @@ function Packing() {
         }
         setPackingList(id, name, products).then(response => {})
     }, [products, name]);
+
+    function sortItems({type, column}){
+        console.log("sorting items", type, column)
+        let newProducts = [...products];
+        console.log(newProducts[0])
+        newProducts.sort((a, b) => {
+            const aValue = a[column];
+            const bValue = b[column];
+            console.log(aValue, bValue)
+            if(aValue < bValue){
+                return -1;
+            }
+            if(aValue > bValue){
+                return 1;
+            }
+            return 0;
+        })
+        setProducts(newProducts)
+    }
 
     function updateSearchResults(value){
         let results = [];
@@ -461,47 +478,43 @@ function Packing() {
 
 
     return <Container style={{paddingTop:"15px"}}>
-        <Form>
-            <Form.Field>
-                <Input
-                    value={name}
-                    placeholder="placeholder name"
-                    onChange={(e) => {
-                        setName(e.target.value)
-                    }}
-                    label="Packing List Name"
-                />
-            </Form.Field>
+        <Input
+            value={name}
+            placeholder="placeholder name"
+            onChange={(e) => {
+                setName(e.target.value)
+            }}
+            size="huge"
+            style={{width:"100%"}}
+            label="Packing List Name"
+        />
 
-            <Segment textAlign="center" basic>
-                <Search
-                    placeholder="Search for items to add"
-                    loading={false}
-                    onResultSelect={onResultSelect.bind(this)}
-                    onSearchChange={onSearchChange.bind(this)}
-                    results={results}
-                    value={searchText}
-                />
-            </Segment>
-            <br/>
-
-            <ProductsTable
-                products={products}
-                onRemoveItem={onRemoveItem}
-                onAddItem={onAddItem}
-                onChangeQuantity={onChangeQuantity}
-                onChangeWeight={onChangeWeight}
-                onChangeCustomWeight={onChangeCustomWeight}
-                onChangeFriendlyName={onChangeFriendlyName}
-                onChangeInPack={onChangeInPack}
+        <Segment textAlign="center" basic>
+            <Search
+                placeholder="Search for items to add"
+                loading={false}
+                onResultSelect={onResultSelect.bind(this)}
+                onSearchChange={onSearchChange.bind(this)}
+                results={results}
+                value={searchText}
             />
-            <ProductsSummaryTable products={products} />
-            <br/>
+        </Segment>
 
-            <br/>
-            <br/>
-
-        </Form>
+        <ProductsTable
+            products={products}
+            onRemoveItem={onRemoveItem}
+            onAddItem={onAddItem}
+            onChangeQuantity={onChangeQuantity}
+            onChangeWeight={onChangeWeight}
+            onChangeCustomWeight={onChangeCustomWeight}
+            onChangeFriendlyName={onChangeFriendlyName}
+            onChangeInPack={onChangeInPack}
+            sortItems={sortItems}
+        />
+        <ProductsSummaryTable products={products} />
+        <br/>
+        <br/>
+        <br/>n
     </Container>;
 }
 

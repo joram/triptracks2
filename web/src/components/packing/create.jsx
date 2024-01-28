@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React from "react";
 import {url} from "../topNav";
 import {Redirect} from "react-router-dom";
 import {getAccessKey} from "../../utils/auth";
