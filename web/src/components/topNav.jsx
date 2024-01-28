@@ -135,7 +135,7 @@ const TopNav = ({ fixed, onLoginChange}) => {
                     </Header>
                 </Menu.Item>
                 <Menu.Item
-                    active={window.location.pathname==="/trails"}
+                    active={window.location.pathname.startsWith("/trails")}
                     href="/trails"
                 >
                     <Icon name="map signs"/>
@@ -147,6 +147,13 @@ const TopNav = ({ fixed, onLoginChange}) => {
                 >
                     <Icon name="calendar minus"/>
                     Packing
+                </Menu.Item>
+                <Menu.Item
+                    active={window.location.pathname.startsWith("/partners")}
+                    href="/partners"
+                >
+                    <Icon name="group"/>
+                    Partners
                 </Menu.Item>
                 <Menu.Item
                     active={window.location.pathname.startsWith("/plan")}
