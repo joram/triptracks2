@@ -11,6 +11,7 @@ import TripPlanList from "./components/trip_plan/list";
 import TripPlanCreate from "./components/trip_plan/create";
 import TripPlan from "./components/trip_plan/trip_plan";
 import {useState} from "react";
+import Home from "./components/home";
 
 function App() {
   let [loggedIn, setIsLoggedIn] = useState(false)
@@ -40,7 +41,7 @@ function App() {
           <Route path="/plan/:id"><TripPlan/></Route>
 
           {/* DEFAULT */}
-          <Route path="/"><Map /></Route>
+          <Route path="/"><Home /></Route>
         </Switch>
       </BrowserRouter>
     </div>

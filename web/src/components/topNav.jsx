@@ -1,11 +1,11 @@
-import {Button, Container, Dropdown, Header, Image, Menu, Segment} from "semantic-ui-react";
+import {Button, Container, Dropdown, Header, Icon, Image, Menu, Segment} from "semantic-ui-react";
 import TrailsSearch from "./trails/TrailsSearch";
 import GoogleLogin from 'react-google-login';
 import {withRouter} from "react-router-dom";
 import {useHistory} from "react-router-dom/cjs/react-router-dom";
 import {useState} from "react";
 import {getAccessKey, getUserInfo, setAccessKey, setUserInfo} from "../utils/auth";
-
+import backpack from "../icons/backpack.png";
 
 function url(path){
     let base = "https://triptracks2.oram.ca"
@@ -124,19 +124,46 @@ const TopNav = ({ fixed, onLoginChange}) => {
             secondary={!fixed}
             size='large'
         >
-            <Container>
-                <Menu.Item style={{backgroundColor: "darkgreen"}}>
-                    <Header inverted as='a' href="/">
-                        <Image src="/icon.png"/>
+            <Menu id="left-menu-section" inverted={!fixed}>
+                <Menu.Item
+                    active={window.location.pathname==="/"}
+                    position="left"
+                >
+                    <Header inverted href="/">
+                        <Image src="/icon.png" size="tiny" />
                         Triptracks
                     </Header>
                 </Menu.Item>
-                <Menu.Item as='a' active={window.location.pathname==="/"} href="/">Trails</Menu.Item>
-                <Menu.Item as='a' active={window.location.pathname.startsWith("/packing")} href="/packing/list">Packing</Menu.Item>
-                <Menu.Item as='a' active={window.location.pathname.startsWith("/plan")} href="/plan/list">Trip Plans</Menu.Item>
-                <Menu.Item position="right"><TrailsSearch/></Menu.Item>
-                <AccountMenuWithRouter onLoginChange={onLoginChange}/>
-            </Container>
+                <Menu.Item
+                    active={window.location.pathname==="/trails"}
+                    href="/trails"
+                >
+                    <Icon name="map signs"/>
+                    Trails
+                </Menu.Item>
+                <Menu.Item
+                    active={window.location.pathname.startsWith("/packing")}
+                    href="/packing/list"
+                >
+                    <Icon name="calendar minus"/>
+                    Packing
+                </Menu.Item>
+                <Menu.Item
+                    active={window.location.pathname.startsWith("/plan")}
+                    href="/plan/list"
+                >
+                    <Icon name="calendar alternate"/>
+                    Trip Plans
+                </Menu.Item>
+            </Menu>
+            <Menu.Item position="right">
+                <TrailsSearch/>
+            </Menu.Item>
+            <Menu floated="right" inverted>
+                <Menu.Item>
+                    Logged in as: <AccountMenuWithRouter onLoginChange={onLoginChange}/>
+                </Menu.Item>
+            </Menu>
         </Menu>
     </Segment>
 }
