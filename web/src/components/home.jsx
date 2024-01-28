@@ -7,7 +7,7 @@ function Home() {
           <Header as='h1'>Welcome to Triptracks</Header>
             <Segment basic>
                 <p>
-                    TripTracks is a tool for planning and sharing your outdoor adventures.
+                    Triptracks is a tool for planning and sharing your outdoor adventures.
                     It's a work in progress, but you can already use it to:
                 </p>
             </Segment>
