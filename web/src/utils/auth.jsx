@@ -1,35 +1,17 @@
-import Cookies from "universal-cookie";
-
-const cookies = new Cookies();
-
-function getUserInfo(){
-    return cookies.get("userinfo")
+function url(path){
+    let base = "https://triptracks2.oram.ca"
+    if (process.env.REACT_APP_ENVIRONMENT==="local")
+        base = "http://localhost:8000"
+    return base+path
 }
 
-function setUserInfo(userinfo){
-    if (userinfo === undefined){
-        cookies.remove("userinfo")
-        return
+function handleApiErrors(response){
+    if(response["detail"] !== undefined){
+        console.log("api error:", response["detail"])
+        return true
     }
-    cookies.set("userinfo", userinfo)
+    return false
 }
 
-function getAccessKey(){
-    return cookies.get("accessKey")
-}
 
-function setAccessKey(accessKey){
-    if (accessKey === undefined){
-        cookies.remove("accessKey")
-        return
-    }
-    cookies.set("accessKey", accessKey)
-}
-function isLoggedIn(){
-    let accessKey = getAccessKey()
-    let userinfo = getUserInfo()
-    console.log("is logged in?", accessKey, userinfo)
-    return (accessKey !== undefined && userinfo !== undefined)
-}
-
-export {isLoggedIn, getUserInfo, getAccessKey, setUserInfo, setAccessKey}
+export {url, handleApiErrors}

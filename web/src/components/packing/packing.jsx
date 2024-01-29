@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
+import React, {useContext, useEffect} from "react";
 import {useParams} from 'react-router-dom'
-import {Button, Container, Dropdown, Form, Icon, Input, Search, Segment, Table} from "semantic-ui-react";
+import {Button, Container, Dropdown, Icon, Input, Search, Segment, Table} from "semantic-ui-react";
 import product_manifest from "./products_manifest.json";
-import {handleApiErrors, url} from "../topNav";
-import {getAccessKey, getUserInfo} from "../../utils/auth";
+import {handleApiErrors, url} from "../../utils/auth";
 import {indexOf} from "lodash/array";
+import {UserContext} from "../../App";
 
 // HINTS:
 // FOOD: On a typical day you will burn between 3,000 and 5,000 calories. Generally this amounts to about 1½ pounds of food. Your food weight distribution should optimally be around 55 to 65% carbohydrates, 15 to 20 % protein, and less than 25% fat.
@@ -55,22 +55,6 @@ async function getPackingList(id){
   })
 }
 
-function setPackingList(id, name, contents){
-    if(contents === undefined){
-        return
-    }
-  return fetch(url("/api/v0/packing_list/"+id), {
-      method: "POST",
-      headers: {
-          'Content-Type': 'application/json',
-          'Access-Key': getAccessKey(),
-      },
-      body: JSON.stringify({
-          name: name,
-          contents: contents,
-      })
-  })
-}
 
 function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack, sortItems}) {
     let newProducts = [];
@@ -318,6 +302,7 @@ function ReadOnlyProductsTable({products}) {
 }
 
 function Packing() {
+    const { user, accessToken } = useContext(UserContext);
     let [name, setName] = React.useState("");
     let [ownerId, setOwnerId] = React.useState(undefined);
     let [searchText, setSearchText] = React.useState("");
@@ -336,6 +321,22 @@ function Packing() {
         })
     }, [id]);
 
+    function setPackingList(id, name, contents){
+        if(contents === undefined){
+            return
+        }
+        fetch(url("/api/v0/packing_list/"+id), {
+              method: "POST",
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Access-Key': accessToken,
+              },
+              body: JSON.stringify({
+                  name: name,
+                  contents: contents,
+              })
+        })
+    }
     useEffect(() => {
         if (loading) {
             return
@@ -462,11 +463,10 @@ function Packing() {
     }
 
     function isOwner(){
-        const userInfo = getUserInfo();
-        return ownerId === userInfo.id;
+        return ownerId === user.id;
     }
 
-    if (getAccessKey() === undefined || !isOwner()) {
+    if (accessToken || !isOwner()) {
         return <Container style={{paddingTop:"15px"}}>
             <Segment textAlign="center" basic>
                 <h1>{name}</h1>

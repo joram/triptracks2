@@ -1,19 +1,19 @@
-import React from "react";
-import {url} from "../topNav";
+import React, {useContext} from "react";
 import {Redirect} from "react-router-dom";
-import {getAccessKey} from "../../utils/auth";
+import {url} from "../../utils/auth";
+import {UserContext} from "../../App";
 
 
 function PackingCreate() {
     let [creating, setCreating] = React.useState(true)
     let [id, setId] = React.useState(undefined)
-
+    const { accessToken } = useContext(UserContext);
     React.useEffect(() => {
         fetch(url("/api/v0/packing_list"), {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Key': getAccessKey(),
+                    'Access-Key': accessToken,
                 },
                 body: ""
             }

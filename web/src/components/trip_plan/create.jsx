@@ -1,35 +1,28 @@
-import React, {Component} from "react";
-import {url} from "../topNav";
+import React, {Component, useContext} from "react";
+import {url} from "../../utils/auth";
 import {Redirect} from "react-router-dom";
-import {getAccessKey} from "../../utils/auth";
+import {UserContext} from "../../App";
 
 
-class TripPlanCreate extends Component {
-    state = {
-        creating: true
+function TripPlanCreate(){
+    let [id, setId] = React.useState(undefined)
+    const { accessToken } = useContext(UserContext);
+    if(id !== undefined){
+        return <Redirect to={"/plan/" + id}/>
     }
-    render() {
-        if(!this.state.creating){
-            return <Redirect to={"/plan/" + this.state.id}/>
-        }
-        fetch(url("/api/v0/trip_plan"), {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Key': getAccessKey(),
-            },
-            body: ""
-        }
-        ).then(response => response.json()).then(response => {
-            console.log("response:", response)
-            this.setState({
-                creating: false,
-                id: response,
-            })
-        })
-
-        return <>creating a new tripPlan list, please hold</>
+    fetch(url("/api/v0/trip_plan"), {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+            'Access-Key': accessToken,
+        },
+        body: ""
     }
+    ).then(response => response.json()).then(response => {
+        setId(response)
+    })
+
+    return <>creating a new tripPlan list, please hold</>
 }
 
 export default TripPlanCreate;

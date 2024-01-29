@@ -10,39 +10,69 @@ import Packing from "./components/packing/packing";
 import TripPlanList from "./components/trip_plan/list";
 import TripPlanCreate from "./components/trip_plan/create";
 import TripPlan from "./components/trip_plan/trip_plan";
-import {useState} from "react";
+import React, {useState} from "react";
 import Home from "./components/home";
+import Partners from "./components/partners/partners";
+import Login from "./components/login";
+import Cookies from "universal-cookie/es6";
+
+export const UserContext = React.createContext(null);
+const cookies = new Cookies();
 
 function App() {
-  let [loggedIn, setIsLoggedIn] = useState(false)
-  function onLoginChange(loggedIn){
-    setIsLoggedIn(loggedIn)
-    window.location.reload(true);
+  const [user, setUserProp] = useState(cookies.get('user'));
+  const [accessToken, setAccessTokenProp] = useState(cookies.get('accessToken'));
+
+  function setUser(newUser){
+    setUserProp(newUser)
+    cookies.set('user', newUser, { path: '/' });
+    if(newUser === null){
+      cookies.remove('user');
+    }
+  }
+
+  function setAccessToken(newAccessToken){
+    setAccessTokenProp(newAccessToken)
+    cookies.set('accessToken', newAccessToken, { path: '/' });
+    if(newAccessToken === null){
+      cookies.remove('accessToken');
+    }
   }
 
   return (
     <div className="App">
       <BrowserRouter>
-        <TopNav onLoginChange={onLoginChange}/>
-        <Switch>
+        <UserContext.Provider value={{
+          user: user,
+          setUser: setUser,
+          accessToken: accessToken,
+          setAccessToken: setAccessToken
+        }}>
+          <TopNav/>
+          <Switch>
 
-          {/* TRAILS */}
-          <Route path="/trail/:geohash"><TrailDetails/></Route>
-          <Route path="/trails"><Map /></Route>
+            {/* TRAILS */}
+            <Route path="/trail/:geohash"><TrailDetails/></Route>
+            <Route path="/trails"><Map /></Route>
 
-          {/* PACKING */}
-          <Route path="/packing/list"><PackingList loggedIn={loggedIn}/></Route>
-          <Route path="/packing/create"><PackingCreate loggedIn={loggedIn}/></Route>
-          <Route path="/packing/:id"><Packing loggedIn={loggedIn}/></Route>
+            {/* PACKING */}
+            <Route path="/packing/list"><PackingList/></Route>
+            <Route path="/packing/create"><PackingCreate/></Route>
+            <Route path="/packing/:id"><Packing/></Route>
 
-          {/* PLAN */}
-          <Route path="/plan/list"><TripPlanList/></Route>
-          <Route path="/plan/create"><TripPlanCreate/></Route>
-          <Route path="/plan/:id"><TripPlan/></Route>
+            {/* PARTNERS */}
+            <Route path="/partners"><Partners/></Route>
 
-          {/* DEFAULT */}
-          <Route path="/"><Home /></Route>
-        </Switch>
+            {/* PLAN */}
+            <Route path="/plan/list"><TripPlanList/></Route>
+            <Route path="/plan/create"><TripPlanCreate/></Route>
+            <Route path="/plan/:id"><TripPlan/></Route>
+
+            {/* DEFAULT */}
+            <Route path="/login"><Login/></Route>
+            <Route path="/"><Home/></Route>
+          </Switch>
+        </UserContext.Provider>
       </BrowserRouter>
     </div>
   );
