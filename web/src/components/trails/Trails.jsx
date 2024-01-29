@@ -18,7 +18,7 @@ function Trail({geohash, url}){
             let features = new GeoJSON({featureProjection: "EPSG:3857"}).readFeatures(jsonDataString)
             setFeatures(features)
         })
-    }, []);
+    }, [url]);
 
     function onClick(e){
         e.stopPropagation()

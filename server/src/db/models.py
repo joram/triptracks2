@@ -22,7 +22,11 @@ class User(Base):
 
     @staticmethod
     def new(email: str, google_userinfo: dict) -> "User":
-        return User(id=prefixed_id("user_id"), email=email, google_userinfo=google_userinfo)
+        return User(
+            id=prefixed_id("user"),
+            email=email,
+            google_userinfo=google_userinfo,
+        )
 
     @property
     def access_token(self) -> "AccessToken":

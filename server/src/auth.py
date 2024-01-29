@@ -23,6 +23,8 @@ async def create_access_key(request: AccessKeyRequest):
     qs = session.query(User).filter(User.email == email)
     if qs.count() >= 1:
         user = qs.first()
+        if user.id is None:
+            user.id = prefixed_id("user")
         user.google_userinfo = userinfo
         session.add(user)
     else:
@@ -38,10 +40,15 @@ async def create_access_key(request: AccessKeyRequest):
         session.add(access_token)
 
     session.commit()
-    return access_token.token
-
+    return {
+        "token": access_token.token,
+        "user_id": user.id,
+        }
 
 async def verify_access_key(access_key: str = Header(...)) -> User:
+    for db_access_token in get_session().query(AccessToken).all():
+        print(f"access_key: {access_key} access_token: {db_access_token.token}")
+
     qs = get_session().query(AccessToken).filter(AccessToken.token == access_key)
     if qs.count() == 0:
         raise HTTPException(status_code=400, detail="invalid Access-Key")

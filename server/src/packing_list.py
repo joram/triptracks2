@@ -29,6 +29,7 @@ async def get_packing_lists(user: User = Depends(verify_access_key)) -> list[Pac
             name=packing_list.name,
             contents=list(packing_list.contents),
             id=packing_list.id,
+            ownerId=packing_list.user_id,
         ))
     return packing_lists
 
