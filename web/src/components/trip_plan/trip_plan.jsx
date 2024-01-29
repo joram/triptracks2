@@ -1,28 +1,14 @@
-import React, {useState} from "react";
+import React, {useContext, useState} from "react";
 import {useParams} from 'react-router-dom'
-import {handleApiErrors, url} from "../topNav";
+import {getAccessKey, handleApiErrors, url} from "../../utils/auth";
 import {Tab} from "semantic-ui-react";
-import {getAccessKey} from "../../utils/auth";
-
-async function getTripPlan(id){
-  return fetch(url("/api/v0/trip_plan/"+id), {
-      method: "GET",
-      headers: {
-          'Content-Type': 'application/json',
-          'Access-Key': getAccessKey(),
-      },
-  }).then(response => {
-      return response.json()
-  }).then(response => {
-      handleApiErrors(response)
-      return response
-  })
-}
+import {UserContext} from "../../App";
 
 
 function TripPlan() {
     let [trip_plan, setTripPlan] = useState({Group: []})
     let [fetched, setFetched] = useState(false)
+    const { accessToken } = useContext(UserContext);
     let {id} = useParams()
 
     if(!fetched){
@@ -31,6 +17,22 @@ function TripPlan() {
             setTripPlan(packing_list)
         })
     }
+
+    function getTripPlan(id){
+      return fetch(url("/api/v0/trip_plan/"+id), {
+          method: "GET",
+          headers: {
+              'Content-Type': 'application/json',
+              'Access-Key': accessToken,
+          },
+      }).then(response => {
+          return response.json()
+      }).then(response => {
+          handleApiErrors(response)
+          return response
+      })
+    }
+
 
     console.log(trip_plan)
     const panes = [

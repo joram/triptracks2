@@ -1,26 +1,35 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
-import {handleApiErrors, url} from "../topNav";
+import {handleApiErrors, url} from "../../utils/auth";
 import {Link} from "react-router-dom";
-import {getAccessKey} from "../../utils/auth";
+import {UserContext} from "../../App";
 
-function PackingList({isLoggedIn}){
+function PackingList(){
+    let [loading, setLoading] = useState(false)
     let [packingLists, setPackingLists] = useState([])
+    const { accessToken } = useContext(UserContext);
 
     useEffect(() => {
+        if (loading) {
+            return
+        }
+        setLoading(true)
+        if (accessToken === null) {
+            return
+        }
         getPackingLists().then(packing_lists => {
             setPackingLists(packing_lists)
         })
-    }, []);
-
+    });
 
     async function getPackingLists() {
+        console.log("getting packing lists with access token: ", accessToken)
         return await fetch(url("/api/v0/packing_lists"), {
             method: "GET",
             headers: {
                 'Access-Control-Allow-Origin':'triptracks2.oram.ca',
                 'Content-Type': 'application/json',
-                'Access-Key': getAccessKey(),
+                'Access-Key': accessToken,
             },
         })
             .then(response => response.json())
@@ -41,7 +50,7 @@ function PackingList({isLoggedIn}){
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Key': getAccessKey(),
+                'Access-Key': accessToken,
             },
             body: "{}"
         }).then(response => {
@@ -77,6 +86,7 @@ function PackingList({isLoggedIn}){
     })
     return <>
         <Container>
+            <br/>
             <Table celled striped>
                 <Table.Body>
                     {rows}

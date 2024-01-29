@@ -1,116 +1,37 @@
-import {Button, Container, Dropdown, Header, Icon, Image, Menu, Segment} from "semantic-ui-react";
+import {Dropdown, Header, Icon, Image, Menu, Segment} from "semantic-ui-react";
 import TrailsSearch from "./trails/TrailsSearch";
-import GoogleLogin from 'react-google-login';
-import {withRouter} from "react-router-dom";
-import {useHistory} from "react-router-dom/cjs/react-router-dom";
-import {useState} from "react";
-import {getAccessKey, getUserInfo, setAccessKey, setUserInfo} from "../utils/auth";
-import backpack from "../icons/backpack.png";
+import {isLoggedIn, setAccessKey, setUserInfo} from "../utils/auth";
+import {useContext} from "react";
+import {UserContext} from "../App";
 
-function url(path){
-    let base = "https://triptracks2.oram.ca"
-    if (process.env.REACT_APP_ENVIRONMENT==="local")
-        base = "http://localhost:8000"
-    return base+path
-}
+const TopNav = ({ fixed}) => {
+    const { user, setUser, setAccessToken } = useContext(UserContext);
 
-function updateAccessKey(token){
-    return fetch(url("/api/v0/access_key"), {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({token: token})
-    }).then(response => {
-        return response.json()
-    }).then(newAccessKey => {
-        handleApiErrors(newAccessKey)
-        setAccessKey( newAccessKey)
-        return newAccessKey
-    });
-}
-
-function handleApiErrors(response){
-    if(response["detail"] !== undefined){
-        console.log("api error, logging out:", response["detail"])
-        setUserInfo(undefined)
-        setAccessKey(undefined)
-        return true
-    }
-    return false
-}
-
-function updateUserInfo(){
-    return fetch(url("/api/v0/userinfo"), {
-        method: "GET",
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Key': getAccessKey(),
-        },
-    }).then(response => {
-        return response.json()
-    }).then(newuserinfo => {
-        if(!handleApiErrors(newuserinfo)){
-            setUserInfo(newuserinfo)
-            return newuserinfo
-        }
-    });
-}
-
-
-function AccountMenu({onLoginChange}){
-    let history = useHistory()
-    let [isLoggedIn, setIsLoggedIn] = useState(getAccessKey() === undefined)
-
-    function loginSuccess(response) {
-        updateAccessKey(response.tokenId).then(_ => {
-            updateUserInfo().then(_ => {
-                setIsLoggedIn(true)
-                onLoginChange(true)
-            })
-        })
-    }
-
-    function logout(){
-        setUserInfo(undefined)
-        setAccessKey(undefined)
-        setIsLoggedIn(false)
-        onLoginChange(false)
-        history.push("/")
-    }
-
-    const userInfo = getUserInfo()
-    if (userInfo !== undefined && userInfo.google_userinfo !== undefined){
-        const googleUserInfo = userInfo.google_userinfo
-        return <Dropdown
-            item
-            labeled
-            icon='user'
-            floating
-            text={googleUserInfo.name}
+    let loginInOrOut = <Menu.Item
+        active={window.location.pathname.startsWith("/login")}
+        href="/login"
+    >
+        Sign in
+    </Menu.Item>;
+    console.log("user", user)
+    if (user !== undefined && user !== null){
+        let username = user.name
+        loginInOrOut = <Dropdown
+            active={window.location.pathname.startsWith("/login")}
+            text={username}
+            pointing className='link item'
         >
             <Dropdown.Menu>
-                <Dropdown.Item>
-                        <Button onClick={logout}>logout</Button>
+                <Dropdown.Item onClick={() => {
+                    setUser(null)
+                    setAccessToken(null)
+                }}>
+                    Logout
                 </Dropdown.Item>
             </Dropdown.Menu>
-        </Dropdown>
+        </Dropdown>;
     }
 
-    return <div style={{
-        marginTop: "15px",
-        marginBottom: "15px",
-    }}>
-        <GoogleLogin
-            clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
-            buttonText="Login"
-            onSuccess={loginSuccess}
-            cookiePolicy={'single_host_origin'}
-        />
-    </div>
-}
-
-let AccountMenuWithRouter = withRouter(AccountMenu)
-
-const TopNav = ({ fixed, onLoginChange}) => {
     return <Segment
         inverted
         textAlign='center'
@@ -159,21 +80,17 @@ const TopNav = ({ fixed, onLoginChange}) => {
                     active={window.location.pathname.startsWith("/plan")}
                     href="/plan/list"
                 >
-                    <Icon name="calendar alternate"/>
+                    <Icon name="calendar alternate outline"/>
                     Trip Plans
                 </Menu.Item>
             </Menu>
             <Menu.Item position="right">
                 <TrailsSearch/>
             </Menu.Item>
-            <Menu floated="right" inverted>
-                <Menu.Item>
-                    Logged in as: <AccountMenuWithRouter onLoginChange={onLoginChange}/>
-                </Menu.Item>
-            </Menu>
+            {loginInOrOut}
         </Menu>
     </Segment>
 }
 
 
-export {url, TopNav, handleApiErrors}
+export {TopNav}

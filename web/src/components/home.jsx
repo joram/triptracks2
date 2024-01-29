@@ -1,4 +1,4 @@
-import {Card, Confirm, Container, Header, Icon, Segment} from "semantic-ui-react";
+import {Card, Container, Header, Icon, Segment} from "semantic-ui-react";
 
 function Home() {
   return (
@@ -47,7 +47,7 @@ function Home() {
                       <Card.Header>Planning</Card.Header>
                       <Card.Meta>Write out your trip plan</Card.Meta>
                       <Card.Description>
-                          <Icon name='calendar' size="huge"/>
+                          <Icon name='calendar alternate outline' size="huge"/>
                       </Card.Description>
                   </Card.Content>
               </Card>
