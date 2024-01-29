@@ -173,7 +173,7 @@ function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onCha
     function SortableHeaderCell({column, direction, itemKey, collapsing}) {
         return <Table.HeaderCell
             collapsing={collapsing}
-            sorted={column === column ? direction : null}
+            sorted={null}
             onClick={() => sortItems({ type: 'CHANGE_SORT', column: itemKey || column })}
         >
             {column}
@@ -337,6 +337,7 @@ function Packing() {
               })
         })
     }
+
     useEffect(() => {
         if (loading) {
             return
@@ -344,8 +345,8 @@ function Packing() {
         if(products === undefined){
             return
         }
-        setPackingList(id, name, products).then(response => {})
-    }, [products, name]);
+        setPackingList(id, name, products)
+    }, [loading, id, products, name]);
 
     function sortItems({type, column}){
         console.log("sorting items", type, column)
@@ -463,10 +464,10 @@ function Packing() {
     }
 
     function isOwner(){
-        return ownerId === user.id;
+        return user !== null && user != undefined && ownerId === user.id;
     }
 
-    if (accessToken || !isOwner()) {
+    if (!isOwner()) {
         return <Container style={{paddingTop:"15px"}}>
             <Segment textAlign="center" basic>
                 <h1>{name}</h1>

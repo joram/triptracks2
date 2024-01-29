@@ -1,11 +1,10 @@
 import {Dropdown, Header, Icon, Image, Menu, Segment} from "semantic-ui-react";
 import TrailsSearch from "./trails/TrailsSearch";
-import {isLoggedIn, setAccessKey, setUserInfo} from "../utils/auth";
 import {useContext} from "react";
 import {UserContext} from "../App";
 
 const TopNav = ({ fixed}) => {
-    const { user, setUser, setAccessToken } = useContext(UserContext);
+    const { user, setUser, accessToken, setAccessToken } = useContext(UserContext);
 
     let loginInOrOut = <Menu.Item
         active={window.location.pathname.startsWith("/login")}
@@ -13,8 +12,10 @@ const TopNav = ({ fixed}) => {
     >
         Sign in
     </Menu.Item>;
-    console.log("user", user)
-    if (user !== undefined && user !== null){
+    console.log("user", user, typeof user)
+    console.log("access token", accessToken, typeof accessToken)
+    if (user !== null && user !== undefined && accessToken !== null && accessToken !== undefined){
+        console.log("user is logged in", user)
         let username = user.name
         loginInOrOut = <Dropdown
             active={window.location.pathname.startsWith("/login")}
@@ -69,20 +70,20 @@ const TopNav = ({ fixed}) => {
                     <Icon name="calendar minus"/>
                     Packing
                 </Menu.Item>
-                <Menu.Item
-                    active={window.location.pathname.startsWith("/partners")}
-                    href="/partners"
-                >
-                    <Icon name="group"/>
-                    Partners
-                </Menu.Item>
-                <Menu.Item
-                    active={window.location.pathname.startsWith("/plan")}
-                    href="/plan/list"
-                >
-                    <Icon name="calendar alternate outline"/>
-                    Trip Plans
-                </Menu.Item>
+                {/*<Menu.Item*/}
+                {/*    active={window.location.pathname.startsWith("/partners")}*/}
+                {/*    href="/partners"*/}
+                {/*>*/}
+                {/*    <Icon name="group"/>*/}
+                {/*    Partners*/}
+                {/*</Menu.Item>*/}
+                {/*<Menu.Item*/}
+                {/*    active={window.location.pathname.startsWith("/plan")}*/}
+                {/*    href="/plan/list"*/}
+                {/*>*/}
+                {/*    <Icon name="calendar alternate outline"/>*/}
+                {/*    Trip Plans*/}
+                {/*</Menu.Item>*/}
             </Menu>
             <Menu.Item position="right">
                 <TrailsSearch/>

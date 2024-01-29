@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import {useParams} from 'react-router-dom'
-import {getAccessKey, handleApiErrors, url} from "../../utils/auth";
+import {handleApiErrors, url} from "../../utils/auth";
 import {Tab} from "semantic-ui-react";
 import {UserContext} from "../../App";
 

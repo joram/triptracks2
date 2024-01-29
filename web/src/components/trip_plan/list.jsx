@@ -1,6 +1,6 @@
-import React, {Component, useContext, useEffect} from "react";
+import React, {useContext, useEffect} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
-import {getAccessKey, handleApiErrors, isLoggedIn, url} from "../../utils/auth";
+import {handleApiErrors, url} from "../../utils/auth";
 import {Link} from "react-router-dom";
 import {UserContext} from "../../App";
 

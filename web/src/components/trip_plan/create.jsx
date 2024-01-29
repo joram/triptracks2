@@ -1,4 +1,4 @@
-import React, {Component, useContext} from "react";
+import React, {useContext} from "react";
 import {url} from "../../utils/auth";
 import {Redirect} from "react-router-dom";
 import {UserContext} from "../../App";

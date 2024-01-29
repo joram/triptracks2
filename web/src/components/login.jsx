@@ -3,15 +3,25 @@ import {useHistory} from "react-router-dom/cjs/react-router-dom";
 import {useContext} from "react";
 import GoogleLogin from "react-google-login";
 import {UserContext} from "../App";
+import {url, handleApiErrors} from "../utils/auth";
 
-function AccountMenu(){
+function LoginButton(){
     let history = useHistory()
     const { user, setUser, setAccessToken } = useContext(UserContext);
 
     function loginSuccess(response) {
-        console.log("login success", response)
-        setUser(response.profileObj)
-        setAccessToken(response.tokenId)
+        fetch(url("/api/v0/access_key"), {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({token: response.tokenId})
+        }
+        ).then(response2 => response2.json()
+        ).then(data => {
+            const {token, user_id} = data
+            response.profileObj.id = user_id
+            setUser(response.profileObj)
+            setAccessToken(token)
+        });
     }
 
     function logout(){
@@ -61,6 +71,8 @@ function Login() {
                     <p>
                         You are already logged in.
                     </p>
+
+                    <LoginButton />
                 </Segment>
             </Container>
         );
@@ -78,7 +90,7 @@ function Login() {
                 If you have a google account, you can login with it here:
             </p>
         </Segment>
-      <AccountMenu />
+      <LoginButton />
   </Container>
 }
 

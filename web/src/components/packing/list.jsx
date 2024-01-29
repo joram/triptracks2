@@ -9,25 +9,12 @@ function PackingList(){
     let [packingLists, setPackingLists] = useState([])
     const { accessToken } = useContext(UserContext);
 
-    useEffect(() => {
-        if (loading) {
-            return
-        }
-        setLoading(true)
-        if (accessToken === null) {
-            return
-        }
-        getPackingLists().then(packing_lists => {
-            setPackingLists(packing_lists)
-        })
-    });
 
     async function getPackingLists() {
         console.log("getting packing lists with access token: ", accessToken)
         return await fetch(url("/api/v0/packing_lists"), {
             method: "GET",
             headers: {
-                'Access-Control-Allow-Origin':'triptracks2.oram.ca',
                 'Content-Type': 'application/json',
                 'Access-Key': accessToken,
             },
@@ -44,6 +31,18 @@ function PackingList(){
                 return []
             })
     }
+
+    useEffect(() => {
+        if(loading){
+            return
+        }
+        setLoading(true)
+
+        getPackingLists().then(packing_lists => {
+            setPackingLists(packing_lists)
+        })
+    }, [loading])
+
 
     async function removePackingList(packing_list_id) {
         return await fetch(url("/api/v0/packing_list/"+packing_list_id), {

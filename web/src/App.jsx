@@ -20,22 +20,27 @@ export const UserContext = React.createContext(null);
 const cookies = new Cookies();
 
 function App() {
-  const [user, setUserProp] = useState(cookies.get('user'));
-  const [accessToken, setAccessTokenProp] = useState(cookies.get('accessToken'));
+  const [user, setUser] = useState(cookies.get('user', { path: '/' }));
+  const [accessToken, setAccessToken] = useState(cookies.get('accessToken', { path: '/' }));
 
-  function setUser(newUser){
-    setUserProp(newUser)
+  function setUserPropAndCookie(newUser){
+
+    setUser(newUser)
     cookies.set('user', newUser, { path: '/' });
-    if(newUser === null){
-      cookies.remove('user');
+    if(newUser === null || newUser === undefined){
+      cookies.remove('user', { path: '/' });
+      setUser(null)
+      console.log("removed user cookie")
     }
   }
 
-  function setAccessToken(newAccessToken){
-    setAccessTokenProp(newAccessToken)
+  function setAccessTokenPropAndCookie(newAccessToken){
+    setAccessToken(newAccessToken)
     cookies.set('accessToken', newAccessToken, { path: '/' });
-    if(newAccessToken === null){
-      cookies.remove('accessToken');
+    if(newAccessToken === null || newAccessToken === undefined){
+      cookies.remove('accessToken', { path: '/' });
+      setAccessToken(null)
+      console.log("removed access token cookie")
     }
   }
 
@@ -44,9 +49,9 @@ function App() {
       <BrowserRouter>
         <UserContext.Provider value={{
           user: user,
-          setUser: setUser,
+          'setUser': setUserPropAndCookie,
           accessToken: accessToken,
-          setAccessToken: setAccessToken
+          'setAccessToken': setAccessTokenPropAndCookie,
         }}>
           <TopNav/>
           <Switch>
