@@ -7,14 +7,15 @@ import {TopNav} from "./components/topNav";
 import PackingList from "./components/packing/list";
 import PackingCreate from "./components/packing/create";
 import Packing from "./components/packing/packing";
-import TripPlanList from "./components/trip_plan/list";
-import TripPlanCreate from "./components/trip_plan/create";
-import TripPlan from "./components/trip_plan/trip_plan";
+import TripPlanList from "./components/plan/list";
+import TripPlanCreate from "./components/plan/create";
+import TripPlan from "./components/plan/trip_plan";
 import React, {useState} from "react";
 import Home from "./components/home";
 import Partners from "./components/partners/partners";
 import Login from "./components/login";
 import Cookies from "universal-cookie/es6";
+import {Segment} from "semantic-ui-react";
 
 export const UserContext = React.createContext(null);
 const cookies = new Cookies();
@@ -54,29 +55,33 @@ function App() {
           'setAccessToken': setAccessTokenPropAndCookie,
         }}>
           <TopNav/>
-          <Switch>
+          <Segment vertical style={{ margin: '5em 0em 0em', padding: '5em 0em' }}>
+            <Switch>
 
-            {/* TRAILS */}
-            <Route path="/trail/:geohash"><TrailDetails/></Route>
-            <Route path="/trails"><Map /></Route>
+              {/* TRAILS */}
+              <Route path="/trail/:geohash"><TrailDetails/></Route>
+              <Route path="/trails"><Map /></Route>
 
-            {/* PACKING */}
-            <Route path="/packing/list"><PackingList/></Route>
-            <Route path="/packing/create"><PackingCreate/></Route>
-            <Route path="/packing/:id"><Packing/></Route>
+              {/* PACKING */}
+              <Route path="/packing/list"><PackingList/></Route>
+              <Route path="/packing/create"><PackingCreate/></Route>
+              <Route path="/packing/:id"><Packing/></Route>
 
-            {/* PARTNERS */}
-            <Route path="/partners"><Partners/></Route>
+              {/* PARTNERS */}
+              <Route path="/partners"><Partners/></Route>
 
-            {/* PLAN */}
-            <Route path="/plan/list"><TripPlanList/></Route>
-            <Route path="/plan/create"><TripPlanCreate/></Route>
-            <Route path="/plan/:id"><TripPlan/></Route>
+              {/* PLAN */}
+              <Route path="/plan/list"><TripPlanList/></Route>
+              <Route path="/plan/create"><TripPlanCreate/></Route>
+              <Route path="/plan/:id"><TripPlan/></Route>
 
-            {/* DEFAULT */}
-            <Route path="/login"><Login/></Route>
-            <Route path="/"><Home/></Route>
-          </Switch>
+              {/* DEFAULT */}
+              <Route path="/login"><Login/></Route>
+              <Route path="/"><Home/></Route>
+            </Switch>
+
+          </Segment>
+
         </UserContext.Provider>
       </BrowserRouter>
     </div>

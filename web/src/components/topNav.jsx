@@ -1,4 +1,4 @@
-import {Dropdown, Header, Icon, Image, Menu, Segment} from "semantic-ui-react";
+import {Container, Dropdown, Header, Icon, Image, Menu, Segment} from "semantic-ui-react";
 import TrailsSearch from "./trails/TrailsSearch";
 import {useContext} from "react";
 import {UserContext} from "../App";
@@ -33,19 +33,11 @@ const TopNav = ({ fixed}) => {
         </Dropdown>;
     }
 
-    return <Segment
+    return <Menu
+        fixed={'top'}
         inverted
-        textAlign='center'
-        style={{padding: '0em 0em'}}
-        vertical
     >
-        <Menu
-            fixed={fixed ? 'top' : null}
-            inverted={!fixed}
-            pointing={!fixed}
-            secondary={!fixed}
-            size='large'
-        >
+        <Container>
             <Menu id="left-menu-section" inverted={!fixed}>
                 <Menu.Item
                     active={window.location.pathname==="/"}
@@ -77,20 +69,20 @@ const TopNav = ({ fixed}) => {
                 {/*    <Icon name="group"/>*/}
                 {/*    Partners*/}
                 {/*</Menu.Item>*/}
-                {/*<Menu.Item*/}
-                {/*    active={window.location.pathname.startsWith("/plan")}*/}
-                {/*    href="/plan/list"*/}
-                {/*>*/}
-                {/*    <Icon name="calendar alternate outline"/>*/}
-                {/*    Trip Plans*/}
-                {/*</Menu.Item>*/}
+                <Menu.Item
+                    active={window.location.pathname.startsWith("/plan")}
+                    href="/plan/list"
+                >
+                    <Icon name="calendar alternate outline"/>
+                    Plans
+                </Menu.Item>
             </Menu>
             <Menu.Item position="right">
                 <TrailsSearch/>
             </Menu.Item>
             {loginInOrOut}
-        </Menu>
-    </Segment>
+        </Container>
+    </Menu>
 }
 
 
