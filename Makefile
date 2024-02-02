@@ -20,7 +20,7 @@ start_server:
 	cd ./server/; uvicorn src:app --reload
 
 _deploy_build:
-	cd web; yarn build
+	cd web; npm run build
 
 _deploy_push_all:
 	aws s3 sync ./web/build s3://app2.triptracks.io
