@@ -43,13 +43,3 @@ deploy_server: build_server
 	ssh 192.168.1.220 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
 server_logs:
 	ssh 192.168.1.220 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
-
-build_openapi_client:
-	docker run --rm -v "${PWD}:/local" openapitools/openapi-generator-cli bash -c "rm -r /local/client/* || true"
-	docker run --rm -v "${PWD}:/local" -e uid=1000 -e gid=1000 openapitools/openapi-generator-cli generate \
-		-i https://triptracks2.oram.ca/openapi.json \
-		-g javascript \
-		--additional-properties=apiPackage=triptracks,projectName=triptracks,prependFormOrBodyParameters=true,usePromises=true, \
-		-o /local/client
-    sudo chown john:john -R ./client
-	cd client; npm remove triptracks; npm install ../client

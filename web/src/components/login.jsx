@@ -3,21 +3,15 @@ import {useHistory} from "react-router-dom/cjs/react-router-dom";
 import {useContext} from "react";
 import GoogleLogin from "react-google-login";
 import {UserContext} from "../App";
-import {url, handleApiErrors} from "../utils/auth";
+import {login} from "../utils/api";
 
 export function LoginButton(){
     let history = useHistory()
     const { user, setUser, setAccessToken } = useContext(UserContext);
 
-    function loginSuccess(response) {
-        fetch(url("/api/v0/access_key"), {
-            method: "POST",
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({token: response.tokenId})
-        }
-        ).then(response2 => response2.json()
-        ).then(data => {
-            const {token, user_id} = data
+    async function loginSuccess(response) {
+        login(response.tokenId).then(data => {
+            const {token, user_id} = data.data
             response.profileObj.id = user_id
             setUser(response.profileObj)
             setAccessToken(token)

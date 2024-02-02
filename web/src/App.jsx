@@ -21,15 +21,15 @@ export const UserContext = React.createContext(null);
 const cookies = new Cookies();
 
 function App() {
-  const [user, setUser] = useState(cookies.get('user', { path: '/' }));
-  const [accessToken, setAccessToken] = useState(cookies.get('accessToken', { path: '/' }));
+  const [user, setUser] = useState(cookies.get('user', { path: '/', domain: window.location.hostname }));
+  const [accessToken, setAccessToken] = useState(cookies.get('accessToken', { path: '/',domain: window.location.hostname }));
 
   function setUserPropAndCookie(newUser){
 
     setUser(newUser)
-    cookies.set('user', newUser, { path: '/' });
+    cookies.set('user', newUser, { path: '/', domain: window.location.hostname });
     if(newUser === null || newUser === undefined){
-      cookies.remove('user', { path: '/' });
+      cookies.remove('user', { path: '/',domain: window.location.hostname});
       setUser(null)
       console.log("removed user cookie")
     }
@@ -37,9 +37,9 @@ function App() {
 
   function setAccessTokenPropAndCookie(newAccessToken){
     setAccessToken(newAccessToken)
-    cookies.set('accessToken', newAccessToken, { path: '/' });
+    cookies.set('accessToken', newAccessToken, { path: '/',domain: window.location.hostname });
     if(newAccessToken === null || newAccessToken === undefined){
-      cookies.remove('accessToken', { path: '/' });
+      cookies.remove('accessToken', { path: '/',domain: window.location.hostname });
       setAccessToken(null)
       console.log("removed access token cookie")
     }
