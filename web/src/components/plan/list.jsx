@@ -53,13 +53,6 @@ function TripPlanList(){
         })
     }, []);
 
-    function removeTripPlanList(id){
-        removeTripPlan(id).then(()=> {
-            refreshList()
-        })
-    }
-
-
 
     if(accessToken === undefined || accessToken === null){
         return <Container>you must be logged in before you can create a trip plan list</Container>

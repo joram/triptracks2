@@ -46,12 +46,13 @@ async def create_access_key(request: AccessKeyRequest):
         }
 
 async def verify_access_key(access_key: str = Header(...)) -> User:
-    for db_access_token in get_session().query(AccessToken).all():
-        print(f"access_key: {access_key} access_token: {db_access_token.token}")
+    if access_key is None:
+        raise HTTPException(status_code=400, detail="Access-Key is required")
 
     qs = get_session().query(AccessToken).filter(AccessToken.token == access_key)
     if qs.count() == 0:
-        raise HTTPException(status_code=400, detail="invalid Access-Key")
+        raise HTTPException(status_code=400, detail=f"invalid Access-Key '{access_key}'")
+
     user_id = qs.first().user_id
     return get_session().query(User).filter(User.id == user_id).first()
 

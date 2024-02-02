@@ -2,61 +2,130 @@ import React, {useContext, useEffect} from "react";
 import {useParams} from 'react-router-dom'
 import {Button, Container, Dropdown, Icon, Input, Search, Segment, Table} from "semantic-ui-react";
 import product_manifest from "./products_manifest.json";
-import {handleApiErrors, url} from "../../utils/auth";
+import {url} from "../../utils/auth";
 import {indexOf} from "lodash/array";
 import {UserContext} from "../../App";
+import {getPackingList, packWeights, productToWeightStrings, stringToWeightString} from "./utils";
 
 // HINTS:
 // FOOD: On a typical day you will burn between 3,000 and 5,000 calories. Generally this amounts to about 1½ pounds of food. Your food weight distribution should optimally be around 55 to 65% carbohydrates, 15 to 20 % protein, and less than 25% fat.
 // WEIGHT: max 20% body weight
 
-function stringToGrams(s){
-    let value = s.split(" ")[0];
-    if(value.includes("kg")){
-        return parseFloat(value.replace("kg", "")) * 1000
-    } else if(value.includes("g")){
-        return parseFloat(value.replace("g", ""))
-    } else {
-        console.log(`Unknown weight unit ${s}`)
-    }
-}
-
-function stringToWeightString(grams){
-    if(typeof grams === "string") {
-        grams = stringToGrams(grams)
-    }
-    if(grams >= 1000){
-        return `${grams/1000}kg`
-    }
-    return `${grams}g`
-}
-function productToWeightStrings(product){
-    let weightString = "";
-    if(product.weights.length > 0){
-        weightString = product.weights[product.weightIndex].value;
-    } else {
-        weightString = product.customWeight+"g";
-    }
-    const totalWeight = stringToWeightString(stringToGrams(weightString)*product.quantity);
-    return {weightString, totalWeight}
-}
-
-async function getPackingList(id){
-  return fetch(url("/api/v0/packing_list/"+id), {
-      method: "GET",
-      headers: {
-          'Content-Type': 'application/json',
-      },
-  }).then(response => {
-      return response.json()
-  }).then(response => {
-      handleApiErrors(response)
-      return response
-  })
-}
 
 
-function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack, sortItems}) {
+function ProductRow({product, onRemoveItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack}) {
+    const quantity =product.quantity || 1;
+    const friendlyName = product.friendlyName || product.title;
+
+    const weightOptions = product.weights.map(weight => {
+        return {
+            key: weight.value,
+            text: `${weight.key} (${weight.value})`,
+            value: weight.value,
+        }
+    });
+    const {weightString, totalWeight} = productToWeightStrings(product);
+
+
+    let weightInput = <Dropdown
+        placeholder='Select Weight Type'
+        selection
+        options={weightOptions}
+        defaultValue={weightString}
+        onChange={(e, {value}) => {
+            const newIndex = product.weights.findIndex(weight => weight.value === value);
+            onChangeWeight(product, newIndex);
+        }}
+    />
+    if(product.weights.length === 0){
+        weightInput = <Input
+            type={"text"}
+            value={product.customWeight}
+            style={{
+                width: "100%",
+                marginLeft: "5px",
+                marginRight: "5px",
+            }}
+            onChange={(e) => {
+                onChangeCustomWeight(product, e.target.value)
+            }}
+        />
+    }
+    return <Table.Row>
+        <Table.Cell>
+            <Input
+                type={"text"}
+                value={friendlyName}
+                style={{
+                    width: "100%",
+                    marginLeft: "5px",
+                    marginRight: "5px",
+                }}
+                onChange={(e) => {
+                    onChangeFriendlyName(product, e.target.value)
+                }}
+            />
+        </Table.Cell>
+        <Table.Cell>
+            {weightInput}
+        </Table.Cell>
+        <Table.Cell>
+            <Input
+                type="number"
+                value={quantity}
+                style={{
+                    width: "55px",
+                    marginLeft: "5px",
+                    marginRight: "5px",
+                }}
+                onChange={(e) => {
+                    onChangeQuantity(product, e.target.value)
+                }}
+            />
+        </Table.Cell>
+        <Table.Cell>{totalWeight}</Table.Cell>
+        <Table.Cell>
+            <Input
+                type="checkbox"
+                checked={product.inPack}
+                onChange={(e) => {
+                    onChangeInPack(product, e.target.checked)
+                }}
+            />
+        </Table.Cell>
+        <Table.Cell>
+            <Icon name="remove circle" onClick={(e) => {onRemoveItem(product)}}/>
+        </Table.Cell>
+    </Table.Row>
+}
+
+
+function SortableHeaderCell({column, direction, itemKey, collapsing, sortItems, sortByColumn}) {
+    let icon = null;
+    console.log("column", column, "sortByColumn", sortByColumn, "direction", direction)
+    if(itemKey === sortByColumn) {
+        if (direction === "descending") {
+            icon = <Icon name="caret down"/>
+        }
+        if (direction === "ascending") {
+            icon = <Icon name="caret up"/>
+        }
+    }
+
+    return <Table.HeaderCell
+        collapsing={collapsing}
+        sorted={null}
+        onClick={() => {
+            sortItems({column: itemKey || column })
+
+        }}
+    >
+        {column}
+        {icon}
+    </Table.HeaderCell>
+}
+
+function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack, sortItems, sortOrder, sortByColumn}) {
     let newProducts = [];
     if (products === undefined) {
         return null
@@ -82,113 +151,15 @@ function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onCha
         return null
     }
 
-
-    function ProductRow({product, onRemoveItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack}) {
-        const quantity =product.quantity || 1;
-        const friendlyName = product.friendlyName || product.title;
-
-        const weightOptions = product.weights.map(weight => {
-            return {
-                key: weight.value,
-                text: `${weight.key} (${weight.value})`,
-                value: weight.value,
-            }
-        });
-        const {weightString, totalWeight} = productToWeightStrings(product);
-
-
-        let weightInput = <Dropdown
-            placeholder='Select Weight Type'
-            selection
-            options={weightOptions}
-            defaultValue={weightString}
-            onChange={(e, {value}) => {
-                const newIndex = product.weights.findIndex(weight => weight.value === value);
-                onChangeWeight(product, newIndex);
-            }}
-        />
-        if(product.weights.length === 0){
-            weightInput = <Input
-                type={"text"}
-                value={product.customWeight}
-                style={{
-                    width: "100%",
-                    marginLeft: "5px",
-                    marginRight: "5px",
-                }}
-                onChange={(e) => {
-                    onChangeCustomWeight(product, e.target.value)
-                }}
-            />
-        }
-        return <Table.Row>
-            <Table.Cell>
-                <Input
-                    type={"text"}
-                    value={friendlyName}
-                    style={{
-                        width: "100%",
-                        marginLeft: "5px",
-                        marginRight: "5px",
-                    }}
-                    onChange={(e) => {
-                        onChangeFriendlyName(product, e.target.value)
-                    }}
-                />
-            </Table.Cell>
-            <Table.Cell>
-                {weightInput}
-            </Table.Cell>
-            <Table.Cell>
-                <Input
-                    type="number"
-                    value={quantity}
-                    style={{
-                        width: "55px",
-                        marginLeft: "5px",
-                        marginRight: "5px",
-                    }}
-                    onChange={(e) => {
-                        onChangeQuantity(product, e.target.value)
-                    }}
-                />
-            </Table.Cell>
-            <Table.Cell>{totalWeight}</Table.Cell>
-            <Table.Cell>
-                <Input
-                    type="checkbox"
-                    checked={product.inPack}
-                    onChange={(e) => {
-                        onChangeInPack(product, e.target.checked)
-                    }}
-                />
-            </Table.Cell>
-            <Table.Cell>
-                <Icon name="remove circle" onClick={(e) => {onRemoveItem(product)}}/>
-            </Table.Cell>
-        </Table.Row>
-    }
-
-
-    function SortableHeaderCell({column, direction, itemKey, collapsing}) {
-        return <Table.HeaderCell
-            collapsing={collapsing}
-            sorted={null}
-            onClick={() => sortItems({ type: 'CHANGE_SORT', column: itemKey || column })}
-        >
-            {column}
-        </Table.HeaderCell>
-    }
-
     return <Segment basic>
         <Table striped stackable sortable>
             <Table.Header>
                 <Table.Row>
-                    <SortableHeaderCell column={"Item"} itemKey={"friendlyName"} />
-                    <SortableHeaderCell column={"Weight"} collapsing />
-                    <SortableHeaderCell column={"Quantity"} collapsing />
-                    <SortableHeaderCell column={"Total Weight"} collapsing />
-                    <SortableHeaderCell column={"In Pack"} collapsing />
+                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Item"} itemKey={"friendlyName"} />
+                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Weight"} collapsing />
+                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Quantity"} collapsing />
+                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Total Weight"} collapsing />
+                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"In Pack"} collapsing />
                     <Table.HeaderCell></Table.HeaderCell>
                 </Table.Row>
             </Table.Header>
@@ -227,23 +198,8 @@ function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onCha
     </Segment>
 }
 
-
 function ProductsSummaryTable({products}) {
-    let packWeight = 0;
-    let outOfPackWeight = 0;
-    if (products !== undefined) {
-        products.forEach(product => {
-            if (product.weights.length === 0) {
-                return
-            }
-            if(product.inPack){
-                packWeight += product.quantity * stringToGrams(product.weights[product.weightIndex].value);
-            } else {
-                outOfPackWeight += product.quantity * stringToGrams(product.weights[product.weightIndex].value);
-            }
-        })
-    }
-    let totalWeight = packWeight + outOfPackWeight;
+    let {packWeight, outOfPackWeight, totalWeight} = packWeights(products);
     totalWeight = stringToWeightString(totalWeight);
     packWeight = stringToWeightString(packWeight);
     outOfPackWeight = stringToWeightString(outOfPackWeight);
@@ -309,6 +265,8 @@ function Packing() {
     let [results, setResults] = React.useState([]);
     let [products, setProducts] = React.useState(undefined);
     let [loading, setLoading] = React.useState(false);
+    let [sortByColumn, setSortByColumn] = React.useState("Item");
+    let [sortOrder, setSortOrder] = React.useState("ascending");
     let {id} = useParams()
 
     useEffect(() => {
@@ -321,23 +279,6 @@ function Packing() {
         })
     }, [id]);
 
-    function setPackingList(id, name, contents){
-        if(contents === undefined){
-            return
-        }
-        fetch(url("/api/v0/packing_list/"+id), {
-              method: "POST",
-              headers: {
-                  'Content-Type': 'application/json',
-                  'Access-Key': accessToken,
-              },
-              body: JSON.stringify({
-                  name: name,
-                  contents: contents,
-              })
-        })
-    }
-
     useEffect(() => {
         if (loading) {
             return
@@ -348,14 +289,37 @@ function Packing() {
         setPackingList(id, name, products)
     }, [loading, id, products, name]);
 
-    function sortItems({type, column}){
-        console.log("sorting items", type, column)
+
+    function setPackingList(id, name, contents){
+        if(contents === undefined){
+            return
+        }
+        fetch(url("/api/v0/packing_list/"+id), {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Key': accessToken,
+            },
+            body: JSON.stringify({
+                name: name,
+                contents: contents,
+            })
+        })
+    }
+
+
+    function sortItems({column}){
+        if(sortByColumn === column){
+            if(sortOrder === "ascending"){
+                setSortOrder("descending")
+            }else{
+                setSortOrder("ascending")
+            }
+        }
         let newProducts = [...products];
-        console.log(newProducts[0])
         newProducts.sort((a, b) => {
             const aValue = a[column];
             const bValue = b[column];
-            console.log(aValue, bValue)
             if(aValue < bValue){
                 return -1;
             }
@@ -364,7 +328,11 @@ function Packing() {
             }
             return 0;
         })
+        if(sortOrder === "descending"){
+            newProducts.reverse();
+        }
         setProducts(newProducts)
+        setSortByColumn(column)
     }
 
     function updateSearchResults(value){
@@ -478,7 +446,7 @@ function Packing() {
     }
 
 
-    return <Container style={{paddingTop:"15px"}}>
+    return <Container>
         <Input
             value={name}
             placeholder="placeholder name"
@@ -510,12 +478,11 @@ function Packing() {
             onChangeCustomWeight={onChangeCustomWeight}
             onChangeFriendlyName={onChangeFriendlyName}
             onChangeInPack={onChangeInPack}
+            sortByColumn={sortByColumn}
+            sortOrder={sortOrder}
             sortItems={sortItems}
         />
         <ProductsSummaryTable products={products} />
-        <br/>
-        <br/>
-        <br/>n
     </Container>;
 }
 

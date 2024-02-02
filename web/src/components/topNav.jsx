@@ -1,4 +1,4 @@
-import {Container, Dropdown, Header, Icon, Image, Menu, Segment} from "semantic-ui-react";
+import {Container, Dropdown, Header, Icon, Image, Menu} from "semantic-ui-react";
 import TrailsSearch from "./trails/TrailsSearch";
 import {useContext} from "react";
 import {UserContext} from "../App";
@@ -12,10 +12,7 @@ const TopNav = ({ fixed}) => {
     >
         Sign in
     </Menu.Item>;
-    console.log("user", user, typeof user)
-    console.log("access token", accessToken, typeof accessToken)
     if (user !== null && user !== undefined && accessToken !== null && accessToken !== undefined){
-        console.log("user is logged in", user)
         let username = user.name
         loginInOrOut = <Dropdown
             active={window.location.pathname.startsWith("/login")}
@@ -71,7 +68,7 @@ const TopNav = ({ fixed}) => {
                 {/*</Menu.Item>*/}
                 <Menu.Item
                     active={window.location.pathname.startsWith("/plan")}
-                    href="/plan/list"
+                    href="/plans/list"
                 >
                     <Icon name="calendar alternate outline"/>
                     Plans

@@ -1,5 +1,6 @@
-from typing import Optional, List, Dict
+from typing import Optional, List, Dict, Union
 
+import pprint
 from fastapi import Depends, HTTPException
 from pydantic import BaseModel
 
@@ -26,29 +27,44 @@ async def get_trip_plan(trip_plan_id: str, user: User = Depends(verify_access_ke
     if qs.count() == 0:
         raise HTTPException(status_code=404, detail="packing list not found")
     trip_plan = qs.first()
-    return TripPlan(
-        name=trip_plan.name,
-        id=trip_plan.id,
-    )
+
+    return trip_plan
 
 
 class TripPlanRequest(BaseModel):
+
+    class TripPlanDate(BaseModel):
+        type: str
+        dates: Union[str, List[str]]
+
     name: str
+    dates: Optional[TripPlanDate]
 
 
-@app.post("/api/v0/trip_plan/{trip_plan_id}")
+@app.update("/api/v0/trip_plan/{trip_plan_id}")
 async def update_trip_plan(trip_plan_id: str, request: TripPlanRequest, user: User = Depends(verify_access_key)) -> TripPlan:
+    pprint.pprint(request.json())
+
     session = get_session()
     qs = session.query(TripPlan).filter(TripPlan.user_id == user.id, TripPlan.id == trip_plan_id)
     if qs.count() == 0:
         raise HTTPException(status_code=404, detail="packing list not found")
     trip_plan = qs.first()
+
+    # update values
     trip_plan.name = request.name
+    trip_plan.dates = request.dates.json() if request.dates else None
 
     session.add(trip_plan)
     session.commit()
 
-    return trip_plan
+    response = TripPlan(
+       name=trip_plan.name,
+       id=trip_plan.id,
+       dates=request.dates.json() if request.dates else None,
+    )
+
+    return response
 
 
 @app.delete("/api/v0/trip_plan/{trip_plan_id}")
