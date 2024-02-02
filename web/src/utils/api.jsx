@@ -41,4 +41,31 @@ async function getPlans(accessToken){
         }})
     });
 }
-export {login, getPlans}
+
+async function updatePlan(accessToken, plan, plan_id){
+    if (plan.dates !== null && plan.dates.dates === null){
+        plan.dates = null
+    }
+    console.log("updating plan", plan, plan_id, accessToken)
+    return api.getClient({
+        axiosConfigDefaults: {
+        headers: {
+            'Access-Key': accessToken,
+        },
+        },
+    }).then(client => {
+        return client.update_trip_plan_api_v0_trip_plan__trip_plan_id__patch(
+            {
+                trip_plan_id: plan_id
+            },
+            plan,
+            {
+                headers: {
+                    'Access-Key': accessToken,
+                }
+            }
+        )
+    });
+}
+
+export {login, getPlans, updatePlan}

@@ -61,7 +61,7 @@ async def update_trip_plan(trip_plan_id: str, request: TripPlanRequest, user: Us
     response = TripPlan(
        name=trip_plan.name,
        id=trip_plan.id,
-       dates=request.dates.json() if request.dates else None,
+       dates=TripPlanRequest.TripPlanDate.parse_obj(trip_plan.dates) if trip_plan.dates else None,
     )
 
     return response

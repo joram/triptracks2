@@ -7,6 +7,7 @@ import {UserContext} from "../../App.jsx";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import SemanticDatepicker from "react-semantic-ui-datepickers";
 import 'react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css';
+import {updatePlan} from "../../utils/api";
 
 
 function AccordionSection({index, title, icon, children}){
@@ -50,25 +51,6 @@ async function getTripPlan(id, accessToken){
     })
 }
 
-async function updateTripPlan(trip_plan, id, accessToken){
-    if (trip_plan.dates === null || trip_plan.dates === undefined){
-        trip_plan.dates = null
-    } else if(trip_plan.dates.dates === null || trip_plan.dates.dates === undefined){
-        trip_plan.dates = null
-    }
-
-// Use configuration with your_api
-    return fetch(url("/api/v0/trip_plan/"+id), {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Key': accessToken,
-        },
-        body: JSON.stringify(trip_plan)
-    }).then(response => {
-        return response.json()
-    })
-}
 
 function TripPlan() {
     let [loading, setLoading] = useState(true)
@@ -132,8 +114,9 @@ function TripPlan() {
             }
         }
         console.log("sending trip plan", trip_plan)
-        updateTripPlan(trip_plan, id, accessToken).then(new_trip_plan => {
-            updateTripPlanState(new_trip_plan)
+        updatePlan(accessToken, trip_plan, id).then(response => {
+            console.log("response", response)
+            return response
         })
     }, [name, startDate, endDate]);
 
