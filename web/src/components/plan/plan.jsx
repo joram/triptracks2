@@ -1,15 +1,13 @@
 import React, {useContext, useEffect, useState} from "react";
 import {useParams} from 'react-router-dom'
 import {url} from "../../utils/auth.jsx";
-import {Accordion, Button, ButtonGroup, Container, Divider, Header, Icon, Input, Segment} from "semantic-ui-react";
+import {Accordion, Button, ButtonGroup, Container, Divider, Icon, Input, Segment} from "semantic-ui-react";
 import {UserContext} from "../../App.jsx";
 // import {Editor} from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import SemanticDatepicker from "react-semantic-ui-datepickers";
 import 'react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css';
-import {ServerConfiguration} from "@triptracks/client";
-import {DefaultApi, TripPlanRequest} from "triptracks/src";
-import ApiClient from "triptracks/src/ApiClient";
+
 
 function AccordionSection({index, title, icon, children}){
     let [active, setActive] = useState(true)
@@ -58,16 +56,6 @@ async function updateTripPlan(trip_plan, id, accessToken){
     } else if(trip_plan.dates.dates === null || trip_plan.dates.dates === undefined){
         trip_plan.dates = null
     }
-
-
-    const api = new DefaultApi(new ApiClient("https://triptracks2.oram.ca"))
-    api.createTripPlanApiV0TripPlanPost(new TripPlanRequest("foo"), (error, data, response) => {
-        if (error) {
-            console.error(error);
-        } else {
-            console.log('API called successfully. Returned data: ' + data);
-        }
-    });
 
 // Use configuration with your_api
     return fetch(url("/api/v0/trip_plan/"+id), {

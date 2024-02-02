@@ -41,7 +41,7 @@ class TripPlanRequest(BaseModel):
     dates: Optional[TripPlanDate]
 
 
-@app.update("/api/v0/trip_plan/{trip_plan_id}")
+@app.patch("/api/v0/trip_plan/{trip_plan_id}")
 async def update_trip_plan(trip_plan_id: str, request: TripPlanRequest, user: User = Depends(verify_access_key)) -> TripPlan:
     pprint.pprint(request.json())
 
