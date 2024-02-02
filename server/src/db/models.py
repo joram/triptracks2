@@ -57,6 +57,8 @@ class TripPlan(Base):
     packing_lists = Column(JSON)
     people = Column(JSON)
     trails = Column(JSON)
+    dates = Column(JSON)
+
 
     @staticmethod
     def new(name: str, user: User) -> "TripPlan":
@@ -67,6 +69,7 @@ class TripPlan(Base):
             packing_lists=[],
             people=[],
             trails=[],
+            dates=[],
         )
 
 

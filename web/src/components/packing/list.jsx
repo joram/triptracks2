@@ -21,10 +21,7 @@ function PackingList(){
         })
             .then(response => response.json())
             .then(packing_lists => {
-                handleApiErrors(packing_lists)
-                if(packing_lists.detail !== undefined){
-                    return []
-                }
+                console.log("packing_lists", packing_lists)
                 return packing_lists
             }).catch(exception => {
                 console.log("exception", exception)

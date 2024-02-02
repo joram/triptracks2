@@ -5,7 +5,7 @@ import GoogleLogin from "react-google-login";
 import {UserContext} from "../App";
 import {url, handleApiErrors} from "../utils/auth";
 
-function LoginButton(){
+export function LoginButton(){
     let history = useHistory()
     const { user, setUser, setAccessToken } = useContext(UserContext);
 

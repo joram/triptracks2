@@ -22,11 +22,10 @@ def get_session():
     if not os.path.exists(db_filepath):
         print(f"creating db at {db_filepath}")
         Base.metadata.create_all(engine)
+
+    # drop and recreate tables
+    # from .models import TripPlan
+    # TripPlan.__table__.drop(bind=engine, checkfirst=False)
+    # TripPlan.__table__.create(bind=engine, checkfirst=False)
+
     return SessionLocal()
-
-
-def get_object_session(o):
-    if not os.path.exists(db_filepath):
-        print(f"creating db at {db_filepath}")
-        Base.metadata.create_all(engine)
-    return SessionLocal().object_session(o)

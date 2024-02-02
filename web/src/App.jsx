@@ -9,7 +9,7 @@ import PackingCreate from "./components/packing/create";
 import Packing from "./components/packing/packing";
 import TripPlanList from "./components/plan/list";
 import TripPlanCreate from "./components/plan/create";
-import TripPlan from "./components/plan/trip_plan";
+import Plan from "./components/plan/plan";
 import React, {useState} from "react";
 import Home from "./components/home";
 import Partners from "./components/partners/partners";
@@ -55,7 +55,7 @@ function App() {
           'setAccessToken': setAccessTokenPropAndCookie,
         }}>
           <TopNav/>
-          <Segment vertical style={{ margin: '5em 0em 0em', padding: '5em 0em' }}>
+          <Segment vertical style={{ margin: '0em 0em 0em', padding: '5em 0em' }}>
             <Switch>
 
               {/* TRAILS */}
@@ -71,9 +71,9 @@ function App() {
               <Route path="/partners"><Partners/></Route>
 
               {/* PLAN */}
-              <Route path="/plan/list"><TripPlanList/></Route>
+              <Route path="/plans/list"><TripPlanList/></Route>
               <Route path="/plan/create"><TripPlanCreate/></Route>
-              <Route path="/plan/:id"><TripPlan/></Route>
+              <Route path="/plan/:id"><Plan/></Route>
 
               {/* DEFAULT */}
               <Route path="/login"><Login/></Route>
