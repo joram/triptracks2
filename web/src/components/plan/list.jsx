@@ -27,10 +27,19 @@ function TripPlanList(){
     let rows = []
     tripPlans.map((trip_plan, i) => {
         console.log(trip_plan)
-        const datesJson = JSON.parse(trip_plan.dates)
-        const dt = new Date(datesJson.dates)
+        let dtStr = "not scheduled"
+        if(trip_plan.dates !== undefined && trip_plan.dates !== null) {
+            const datesJson = JSON.parse(trip_plan.dates)
+            if (datesJson.type === "basic") {
+                const dt = new Date(datesJson.dates)
+                dtStr = dt.getFullYear() + "-" + dt.getMonth() + "-" + dt.getDate()
+            } else if (datesJson.type === "range") {
+                const dates = datesJson.dates.map(d => new Date(d))
+                dtStr = dates[0].getFullYear() + "-" + dates[0].getMonth() + "-" + dates[0].getDate() + " to " + dates[1].getFullYear() + "-" + dates[1].getMonth() + "-" + dates[1].getDate()
+            }
+        }
         rows.push(<Table.Row key={"tripplan_"+i}>
-            <Table.Cell>{dt.getFullYear()}-{dt.getMonth()}-{dt.getDate()}</Table.Cell>
+            <Table.Cell>{dtStr}</Table.Cell>
             <Table.Cell><Link to={"/plan/"+trip_plan.id}>{trip_plan.name}</Link></Table.Cell>
         </Table.Row>)
         return ""

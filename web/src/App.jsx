@@ -16,6 +16,8 @@ import Partners from "./components/partners/partners";
 import Login from "./components/login";
 import Cookies from "universal-cookie/es6";
 import {Segment} from "semantic-ui-react";
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const UserContext = React.createContext(null);
 const cookies = new Cookies();
@@ -55,6 +57,7 @@ function App() {
           'setAccessToken': setAccessTokenPropAndCookie,
         }}>
           <TopNav/>
+          <ToastContainer />
           <Segment vertical style={{ margin: '0em 0em 0em', padding: '5em 0em' }}>
             <Switch>
 
