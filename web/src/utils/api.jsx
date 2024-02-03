@@ -29,9 +29,9 @@ function toastErrors(response){
         });
     }
 }
-async function login(token){
+async function login(token, profile){
     return api.getClient().then(client => {
-        return client.create_access_key_api_v0_access_key_post({}, {token}).then(response => {
+        return client.create_access_key_api_v0_access_key_post({}, {token, profile}).then(response => {
             toastErrors(response)
             return response
         })

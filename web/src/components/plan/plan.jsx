@@ -1,7 +1,19 @@
 import React, {useContext, useEffect, useState} from "react";
 import {useParams} from 'react-router-dom'
 import {url} from "../../utils/auth.jsx";
-import {Accordion, Button, ButtonGroup, Container, Divider, Icon, Input, Segment} from "semantic-ui-react";
+import {
+    Accordion,
+    Button,
+    ButtonGroup,
+    Card,
+    CardGroup,
+    Container,
+    Divider,
+    Icon,
+    Input,
+    Image,
+    Segment, Item, ItemGroup
+} from "semantic-ui-react";
 import {UserContext} from "../../App.jsx";
 // import {Editor} from "react-draft-wysiwyg";
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
@@ -86,6 +98,82 @@ function DatePicker({isMultiDay, setIsMultiDay, date, setDate, dateRange, setDat
     </>
 }
 
+function Person({person, removePerson}){
+    const defaultImage = "https://react.semantic-ui.com/images/avatar/large/matthew.png"
+    let name = "Unknown"
+    let image = defaultImage
+    if(typeof person === "string"){
+        name = person
+    } else {
+        name = person.google_info.name
+        image = person?.google_info?.picture || defaultImage
+    }
+
+    return <Item>
+        <Image circular size="tiny" src={image} />
+        <Item.Content verticalAlign="middle" >
+            <Item.Header>{name}</Item.Header>
+        </Item.Content>
+        <Item.Meta>
+            <Item.Extra floated="right">
+                <Button icon={"remove"} onClick={() => {
+                    removePerson(person)
+                }} />
+            </Item.Extra>
+
+        </Item.Meta>
+    </Item>
+
+}
+
+function People({people, setPeople}){
+    let [newPersonEmail, setNewPersonEmail] = useState("")
+
+    function removePerson(person){
+        let newPeople = people.slice()
+        newPeople.splice(newPeople.indexOf(person), 1)
+        setPeople(newPeople)
+    }
+
+
+    let cards = [];
+    if(people !== null){
+        cards = people.map((person, i) => {
+            return <Person person={person} removePerson={removePerson} key={"person_"+i}/>
+        })
+    }
+
+    return <Segment compact basic a>
+        <Item.Group style={{textAlign:"left"}}>
+            {cards}
+            <Item key="add_person">
+                <Item.Content>
+                    <Icon name={"add user"} size="large" />
+                    <Item.Header>
+                        <Input
+                            type="text"
+                            placeholder="Add By Email"
+                            value={newPersonEmail}
+                            onChange={(e) => {
+                                setNewPersonEmail(e.target.value)
+                            }}
+                        />
+                        <Button
+                            icon={"add"}
+                            style={{floated:"right"}}
+                            onClick={() => {
+                            console.log("adding person", newPersonEmail)
+                            let newPeople = people? people.slice() : [];
+                            newPeople.push(newPersonEmail)
+                            setPeople(newPeople)
+                        }} />
+                    </Item.Header>
+                </Item.Content>
+            </Item>
+        </Item.Group>
+    </Segment>
+}
+
 function TripPlan() {
     let [loading, setLoading] = useState(true)
     let [trip_plan, setTripPlan] = useState(null)
@@ -93,14 +181,18 @@ function TripPlan() {
     let [isMultiDay, setIsMultiDay] = useState(false)
     let [date, setDate] = useState(null);
     let [dateRange, setDateRange] = useState([]);
+    let [people, setPeople] = useState([])
 
-    const { accessToken } = useContext(UserContext);
+    const { accessToken, user } = useContext(UserContext);
     let {id} = useParams()
 
     function updateTripPlanState(trip_plan){
-        console.log("receiving trip plan", trip_plan)
+        console.log("cookie has", user)
         setTripPlan(trip_plan)
         setName(trip_plan.name)
+        if (trip_plan.dates === undefined || trip_plan.dates === null){
+            trip_plan.dates = {type: "basic", dates: null}
+        }
         if(trip_plan.dates.type === "range"){
             setIsMultiDay(true)
             setDateRange(trip_plan.dates.dates.map(d => Date.parse(d)))
@@ -109,30 +201,33 @@ function TripPlan() {
             setIsMultiDay(false)
             setDate(Date.parse(trip_plan.dates.dates))
         }
-        setLoading(false)
+        setPeople(trip_plan.people)
     }
 
 
     useEffect(() => {
         getTripPlan(id, accessToken).then(trip_plan => {
             updateTripPlanState(trip_plan)
+            setLoading(false)
         });
-    }, []);
+    }, [accessToken, id]);
 
     useEffect(() => {
-        if(loading)
+        console.log("useEffect", name, date, dateRange, people);
+        if(loading) {
+            console.log("still loading");
             return
+        }
         trip_plan.name = name
         trip_plan.dates = {
             type: isMultiDay ? "range" : "basic",
             dates: isMultiDay ? dateRange : date
         }
+        trip_plan.people = people
         console.log("sending trip plan", trip_plan)
-        updatePlan(accessToken, trip_plan, id).then(response => {
-            console.log("response", response)
-            return response
-        })
-    }, [name, date, dateRange]);
+        updatePlan(accessToken, trip_plan, id).then(response => {})
+    }, [accessToken, id, isMultiDay, loading, trip_plan, people, name, date, dateRange]);
+
 
     if(loading){
         return <Container>
@@ -157,7 +252,13 @@ function TripPlan() {
 
         <Accordion fluid>
             <AccordionSection index={0} title="People" icon="group">
-                Hello world
+                <People
+                    people={people}
+                    setPeople={(newPeople) => {
+                        console.log("setting people", newPeople)
+                        setPeople(newPeople)
+                    }}
+                />
             </AccordionSection>
 
             <AccordionSection index={1} title="Trails" icon="map signs">

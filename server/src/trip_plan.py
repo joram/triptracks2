@@ -18,17 +18,18 @@ async def get_trip_plans(user: User = Depends(verify_access_key)) -> list[TripPl
     return [tp for tp in qs]
 
 
-
 def string_to_date(s):
-    print(s, type(s))
     data = json.loads(s)
     return TripPlanRequest.TripPlanDate(
         type=data["type"],
         dates=data["dates"],
     )
 
+
 @app.get("/api/v0/trip_plan/{trip_plan_id}")
-async def get_trip_plan(trip_plan_id: str, user: User = Depends(verify_access_key)) -> TripPlan:
+async def get_trip_plan(
+    trip_plan_id: str, user: User = Depends(verify_access_key)
+) -> TripPlan:
     session = get_session()
     qs = session.query(TripPlan).filter(
         TripPlan.user_id == user.id,
@@ -37,13 +38,14 @@ async def get_trip_plan(trip_plan_id: str, user: User = Depends(verify_access_ke
     if qs.count() == 0:
         raise HTTPException(status_code=404, detail="packing list not found")
     trip_plan = qs.first()
+    trip_plan.people = flesh_out_people(trip_plan.people)
 
     response = TripPlan(
-       name=trip_plan.name,
-       id=trip_plan.id,
-       dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
+        name=trip_plan.name,
+        id=trip_plan.id,
+        dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
+        people=trip_plan.people,
     )
-    print(response)
     return response
 
 
@@ -51,18 +53,44 @@ class TripPlanRequest(BaseModel):
 
     class TripPlanDate(BaseModel):
         type: str
-        dates: Union[str, List[str]]
+        dates: Union[str, List[str], None]
 
     name: str
     dates: Optional[TripPlanDate]
+    people: List[Union[str, dict]]
+
+
+def flesh_out_people(people):
+    fleshed_out = []
+    for p in people:
+        if isinstance(p, str):
+            session = get_session()
+            qs = session.query(User).filter(User.email == p)
+            if qs.count() > 0:
+                user = qs.first()
+                fleshed_out.append(
+                    {
+                        "email": user.email,
+                        "google_info": user.google_userinfo,
+                        "id": user.id,
+                    }
+                )
+                continue
+
+        fleshed_out.append(p)
+    return fleshed_out
 
 
 @app.patch("/api/v0/trip_plan/{trip_plan_id}")
-async def update_trip_plan(trip_plan_id: str, request: TripPlanRequest, user: User = Depends(verify_access_key)) -> TripPlan:
+async def update_trip_plan(
+    trip_plan_id: str, request: TripPlanRequest, user: User = Depends(verify_access_key)
+) -> TripPlan:
     pprint.pprint(request.json())
 
     session = get_session()
-    qs = session.query(TripPlan).filter(TripPlan.user_id == user.id, TripPlan.id == trip_plan_id)
+    qs = session.query(TripPlan).filter(
+        TripPlan.user_id == user.id, TripPlan.id == trip_plan_id
+    )
     if qs.count() == 0:
         raise HTTPException(status_code=404, detail="packing list not found")
     trip_plan = qs.first()
@@ -70,14 +98,16 @@ async def update_trip_plan(trip_plan_id: str, request: TripPlanRequest, user: Us
     # update values
     trip_plan.name = request.name
     trip_plan.dates = request.dates.json() if request.dates else None
+    trip_plan.people = flesh_out_people(request.people)
 
     session.add(trip_plan)
     session.commit()
 
     response = TripPlan(
-       name=trip_plan.name,
-       id=trip_plan.id,
-       dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
+        name=trip_plan.name,
+        id=trip_plan.id,
+        dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
+        people=trip_plan.people,
     )
 
     return response
@@ -86,7 +116,9 @@ async def update_trip_plan(trip_plan_id: str, request: TripPlanRequest, user: Us
 @app.delete("/api/v0/trip_plan/{trip_plan_id}")
 async def remove_trip_plan(trip_plan_id: str, user: User = Depends(verify_access_key)):
     session = get_session()
-    qs = session.query(TripPlan).filter(TripPlan.user_id == user.id, TripPlan.id == trip_plan_id)
+    qs = session.query(TripPlan).filter(
+        TripPlan.user_id == user.id, TripPlan.id == trip_plan_id
+    )
     if qs.count() == 0:
         raise HTTPException(status_code=404, detail="packing list not found")
     trip_plan = qs.first()
@@ -100,5 +132,4 @@ async def create_trip_plan(user: User = Depends(verify_access_key)) -> str:
     session = get_session()
     session.add(trip_plan)
     session.commit()
-    print(trip_plan)
     return trip_plan.id

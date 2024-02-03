@@ -5,7 +5,7 @@ from pydantic import BaseModel
 
 from .app import app
 from .db.database import get_session
-from .db.models import User, AccessToken
+from .db.models import User, AccessToken, prefixed_id
 from .settings import GOOGLE_CLIENT_ID
 
 
@@ -15,8 +15,11 @@ class AccessKeyRequest(BaseModel):
 
 @app.post("/api/v0/access_key")
 async def create_access_key(request: AccessKeyRequest):
-    userinfo = id_token.verify_oauth2_token(request.token, requests.Request(), GOOGLE_CLIENT_ID)
+    userinfo = id_token.verify_oauth2_token(
+        request.token, requests.Request(), GOOGLE_CLIENT_ID
+    )
     email = userinfo["email"]
+    print(userinfo)
 
     # upsert user_id
     session = get_session()
@@ -43,7 +46,8 @@ async def create_access_key(request: AccessKeyRequest):
     return {
         "token": access_token.token,
         "user_id": user.id,
-        }
+    }
+
 
 async def verify_access_key(access_key: str = Header(...)) -> User:
     if access_key is None:
@@ -51,7 +55,9 @@ async def verify_access_key(access_key: str = Header(...)) -> User:
 
     qs = get_session().query(AccessToken).filter(AccessToken.token == access_key)
     if qs.count() == 0:
-        raise HTTPException(status_code=400, detail=f"invalid Access-Key '{access_key}'")
+        raise HTTPException(
+            status_code=400, detail=f"invalid Access-Key '{access_key}'"
+        )
 
     user_id = qs.first().user_id
     return get_session().query(User).filter(User.id == user_id).first()
