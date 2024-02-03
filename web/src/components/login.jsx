@@ -10,7 +10,7 @@ export function LoginButton(){
     const { user, setUser, setAccessToken } = useContext(UserContext);
 
     async function loginSuccess(response) {
-        login(response.tokenId).then(data => {
+        login(response.tokenId, response.profileObj).then(data => {
             const {token, user_id} = data.data
             response.profileObj.id = user_id
             setUser(response.profileObj)
