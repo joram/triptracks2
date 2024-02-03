@@ -1,3 +1,5 @@
+import {toast} from "react-toastify";
+
 const OpenAPIClientAxios = require('openapi-client-axios').default;
 
 const api = new OpenAPIClientAxios({
@@ -20,10 +22,19 @@ api.init({
         console.error('Error initializing OpenAPI client', err);
     });
 
-
+function toastErrors(response){
+    if(response.errors !== undefined){
+        response.errors.forEach(error => {
+            toast(error.msg, {type: "error"})
+        });
+    }
+}
 async function login(token){
     return api.getClient().then(client => {
-        return client.create_access_key_api_v0_access_key_post({}, {token})
+        return client.create_access_key_api_v0_access_key_post({}, {token}).then(response => {
+            toastErrors(response)
+            return response
+        })
     });
 }
 
@@ -39,12 +50,21 @@ async function getPlans(accessToken){
             headers: {
             'Access-Key': accessToken,
         }})
+    }).then(response => {
+        toastErrors(response)
+        return response
     });
 }
 
 async function updatePlan(accessToken, plan, plan_id){
     if (plan.dates !== null && plan.dates.dates === null){
         plan.dates = null
+    }
+    if (plan.dates !== null && plan.dates.type === "range" && plan.dates.dates.includes(null)){
+        plan.dates = {
+            type: "range",
+            dates: [],
+        }
     }
     console.log("updating plan", plan, plan_id, accessToken)
     return api.getClient({
@@ -65,7 +85,12 @@ async function updatePlan(accessToken, plan, plan_id){
                 }
             }
         )
-    });
+    }).then(response => {
+        toastErrors(response)
+        return response
+    }).catch(err => {
+        toastErrors(err.response.data)
+    })
 }
 
 export {login, getPlans, updatePlan}

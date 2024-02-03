@@ -51,14 +51,48 @@ async function getTripPlan(id, accessToken){
     })
 }
 
+function DatePicker({isMultiDay, setIsMultiDay, date, setDate, dateRange, setDateRange}){
+    return <>
+        <ButtonGroup basic style={{marginRight:"10px"}}>
+            <Button
+                active={!isMultiDay}
+                onClick={() => {
+                    setIsMultiDay(false)
+                    setDate(null)
+                }}
+            >
+                single day
+            </Button>
+            <Button active={isMultiDay} onClick={() => {
+                setIsMultiDay(true)
+                setDateRange([])
+            }}>multi-day</Button>
+        </ButtonGroup>
+        <SemanticDatepicker
+            key={"date_picker_"+isMultiDay}
+            type={isMultiDay ? "range" : "basic" }
+            style={{width: "225px"}}
+            showToday={true}
+            value={isMultiDay ? dateRange : date}
+            onChange={(event, data) => {
+                if(data.type === "range"){
+                    setDateRange(data.value)
+                }
+                else if(data.type === "basic"){
+                    setDate(data.value)
+                }
+            }}
+        />
+    </>
+}
 
 function TripPlan() {
     let [loading, setLoading] = useState(true)
     let [trip_plan, setTripPlan] = useState(null)
     let [name, setName] = useState(null)
     let [isMultiDay, setIsMultiDay] = useState(false)
-    let [startDate, setStartDate] = useState(null);
-    let [endDate, setEndDate] = useState(null);
+    let [date, setDate] = useState(null);
+    let [dateRange, setDateRange] = useState([]);
 
     const { accessToken } = useContext(UserContext);
     let {id} = useParams()
@@ -67,27 +101,14 @@ function TripPlan() {
         console.log("receiving trip plan", trip_plan)
         setTripPlan(trip_plan)
         setName(trip_plan.name)
-        if (trip_plan.dates === null || trip_plan.dates === undefined){
-            setStartDate(null)
-            setEndDate(null)
-            setIsMultiDay(false)
-        }
-        else if(trip_plan.dates.type === "basic"){
-            setStartDate(trip_plan.dates.date)
-            setIsMultiDay(false)
-        }
-        else if(trip_plan.dates.type === "range"){
-            const dates = [Date.parse(trip_plan.dates.dates[0]), Date.parse(trip_plan.dates.dates[1])]
-            console.log(dates)
-            setStartDate(dates[0])
-            setEndDate(dates[1])
+        if(trip_plan.dates.type === "range"){
             setIsMultiDay(true)
+            setDateRange(trip_plan.dates.dates.map(d => Date.parse(d)))
         }
-        // else {
-        //     setStartDate(null)
-        //     setEndDate(null)
-        //     setIsMultiDay(true)
-        // }
+        else {
+            setIsMultiDay(false)
+            setDate(Date.parse(trip_plan.dates.dates))
+        }
         setLoading(false)
     }
 
@@ -102,23 +123,16 @@ function TripPlan() {
         if(loading)
             return
         trip_plan.name = name
-        if(isMultiDay){
-            trip_plan.dates = {
-                type: "range",
-                dates: [startDate, endDate]
-            }
-        } else {
-            trip_plan.dates = {
-                type: "basic",
-                dates: startDate
-            }
+        trip_plan.dates = {
+            type: isMultiDay ? "range" : "basic",
+            dates: isMultiDay ? dateRange : date
         }
         console.log("sending trip plan", trip_plan)
         updatePlan(accessToken, trip_plan, id).then(response => {
             console.log("response", response)
             return response
         })
-    }, [name, startDate, endDate]);
+    }, [name, date, dateRange]);
 
     if(loading){
         return <Container>
@@ -138,43 +152,7 @@ function TripPlan() {
             />
         </Segment>
         <Segment basic>
-            <ButtonGroup basic style={{marginRight:"10px"}}>
-                <Button
-                    active={!isMultiDay}
-                    onClick={() => {
-                        setIsMultiDay(false)
-                        setStartDate(null)
-                        setEndDate(null)
-                    }}
-                >
-                    single day
-                </Button>
-                <Button active={isMultiDay} onClick={() => {
-                    setIsMultiDay(true)
-                    setStartDate(null)
-                    setEndDate(null)
-                }}>multi-day</Button>
-            </ButtonGroup>
-            <SemanticDatepicker
-                key={"date_picker_"+isMultiDay}
-                type={isMultiDay ? "range" : "basic" }
-                style={{width: "225px"}}
-                showToday={true}
-                value={isMultiDay ? [startDate, endDate] : startDate}
-                onChange={(event, data) => {
-                    console.log(data)
-                    if(data.type === "range"){
-                        if (data.value === null)
-                            return
-                        setStartDate(data.value[0])
-                        setEndDate(data.value[1])
-                    }
-                    else if(data.type === "basic"){
-                        setStartDate(data.value)
-                        setEndDate(null)
-                    }
-                }}
-            />
+            <DatePicker date={date} setDate={setDate} dateRange={dateRange} setDateRange={setDateRange} isMultiDay={isMultiDay} setIsMultiDay={setIsMultiDay}/>
         </Segment>
 
         <Accordion fluid>

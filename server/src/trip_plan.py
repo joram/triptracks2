@@ -1,6 +1,7 @@
 from typing import Optional, List, Dict, Union
 
 import pprint
+import json
 from fastapi import Depends, HTTPException
 from pydantic import BaseModel
 
@@ -17,6 +18,15 @@ async def get_trip_plans(user: User = Depends(verify_access_key)) -> list[TripPl
     return [tp for tp in qs]
 
 
+
+def string_to_date(s):
+    print(s, type(s))
+    data = json.loads(s)
+    return TripPlanRequest.TripPlanDate(
+        type=data["type"],
+        dates=data["dates"],
+    )
+
 @app.get("/api/v0/trip_plan/{trip_plan_id}")
 async def get_trip_plan(trip_plan_id: str, user: User = Depends(verify_access_key)) -> TripPlan:
     session = get_session()
@@ -28,7 +38,13 @@ async def get_trip_plan(trip_plan_id: str, user: User = Depends(verify_access_ke
         raise HTTPException(status_code=404, detail="packing list not found")
     trip_plan = qs.first()
 
-    return trip_plan
+    response = TripPlan(
+       name=trip_plan.name,
+       id=trip_plan.id,
+       dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
+    )
+    print(response)
+    return response
 
 
 class TripPlanRequest(BaseModel):
@@ -61,7 +77,7 @@ async def update_trip_plan(trip_plan_id: str, request: TripPlanRequest, user: Us
     response = TripPlan(
        name=trip_plan.name,
        id=trip_plan.id,
-       dates=TripPlanRequest.TripPlanDate.parse_obj(trip_plan.dates) if trip_plan.dates else None,
+       dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
     )
 
     return response
