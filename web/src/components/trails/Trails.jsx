@@ -52,7 +52,7 @@ function Trails({viewGeohash, maxTrails}){
         }).catch((error) => {
             console.error(error)
         })
-    });
+    }, []);
 
 
     function getTrails(limit=1){
@@ -106,7 +106,8 @@ function Trails({viewGeohash, maxTrails}){
             return
         }
         let geohash = filename.replace("trails/", "").replace(".geojson", "")
-        trails[filename] = (<Trail key={filename} url={filename} geohash={geohash} />)
+        console.log(filename)
+        trails[filename] = (<Trail key={filename} url={"/"+filename} geohash={geohash} />)
     })
     return Object.values(trails)
 }

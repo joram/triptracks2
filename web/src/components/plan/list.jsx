@@ -1,6 +1,5 @@
 import React, {useContext, useEffect} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
-import {handleApiErrors, url} from "../../utils/auth";
 import {Link} from "react-router-dom";
 import {UserContext} from "../../App";
 import {getPlans} from "../../utils/api";
@@ -19,7 +18,7 @@ function TripPlanList(){
             setTripPlans(response.data)
             setLoading(false)
         })
-    }, [])
+    }, [accessToken, loading])
 
     if(accessToken === undefined || accessToken === null){
         return <Container>you must be logged in before you can create a trip plan list</Container>
