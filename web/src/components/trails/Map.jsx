@@ -83,7 +83,8 @@ export default function Map() {
     <React.Fragment>
       <RMap
         ref={map}
-        width={"100%"} height={height-70+"px"}
+        width={"100%"}
+        height={height-70+"px"}
         className="example-map"
         initial={{ center: center, zoom: 10 }}
         properties={{ label: "HillShading" }}

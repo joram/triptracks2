@@ -16,7 +16,7 @@ import Partners from "./components/partners/partners";
 import Login from "./components/login";
 import Cookies from "universal-cookie/es6";
 import {Segment} from "semantic-ui-react";
-import {toast, ToastContainer} from "react-toastify";
+import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
 export const UserContext = React.createContext(null);
@@ -33,7 +33,6 @@ function App() {
     if(newUser === null || newUser === undefined){
       cookies.remove('user', { path: '/',domain: window.location.hostname});
       setUser(null)
-      console.log("removed user cookie")
     }
   }
 
@@ -43,7 +42,6 @@ function App() {
     if(newAccessToken === null || newAccessToken === undefined){
       cookies.remove('accessToken', { path: '/',domain: window.location.hostname });
       setAccessToken(null)
-      console.log("removed access token cookie")
     }
   }
 

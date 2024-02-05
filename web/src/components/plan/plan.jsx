@@ -1,178 +1,14 @@
 import React, {useContext, useEffect, useState} from "react";
 import {useParams} from 'react-router-dom'
-import {url} from "../../utils/auth.jsx";
-import {
-    Accordion,
-    Button,
-    ButtonGroup,
-    Card,
-    CardGroup,
-    Container,
-    Divider,
-    Icon,
-    Input,
-    Image,
-    Segment, Item, ItemGroup
-} from "semantic-ui-react";
+import {Container, Input, Segment} from "semantic-ui-react";
 import {UserContext} from "../../App.jsx";
-// import {Editor} from "react-draft-wysiwyg";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import SemanticDatepicker from "react-semantic-ui-datepickers";
 import 'react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css';
-import {updatePlan} from "../../utils/api";
+import {getPlan, updatePlan} from "../../utils/api";
+import {People} from "./components/people";
+import {DatePicker} from "./components/datePicker";
+import Itinerary from "./components/itinerary";
+import PlanTrails from "./components/planTrails";
 
-
-function AccordionSection({index, title, icon, children}){
-    let [active, setActive] = useState(true)
-
-    return <>
-        <Accordion.Title
-            active={active}
-            index={index}
-            onClick={() => setActive(!active)}
-        >
-            <h2 align="left">
-                <Icon name="dropdown" />
-                <Icon name={icon} size="large" style={{margin:"15px"}}/>
-                {title}
-                <Divider />
-            </h2>
-        </Accordion.Title>
-        <Accordion.Content active={active}>
-            {children}
-        </Accordion.Content>
-        </>
-}
-
-function Itinerary(){
-    return <>  itinerary </>
-}
-
-async function getTripPlan(id, accessToken){
-    return fetch(url("/api/v0/trip_plan/"+id), {
-        method: "GET",
-        headers: {
-            'Content-Type': 'application/json',
-            'Access-Key': accessToken,
-        },
-    }).then(response => {
-        return response.json()
-    }).then(response => {
-        console.log("accesstoken", accessToken, "plan", response)
-        return response
-    })
-}
-
-function DatePicker({isMultiDay, setIsMultiDay, date, setDate, dateRange, setDateRange}){
-    return <>
-        <ButtonGroup basic style={{marginRight:"10px"}}>
-            <Button
-                active={!isMultiDay}
-                onClick={() => {
-                    setIsMultiDay(false)
-                    setDate(null)
-                }}
-            >
-                single day
-            </Button>
-            <Button active={isMultiDay} onClick={() => {
-                setIsMultiDay(true)
-                setDateRange([])
-            }}>multi-day</Button>
-        </ButtonGroup>
-        <SemanticDatepicker
-            key={"date_picker_"+isMultiDay}
-            type={isMultiDay ? "range" : "basic" }
-            style={{width: "225px"}}
-            showToday={true}
-            value={isMultiDay ? dateRange : date}
-            onChange={(event, data) => {
-                if(data.type === "range"){
-                    setDateRange(data.value)
-                }
-                else if(data.type === "basic"){
-                    setDate(data.value)
-                }
-            }}
-        />
-    </>
-}
-
-function Person({person, removePerson}){
-    const defaultImage = "https://react.semantic-ui.com/images/avatar/large/matthew.png"
-    let name = "Unknown"
-    let image = defaultImage
-    if(typeof person === "string"){
-        name = person
-    } else {
-        name = person.google_info.name
-        image = person?.google_info?.picture || defaultImage
-    }
-
-    return <Item>
-        <Image circular size="tiny" src={image} />
-        <Item.Content verticalAlign="middle" >
-            <Item.Header>{name}</Item.Header>
-        </Item.Content>
-        <Item.Meta>
-            <Item.Extra floated="right">
-                <Button icon={"remove"} onClick={() => {
-                    removePerson(person)
-                }} />
-            </Item.Extra>
-
-        </Item.Meta>
-    </Item>
-
-}
-
-function People({people, setPeople}){
-    let [newPersonEmail, setNewPersonEmail] = useState("")
-
-    function removePerson(person){
-        let newPeople = people.slice()
-        newPeople.splice(newPeople.indexOf(person), 1)
-        setPeople(newPeople)
-    }
-
-
-    let cards = [];
-    if(people !== null){
-        cards = people.map((person, i) => {
-            return <Person person={person} removePerson={removePerson} key={"person_"+i}/>
-        })
-    }
-
-    return <Segment compact basic a>
-        <Item.Group style={{textAlign:"left"}}>
-            {cards}
-            <Item key="add_person">
-                <Item.Content>
-                    <Icon name={"add user"} size="large" />
-                    <Item.Header>
-                        <Input
-                            type="text"
-                            placeholder="Add By Email"
-                            value={newPersonEmail}
-                            onChange={(e) => {
-                                setNewPersonEmail(e.target.value)
-                            }}
-                        />
-                        <Button
-                            icon={"add"}
-                            style={{floated:"right"}}
-                            onClick={() => {
-                            console.log("adding person", newPersonEmail)
-                            let newPeople = people? people.slice() : [];
-                            newPeople.push(newPersonEmail)
-                            setPeople(newPeople)
-                        }} />
-                    </Item.Header>
-                </Item.Content>
-            </Item>
-        </Item.Group>
-    </Segment>
-}
 
 function TripPlan() {
     let [loading, setLoading] = useState(true)
@@ -182,12 +18,38 @@ function TripPlan() {
     let [date, setDate] = useState(null);
     let [dateRange, setDateRange] = useState([]);
     let [people, setPeople] = useState([])
+    let [trails, setTrails] = useState([])
+    let [itinerary, setItinerary] = useState([
+        {
+            date: "2021-01-01",
+            timeline: [
+                {id:1, startTime: "6:00", icon:"sun outline", color:"grey", description: "sunrise"},
+                {id:2, startTime: "7:00", description: "wake up"},
+                {id:3, duration: "1:00", description: "breakfast and pack up"},
+                {id:4, duration: "2:00", description: "drive to trailhead"},
+                {id:5, duration: "1:00", description: "shuttle cars"},
+                {id:6, duration: "1:30", description: "ski tour to to Peyto hut"},
+                {id:7, startTime: "18:00", duration:"1:00", description: "ski tour to to Peyto hut"},
+                {id:8, startTime: "19:00", icon: "sun", color:"grey", description: "sunset"},
+                {id:9, startTime: "20:00", icon: "bed", color:"grey", description: "in bed"},
+            ],
+        },
+        {
+            date: "2021-01-02",
+            timeline: [
+                {id:1, startTime: "7:00", description: "wake up"},
+                {id:2, duration: "1hr", description: "breakfast and pack up"},
+                {id:3, duration: "1hr", description: "drive to trailhead"},
+                {id:4, duration: "1hr", description: "shuttle cars"},
+                {id:5, duration: "1hr", description: "ski tour to to Peyto hut"},
+            ],
+        }
+    ])
 
-    const { accessToken, user } = useContext(UserContext);
+    const { accessToken } = useContext(UserContext);
     let {id} = useParams()
 
     function updateTripPlanState(trip_plan){
-        console.log("cookie has", user)
         setTripPlan(trip_plan)
         setName(trip_plan.name)
         if (trip_plan.dates === undefined || trip_plan.dates === null){
@@ -195,38 +57,51 @@ function TripPlan() {
         }
         if(trip_plan.dates.type === "range"){
             setIsMultiDay(true)
-            setDateRange(trip_plan.dates.dates.map(d => Date.parse(d)))
-        }
-        else {
+            setDateRange(trip_plan.dates.dates)
+        } else {
             setIsMultiDay(false)
-            setDate(Date.parse(trip_plan.dates.dates))
+            setDate(trip_plan.dates.dates)
         }
         setPeople(trip_plan.people)
+        setTrails(trip_plan.trails)
     }
 
 
     useEffect(() => {
-        getTripPlan(id, accessToken).then(trip_plan => {
-            updateTripPlanState(trip_plan)
+        getPlan(accessToken, id).then(response => {
+            updateTripPlanState(response.data)
             setLoading(false)
         });
     }, [accessToken, id]);
 
     useEffect(() => {
-        console.log("useEffect", name, date, dateRange, people);
-        if(loading) {
-            console.log("still loading");
+        if (loading) {
             return
         }
+
+        // update the trip plan
         trip_plan.name = name
         trip_plan.dates = {
             type: isMultiDay ? "range" : "basic",
             dates: isMultiDay ? dateRange : date
         }
         trip_plan.people = people
+        trip_plan.trails = trails
+
         console.log("sending trip plan", trip_plan)
-        updatePlan(accessToken, trip_plan, id).then(response => {})
-    }, [accessToken, id, isMultiDay, loading, trip_plan, people, name, date, dateRange]);
+        updatePlan(accessToken, trip_plan, id).then(r => {})
+    }, [
+        accessToken,
+        id,
+        isMultiDay,
+        loading,
+        trip_plan,
+        people,
+        name,
+        date,
+        dateRange,
+        trails,
+    ]);
 
 
     if(loading){
@@ -237,6 +112,7 @@ function TripPlan() {
         </Container>
     }
     return <Container>
+
         <Segment basic>
             <Input
                 size="huge"
@@ -250,27 +126,18 @@ function TripPlan() {
             <DatePicker date={date} setDate={setDate} dateRange={dateRange} setDateRange={setDateRange} isMultiDay={isMultiDay} setIsMultiDay={setIsMultiDay}/>
         </Segment>
 
-        <Accordion fluid>
-            <AccordionSection index={0} title="People" icon="group">
-                <People
-                    people={people}
-                    setPeople={(newPeople) => {
-                        console.log("setting people", newPeople)
-                        setPeople(newPeople)
-                    }}
-                />
-            </AccordionSection>
+        <Segment basic>
+            <PlanTrails trails={trails} setTrails={setTrails} />
+        </Segment>
 
-            <AccordionSection index={1} title="Trails" icon="map signs">
-            </AccordionSection>
+        <Segment basic>
+            <People people={people} setPeople={setPeople} />
+        </Segment>
 
-            <AccordionSection index={2} title="Itinerary" icon="clipboard list">
-                <Itinerary/>
-            </AccordionSection>
+        <Segment basic>
+            <Itinerary itinerary={itinerary} setItinerary={setItinerary}/>
+        </Segment>
 
-            <AccordionSection index={3} title="Packing" icon="calendar minus">
-            </AccordionSection>
-        </Accordion>
     </Container>
 }
 

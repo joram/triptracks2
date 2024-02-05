@@ -1,4 +1,5 @@
 import {toast} from "react-toastify";
+import {Header} from "semantic-ui-react";
 
 const OpenAPIClientAxios = require('openapi-client-axios').default;
 
@@ -25,10 +26,16 @@ api.init({
 function toastErrors(response){
     if(response.errors !== undefined){
         response.errors.forEach(error => {
-            toast(error.msg, {type: "error"})
+            const path = error.loc.join(".")
+            const errorMsg = <>
+                <Header as="h4">{error.msg}</Header>
+                {path}
+            </>
+            toast.error(errorMsg)
         });
     }
 }
+
 async function login(token, profile){
     return api.getClient().then(client => {
         return client.create_access_key_api_v0_access_key_post({}, {token, profile}).then(response => {
@@ -39,13 +46,7 @@ async function login(token, profile){
 }
 
 async function getPlans(accessToken){
-    return api.getClient({
-        axiosConfigDefaults: {
-        headers: {
-            'Access-Key': accessToken,
-        },
-        },
-    }).then(client => {
+    return api.getClient().then(client => {
         return client.get_trip_plans_api_v0_trip_plans_get({}, {},{
             headers: {
             'Access-Key': accessToken,
@@ -54,6 +55,25 @@ async function getPlans(accessToken){
         toastErrors(response)
         return response
     });
+}
+
+async function getPlan(accessToken, plan_id){
+    return api.getClient().then(client => {
+        return client.get_trip_plan_api_v0_trip_plan__trip_plan_id__get(
+            {
+                trip_plan_id: plan_id
+            }, {},
+            {
+                headers: {
+                    'Access-Key': accessToken,
+                }
+            }
+        )
+    }).then(response => {
+        toastErrors(response)
+        return response
+    });
+
 }
 
 async function updatePlan(accessToken, plan, plan_id){
@@ -93,4 +113,4 @@ async function updatePlan(accessToken, plan, plan_id){
     })
 }
 
-export {login, getPlans, updatePlan}
+export {login, getPlans, getPlan, updatePlan}

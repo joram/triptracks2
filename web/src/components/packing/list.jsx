@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {Button, Container, Table} from "semantic-ui-react";
-import {handleApiErrors, url} from "../../utils/auth";
+import {url} from "../../utils/auth";
 import {Link} from "react-router-dom";
 import {UserContext} from "../../App";
 
@@ -9,74 +9,49 @@ function PackingList(){
     let [packingLists, setPackingLists] = useState([])
     const { accessToken } = useContext(UserContext);
 
-
-    async function getPackingLists() {
-        console.log("getting packing lists with access token: ", accessToken)
-        return await fetch(url("/api/v0/packing_lists"), {
-            method: "GET",
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Key': accessToken,
-            },
-        })
-            .then(response => response.json())
-            .then(packing_lists => {
-                console.log("packing_lists", packing_lists)
-                return packing_lists
-            }).catch(exception => {
-                console.log("exception", exception)
-                return []
-            })
-    }
-
     useEffect(() => {
         if(loading){
             return
         }
         setLoading(true)
 
+
+        async function getPackingLists() {
+            console.log("getting packing lists with access token: ", accessToken)
+            return await fetch(url("/api/v0/packing_lists"), {
+                method: "GET",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Key': accessToken,
+                },
+            })
+                .then(response => response.json())
+                .then(packing_lists => {
+                    console.log("packing_lists", packing_lists)
+                    return packing_lists
+                }).catch(exception => {
+                    console.log("exception", exception)
+                    return []
+                })
+        }
+
         getPackingLists().then(packing_lists => {
             setPackingLists(packing_lists)
         })
-    }, [loading])
-
-
-    async function removePackingList(packing_list_id) {
-        return await fetch(url("/api/v0/packing_list/"+packing_list_id), {
-            method: "DELETE",
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Key': accessToken,
-            },
-            body: "{}"
-        }).then(response => {
-            let newPackingLists = packingLists.filter(packing_list => {
-                return packing_list.id !== packing_list_id
-            })
-            setPackingLists(newPackingLists)
-        })
-    }
-
-    function remove(id){
-        removePackingList(id).then(()=> {
-            getPackingLists().then(packing_lists => {
-                setPackingLists(packing_lists)
-            })
-        })
-    }
+    }, [loading, accessToken])
 
 
     let rows = []
     rows.push(<Table.Row key="headers">
         <Table.HeaderCell>Name</Table.HeaderCell>
         <Table.HeaderCell># Items</Table.HeaderCell>
-        <Table.HeaderCell>Remove</Table.HeaderCell>
+        {/*<Table.HeaderCell>Remove</Table.HeaderCell>*/}
     </Table.Row>)
     packingLists.map((packing_list, i) => {
         rows.push(<Table.Row key={"packing_list_"+i}>
             <Table.Cell><Link to={"/packing/"+packing_list.id}>{packing_list.name}</Link></Table.Cell>
             <Table.Cell>{packing_list.contents.length}</Table.Cell>
-            <Table.Cell><Button onClick={()=>{remove(packing_list.id)}}>Remove</Button></Table.Cell>
+            {/*<Table.Cell><Button onClick={()=>{remove(packing_list.id)}}>Remove</Button></Table.Cell>*/}
         </Table.Row>)
         return ""
     })

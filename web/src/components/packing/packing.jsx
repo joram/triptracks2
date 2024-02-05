@@ -286,26 +286,27 @@ function Packing() {
         if(products === undefined){
             return
         }
-        setPackingList(id, name, products)
-    }, [loading, id, products, name]);
 
-
-    function setPackingList(id, name, contents){
-        if(contents === undefined){
-            return
-        }
-        fetch(url("/api/v0/packing_list/"+id), {
-            method: "POST",
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Key': accessToken,
-            },
-            body: JSON.stringify({
-                name: name,
-                contents: contents,
+        function setPackingList(id, name, contents){
+            if(contents === undefined){
+                return
+            }
+            fetch(url("/api/v0/packing_list/"+id), {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Access-Key': accessToken,
+                },
+                body: JSON.stringify({
+                    name: name,
+                    contents: contents,
+                })
             })
-        })
-    }
+        }
+
+        setPackingList(id, name, products)
+    }, [loading, id, products, name, accessToken]);
+
 
 
     function sortItems({column}){
@@ -432,7 +433,7 @@ function Packing() {
     }
 
     function isOwner(){
-        return user !== null && user != undefined && ownerId === user.id;
+        return user !== null && user !== undefined && ownerId === user.id;
     }
 
     if (!isOwner()) {
