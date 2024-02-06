@@ -100,10 +100,13 @@ function makeRowHeader() {
 
 
 function fleshOutTimeline(date, timeline){
-    let [year, month, day] = date.split("-")
-    year = parseInt(year)
-    month = parseInt(month)
-    day = parseInt(day)
+    if (typeof date === "string"){
+        date = new Date(date)
+    }
+    const year = date.getFullYear()
+    const month = date.getMonth()
+    const day = date.getDate()
+
     let lastEndTime = new Date(year, month, day, 0, 0, 0, 0)  // midnight
 
     let newTimeline = timeline.map((item, index) => {
@@ -157,7 +160,7 @@ function fleshOutTimeline(date, timeline){
 
 function DayTimeline({day, timeline, setTimeline}) {
     return <div>
-        <h2>{day}</h2>
+        <h2>{moment(day).format()}</h2>
         <DraggableTable
             rows={timeline}
             setRows={setTimeline}
@@ -168,6 +171,10 @@ function DayTimeline({day, timeline, setTimeline}) {
 }
 
 function Itinerary({itinerary, setItinerary}) {
+    if(itinerary === null){
+        return <></>
+    }
+
     let itineraryDays = []
     itinerary.forEach((itineraryDay) => {
       itineraryDays.push(<DayTimeline
@@ -175,11 +182,12 @@ function Itinerary({itinerary, setItinerary}) {
           timeline={fleshOutTimeline(itineraryDay.date, itineraryDay.timeline)}
           setTimeline={(newTimeline) => {
               const newItinerary = Object.assign([], itinerary);
-              newItinerary.forEach((day) => {
+              itinerary.forEach((day) => {
                     if(day.date === itineraryDay.date){
                         day.timeline = newTimeline
                     }
               })
+              console.log("updating new itinerary ", newItinerary)
               setItinerary(newItinerary);
           }}
       />)

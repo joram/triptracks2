@@ -86,7 +86,6 @@ async function updatePlan(accessToken, plan, plan_id){
             dates: [],
         }
     }
-    console.log("updating plan", plan, plan_id, accessToken)
     return api.getClient({
         axiosConfigDefaults: {
         headers: {

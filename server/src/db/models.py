@@ -45,7 +45,9 @@ class PackingList(Base):
 
     @staticmethod
     def new(name: str, contents: dict, user: User) -> "PackingList":
-        return PackingList(id=prefixed_id("packinglist"), user_id=user.id, name=name, contents=contents)
+        return PackingList(
+            id=prefixed_id("packinglist"), user_id=user.id, name=name, contents=contents
+        )
 
 
 class TripPlan(Base):
@@ -58,7 +60,7 @@ class TripPlan(Base):
     people = Column(JSON)
     trails = Column(JSON)
     dates = Column(JSON)
-
+    itinerary = Column(JSON)
 
     @staticmethod
     def new(name: str, user: User) -> "TripPlan":
@@ -70,6 +72,7 @@ class TripPlan(Base):
             people=[],
             trails=[],
             dates=[],
+            itinerary=[],
         )
 
 
