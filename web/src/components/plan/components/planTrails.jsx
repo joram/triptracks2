@@ -36,9 +36,7 @@ function PlanTrail({geohash}){
     useEffect(() => {
         fetch(`/trail_details/${geohash}.json`).then(results => results.json()).then(newDetails => {
             setDetails(newDetails)
-            console.log(newDetails)
             fetch(`/trails/${geohash}.geojson`).then(results => results.json()).then(newTrail => {
-                console.log(newTrail)
                 setTrail(newTrail)
                 setLoading(false)
             });
@@ -53,8 +51,6 @@ function PlanTrail({geohash}){
 }
 
 function PlanTrails({ trails, setTrails }) {
-  console.log("PlanTrails", trails)
-
   return (
     <>
       {/*<TrailSearch/>*/}

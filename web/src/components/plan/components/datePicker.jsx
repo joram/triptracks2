@@ -3,9 +3,8 @@ import SemanticDatepicker from "react-semantic-ui-datepickers";
 import React from "react";
 
 export function DatePicker({isMultiDay, setIsMultiDay, date, setDate, dateRange, setDateRange}) {
-    console.log(date, dateRange)
-    if(dateRange !== null && dateRange.length === 2){
-        dateRange = dateRange.map(d => Date.parse(d))
+    if(dateRange !== null){
+        dateRange = dateRange.map(d => new Date(d))
     }
 
     return <>
@@ -32,6 +31,9 @@ export function DatePicker({isMultiDay, setIsMultiDay, date, setDate, dateRange,
             value={isMultiDay ? dateRange : date}
             onChange={(event, data) => {
                 if (data.type === "range") {
+                    if(data.value !== null && data.value.length === 2 && typeof data.value[0] === "number" ){
+                        data.value = data.value.map(d => new Date(d))
+                    }
                     setDateRange(data.value)
                 } else if (data.type === "basic") {
                     setDate(data.value)

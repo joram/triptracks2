@@ -45,6 +45,8 @@ async def get_trip_plan(
         id=trip_plan.id,
         dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
         people=trip_plan.people,
+        trails=trip_plan.trails,
+        itinerary=trip_plan.itinerary,
     )
     return response
 
@@ -58,6 +60,8 @@ class TripPlanRequest(BaseModel):
     name: str
     dates: Optional[TripPlanDate]
     people: List[Union[str, dict]]
+    trails: List[str]
+    itinerary: Optional[List]
 
 
 def flesh_out_people(people):
@@ -99,6 +103,8 @@ async def update_trip_plan(
     trip_plan.name = request.name
     trip_plan.dates = request.dates.json() if request.dates else None
     trip_plan.people = flesh_out_people(request.people)
+    trip_plan.trails = request.trails
+    trip_plan.itinerary = request.itinerary
 
     session.add(trip_plan)
     session.commit()
@@ -108,6 +114,8 @@ async def update_trip_plan(
         id=trip_plan.id,
         dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
         people=trip_plan.people,
+        trails=trip_plan.trails,
+        itinerary=trip_plan.itinerary,
     )
 
     return response

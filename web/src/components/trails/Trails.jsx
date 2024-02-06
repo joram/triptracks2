@@ -101,13 +101,13 @@ function Trails({viewGeohash, maxTrails}){
     let trails = {}
     let filenames = getTrails(maxTrails)
 
-    filenames.forEach(filename => {
+
+    filenames.map((filename, i) => {
         if(trails[filename] !== undefined || trails.length >= maxTrails){
             return
         }
         let geohash = filename.replace("trails/", "").replace(".geojson", "")
-        console.log(filename)
-        trails[filename] = (<Trail key={filename} url={"/"+filename} geohash={geohash} />)
+        trails[filename] = (<Trail key={filename+"_"+i} url={"/"+filename} geohash={geohash} />)
     })
     return Object.values(trails)
 }
