@@ -87,7 +87,7 @@ function TripPlan() {
         setName(trip_plan.name)
         setPeople(trip_plan.people)
         setTrails(trip_plan.trails)
-        setItinerary(trip_plan.itinerary)
+        setItinerary([]) //trip_plan.itinerary)
 
 
         if (trip_plan.dates === undefined || trip_plan.dates === null){
@@ -104,11 +104,16 @@ function TripPlan() {
 
 
     useEffect(() => {
+        console.log("getting the plan", id, accessToken, loading)
+        if (!loading) {
+            return
+        }
         getPlan(accessToken, id).then(response => {
+            console.log("getting the plan")
             updateTripPlanState(response.data)
             setLoading(false)
         });
-    }, [accessToken, id]);
+    }, [accessToken, id, setLoading, loading]);
 
     useEffect(() => {
         if (loading) {
@@ -176,7 +181,7 @@ function TripPlan() {
         </Segment>
 
         <Segment basic>
-            <Itinerary itinerary={itinerary} setItinerary={setItinerary}/>
+            <Itinerary itinerary={itinerary} setItinerary={setItinerary} trails={trails}/>
         </Segment>
 
     </Container>
