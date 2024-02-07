@@ -29,7 +29,18 @@ export function DraggableTable({rows, setRows, makeRowHeaderFunc, makeRowFunc}) 
             id: maxId+1,
             description: ""
         }
+        console.log("adding row", newRow)
         setRows([...rows, newRow])
+    }
+
+    function updateRow(data) {
+        const newRows = rows.map((row, index) => {
+            if(row.id === data.id){
+                return data
+            }
+            return row
+        })
+        setRows(newRows)
     }
 
     function removeRow(id) {
@@ -77,7 +88,7 @@ export function DraggableTable({rows, setRows, makeRowHeaderFunc, makeRowFunc}) 
                                     index={index}
                                     key={row.id}
                                 >
-                                    {(provided, snapshot) => ( makeRowFunc(provided, row, removeRow) )}
+                                    {(provided, snapshot) => ( makeRowFunc(provided, row, updateRow, removeRow) )}
                                 </Draggable>
                             })}
                             <Table.Row>

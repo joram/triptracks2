@@ -40,6 +40,7 @@
     "rlayers": "^1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^2.0.3",
+    "sunrise-sunset-js": "^2.2.1",
     "universal-cookie": "^4.0.4",
     "uuid": "^9.0.1",
     "web-vitals": "^1.0.1"
@@ -66,6 +67,13 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "watchOptions": {
+    "ignored": [
+      "./node_modules/",
+      "./public/",
+      "./src/"
     ]
   }
 }

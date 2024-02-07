@@ -1,10 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import {Icon, Input, Label, Ref, Table} from "semantic-ui-react";
 import {DraggableTable} from "./draggableTable";
 import moment from 'moment';
+import fleshOutTimeline from "./utils/timeline";
+import dedupeItinerary from "./utils/itinerary";
 
 
-function Row({provided, data, removeRow}) {
+function Row({provided, data, setData, removeRow}) {
     let [isEditing, setIsEditing] = React.useState(false)
 
     let icon = <Icon {...provided.dragHandleProps} name='bars'/>
@@ -14,7 +16,7 @@ function Row({provided, data, removeRow}) {
         </Label>
     }
 
-    let startTime = data.startTime
+    let startTime = moment(new Date(data.startTime)).format("HH:mm")
     if(isEditing){
         startTime = <Input type="time" />
     }
@@ -25,9 +27,15 @@ function Row({provided, data, removeRow}) {
     }
     let description = data.description
     if(isEditing){
-        description = <input type="text" value={description} onChange={(e) => {
-            data.description = e.target.value
-        }}/>
+        description = <input
+            type="text"
+            value={description}
+            onChange={
+            (e) => {
+                data.description = e.target.value
+                setData(data)
+            }}
+        />
     }
 
     let deleteIcon = null
@@ -83,8 +91,18 @@ function Row({provided, data, removeRow}) {
         </Ref>
     </>
 }
-function makeRow(provided, data, removeRow) {
-    return <Row provided={provided} data={data} removeRow={removeRow}/>
+function makeRow(provided, data, setData, removeRow) {
+    try {
+        return <Row
+            provided={provided}
+            data={data}
+            setData={setData}
+            removeRow={removeRow}
+        />
+    } catch (error) {
+        console.error(error)
+        return <></>
+    }
 }
 
 function makeRowHeader() {
@@ -99,71 +117,23 @@ function makeRowHeader() {
 }
 
 
-function fleshOutTimeline(date, timeline){
-    if (typeof date === "string"){
-        date = new Date(date)
-    }
-    const year = date.getFullYear()
-    const month = date.getMonth()
-    const day = date.getDate()
-
-    let lastEndTime = new Date(year, month, day, 0, 0, 0, 0)  // midnight
-
-    let newTimeline = timeline.map((item, index) => {
-        item.inferred = {
-            startTime: false,
-            endTime: false,
-            durationMinutes: false,
-        }
-
-        if(item.startTime === undefined){
-            item.inferred.startTime = lastEndTime
-        } else {
-            item.inferred.startTime = item.startTime
-            // convert startTime to a date object
-            if(!(item.startTime instanceof Date)){
-                console.log(item)
-                let [hours, minutes] = item.inferred.startTime.split(":")
-                hours = parseInt(hours)
-                minutes = parseInt(minutes)
-                item.inferred.startTime = new Date(year, month, day, hours, minutes, 0, 0)
-            }
-        }
-
-
-        if(item.endTime === undefined && item.duration === undefined){
-            item.inferred.endTime = item.inferred.startTime
-            item.inferred.durationMinutes = 0
-        }
-
-        if(item.duration !== undefined){
-            let [durationHours, durationMinutes] = item.duration.split(":")
-            let totalDurationMinutes = parseInt(durationHours) * 60 + parseInt(durationMinutes)
-            item.inferred.durationMinutes = totalDurationMinutes
-            let endDt = moment(item.inferred.startTime).add(totalDurationMinutes, 'minutes').toDate()
-            console.log(`adding ${totalDurationMinutes} minutes to ${item.inferred.startTime} to get ${endDt}`)
-
-            item.inferred.endTime = endDt
-            lastEndTime = endDt
-        }
-
-        const startStr = moment(item.inferred.startTime).format("HH:mm")
-        const endStr = moment(item.inferred.endTime).format("HH:mm")
-        item.inferred.timeString = `${startStr} - ${endStr} (${item.inferred.durationMinutes+" min" || 'unknown'})`
-
-        lastEndTime = item.inferred.endTime
-        return item
-    })
-    return newTimeline
-}
-
-
 function DayTimeline({day, timeline, setTimeline}) {
+
+    function setRows(timeline){
+        setTimeline(day, fleshOutTimeline(day, timeline, null))
+    }
+
+    useEffect(() => {
+        let fleshedOutTimeline = fleshOutTimeline(day, timeline, null)
+        console.log("fleshedOutTimeline", fleshedOutTimeline)
+        setTimeline(day, fleshedOutTimeline)
+    }, []);
+
     return <div>
-        <h2>{moment(day).format()}</h2>
+        <h2>{moment(day).format("YYYY-MM-DD")}</h2>
         <DraggableTable
             rows={timeline}
-            setRows={setTimeline}
+            setRows={setRows}
             makeRowHeaderFunc={makeRowHeader}
             makeRowFunc={makeRow}
         />
@@ -171,25 +141,46 @@ function DayTimeline({day, timeline, setTimeline}) {
 }
 
 function Itinerary({itinerary, setItinerary}) {
+
+    useEffect(() => {
+        const newItinerary = dedupeItinerary(itinerary)
+        if(newItinerary.length !== itinerary.length){
+            setItinerary(newItinerary)
+        }
+    }, [itinerary, setItinerary])
+
     if(itinerary === null){
         return <></>
+    }
+
+    function setNewTimeline(date, newTimeline){
+        try {
+            date = new Date(date)
+
+            function dateToString(date) {
+                return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+            }
+
+            let newItinerary = []
+            itinerary.forEach(day => {
+                if (dateToString(day.date) === dateToString(date)) {
+                    day.timeline = newTimeline
+                }
+                newItinerary.push(day)
+            })
+            setItinerary(newItinerary);
+        } catch (error) {
+            console.error(error)
+        }
     }
 
     let itineraryDays = []
     itinerary.forEach((itineraryDay) => {
       itineraryDays.push(<DayTimeline
+          key={itineraryDay.date}
           day={itineraryDay.date}
-          timeline={fleshOutTimeline(itineraryDay.date, itineraryDay.timeline)}
-          setTimeline={(newTimeline) => {
-              const newItinerary = Object.assign([], itinerary);
-              itinerary.forEach((day) => {
-                    if(day.date === itineraryDay.date){
-                        day.timeline = newTimeline
-                    }
-              })
-              console.log("updating new itinerary ", newItinerary)
-              setItinerary(newItinerary);
-          }}
+          timeline={itineraryDay.timeline}
+          setTimeline={setNewTimeline}
       />)
     })
 
