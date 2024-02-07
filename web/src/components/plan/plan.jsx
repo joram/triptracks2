@@ -90,7 +90,6 @@ function TripPlan() {
         setPeople(trip_plan.people)
         setTrails(trip_plan.trails)
 
-        // convert date strings to date objects
         trip_plan.itinerary.forEach(day => {
             day.date = new Date(day.date)
         })
