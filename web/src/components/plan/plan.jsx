@@ -10,7 +10,9 @@ import Itinerary from "./components/itinerary";
 import PlanTrails from "./components/planTrails";
 import moment from "moment";
 
-
+function dateToString(date) {
+    return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+}
 function fleshOutItinerary(date, dateRange, isMultiDay, itinerary, setItinerary) {
 
     function getDatesInItinerary(dateRange, date, isMultiDay) {
@@ -42,7 +44,7 @@ function fleshOutItinerary(date, dateRange, isMultiDay, itinerary, setItinerary)
 
         let found = false
         itinerary.forEach(day => {
-            if (day.date === date){
+            if (dateToString(day.date) === dateToString(date)){
                 found = true
             }
         })
@@ -87,7 +89,12 @@ function TripPlan() {
         setName(trip_plan.name)
         setPeople(trip_plan.people)
         setTrails(trip_plan.trails)
-        setItinerary([]) //trip_plan.itinerary)
+
+        // convert date strings to date objects
+        trip_plan.itinerary.forEach(day => {
+            day.date = new Date(day.date)
+        })
+        setItinerary(trip_plan.itinerary)
 
 
         if (trip_plan.dates === undefined || trip_plan.dates === null){
