@@ -8,65 +8,8 @@ import {People} from "./components/people";
 import {DatePicker} from "./components/datePicker";
 import Itinerary from "./components/itinerary";
 import PlanTrails from "./components/planTrails";
-import moment from "moment";
+import fleshOutItinerary from "./components/utils/itinerary";
 
-function dateToString(date) {
-    return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
-}
-function fleshOutItinerary(date, dateRange, isMultiDay, itinerary, setItinerary) {
-
-    function getDatesInItinerary(dateRange, date, isMultiDay) {
-        let dates = []
-        if (!isMultiDay){
-            dates.push(date)
-        } else if (dateRange !== null){
-            if (dateRange.length === 0 || dateRange.length === 1){
-                return []
-            }
-            if (dateRange[0] === null || dateRange[1] === null){
-                return []
-            }
-            let startDate = moment(dateRange[0])
-            let endDate = moment(dateRange[1])
-            let currentDate = startDate
-            while (currentDate <= endDate) {
-                dates.push(currentDate.toDate())
-                currentDate = currentDate.add(1, 'days')
-            }
-        }
-        return dates
-    }
-
-    function upsertDay(date, itinerary){
-        if (itinerary === null){
-            itinerary = []
-        }
-
-        let found = false
-        itinerary.forEach(day => {
-            if (dateToString(day.date) === dateToString(date)){
-                found = true
-            }
-        })
-        if (!found){
-            itinerary.push({date: date, timeline: []})
-        }
-        return itinerary
-    }
-
-
-    date = new Date(date)
-    dateRange = dateRange.map(d => new Date(d))
-    const dates = getDatesInItinerary(dateRange, date, isMultiDay)
-    let newItinerary = itinerary || []
-    dates.forEach(date => {
-        newItinerary = upsertDay(date, newItinerary)
-    })
-
-    if(newItinerary !== itinerary) {
-        setItinerary(newItinerary)
-    }
-}
 
 function TripPlan() {
     let [loading, setLoading] = useState(true)
@@ -90,6 +33,9 @@ function TripPlan() {
         setPeople(trip_plan.people)
         setTrails(trip_plan.trails)
 
+        if(trip_plan.itinerary.date !== undefined){
+            trip_plan.itinerary = []
+        }
         trip_plan.itinerary.forEach(day => {
             day.date = new Date(day.date)
         })
@@ -153,7 +99,8 @@ function TripPlan() {
 
     if(!loading && !fleshedOutItinerary) {
         setFleshedOutItinerary(true)
-        fleshOutItinerary(date, dateRange, isMultiDay, itinerary, setItinerary)
+        const newItinerary = fleshOutItinerary(date, dateRange, isMultiDay, itinerary)
+        setItinerary(newItinerary)
     }
 
     if(loading){
