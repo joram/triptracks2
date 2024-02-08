@@ -81,7 +81,7 @@ class TripPlanRequest(BaseModel):
     dates: Optional[TripPlanDate]
     people: List[Union[str, dict]]
     trails: List[str]
-    itinerary: List[Dict[str, Any]]
+    itinerary: List[Dict[str, Union[str, int, Dict]]]
 
 
 def flesh_out_people(people):
