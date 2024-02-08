@@ -1,11 +1,11 @@
 import datetime
-from typing import Optional, List, Dict, Union
-
-import pprint
 import json
+from typing import Optional, List, Dict, Union, Any
+
+import geohash2
 from fastapi import Depends, HTTPException
 from pydantic import BaseModel
-import geohash2
+from suntimes import SunTimes
 
 from . import verify_access_key
 from .app import app
@@ -13,15 +13,31 @@ from .db.database import get_session
 from .db.models import TripPlan, User
 
 
+DT_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
+
+
 @app.get("/api/v0/trip_plans")
 async def get_trip_plans(user: User = Depends(verify_access_key)) -> list[TripPlan]:
     session = get_session()
     qs = session.query(TripPlan).filter(TripPlan.user_id == user.id)
-    return [tp for tp in qs]
+    response = []
+    for tp in qs:
+        response.append(
+            TripPlan(
+                name=tp.name,
+                id=tp.id,
+                dates=string_to_date(tp.dates) if tp.dates else None,
+                people=tp.people,
+                trails=tp.trails,
+                itinerary=tp.itinerary,
+            )
+        )
+    return response
 
 
 def string_to_date(s):
     data = json.loads(s)
+    print(data)
     return TripPlanRequest.TripPlanDate(
         type=data["type"],
         dates=data["dates"],
@@ -41,8 +57,6 @@ async def get_trip_plan(
         raise HTTPException(status_code=404, detail="packing list not found")
     trip_plan = qs.first()
     trip_plan.people = flesh_out_people(trip_plan.people)
-
-    print("trip_plan.itinerary", trip_plan.itinerary)
     trip_plan.itinerary = flesh_out_itinerary(trip_plan.trails, trip_plan.itinerary)
 
     response = TripPlan(
@@ -66,7 +80,7 @@ class TripPlanRequest(BaseModel):
     dates: Optional[TripPlanDate]
     people: List[Union[str, dict]]
     trails: List[str]
-    itinerary: Optional[Dict]
+    itinerary: List[Dict[str, Any]]
 
 
 def flesh_out_people(people):
@@ -91,80 +105,77 @@ def flesh_out_people(people):
 
 
 def flesh_out_itinerary(trails, itinerary):
-    print(itinerary)
-    lat, lng = 0, 0
+    def _get_coords(trails):
+        trails.reverse()
+        for geohash_code in trails:
+            try:
+                int(geohash_code)
+                continue
+            except:
+                pass
 
-    trails.reverse()
-    for geohash_code in trails:
-        try:
-            int(geohash_code)
-            continue
-        except:
-            pass
+            try:
+                lat, lng = geohash2.decode(geohash_code)
+                lat = float(lat)
+                lng = float(lng)
+                print("trail, lat, lng", geohash_code, lat, lng, type(lat), type(lng))
+                return lat, lng
+            except Exception as e:
+                print(e)
+                continue
+        return 0, 0
 
-        try:
-            lat, lng = geohash2.decode(geohash_code)
-            lat = float(lat)
-            lng = float(lng)
-            print("trail, lat, lng", geohash_code, lat, lng, type(lat), type(lng))
-            break
-        except Exception as e:
-            print(e)
-            continue
-    from suntimes import SunTimes
-
-    place = SunTimes(lng, lat)
-
-    newItinerary = []
-
-    for i, day_timeline in enumerate(itinerary):
-        print("day_timeline", day_timeline)
-        date = day_timeline["date"]
-        date = datetime.datetime.strptime(date, "%Y-%m-%dT%H:%M:%S.%fZ").date()
+    def _upsert_sunrise(place, date, timeline):
         sunrise_dt = place.riselocal(date)
-        print(date, "sunrise_dt", sunrise_dt)
         sunrise_event = {
             "description": "sunrise",
-            "startTime": sunrise_dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+            "startTime": sunrise_dt.strftime(DT_FORMAT),
             "durationMinutes": 0,
             "inferred": {
                 "timeString": sunrise_dt.strftime("%H:%M"),
             },
         }
+
+        for i, event in enumerate(timeline):
+            if event["description"] == "sunrise":
+                timeline[i] = sunrise_event
+                return timeline
+
+        timeline.append(sunrise_event)
+        return timeline
+
+    def _upsert_sunset(place, date, timeline):
         sunset_dt = place.setlocal(date)
-        print(date, "sunset_dt", sunset_dt)
         sunset_event = {
             "description": "sunset",
-            "startTime": sunset_dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ"),
+            "startTime": sunset_dt.strftime(DT_FORMAT),
             "durationMinutes": 0,
             "inferred": {
                 "timeString": sunset_dt.strftime("%H:%M"),
             },
         }
 
-        added_sunrise = False
-        added_sunset = False
-        newTimeline = []
-        for event in day_timeline.get("timeline", []):
-            if event["description"] == "sunrise":
-                newTimeline.append(sunrise_event)
-                added_sunrise = True
-            elif event["description"] == "sunset":
-                newTimeline.append(sunset_event)
-                added_sunset = True
-            else:
-                newTimeline.append(event)
+        for i, event in enumerate(timeline):
+            if event["description"] == "sunset":
+                timeline[i] = sunset_event
+                return timeline
 
-        if not added_sunrise:
-            newTimeline.append(sunrise_event)
+        timeline.append(sunset_event)
+        return timeline
 
-        if not added_sunset:
-            newTimeline.append(sunset_event)
-
+    newItinerary = []
+    lat, lng = _get_coords(trails)
+    place = SunTimes(lng, lat)
+    for i, day in enumerate(itinerary):
+        date = day["date"]
+        date = datetime.datetime.strptime(date, DT_FORMAT).date()
+        timeline = day["timeline"]
+        timeline = _upsert_sunrise(place, date, timeline)
+        timeline = _upsert_sunset(place, date, timeline)
         newItinerary.append(
             {
-                "date": day_timeline["date"],
-                "timeline": newTimeline,
+                "date": date.strftime("%Y-%m-%d"),
+                "timeline": timeline,
             }
         )
     return newItinerary
@@ -187,7 +198,6 @@ async def update_trip_plan(
     trip_plan.dates = request.dates.json() if request.dates else None
     trip_plan.people = flesh_out_people(request.people)
     trip_plan.trails = request.trails
-    print("request.itinerary", request.itinerary)
     trip_plan.itinerary = flesh_out_itinerary(request.trails, request.itinerary)
 
     session.add(trip_plan)

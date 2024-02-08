@@ -120,11 +120,11 @@ function makeRowHeader() {
 function DayTimeline({day, timeline, setTimeline}) {
 
     function setRows(timeline){
-        setTimeline(day, fleshOutTimeline(day, timeline, null))
+        setTimeline(day, fleshOutTimeline(day, timeline))
     }
 
     useEffect(() => {
-        let fleshedOutTimeline = fleshOutTimeline(day, timeline, null)
+        let fleshedOutTimeline = fleshOutTimeline(day, timeline)
         console.log("fleshedOutTimeline", fleshedOutTimeline)
         setTimeline(day, fleshedOutTimeline)
     }, []);
@@ -141,13 +141,6 @@ function DayTimeline({day, timeline, setTimeline}) {
 }
 
 function Itinerary({itinerary, setItinerary}) {
-
-    useEffect(() => {
-        const newItinerary = dedupeItinerary(itinerary)
-        if(newItinerary.length !== itinerary.length){
-            setItinerary(newItinerary)
-        }
-    }, [itinerary, setItinerary])
 
     if(itinerary === null){
         return <></>

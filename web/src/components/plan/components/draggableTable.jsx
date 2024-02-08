@@ -7,24 +7,13 @@ import {toast} from "react-toastify";
 
 export function DraggableTable({rows, setRows, makeRowHeaderFunc, makeRowFunc}) {
 
-    // sanity check
-    const seenIds = []
+    // add IDs
     rows.forEach((row, index) => {
-        if(seenIds.includes(row.id)){
-            toast("duplicate id in rows")
-            throw new Error("duplicate id in rows")
-        }
-        seenIds.push(row.id)
+        rows[index].id = index
     })
 
     function addRow() {
-        let maxId = 0
-        rows.forEach((row, index) => {
-            if(row.id > maxId){
-                maxId = row.id
-            }
-        })
-
+        let maxId = rows.length
         const newRow = {
             id: maxId+1,
             description: ""

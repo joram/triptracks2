@@ -1,76 +1,4 @@
 import moment from "moment/moment";
-import {getSunrise, getSunset} from "sunrise-sunset-js";
-
-function upsertSunriseToTimeline(date, timeline, coordinates){
-    if(coordinates === null){
-        coordinates = {lat: 0, lng: 0}
-    }
-    if (typeof date === "string"){
-        date = new Date(date)
-    }
-
-    let maxId = 0
-    timeline.forEach((item) => {
-        if(item.id > maxId){
-            maxId = item.id
-        }
-    })
-
-    const sunrise = getSunrise(coordinates.lat, coordinates.lng, date);
-    let sunriseExists = false
-    timeline.forEach((item) => {
-        if(item.description === "sunrise"){
-            sunriseExists = true
-        }
-    })
-    if (!sunriseExists){
-        console.log("adding sunrise to timeline")
-        timeline.push({
-            id: maxId + 1,
-            description: "sunrise",
-            icon: "sun outline",
-            startTime: sunrise,
-            endTime: sunrise,
-            duration: "00:00",
-            inferred: {
-                startTime: sunrise,
-                endTime: sunrise,
-                durationMinutes: 0,
-                timeString: moment(sunrise).format("HH:mm")
-            }
-        })
-        maxId += 1
-    }
-
-    const sunset = getSunset(coordinates.lat, coordinates.lng, date);
-    let sunsetExists = false
-    timeline.forEach((item) => {
-        if(item.description === "sunset"){
-            sunsetExists = true
-        }
-    })
-    if (!sunsetExists){
-        console.log("adding sunset to timeline")
-        timeline.push({
-            maxId: maxId + 1,
-            description: "sunset",
-            icon: "sun",
-            startTime: sunset,
-            endTime: sunset,
-            duration: "00:00",
-            inferred: {
-                startTime: sunset,
-                endTime: sunset,
-                durationMinutes: 0,
-                timeString: moment(sunset).format("HH:mm")
-            }
-        })
-    }
-
-
-
-    return timeline
-}
 
 function upsertInferredData(date, timeline){
     if (typeof date === "string"){
@@ -131,11 +59,10 @@ function upsertInferredData(date, timeline){
 }
 
 
-function fleshOutTimeline(date, timeline, coordinates){
+function fleshOutTimeline(date, timeline){
     if(typeof date === "string"){
         date = new Date(date)
     }
-    timeline = upsertSunriseToTimeline(date, timeline, coordinates)
     timeline = upsertInferredData(date, timeline)
     return timeline
 }

@@ -25,15 +25,13 @@ function TripPlanList(){
     }
     let rows = []
     tripPlans.map((trip_plan, i) => {
-        console.log(trip_plan)
         let dtStr = "not scheduled"
         if(trip_plan.dates !== undefined && trip_plan.dates !== null) {
-            const datesJson = JSON.parse(trip_plan.dates)
-            if (datesJson.type === "basic") {
-                const dt = new Date(datesJson.dates)
+            if (trip_plan.dates.type === "basic") {
+                const dt = new Date(trip_plan.dates.dates)
                 dtStr = dt.getFullYear() + "-" + dt.getMonth() + "-" + dt.getDate()
-            } else if (datesJson.type === "range") {
-                const dates = datesJson.dates.map(d => new Date(d))
+            } else if (trip_plan.dates.type === "range") {
+                const dates = trip_plan.dates.dates.map(d => new Date(d))
                 dtStr = dates[0].getFullYear() + "-" + dates[0].getMonth() + "-" + dates[0].getDate() + " to " + dates[1].getFullYear() + "-" + dates[1].getMonth() + "-" + dates[1].getDate()
             }
         }
