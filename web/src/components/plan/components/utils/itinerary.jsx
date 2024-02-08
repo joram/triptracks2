@@ -15,7 +15,6 @@ function dedupeItinerary(itinerary) {
         }
         const key = dateToString(day.date)
         if (!seenDates.has(key)) {
-            console.log("adding day", key)
             newItinerary.push(newDay)
             seenDates.add(key)
         } else {
@@ -28,6 +27,7 @@ function dedupeItinerary(itinerary) {
 function dateToString(date) {
     return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
 }
+
 function fleshOutItinerary(date, dateRange, isMultiDay, itinerary) {
 
     function getDatesInItinerary(dateRange, date, isMultiDay) {
@@ -82,4 +82,5 @@ function fleshOutItinerary(date, dateRange, isMultiDay, itinerary) {
     return newItinerary
 }
 
+export {dedupeItinerary}
 export default fleshOutItinerary
