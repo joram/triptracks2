@@ -163,6 +163,7 @@ def flesh_out_itinerary(trails, itinerary):
     lat, lng = _get_coords(trails)
     place = SunTimes(lng, lat)
     for i, day in enumerate(itinerary):
+        print(day)
         date = day["date"]
         date = datetime.datetime.strptime(date, DT_FORMAT).date()
         timeline = day["timeline"]
