@@ -133,6 +133,9 @@ def flesh_out_itinerary(trails, itinerary):
             "startTime": sunrise_dt.strftime(DT_FORMAT),
             "durationMinutes": 0,
             "icon": "sun outline",
+            "inferred": {
+                "timeString": sunrise_dt.strftime("%I:%M %p"),
+            }
         }
 
         for i, event in enumerate(timeline):
@@ -150,6 +153,10 @@ def flesh_out_itinerary(trails, itinerary):
             "startTime": sunset_dt.strftime(DT_FORMAT),
             "durationMinutes": 0,
             "icon": "sun",
+            "inferred": {
+                "timeString": sunset_dt.strftime("%I:%M %p"),
+            }
+
         }
 
         for i, event in enumerate(timeline):
