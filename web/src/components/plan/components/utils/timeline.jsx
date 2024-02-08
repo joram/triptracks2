@@ -37,20 +37,12 @@ function upsertInferredData(date, timeline){
             item.inferred.endTime = item.endTime
         }
 
-        // if(item.duration !== undefined){
-        //     let [durationHours, durationMinutes] = item.duration.split(":")
-        //     let totalDurationMinutes = parseInt(durationHours) * 60 + parseInt(durationMinutes)
-        //     item.inferred.durationMinutes = totalDurationMinutes
-        //     let endDt = moment(item.inferred.startTime).add(totalDurationMinutes, 'minutes').toDate()
-        //     console.log(`adding ${totalDurationMinutes} minutes to ${item.inferred.startTime} to get ${endDt}`)
-        //
-        //     item.inferred.endTime = endDt
-        //     lastEndTime = endDt
+        // infer the display string
+        // if(item.inferred.timeString === undefined){
+        //     const startStr = moment(item.inferred.startTime).format("HH:mm")
+        //     const endStr = moment(item.inferred.endTime).format("HH:mm")
+        //     item.inferred.timeString = `${startStr} - ${endStr} (${item.inferred.durationMinutes+" min" || 'unknown'})`
         // }
-
-        const startStr = moment(item.inferred.startTime).format("HH:mm")
-        const endStr = moment(item.inferred.endTime).format("HH:mm")
-        item.inferred.timeString = `${startStr} - ${endStr} (${item.inferred.durationMinutes+" min" || 'unknown'})`
 
         lastEndTime = item.inferred.endTime
         return item
