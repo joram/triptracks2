@@ -14,6 +14,7 @@ from .db.models import TripPlan, User
 
 
 DT_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
+D_FORMAT = "%Y-%m-%d"
 
 
 @app.get("/api/v0/trip_plans")
@@ -165,7 +166,7 @@ def flesh_out_itinerary(trails, itinerary):
     for i, day in enumerate(itinerary):
         print(day)
         date = day["date"]
-        date = datetime.datetime.strptime(date, DT_FORMAT).date()
+        date = datetime.datetime.strptime(date, D_FORMAT).date()
         timeline = day["timeline"]
         timeline = _upsert_sunrise(place, date, timeline)
         timeline = _upsert_sunset(place, date, timeline)
