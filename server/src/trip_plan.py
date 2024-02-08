@@ -166,7 +166,10 @@ def flesh_out_itinerary(trails, itinerary):
     for i, day in enumerate(itinerary):
         print(day)
         date = day["date"]
-        date = datetime.datetime.strptime(date, D_FORMAT).date()
+        if "T" in date:
+            date = datetime.datetime.strptime(date, DT_FORMAT).date()
+        else:
+            date = datetime.datetime.strptime(date, D_FORMAT).date()
         timeline = day["timeline"]
         timeline = _upsert_sunrise(place, date, timeline)
         timeline = _upsert_sunset(place, date, timeline)
