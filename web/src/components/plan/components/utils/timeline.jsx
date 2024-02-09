@@ -9,11 +9,7 @@ function upsertInferredData(date, timeline){
     let lastEndTime = new Date(year, month, day, 0, 0, 0, 0)  // midnight
 
     let newTimeline = timeline.map((item, index) => {
-        item.inferred = {
-            startTime: false,
-            endTime: false,
-            durationMinutes: false,
-        }
+        item.inferred = {}
 
         // convert to date objects
         if(item.startTime !== undefined){
@@ -38,11 +34,15 @@ function upsertInferredData(date, timeline){
         }
 
         // infer the display string
-        // if(item.inferred.timeString === undefined){
-        //     const startStr = moment(item.inferred.startTime).format("HH:mm")
-        //     const endStr = moment(item.inferred.endTime).format("HH:mm")
-        //     item.inferred.timeString = `${startStr} - ${endStr} (${item.inferred.durationMinutes+" min" || 'unknown'})`
-        // }
+        if(item.inferred.timeString === undefined){
+            const startStr = moment(item.inferred.startTime).format("HH:mm")
+            const endStr = moment(item.inferred.endTime).format("HH:mm")
+            if(startStr === endStr){
+                item.inferred.timeString = startStr
+            } else {
+                item.inferred.timeString = `${startStr} - ${endStr} (${item.inferred.durationMinutes+" min" || 'unknown'})`
+            }
+        }
 
         lastEndTime = item.inferred.endTime
         return item
