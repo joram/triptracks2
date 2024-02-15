@@ -112,4 +112,19 @@ async function updatePlan(accessToken, plan, plan_id){
     })
 }
 
-export {login, getPlans, getPlan, updatePlan}
+async function getForecast(latitude, longitude){
+    return api.getClient().then(client => {
+        return client.forecast_api_v0_forecast_get(
+            {},
+            {
+                lat: latitude,
+                lng: longitude
+            }
+        )
+    }).then(response => {
+        toastErrors(response)
+        return response
+    });
+}
+
+export {login, getPlans, getPlan, updatePlan, getForecast}
