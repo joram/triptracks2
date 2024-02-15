@@ -3,13 +3,77 @@ import {useParams} from 'react-router-dom'
 import {Container, Input, Segment} from "semantic-ui-react";
 import {UserContext} from "../../App.jsx";
 import 'react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css';
-import {getPlan, updatePlan} from "../../utils/api";
+import {getForecast, getPlan, updatePlan} from "../../utils/api";
 import {People} from "./components/people";
 import {DatePicker} from "./components/datePicker";
 import Itinerary from "./components/itinerary";
 import PlanTrails from "./components/planTrails";
 import fleshOutItinerary from "./components/utils/itinerary";
+import * as PropTypes from "prop-types";
+import {Chart} from "react-google-charts";
+import moment from "moment/moment";
 
+function Forecast({isMultiDay, date, dateRange, trails}){
+    let [forecast, setForecast] = useState(null)
+    let [geohash, setGeohash] = useState(null)
+    let [details, setDetails] = useState(null)
+
+    useEffect(() => {
+        const longestGeohash = trails.sort(
+            function (a, b) {
+                return b.length - a.length;
+            }
+        )[0];
+
+        fetch(`/trail_details/${longestGeohash}.json`).then(results => results.json()).then(newDetails => {
+            setDetails(newDetails)
+            console.log("getting the forecast", newDetails)
+            getForecast(newDetails.center_lat, newDetails.center_lng).then(response => {
+                console.log(response.data)
+                // setForecast(response.data)
+                const data = [
+                    ["Date", "PoP"],
+                ];
+                let i =0;
+                response.data.weather.daily_forecasts.forEach(day => {
+                    data.push([i, day.precip_probability])
+                    i += 1
+                })
+
+                console.log(data)
+                setForecast(data)
+            //     {primary: Wed Feb 14 2024 16:00:00 GMT-0800 (Pacific Standard Time), secondary: 28, radius: undefined}
+            })
+        })
+    }, [trails]);
+
+    if (forecast === null){
+        return <Container>
+            <Segment basic>
+                <h1>Loading...</h1>
+            </Segment>
+        </Container>
+    }
+
+
+
+
+    const options = {
+        title: "Probability of Precipitation",
+        curveType: "function",
+        legend: { position: "bottom" },
+    };
+
+    return <Chart
+        chartType="LineChart"
+        width="100%"
+        height="400px"
+        data={forecast}
+        options={options}
+    />
+}
+
+Forecast.propTypes = {trails: PropTypes.arrayOf(PropTypes.any)};
 
 function TripPlan() {
     let [loading, setLoading] = useState(true)
@@ -125,12 +189,16 @@ function TripPlan() {
                 onChange={(e) => setName(e.target.value)}
             />
         </Segment>
+
         <Segment basic>
             <DatePicker date={date} setDate={setDate} dateRange={dateRange} setDateRange={setDateRange} isMultiDay={isMultiDay} setIsMultiDay={setIsMultiDay}/>
         </Segment>
 
         <Segment basic>
-            <PlanTrails trails={trails} />
+            <Forecast trails={trails} date={date} dateRange={dateRange} isMultiDay={isMultiDay} />
+        </Segment>
+        <Segment basic>
+            <PlanTrails trails={trails} setTrails={setTrails} />
         </Segment>
 
         <Segment basic>
