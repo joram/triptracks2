@@ -34,13 +34,12 @@ function makeRowHeader() {
 
 function DayTimeline({day, timeline, setTimeline}) {
 
-    function setRows(timeline){
-        setTimeline(day, fleshOutTimeline(day, timeline))
+    function setRows(newTimeline){
+        setTimeline(day, fleshOutTimeline(day, newTimeline))
     }
 
     useEffect(() => {
-        let fleshedOutTimeline = fleshOutTimeline(day, timeline)
-        setTimeline(day, fleshedOutTimeline)
+        setTimeline(day, fleshOutTimeline(day, timeline))
     }, []);
 
     return <div>

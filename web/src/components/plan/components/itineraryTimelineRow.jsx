@@ -3,13 +3,16 @@ import {Button, ButtonGroup, Icon, Input, Label, Modal, Ref, Table} from "semant
 import moment from "moment/moment";
 
 function Row({provided, data, setData, removeRow}) {
-    let [startTime, setStartTime] = React.useState(new Date(data.inferred.startTime))
-    let [duration, setDuration] = React.useState(data.duration)
+    const inferredStartTime = new Date(data.startTime || data?.inferred?.startTime)
+    let [startTime, setStartTime] = React.useState(inferredStartTime)
+    let [duration, setDuration] = React.useState(data.durationMinutes)
     let [description, setDescription] = React.useState(data.description)
 
     let [editing, setEditing] = React.useState(false)
     let [explicitStartTime, setExplicitStartTime] = React.useState(data.startTime !== undefined)
     let [editingStartTime, setEditingStartTime] = React.useState(startTime)
+    let [editingDuration, setEditingDuration] = React.useState(duration)
+    let [editingDescription, setEditingDescription] = React.useState(description)
 
 
     let icon = <Icon {...provided.dragHandleProps} name='bars'/>
@@ -28,22 +31,31 @@ function Row({provided, data, setData, removeRow}) {
             removeRow(data.id)
         }}/>
     </>
+    if (data.editable === false){
+        icons = <></>
+    }
 
     let timeInput = <Input
         label='Start Time'
         type='time'
         value={moment(editingStartTime).format("HH:mm")}
         onChange={(e) => {
-            setEditingStartTime(new Date(e.target.value))
+            let [hr, min] = e.target.value.split(":")
+            hr = parseInt(hr)
+            min = parseInt(min)
+            editingStartTime.setHours(hr)
+            editingStartTime.setMinutes(min)
+            console.log("newDt", editingStartTime)
+            setEditingStartTime(editingStartTime)
         }}
     />
     if(!explicitStartTime){
         timeInput = <Input
             label='Duration'
             type='number'
-            value={duration}
+            value={editingDuration}
             onChange={(e) => {
-                setDuration(e.target.value)
+                setEditingDuration(e.target.value)
             }}
         />
     }
@@ -65,19 +77,32 @@ function Row({provided, data, setData, removeRow}) {
                     <br/>
                     <Input
                         label='Description'
-                        value={description}
+                        value={editingDescription}
                         onChange={(e) => {
-                            setDescription(e.target.value)
+                            setEditingDescription(e.target.value)
                         }}
                     />
                 </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
                 <ButtonGroup>
-                    <Button primary>
+                    <Button primary onClick={
+                        () => {
+                            let newData = {
+                                id: data.id,
+                                startTime: explicitStartTime ? editingStartTime : undefined,
+                                durationMinutes: explicitStartTime ? undefined : parseInt(editingDuration),
+                                description: editingDescription,
+                                icon: data.icon,
+                                editable: data.editable,
+                            }
+                            setData(newData)
+                            setEditing(false)
+                        }
+                    }>
                         Save
                     </Button>
-                    <Button secondary>
+                    <Button secondary onClick={() => {setEditing(false)}}>
                         Cancel
                     </Button>
                 </ButtonGroup>
@@ -94,13 +119,13 @@ function Row({provided, data, setData, removeRow}) {
                     {moment(startTime).format("HH:mm")}
                 </Table.Cell>
                 <Table.Cell>
-                    {duration}
+                    {editingDuration}
                 </Table.Cell>
                 <Table.Cell>
-                    {data.inferred.timeString}
+                    {data?.inferred?.timeString || "???"}
                 </Table.Cell>
                 <Table.Cell>
-                    {description}
+                    {editingDescription}
                 </Table.Cell>
                 <Table.Cell>
                     {icons}

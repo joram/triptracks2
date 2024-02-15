@@ -52,6 +52,18 @@ function fleshOutItinerary(date, dateRange, isMultiDay, itinerary) {
         return dates
     }
 
+    function removeExcessDays(dates, itinerary){
+        let newItinerary = []
+        itinerary.forEach(day => {
+            dates.forEach(date => {
+                if (dateToString(day.date) === dateToString(date)){
+                    newItinerary.push(day)
+                }
+            })
+        })
+        return newItinerary
+    }
+
     function upsertDay(date, itinerary){
         if (itinerary === null){
             itinerary = []
@@ -77,6 +89,7 @@ function fleshOutItinerary(date, dateRange, isMultiDay, itinerary) {
     dates.forEach(date => {
         newItinerary = upsertDay(date, newItinerary)
     })
+    newItinerary = removeExcessDays(dates, newItinerary)
 
     console.log("fleshed out itinerary", newItinerary)
     return newItinerary

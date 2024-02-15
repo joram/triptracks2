@@ -1,17 +1,14 @@
-import datetime
 import json
-from typing import Optional, List, Dict, Union, Any
+from typing import Optional, List, Union, Any
 
-import geohash2
 from fastapi import Depends, HTTPException
 from pydantic import BaseModel
-from suntimes import SunTimes
 
 from . import verify_access_key
 from .app import app
 from .db.database import get_session
 from .db.models import TripPlan, User
-
+from .utils.trip_plan.sunrise_and_sunset import flesh_out_itinerary
 
 DT_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 D_FORMAT = "%Y-%m-%d"
@@ -38,7 +35,6 @@ async def get_trip_plans(user: User = Depends(verify_access_key)) -> list[TripPl
 
 def string_to_date(s):
     data = json.loads(s)
-    print(data)
     return TripPlanRequest.TripPlanDate(
         type=data["type"],
         dates=data["dates"],
@@ -103,90 +99,6 @@ def flesh_out_people(people):
 
         fleshed_out.append(p)
     return fleshed_out
-
-
-def flesh_out_itinerary(trails, itinerary):
-    def _get_coords(trails):
-        trails.reverse()
-        for geohash_code in trails:
-            try:
-                int(geohash_code)
-                continue
-            except:
-                pass
-
-            try:
-                lat, lng = geohash2.decode(geohash_code)
-                lat = float(lat)
-                lng = float(lng)
-                print("trail, lat, lng", geohash_code, lat, lng, type(lat), type(lng))
-                return lat, lng
-            except Exception as e:
-                print(e)
-                continue
-        return 0, 0
-
-    def _upsert_sunrise(place, date, timeline):
-        sunrise_dt = place.riselocal(date)
-        sunrise_event = {
-            "description": "sunrise",
-            "startTime": sunrise_dt.strftime(DT_FORMAT),
-            "durationMinutes": 0,
-            "icon": "sun outline",
-            "inferred": {
-                "timeString": sunrise_dt.strftime("%I:%M %p"),
-            }
-        }
-
-        for i, event in enumerate(timeline):
-            if event["description"] == "sunrise":
-                timeline[i] = sunrise_event
-                return timeline
-
-        timeline.append(sunrise_event)
-        return timeline
-
-    def _upsert_sunset(place, date, timeline):
-        sunset_dt = place.setlocal(date)
-        sunset_event = {
-            "description": "sunset",
-            "startTime": sunset_dt.strftime(DT_FORMAT),
-            "durationMinutes": 0,
-            "icon": "sun",
-            "inferred": {
-                "timeString": sunset_dt.strftime("%I:%M %p"),
-            }
-
-        }
-
-        for i, event in enumerate(timeline):
-            if event["description"] == "sunset":
-                timeline[i] = sunset_event
-                return timeline
-
-        timeline.append(sunset_event)
-        return timeline
-
-    newItinerary = []
-    lat, lng = _get_coords(trails)
-    place = SunTimes(lng, lat)
-    for i, day in enumerate(itinerary):
-        print(day)
-        date = day["date"]
-        if "T" in date:
-            date = datetime.datetime.strptime(date, DT_FORMAT).date()
-        else:
-            date = datetime.datetime.strptime(date, D_FORMAT).date()
-        timeline = day["timeline"]
-        timeline = _upsert_sunrise(place, date, timeline)
-        timeline = _upsert_sunset(place, date, timeline)
-        newItinerary.append(
-            {
-                "date": date.strftime("%Y-%m-%d"),
-                "timeline": timeline,
-            }
-        )
-    return newItinerary
 
 
 @app.patch("/api/v0/trip_plan/{trip_plan_id}")

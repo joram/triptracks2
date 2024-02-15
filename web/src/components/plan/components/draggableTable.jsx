@@ -12,7 +12,13 @@ export function DraggableTable({rows, setRows, makeRowHeaderFunc, makeRowFunc}) 
     })
 
     function addRow() {
-        let maxId = rows.length
+        let maxId = 0
+        rows.forEach(row => {
+            if(row.id > maxId){
+                maxId = row.id
+            }
+        })
+
         const newRow = {
             id: maxId+1,
             description: ""
@@ -22,12 +28,15 @@ export function DraggableTable({rows, setRows, makeRowHeaderFunc, makeRowFunc}) 
     }
 
     function updateRow(data) {
-        const newRows = rows.map((row, index) => {
+        const newRows = []
+        rows.forEach(row => {
             if(row.id === data.id){
-                return data
+                newRows.push(data)
+            } else {
+                newRows.push(row)
             }
-            return row
         })
+        console.log("updating row", newRows)
         setRows(newRows)
     }
 
@@ -56,6 +65,7 @@ export function DraggableTable({rows, setRows, makeRowHeaderFunc, makeRowFunc}) 
         newRows.splice(source.index, 1);
         newRows.splice(destination.index, 0, row);
 
+        console.log("new order", newRows)
         setRows(newRows)
     }
 
@@ -73,8 +83,8 @@ export function DraggableTable({rows, setRows, makeRowHeaderFunc, makeRowFunc}) 
                             {rows.map((row, index) => {
                                 return <Draggable
                                     draggableId={"" + row.id}
-                                    index={index}
-                                    key={row.id}
+                                    index={row.id}
+                                    key={row.id+row.description}
                                 >
                                     {(provided, snapshot) => ( makeRowFunc(provided, row, updateRow, removeRow) )}
                                 </Draggable>
