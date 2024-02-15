@@ -50,13 +50,14 @@ function PlanTrail({geohash}){
     return <MapBox geojson={trail} lat={details.center_lat} lng={details.center_lng} geohash={details.geohash}/>
 }
 
-function PlanTrails({ trails, setTrails }) {
+function PlanTrails({ trails }) {
+    let trailComponents = trails.map((trail, index) => {
+        return <PlanTrail key={index+trail} geohash={trail}/>
+    })
   return (
     <>
       {/*<TrailSearch/>*/}
-        {trails.map(trail => {
-            return <PlanTrail key={trail} geohash={trail}/>
-        })}
+        {trailComponents}
     </>
   )
 }

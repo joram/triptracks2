@@ -28,7 +28,7 @@ function upsertInferredData(date, timeline){
 
         // infer the end time
         if(item.endTime === undefined){
-            item.inferred.endTime = item.inferred.startTime
+            item.inferred.endTime = moment(new Date(item.inferred.startTime)).add(item.durationMinutes, 'minutes').toDate()
         } else {
             item.inferred.endTime = item.endTime
         }
@@ -40,11 +40,12 @@ function upsertInferredData(date, timeline){
             if(startStr === endStr){
                 item.inferred.timeString = startStr
             } else {
-                item.inferred.timeString = `${startStr} - ${endStr} (${item.inferred.durationMinutes+" min" || 'unknown'})`
+                item.inferred.timeString = `${startStr} - ${endStr} (${item.durationMinutes+" min" || 'unknown'})`
             }
         }
 
         lastEndTime = item.inferred.endTime
+
         return item
     })
     return newTimeline
@@ -52,10 +53,8 @@ function upsertInferredData(date, timeline){
 
 
 function fleshOutTimeline(date, timeline){
-    if(typeof date === "string"){
-        date = new Date(date)
-    }
-    timeline = upsertInferredData(date, timeline)
+    date = new Date(date)
+    // timeline = upsertInferredData(date, timeline)
     return timeline
 }
 

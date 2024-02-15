@@ -22,20 +22,19 @@ function TripPlan() {
     let [trails, setTrails] = useState([])
     let [itinerary, setItinerary] = useState(null)
     let [fleshedOutItinerary, setFleshedOutItinerary] = useState(false)
+    let [manualTrigger, setManualTrigger] = useState(true)
 
     const { accessToken } = useContext(UserContext);
     let {id} = useParams()
 
-    function updateTripPlanState(trip_plan){
-        console.log(trip_plan)
+    async function updateTripPlanState(trip_plan){
+        console.log("updating latest trip plan", trip_plan)
         setTripPlan(trip_plan)
         setName(trip_plan.name)
         setPeople(trip_plan.people)
         setTrails(trip_plan.trails)
 
-        if(trip_plan.itinerary.date !== undefined){
-            trip_plan.itinerary = []
-        }
+
         trip_plan.itinerary.forEach(day => {
             day.date = new Date(day.date)
         })
@@ -52,16 +51,16 @@ function TripPlan() {
             setIsMultiDay(false)
             setDate(trip_plan.dates.dates)
         }
+
+        return trip_plan
     }
 
 
     useEffect(() => {
-        console.log("getting the plan", id, accessToken, loading)
         if (!loading) {
             return
         }
         getPlan(accessToken, id).then(response => {
-            console.log("getting the plan")
             updateTripPlanState(response.data)
             setLoading(false)
         });
@@ -82,13 +81,24 @@ function TripPlan() {
         trip_plan.trails = trails
         trip_plan.itinerary = itinerary
 
-        updatePlan(accessToken, trip_plan, id).then(r => {})
+        if(manualTrigger === false){
+            return
+        }
+        updatePlan(accessToken, trip_plan, id).then(r => {
+            console.log("updated trip plan", r)
+            if (r.status === 200 && r.data !== null && r.data !== undefined && r.data !== trip_plan){
+                console.log("updating local state")
+                setManualTrigger(false)
+                updateTripPlanState(r.data).then(() => {
+                  setManualTrigger(true)
+                })
+            }
+        })
     }, [
         accessToken,
         id,
         isMultiDay,
         loading,
-        trip_plan,
         people,
         name,
         date,
@@ -96,12 +106,6 @@ function TripPlan() {
         trails,
         itinerary,
     ]);
-
-    if(!loading && !fleshedOutItinerary) {
-        setFleshedOutItinerary(true)
-        const newItinerary = fleshOutItinerary(date, dateRange, isMultiDay, itinerary)
-        setItinerary(newItinerary)
-    }
 
     if(loading){
         return <Container>
@@ -126,7 +130,7 @@ function TripPlan() {
         </Segment>
 
         <Segment basic>
-            <PlanTrails trails={trails} setTrails={setTrails} />
+            <PlanTrails trails={trails} />
         </Segment>
 
         <Segment basic>
