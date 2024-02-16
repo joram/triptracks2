@@ -132,7 +132,7 @@ function TripPlan() {
             <DatePicker date={date} setDate={setDate} dateRange={dateRange} setDateRange={setDateRange} isMultiDay={isMultiDay} setIsMultiDay={setIsMultiDay}/>
         </Segment>
 
-        <Segment basic>
+        <Segment basic size={"mini"}>
             <Forecast trails={trails} date={date} dateRange={dateRange} isMultiDay={isMultiDay} />
         </Segment>
         <Segment basic>

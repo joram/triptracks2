@@ -60,7 +60,9 @@ def get_altitude(lat: float, lng: float):
         f"https://api.open-elevation.com/api/v1/lookup?locations={lat},{lng}"
     )
     elevations = [result["elevation"] for result in response.json()["results"]]
-    return sum(elevations) / len(elevations)
+    avg_ele = sum(elevations) / len(elevations)
+    print(f"elevation at {lat}, {lng}: {avg_ele}")
+    return avg_ele
 
 
 def get_weather_forecast(
@@ -68,8 +70,8 @@ def get_weather_forecast(
 ) -> WeatherForecast:
     if altitude is None:
         altitude = int(get_altitude(lat, lng))
-    url = f"https://api.met.no/weatherapi/locationforecast/2.0/compact?lat={lat}&lon={lng}&altitude={altitude}"
-    print(url)
+    altitude = 2560
+    url = f"https://api.met.no/weatherapi/locationforecast/2.0/complete?lat={lat}&lon={lng}&altitude={altitude}"
     response = requests.get(
         url=url,
         headers={"User-Agent": "triptracks/0.1 (https://triptracks.io)"},
