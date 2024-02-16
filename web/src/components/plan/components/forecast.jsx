@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {getForecast} from "../../../utils/api";
 import moment from "moment";
-import {Container, Segment, Table} from "semantic-ui-react";
+import {Container, Image, Segment, Table} from "semantic-ui-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
@@ -30,22 +30,44 @@ export function Forecast({isMultiDay, date, dateRange, trails}) {
     function dataToForecast(data) {
         let overview = []
 
-        console.log(data.weather.forecast.forecastday[0])
-        data.weather.forecast.forecastday.forEach(day => {
-            let date = moment(day.date).format("YYYY-MM-DD")
-            overview.push({
-                date: date,
-                probability: day.day.daily_chance_of_rain,
-                precipitation: day.day.totalprecip_mm,
-            })
+        let yrNo = data.weather.properties.timeseries
+        console.log(`got ${yrNo.length} data points`)
+        yrNo.forEach(datum => {
+            let date = moment(datum.time)
+            let next6hours = datum.data.next_6_hours
+            let instant = datum.data.instant
+
+            if((date.hours()-4) % 6 === 0) {
+                let yLabels = {
+                    4: "late night",
+                    10: "morning",
+                    16: "afternoon",
+                    24: "evening",
+                }
+                let precip = instant.details.precipitation_amount
+                let symbol = instant.summary.symbol_code
+                if (next6hours !== undefined) {
+                    precip = next6hours.details.precipitation_amount
+                    symbol = next6hours.summary.symbol_code
+                }
+
+                overview.push({
+                    yLabel:date.format("dd DD HH a"),
+                    air_temperature: instant.details.air_temperature,
+                    precipitation_amount: precip,
+                    symbol_code: symbol,
+                })
+            }
+
         })
 
-        console.log({
+        let results =  {
             overviewForecasts: overview,
-        })
-        return {
-            overviewForecasts: overview,
+            forecastUnits: data.weather.properties.meta.units,
+            forecastLocation: data.weather.geometry,
         }
+        console.log(results)
+        return results;
     }
 
     if (forecast === null) {
@@ -56,55 +78,46 @@ export function Forecast({isMultiDay, date, dateRange, trails}) {
         </Container>
     }
 
-    function dayGraphs(daysForecast) {
+    function dayGraphs() {
+        let precipCells = forecast.overviewForecasts.map((datum, index) => {
+            return <Table.Cell key={"precip_"+index}>{datum.precipitation_amount + forecast.forecastUnits.precipitation_amount}</Table.Cell>
+        })
+        let units = "??"
+        if(forecast.forecastUnits.air_temperature === "celsius") {
+            units = "°C"
+        }
+        let tempCells = forecast.overviewForecasts.map((datum, index) => {
+            return <Table.Cell key={"temp_"+index}>{datum.air_temperature + " " + units}</Table.Cell>
+        })
+        let labelCells = forecast.overviewForecasts.map((datum, index) => {
+            return <Table.Cell key={"label_"+index}>{datum.yLabel}</Table.Cell>
+        });
 
-        let precipCells = daysForecast.precipMm.map((precip, index) => {
-            return <Table.Cell key={"precip_"+index}>{precip}</Table.Cell>
+        let iconCells = forecast.overviewForecasts.map((datum, index) => {
+            let code = datum.symbol_code
+            let svgPath = "/weather_icons/"+code+".svg"
+            return <Table.Cell key={"icon_"+index}><Image src={svgPath} size={"mini"}/></Table.Cell>
         })
-        let popCells = daysForecast.pop.map((pop, index) => {
-            return <Table.Cell key={"pop_"+index}>{pop}</Table.Cell>
-        })
-        // let dateCells = daysForecast.dates.map((date, index) => {
-        //     return <Table.Cell key={"date_"+index}>{date}</Table.Cell>
-        // })
-        return <Table>
+
+        return <Container scrolling>
+        <Table style={{ overflow: 'auto', display: 'inline-block'}}>
             <Table.Body>
+                <Table.Row>{labelCells}</Table.Row>
+                <Table.Row>{iconCells}</Table.Row>
                 <Table.Row>{precipCells}</Table.Row>
-                <Table.Row>{popCells}</Table.Row>
-                {/*<Table.Row>{dateCells}</Table.Row>*/}
+                <Table.Row>{tempCells}</Table.Row>
             </Table.Body>
         </Table>
+        </Container>
     }
 
-    function overviewGraphs() {
-        return <>
-            <Segment>
-                <h2>Overview</h2>
-                <LineChart
-                    width={1000}
-                    height={300}
-                    data={forecast.overviewForecasts}
-                    margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5,
-                    }}
-                >
-                    <XAxis dataKey="date" />
-                    <YAxis yAxisId="left" />
-                    <YAxis yAxisId="right" orientation="right" />
-                    <Tooltip />
-                    <Legend />
-                    <Line yAxisId="left" type="monotone" dataKey="precipitation" stroke="#8884d8" activeDot={{ r: 8 }} />
-                    <Line yAxisId="right" type="monotone" dataKey="probability" stroke="#82ca9d" />
-
-                </LineChart>
-            </Segment>
-        </>
-    }
     return <>
-        {overviewGraphs()}
+        <h1>Forecast for (
+            lat:{forecast.forecastLocation.coordinates[0]},
+            lng:{forecast.forecastLocation.coordinates[1]},
+            alt:{forecast.forecastLocation.coordinates[2]}
+            )</h1>
+        {dayGraphs()}
         {/*{forecast.map((daysForecast, index) => { return <Segment key={index}>*/}
         {/*    <h2>{moment(daysForecast.dates[0]).format("dddd, MMMM Do")}</h2>*/}
         {/*    {dayGraphs(daysForecast)}*/}
