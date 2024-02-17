@@ -59,13 +59,13 @@ const TopNav = ({ fixed}) => {
                     <Icon name="calendar minus"/>
                     Packing
                 </Menu.Item>
-                {/*<Menu.Item*/}
-                {/*    active={window.location.pathname.startsWith("/partners")}*/}
-                {/*    href="/partners"*/}
-                {/*>*/}
-                {/*    <Icon name="group"/>*/}
-                {/*    Partners*/}
-                {/*</Menu.Item>*/}
+                <Menu.Item
+                    active={window.location.pathname.startsWith("/partners")}
+                    href="/partners"
+                >
+                    <Icon name="group"/>
+                    Partners
+                </Menu.Item>
                 <Menu.Item
                     active={window.location.pathname.startsWith("/plan")}
                     href="/plans/list"

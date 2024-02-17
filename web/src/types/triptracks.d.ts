@@ -42,7 +42,7 @@ export interface paths {
     post: operations["create_trip_plan_api_v0_trip_plan_post"];
   };
   "/api/v0/partners": {
-    /** Partners */
+    /** List */
     get: operations["partners_api_v0_partners_get"];
   };
   "/api/v0/partner": {
@@ -512,7 +512,7 @@ export interface operations {
       };
     };
   };
-  /** Partners */
+  /** List */
   partners_api_v0_partners_get: {
     parameters: {
       header: {

@@ -8,6 +8,7 @@ from utils.auth import optional_user, verify_access_key
 from db.database import get_session
 from db.models import TripPlan, User
 from utils.trip_plan.sunrise_and_sunset import flesh_out_itinerary
+from utils.users import flesh_out_people
 
 DT_FORMAT = "%Y-%m-%dT%H:%M:%S.%fZ"
 D_FORMAT = "%Y-%m-%d"
@@ -99,27 +100,6 @@ class TripPlanRequest(BaseModel):
     people: List[Union[str, dict]]
     trails: List[str]
     itinerary: List[Any]
-
-
-def flesh_out_people(people):
-    fleshed_out = []
-    for p in people:
-        if isinstance(p, str):
-            session = get_session()
-            qs = session.query(User).filter(User.email == p)
-            if qs.count() > 0:
-                user = qs.first()
-                fleshed_out.append(
-                    {
-                        "email": user.email,
-                        "google_info": user.google_userinfo,
-                        "id": user.id,
-                    }
-                )
-                continue
-
-        fleshed_out.append(p)
-    return fleshed_out
 
 
 def validate_user_access(user: User, trip_plan: TripPlan):
