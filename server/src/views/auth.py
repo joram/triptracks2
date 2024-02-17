@@ -1,19 +1,20 @@
-from fastapi import Header, HTTPException, Depends
-from google.auth.transport import requests
+from fastapi import APIRouter, requests, Depends
 from google.oauth2 import id_token
 from pydantic import BaseModel
 
-from .app import app
-from .db.database import get_session
-from .db.models import User, AccessToken, prefixed_id
-from .settings import GOOGLE_CLIENT_ID
+from db.database import get_session
+from db.models import User, prefixed_id, AccessToken
+from settings import GOOGLE_CLIENT_ID
+from utils.auth import verify_access_key
+
+router = APIRouter()
 
 
 class AccessKeyRequest(BaseModel):
     token: str
 
 
-@app.post("/api/v0/access_key")
+@router.post("/api/v0/access_key")
 async def create_access_key(request: AccessKeyRequest):
     userinfo = id_token.verify_oauth2_token(
         request.token, requests.Request(), GOOGLE_CLIENT_ID
@@ -49,20 +50,6 @@ async def create_access_key(request: AccessKeyRequest):
     }
 
 
-async def verify_access_key(access_key: str = Header(...)) -> User:
-    if access_key is None:
-        raise HTTPException(status_code=400, detail="Access-Key is required")
-
-    qs = get_session().query(AccessToken).filter(AccessToken.token == access_key)
-    if qs.count() == 0:
-        raise HTTPException(
-            status_code=400, detail=f"invalid Access-Key '{access_key}'"
-        )
-
-    user_id = qs.first().user_id
-    return get_session().query(User).filter(User.id == user_id).first()
-
-
-@app.get("/api/v0/userinfo")
+@router.get("/api/v0/userinfo")
 async def userinfo(user: User = Depends(verify_access_key)):
     return user
