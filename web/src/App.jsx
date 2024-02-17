@@ -12,7 +12,7 @@ import TripPlanCreate from "./components/plan/create";
 import Plan from "./components/plan/plan";
 import React, {useState} from "react";
 import Home from "./components/home";
-import Partners from "./components/partners/partners";
+import List from "./components/partners/list";
 import Login from "./components/login";
 import Cookies from "universal-cookie/es6";
 import {Segment} from "semantic-ui-react";
@@ -69,7 +69,7 @@ function App() {
               <Route path="/packing/:id"><Packing/></Route>
 
               {/* PARTNERS */}
-              <Route path="/partners"><Partners/></Route>
+              <Route path="/partners"><List/></Route>
 
               {/* PLAN */}
               <Route path="/plans/list"><TripPlanList/></Route>

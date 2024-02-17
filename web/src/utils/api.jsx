@@ -130,7 +130,7 @@ async function getForecast(latitude, longitude){
 
 async function getPartners(accessToken){
     return api.getClient().then(client => {
-        return client.get_partners_api_v0_partners_get({}, {},{
+        return client.partners_api_v0_partners_get({}, {},{
             headers: {
                 'Access-Key': accessToken,
             }})
@@ -142,7 +142,7 @@ async function getPartners(accessToken){
 
 async function addPartner(accessToken, email){
     return api.getClient().then(client => {
-        return client.add_partner_api_v0_partners_post({}, {email}, {
+        return client.add_partner_api_v0_partner_post({}, {email}, {
             headers: {
                 'Access-Key': accessToken,
             }
@@ -154,11 +154,11 @@ async function addPartner(accessToken, email){
 
 }
 
-async function removePartner(accessToken, id){
+async function removePartner(accessToken, partner_id){
     return api.getClient().then(client => {
-        return client.remove_partner_api_v0_partners__email__delete(
+        return client.remove_partner_api_v0_partner__partner_id__delete(
             {
-                id
+                partner_id
             },
             {},
             {
@@ -171,6 +171,15 @@ async function removePartner(accessToken, id){
         toastErrors(response)
         return response
     });
-
 }
-export {login, getPlans, getPlan, updatePlan, getForecast}
+
+export {
+    login,
+    getPlans,
+    getPlan,
+    updatePlan,
+    getForecast,
+    getPartners,
+    addPartner,
+    removePartner,
+}
