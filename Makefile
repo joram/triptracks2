@@ -43,3 +43,12 @@ deploy_server: build_server
 	ssh 192.168.1.220 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
 server_logs:
 	ssh 192.168.1.220 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
+
+build_api_type_definitions:
+	cd web; npx openapi-typescript https://triptracks2.oram.ca/openapi.json --output ./src/types/triptracks.d.ts
+
+pull_db:
+	cd server; scp saintNectaire:/home/john/projects/nas/services/triptracks2/database.db ./database.db
+
+push_db:
+	cd server; scp ./database.db saintNectaire:/home/john/projects/nas/services/triptracks2/database.db

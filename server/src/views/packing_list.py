@@ -1,12 +1,13 @@
-from typing import Optional, List, Dict
+from typing import List
 
-from fastapi import Depends, HTTPException
+from fastapi import Depends, HTTPException, APIRouter
 from pydantic import BaseModel
 
-from . import verify_access_key
-from .app import app
-from .db.database import get_session
-from .db.models import PackingList, User
+from db.database import get_session
+from db.models import PackingList, User
+from utils.auth import verify_access_key
+
+router = APIRouter()
 
 
 class PackingListRequest(BaseModel):
@@ -19,22 +20,26 @@ class PackingListResponse(PackingListRequest):
     ownerId: str
 
 
-@app.get("/api/v0/packing_lists")
-async def get_packing_lists(user: User = Depends(verify_access_key)) -> list[PackingListResponse]:
+@router.get("/api/v0/packing_lists")
+async def get_packing_lists(
+    user: User = Depends(verify_access_key),
+) -> list[PackingListResponse]:
     session = get_session()
     qs = session.query(PackingList).filter(PackingList.user_id == user.id)
     packing_lists = []
     for packing_list in qs:
-        packing_lists.append(PackingListResponse(
-            name=packing_list.name,
-            contents=list(packing_list.contents),
-            id=packing_list.id,
-            ownerId=packing_list.user_id,
-        ))
+        packing_lists.append(
+            PackingListResponse(
+                name=packing_list.name,
+                contents=list(packing_list.contents),
+                id=packing_list.id,
+                ownerId=packing_list.user_id,
+            )
+        )
     return packing_lists
 
 
-@app.get("/api/v0/packing_list/{packing_list_id}")
+@router.get("/api/v0/packing_list/{packing_list_id}")
 async def get_packing_list(packing_list_id: str) -> PackingListResponse:
     session = get_session()
     qs = session.query(PackingList).filter(PackingList.id == packing_list_id)
@@ -49,10 +54,16 @@ async def get_packing_list(packing_list_id: str) -> PackingListResponse:
     )
 
 
-@app.post("/api/v0/packing_list/{packing_list_id}")
-async def update_packing_list(packing_list_id: str, request: PackingListRequest, user: User = Depends(verify_access_key)) -> PackingList:
+@router.post("/api/v0/packing_list/{packing_list_id}")
+async def update_packing_list(
+    packing_list_id: str,
+    request: PackingListRequest,
+    user: User = Depends(verify_access_key),
+) -> PackingList:
     session = get_session()
-    qs = session.query(PackingList).filter(PackingList.user_id == user.id, PackingList.id == packing_list_id)
+    qs = session.query(PackingList).filter(
+        PackingList.user_id == user.id, PackingList.id == packing_list_id
+    )
     if qs.count() == 0:
         print(user.email, user.id, packing_list_id)
         raise HTTPException(status_code=404, detail="packing list not found")
@@ -66,10 +77,14 @@ async def update_packing_list(packing_list_id: str, request: PackingListRequest,
     return packing_list
 
 
-@app.delete("/api/v0/packing_list/{packing_list_id}")
-async def remove_packing_list(packing_list_id: str, user: User = Depends(verify_access_key)):
+@router.delete("/api/v0/packing_list/{packing_list_id}")
+async def remove_packing_list(
+    packing_list_id: str, user: User = Depends(verify_access_key)
+):
     session = get_session()
-    qs = session.query(PackingList).filter(PackingList.user_id == user.id, PackingList.id == packing_list_id)
+    qs = session.query(PackingList).filter(
+        PackingList.user_id == user.id, PackingList.id == packing_list_id
+    )
     if qs.count() == 0:
         print(user.email, user.id, packing_list_id)
         raise HTTPException(status_code=404, detail="packing list not found")
@@ -78,7 +93,7 @@ async def remove_packing_list(packing_list_id: str, user: User = Depends(verify_
     session.commit()
 
 
-@app.post("/api/v0/packing_list")
+@router.post("/api/v0/packing_list")
 async def create_packing_list(user: User = Depends(verify_access_key)) -> str:
     packing_list = PackingList.new(name="new packing list", user=user, contents={})
     session = get_session()

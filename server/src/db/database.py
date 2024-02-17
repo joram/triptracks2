@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-from src import settings
+import settings
 
 root_db_dir = settings.CONFIG_DIR
 if os.path.exists("/data"):

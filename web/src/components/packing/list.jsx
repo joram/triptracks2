@@ -10,7 +10,7 @@ function PackingList(){
     const { accessToken } = useContext(UserContext);
 
     useEffect(() => {
-        if(loading){
+        if(loading || accessToken === null || accessToken === undefined){
             return
         }
         setLoading(true)
@@ -40,6 +40,12 @@ function PackingList(){
         })
     }, [loading, accessToken])
 
+
+    if(accessToken === null || accessToken === undefined){
+        return <Container>
+            <p>Log in to see your packing lists</p>
+        </Container>
+    }
 
     let rows = []
     rows.push(<Table.Row key="headers">

@@ -127,4 +127,50 @@ async function getForecast(latitude, longitude){
     });
 }
 
+
+async function getPartners(accessToken){
+    return api.getClient().then(client => {
+        return client.get_partners_api_v0_partners_get({}, {},{
+            headers: {
+                'Access-Key': accessToken,
+            }})
+    }).then(response => {
+        toastErrors(response)
+        return response
+    });
+}
+
+async function addPartner(accessToken, email){
+    return api.getClient().then(client => {
+        return client.add_partner_api_v0_partners_post({}, {email}, {
+            headers: {
+                'Access-Key': accessToken,
+            }
+        })
+    }).then(response => {
+        toastErrors(response)
+        return response
+    });
+
+}
+
+async function removePartner(accessToken, id){
+    return api.getClient().then(client => {
+        return client.remove_partner_api_v0_partners__email__delete(
+            {
+                id
+            },
+            {},
+            {
+                headers: {
+                    'Access-Key': accessToken,
+                }
+            }
+        )
+    }).then(response => {
+        toastErrors(response)
+        return response
+    });
+
+}
 export {login, getPlans, getPlan, updatePlan, getForecast}

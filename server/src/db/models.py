@@ -4,7 +4,7 @@ from sqlalchemy.types import JSON
 from sqlalchemy import Column, String, Boolean, ForeignKey
 from sqlalchemy.testing import db
 
-from src.db.database import Base
+from db.database import Base
 
 
 def prefixed_id(prefix: str) -> str:
@@ -33,6 +33,14 @@ class User(Base):
         qs = db.query(AccessToken).filter(AccessToken.user_id == self.id)
         if qs.count() >= 1:
             return qs.first()
+
+
+class Partner(Base):
+    __tablename__ = "partners"
+
+    id = Column(String, primary_key=True, index=True)
+    user_id = Column(String, ForeignKey("users.id"), index=True)
+    email = Column(String)
 
 
 class PackingList(Base):

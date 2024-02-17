@@ -10,6 +10,7 @@ import Itinerary from "./components/itinerary";
 import PlanTrails from "./components/planTrails";
 import * as PropTypes from "prop-types";
 import {Forecast} from "./components/forecast";
+import ReadOnlyTripPlan from "./readOnlyPlan";
 
 Forecast.propTypes = {trails: PropTypes.arrayOf(PropTypes.any)};
 
@@ -25,18 +26,21 @@ function TripPlan() {
     let [itinerary, setItinerary] = useState(null)
     let [fleshedOutItinerary, setFleshedOutItinerary] = useState(false)
     let [manualTrigger, setManualTrigger] = useState(true)
+    let [editable, setEditable] = useState(false)
 
     const { accessToken } = useContext(UserContext);
     let {id} = useParams()
 
     async function updateTripPlanState(trip_plan){
-        console.log("updating latest trip plan", trip_plan)
         setTripPlan(trip_plan)
         setName(trip_plan.name)
         setPeople(trip_plan.people)
         setTrails(trip_plan.trails)
+        setEditable(trip_plan.editable)
 
-
+        if (typeof trip_plan.itinerary === "object"){
+            trip_plan.itinerary = []
+        }
         trip_plan.itinerary.forEach(day => {
             day.date = new Date(day.date)
         })
@@ -63,13 +67,13 @@ function TripPlan() {
             return
         }
         getPlan(accessToken, id).then(response => {
-            updateTripPlanState(response.data)
+            updateTripPlanState(response.data).then(r => {})
             setLoading(false)
         });
     }, [accessToken, id, setLoading, loading]);
 
     useEffect(() => {
-        if (loading) {
+        if (loading || !editable) {
             return
         }
 
@@ -97,6 +101,7 @@ function TripPlan() {
             }
         })
     }, [
+        editable,
         accessToken,
         id,
         isMultiDay,
@@ -116,6 +121,11 @@ function TripPlan() {
             </Segment>
         </Container>
     }
+
+    if (!editable){
+        return <ReadOnlyTripPlan trip_plan={trip_plan} />
+    }
+
     return <Container>
 
         <Segment basic>
@@ -140,7 +150,7 @@ function TripPlan() {
         </Segment>
 
         <Segment basic>
-            <People people={people} setPeople={setPeople} />
+            <People people={people} setPeople={setPeople} editable={true} />
         </Segment>
 
         <Segment basic>
