@@ -102,7 +102,6 @@ function ProductRow({product, onRemoveItem, onChangeWeight, onChangeCustomWeight
 
 function SortableHeaderCell({column, direction, itemKey, collapsing, sortItems, sortByColumn}) {
     let icon = null;
-    console.log("column", column, "sortByColumn", sortByColumn, "direction", direction)
     if(itemKey === sortByColumn) {
         if (direction === "descending") {
             icon = <Icon name="caret down"/>

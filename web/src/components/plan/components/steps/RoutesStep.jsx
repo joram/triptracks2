@@ -1,14 +1,33 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import _ from "lodash";
 import {Button, Header, List, Search, Segment} from "semantic-ui-react";
 import {RMap, RLayerVector, RStyle} from "rlayers";
 import GeoJSON from "ol/format/GeoJSON";
 import {fromLonLat, transformExtent} from "ol/proj";
+import {boundingExtent} from "ol/extent";
 import Geohash from "latlon-geohash";
 import LayersControl from "../../../trails/LayersControl";
 import ClusteredTrails from "../../../trails/ClusteredTrails";
 
 const DEFAULT_CENTER = [-124.594444, 49.223611];
+
+// Collect map-projection points for the plan's routes (geohash centers) and
+// pins, so the Routes map can frame everything when the step opens.
+function collectPoints(trails, pins) {
+    const points = [];
+    (pins || []).forEach((p) => {
+        if (p && typeof p.lng === "number" && typeof p.lat === "number") {
+            points.push(fromLonLat([p.lng, p.lat]));
+        }
+    });
+    (trails || []).forEach((geohash) => {
+        try {
+            const {lat, lon} = Geohash.decode(geohash);
+            points.push(fromLonLat([lon, lat]));
+        } catch (e) { /* skip unparseable geohash */ }
+    });
+    return points;
+}
 
 function geohashFromUrl(url) {
     // search results look like "/trail/<geohash>"
@@ -104,13 +123,37 @@ function SelectableTrails({viewGeohash, maxTrails, selected, onToggle}) {
     });
 }
 
-export function RoutesStep({trails, setTrails, editable = true}) {
+export function RoutesStep({trails, setTrails, pins = [], editable = true}) {
     trails = trails || [];
     const [zoom, setZoom] = useState(10);
     const [viewGeohash, setViewGeohash] = useState("c2");
     const [titles, setTitles] = useState({});
     const [searchState, setSearchState] = useState({loading: false, results: [], value: ""});
     const searchSource = React.useRef([]);
+    const mapRef = useRef();
+
+    // On entering the step, frame the map around the existing routes + pins.
+    useEffect(() => {
+        const points = collectPoints(trails, pins);
+        if (points.length === 0) {
+            return;
+        }
+        const fit = () => {
+            const map = mapRef.current && mapRef.current.ol;
+            if (!map) {
+                return;
+            }
+            map.getView().fit(boundingExtent(points), {
+                padding: [60, 60, 60, 60],
+                maxZoom: 13,
+                duration: 250,
+            });
+        };
+        // the map needs a tick to have a rendered size before fit() works
+        const handle = setTimeout(fit, 60);
+        return () => clearTimeout(handle);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     useEffect(() => {
         fetch("/trails.search.json")
@@ -184,6 +227,7 @@ export function RoutesStep({trails, setTrails, editable = true}) {
         </Segment>}
 
         <RMap
+            ref={mapRef}
             width={"100%"}
             height={"400px"}
             initial={{center: fromLonLat(DEFAULT_CENTER), zoom: 10}}
