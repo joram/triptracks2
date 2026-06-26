@@ -2,9 +2,20 @@ import {Button, ButtonGroup} from "semantic-ui-react";
 import SemanticDatepicker from "react-semantic-ui-datepickers";
 import React from "react";
 
+function toDate(value) {
+    if (value === null || value === undefined || value === "") {
+        return null
+    }
+    const d = value instanceof Date ? value : new Date(value)
+    return isNaN(d.getTime()) ? null : d
+}
+
 export function DatePicker({isMultiDay, setIsMultiDay, date, setDate, dateRange, setDateRange}) {
-    if(dateRange !== null){
-        dateRange = dateRange.map(d => new Date(d))
+    // date-fns (used by the datepicker) throws on string/invalid dates, so
+    // coerce everything to real Date objects (or null) before passing it in.
+    date = toDate(date)
+    if (dateRange !== null && dateRange !== undefined) {
+        dateRange = dateRange.map(toDate)
     }
 
     return <>
