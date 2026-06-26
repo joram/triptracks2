@@ -50,6 +50,7 @@ class GetTripPlanResponse(BaseModel):
     packing_lists: Optional[Union[List, Dict]]
     people: Union[List, Dict]
     trails: Union[List, Dict]
+    pins: List
     dates: Optional[Dict]
     itinerary: List
     editable: bool
@@ -81,6 +82,7 @@ async def get_trip_plan(
         dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
         people=trip_plan.people or [],
         trails=trip_plan.trails or [],
+        pins=trip_plan.pins or [],
         itinerary=trip_plan.itinerary or [],
         packing_lists=trip_plan.packing_lists or [],
         editable=editable,
@@ -99,6 +101,8 @@ class TripPlanRequest(BaseModel):
     dates: Optional[TripPlanDate]
     people: List[Union[str, dict]]
     trails: List[str]
+    pins: List[Any] = []
+    packing_lists: List[Any] = []
     itinerary: List[Any]
 
 
@@ -113,10 +117,10 @@ def validate_user_access(user: User, trip_plan: TripPlan):
     raise HTTPException(status_code=403, detail="access denied")
 
 
-@router.patch("/api/v0/trip_plan/{trip_plan_id}", response_model=None)
+@router.patch("/api/v0/trip_plan/{trip_plan_id}")
 async def update_trip_plan(
     trip_plan_id: str, request: TripPlanRequest, user: User = Depends(verify_access_key)
-) -> TripPlan:
+) -> GetTripPlanResponse:
     session = get_session()
     qs = session.query(TripPlan).filter(TripPlan.id == trip_plan_id)
     if qs.count() == 0:
@@ -129,21 +133,25 @@ async def update_trip_plan(
     trip_plan.dates = request.dates.json() if request.dates else None
     trip_plan.people = flesh_out_people(request.people)
     trip_plan.trails = request.trails
+    trip_plan.pins = request.pins
+    trip_plan.packing_lists = request.packing_lists
     trip_plan.itinerary = flesh_out_itinerary(request.trails, request.itinerary)
 
     session.add(trip_plan)
     session.commit()
 
-    response = TripPlan(
+    return GetTripPlanResponse(
+        user_id=trip_plan.user_id,
         name=trip_plan.name,
         id=trip_plan.id,
         dates=string_to_date(trip_plan.dates) if trip_plan.dates else None,
-        people=trip_plan.people,
-        trails=trip_plan.trails,
-        itinerary=trip_plan.itinerary,
+        people=trip_plan.people or [],
+        trails=trip_plan.trails or [],
+        pins=trip_plan.pins or [],
+        itinerary=trip_plan.itinerary or [],
+        packing_lists=trip_plan.packing_lists or [],
+        editable=True,
     )
-
-    return response
 
 
 @router.delete("/api/v0/trip_plan/{trip_plan_id}")

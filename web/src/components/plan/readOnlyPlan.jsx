@@ -17,21 +17,19 @@ Forecast.propTypes = {trails: PropTypes.arrayOf(PropTypes.any)};
 function ReadOnlyTripPlan({trip_plan}) {
     console.log("read only plan is: ", trip_plan)
     let subheader = "dates TBD"
-    if (trip_plan.dates.type === "range"){
-        if(trip_plan.dates.dates.length === 2){
-            let start = trip_plan.dates.dates[0]
-            start = moment(start).format("MMM Do")
-            let end = trip_plan.dates.dates[1]
-            end = moment(end).format("MMM Do")
+    const dates = trip_plan.dates || {type: "basic", dates: null}
+    if (dates.type === "range"){
+        const range = dates.dates || []
+        if(range.length === 2 && range[0] && range[1]){
+            let start = moment(range[0]).format("MMM Do")
+            let end = moment(range[1]).format("MMM Do")
             subheader = `from ${start} to ${end}`
-        }else if(trip_plan.dates.dates.length === 1){
-            subheader = `on ${trip_plan.dates.dates[0]}`
-        } else {
-            subheader = "dates TBD"
+        }else if(range.length === 1 && range[0]){
+            subheader = `on ${moment(range[0]).format("MMM Do")}`
         }
     } else {
-        if(trip_plan.date !== null){
-            subheader = `on ${trip_plan.date}`
+        if(dates.dates){
+            subheader = `on ${moment(dates.dates).format("MMM Do")}`
         }
     }
     return <Container>

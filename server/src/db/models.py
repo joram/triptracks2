@@ -67,6 +67,7 @@ class TripPlan(Base):
     packing_lists = Column(JSON)
     people = Column(JSON)
     trails = Column(JSON)
+    pins = Column(JSON)
     dates = Column(JSON)
     itinerary = Column(JSON)
 
@@ -79,6 +80,7 @@ class TripPlan(Base):
             packing_lists=[],
             people=[],
             trails=[],
+            pins=[],
             dates=[],
             itinerary=[],
         )
