@@ -1,134 +1,145 @@
-import React, {useContext, useEffect, useState} from "react";
-import {useParams} from 'react-router-dom'
-import {Container, Input, Segment} from "semantic-ui-react";
+import React, {useContext, useEffect, useRef, useState} from "react";
+import {useParams} from "react-router-dom";
+import {Button, Container, Input, Segment, Step} from "semantic-ui-react";
+import "react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css";
 import {UserContext} from "../../App.jsx";
-import 'react-semantic-ui-datepickers/dist/react-semantic-ui-datepickers.css';
 import {getPlan, updatePlan} from "../../utils/api";
-import {People} from "./components/people";
-import {DatePicker} from "./components/datePicker";
-import Itinerary from "./components/itinerary";
-import PlanTrails from "./components/planTrails";
-import * as PropTypes from "prop-types";
-import {Forecast} from "./components/forecast";
+import fleshOutItinerary from "./components/utils/itinerary";
+import RoutesStep from "./components/steps/RoutesStep";
+import PinsStep from "./components/steps/PinsStep";
+import ItineraryStep from "./components/steps/ItineraryStep";
+import PackingStep from "./components/steps/PackingStep";
 import ReadOnlyTripPlan from "./readOnlyPlan";
 
-Forecast.propTypes = {trails: PropTypes.arrayOf(PropTypes.any)};
+const STEPS = [
+    {key: "routes", title: "Routes", icon: "map"},
+    {key: "pins", title: "Pins", icon: "map marker alternate"},
+    {key: "itinerary", title: "Itinerary", icon: "calendar"},
+    {key: "packing", title: "Packing", icon: "suitcase"},
+];
 
 function TripPlan() {
-    let [loading, setLoading] = useState(true)
-    let [trip_plan, setTripPlan] = useState(null)
-    let [name, setName] = useState(null)
-    let [isMultiDay, setIsMultiDay] = useState(false)
-    let [date, setDate] = useState(null);
-    let [dateRange, setDateRange] = useState([]);
-    let [people, setPeople] = useState([])
-    let [trails, setTrails] = useState([])
-    let [itinerary, setItinerary] = useState(null)
-    let [fleshedOutItinerary, setFleshedOutItinerary] = useState(false)
-    let [manualTrigger, setManualTrigger] = useState(true)
-    let [editable, setEditable] = useState(false)
+    const {accessToken} = useContext(UserContext);
+    const {id} = useParams();
 
-    const { accessToken } = useContext(UserContext);
-    let {id} = useParams()
+    const [loading, setLoading] = useState(true);
+    const [editable, setEditable] = useState(false);
+    const [plan, setPlan] = useState(null);
+    const [activeStep, setActiveStep] = useState(0);
+    const [saving, setSaving] = useState(false);
 
-    async function updateTripPlanState(trip_plan){
-        setTripPlan(trip_plan)
-        setName(trip_plan.name)
-        setPeople(trip_plan.people)
-        setTrails(trip_plan.trails)
-        setEditable(trip_plan.editable)
+    const [name, setName] = useState("");
+    const [isMultiDay, setIsMultiDay] = useState(false);
+    const [date, setDate] = useState(null);
+    const [dateRange, setDateRange] = useState([]);
+    const [people, setPeople] = useState([]);
+    const [trails, setTrails] = useState([]);
+    const [pins, setPins] = useState([]);
+    const [packing, setPacking] = useState([]);
+    const [itinerary, setItinerary] = useState([]);
 
-        if (typeof trip_plan.itinerary === "object"){
-            trip_plan.itinerary = []
-        }
-        trip_plan.itinerary.forEach(day => {
-            day.date = new Date(day.date)
-        })
-        setItinerary(trip_plan.itinerary)
+    const itineraryRef = useRef(itinerary);
+    itineraryRef.current = itinerary;
 
-
-        if (trip_plan.dates === undefined || trip_plan.dates === null){
-            trip_plan.dates = {type: "basic", dates: null}
-        }
-        if(trip_plan.dates.type === "range"){
-            setIsMultiDay(true)
-            setDateRange(trip_plan.dates.dates)
-        } else {
-            setIsMultiDay(false)
-            setDate(trip_plan.dates.dates)
-        }
-
-        return trip_plan
-    }
-
-
+    // ---- load ----
     useEffect(() => {
-        if (!loading) {
-            return
-        }
-        getPlan(accessToken, id).then(response => {
-            updateTripPlanState(response.data).then(r => {})
-            setLoading(false)
-        });
-    }, [accessToken, id, setLoading, loading]);
+        getPlan(accessToken, id).then((response) => {
+            const tp = response.data;
+            setPlan(tp);
+            setEditable(!!tp.editable);
+            setName(tp.name || "");
+            setPeople(tp.people || []);
+            setTrails(tp.trails || []);
+            setPins(tp.pins || []);
+            setPacking(Array.isArray(tp.packing_lists) ? tp.packing_lists : []);
+            setItinerary((tp.itinerary || []).map((d) => ({...d, date: new Date(d.date)})));
 
+            const dates = tp.dates || {type: "basic", dates: null};
+            if (dates.type === "range") {
+                setIsMultiDay(true);
+                setDateRange(dates.dates || []);
+            } else {
+                setIsMultiDay(false);
+                setDate(dates.dates);
+            }
+            setLoading(false);
+        });
+    }, [accessToken, id]);
+
+    // ---- keep itinerary days in sync with the selected dates ----
+    useEffect(() => {
+        if (loading) {
+            return;
+        }
+        if (!isMultiDay && !date) {
+            setItinerary([]);
+            return;
+        }
+        const next = fleshOutItinerary(date, dateRange, isMultiDay, itineraryRef.current);
+        setItinerary(next);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [date, dateRange, isMultiDay, loading]);
+
+    // ---- debounced autosave ----
     useEffect(() => {
         if (loading || !editable) {
-            return
+            return;
         }
+        const handle = setTimeout(() => {
+            setSaving(true);
+            const payload = {
+                name,
+                dates: {
+                    type: isMultiDay ? "range" : "basic",
+                    dates: isMultiDay ? dateRange : date,
+                },
+                people,
+                trails,
+                pins,
+                packing_lists: packing,
+                itinerary,
+            };
+            updatePlan(accessToken, payload, id).then(() => setSaving(false));
+        }, 800);
+        return () => clearTimeout(handle);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [name, isMultiDay, date, dateRange, people, trails, pins, packing, itinerary, editable, loading]);
 
-        // update the trip plan
-        trip_plan.name = name
-        trip_plan.dates = {
-            type: isMultiDay ? "range" : "basic",
-            dates: isMultiDay ? dateRange : date
-        }
-        trip_plan.people = people
-        trip_plan.trails = trails
-        trip_plan.itinerary = itinerary
-
-        if(manualTrigger === false){
-            return
-        }
-        updatePlan(accessToken, trip_plan, id).then(r => {
-            console.log("updated trip plan", r)
-            if (r.status === 200 && r.data !== null && r.data !== undefined && r.data !== trip_plan){
-                console.log("updating local state")
-                setManualTrigger(false)
-                updateTripPlanState(r.data).then(() => {
-                  setManualTrigger(true)
-                })
-            }
-        })
-    }, [
-        editable,
-        accessToken,
-        id,
-        isMultiDay,
-        loading,
-        people,
-        name,
-        date,
-        dateRange,
-        trails,
-        itinerary,
-    ]);
-
-    if(loading){
+    if (loading) {
         return <Container>
             <Segment basic>
                 <h1>Loading...</h1>
             </Segment>
-        </Container>
+        </Container>;
     }
 
-    if (!editable){
-        return <ReadOnlyTripPlan trip_plan={trip_plan} />
+    if (!editable) {
+        return <ReadOnlyTripPlan trip_plan={plan}/>;
+    }
+
+    function renderStep() {
+        switch (STEPS[activeStep].key) {
+            case "routes":
+                return <RoutesStep trails={trails} setTrails={setTrails}/>;
+            case "pins":
+                return <PinsStep pins={pins} setPins={setPins}/>;
+            case "itinerary":
+                return <ItineraryStep
+                    isMultiDay={isMultiDay} setIsMultiDay={setIsMultiDay}
+                    date={date} setDate={setDate}
+                    dateRange={dateRange} setDateRange={setDateRange}
+                    itinerary={itinerary} setItinerary={setItinerary}
+                    trails={trails}
+                />;
+            case "packing":
+                return <PackingStep packing={packing} setPacking={setPacking}/>;
+            default:
+                return null;
+        }
     }
 
     return <Container>
-
-        <Segment basic>
+        <Segment basic clearing>
             <Input
                 size="huge"
                 type="text"
@@ -136,28 +147,49 @@ function TripPlan() {
                 fluid
                 onChange={(e) => setName(e.target.value)}
             />
+            <div style={{textAlign: "right", color: "#999", fontSize: "0.85em", marginTop: "4px"}}>
+                {saving ? "Saving..." : "All changes saved"}
+            </div>
         </Segment>
+
+        <Step.Group ordered widths={STEPS.length} fluid>
+            {STEPS.map((step, index) => (
+                <Step
+                    key={step.key}
+                    link
+                    active={activeStep === index}
+                    completed={activeStep > index}
+                    onClick={() => setActiveStep(index)}
+                >
+                    <Step.Content>
+                        <Step.Title>{step.title}</Step.Title>
+                    </Step.Content>
+                </Step>
+            ))}
+        </Step.Group>
 
         <Segment basic>
-            <DatePicker date={date} setDate={setDate} dateRange={dateRange} setDateRange={setDateRange} isMultiDay={isMultiDay} setIsMultiDay={setIsMultiDay}/>
+            {renderStep()}
         </Segment>
 
-        <Segment basic size={"mini"}>
-            <Forecast trails={trails} date={date} dateRange={dateRange} isMultiDay={isMultiDay} />
+        <Segment basic clearing>
+            <Button
+                disabled={activeStep === 0}
+                floated="left"
+                onClick={() => setActiveStep((s) => Math.max(0, s - 1))}
+            >
+                Back
+            </Button>
+            <Button
+                primary
+                disabled={activeStep === STEPS.length - 1}
+                floated="right"
+                onClick={() => setActiveStep((s) => Math.min(STEPS.length - 1, s + 1))}
+            >
+                Next
+            </Button>
         </Segment>
-        <Segment basic>
-            <PlanTrails trails={trails} setTrails={setTrails} />
-        </Segment>
-
-        <Segment basic>
-            <People people={people} setPeople={setPeople} editable={true} />
-        </Segment>
-
-        <Segment basic>
-            <Itinerary itinerary={itinerary} setItinerary={setItinerary} trails={trails}/>
-        </Segment>
-
-    </Container>
+    </Container>;
 }
 
 export default TripPlan;

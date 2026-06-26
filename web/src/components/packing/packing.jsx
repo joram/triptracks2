@@ -125,7 +125,7 @@ function SortableHeaderCell({column, direction, itemKey, collapsing, sortItems, 
     </Table.HeaderCell>
 }
 
-function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack, sortItems, sortOrder, sortByColumn}) {
+export function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack, sortItems, sortOrder, sortByColumn}) {
     let newProducts = [];
     if (products === undefined) {
         return null
@@ -198,7 +198,7 @@ function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onCha
     </Segment>
 }
 
-function ProductsSummaryTable({products}) {
+export function ProductsSummaryTable({products}) {
     let {packWeight, outOfPackWeight, totalWeight} = packWeights(products);
     totalWeight = stringToWeightString(totalWeight);
     packWeight = stringToWeightString(packWeight);
