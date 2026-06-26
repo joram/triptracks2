@@ -1,21 +1,39 @@
 import React, {useState} from "react";
-import {Header, Search, Segment} from "semantic-ui-react";
+import {Button, Divider, Header, Icon, Input, Search, Segment} from "semantic-ui-react";
 import product_manifest from "../../../packing/products_manifest.json";
 import {ProductsTable, ProductsSummaryTable} from "../../../packing/packing";
 
-// Edit the plan's packing list inline. `packing` is an array of product
-// objects, stored on the trip plan's packing_lists field.
-export function PackingStep({packing, setPacking, editable = true}) {
-    const products = packing || [];
+// A plan's packing is a list of named groups: [{name, contents:[product...]}].
+// Older plans stored a flat array of products; wrap those in one group.
+function normalizeGroups(packing) {
+    if (!Array.isArray(packing) || packing.length === 0) {
+        return [];
+    }
+    const looksLikeGroups = packing.every(
+        (entry) => entry && typeof entry === "object" && Array.isArray(entry.contents)
+    );
+    if (looksLikeGroups) {
+        return packing;
+    }
+    return [{name: "Packing list", contents: packing}];
+}
+
+// Editor for a single packing group: name, search-to-add, item table, weights.
+function PackingGroup({group, onChange, onRemove, editable}) {
+    const products = group.contents || [];
     const [searchText, setSearchText] = useState("");
     const [results, setResults] = useState([]);
     const [sortByColumn, setSortByColumn] = useState("Item");
     const [sortOrder, setSortOrder] = useState("ascending");
 
+    function setContents(next) {
+        onChange({...group, contents: next});
+    }
+
     function mutate(fn) {
         const next = [...products];
         fn(next);
-        setPacking(next);
+        setContents(next);
     }
 
     function updateSearchResults(value) {
@@ -47,25 +65,59 @@ export function PackingStep({packing, setPacking, editable = true}) {
         if (order === "descending") {
             next.reverse();
         }
-        setPacking(next);
+        setContents(next);
         setSortByColumn(column);
     }
 
-    if (!editable) {
-        return <>
-            <Header size={"large"}>Packing</Header>
-            <ProductsTable products={products} sortItems={() => {}}
-                           onRemoveItem={() => {}} onAddItem={() => {}} onChangeWeight={() => {}}
-                           onChangeCustomWeight={() => {}} onChangeQuantity={() => {}}
-                           onChangeFriendlyName={() => {}} onChangeInPack={() => {}}
-                           sortByColumn={sortByColumn} sortOrder={sortOrder}/>
-            <ProductsSummaryTable products={products}/>
-        </>;
-    }
+    const tableProps = {
+        products,
+        sortByColumn,
+        sortOrder,
+        sortItems: editable ? sortItems : () => {},
+        onRemoveItem: (product) => mutate((next) => {
+            const i = next.indexOf(product);
+            if (i > -1) next.splice(i, 1);
+        }),
+        onAddItem: (product) => mutate((next) => next.push(product)),
+        onChangeQuantity: (product, quantity) => mutate((next) => {
+            const i = next.indexOf(product);
+            if (i > -1) next[i] = {...next[i], quantity};
+        }),
+        onChangeWeight: (product, weightIndex) => mutate((next) => {
+            const i = next.indexOf(product);
+            if (i > -1) next[i] = {...next[i], weightIndex};
+        }),
+        onChangeCustomWeight: (product, customWeight) => mutate((next) => {
+            const i = next.indexOf(product);
+            if (i > -1) next[i] = {...next[i], customWeight};
+        }),
+        onChangeFriendlyName: (product, friendlyName) => mutate((next) => {
+            const i = next.indexOf(product);
+            if (i > -1) next[i] = {...next[i], friendlyName};
+        }),
+        onChangeInPack: (product, inPack) => mutate((next) => {
+            const i = next.indexOf(product);
+            if (i > -1) next[i] = {...next[i], inPack};
+        }),
+    };
 
-    return <>
-        <Header size={"large"}>Packing</Header>
-        <Segment textAlign="center" basic>
+    return <Segment>
+        <div style={{display: "flex", alignItems: "center", gap: "8px"}}>
+            {editable
+                ? <Input
+                    value={group.name || ""}
+                    placeholder="List name"
+                    size="large"
+                    style={{flex: 1}}
+                    onChange={(e) => onChange({...group, name: e.target.value})}
+                />
+                : <Header size="medium" style={{flex: 1, margin: 0}}>{group.name || "Packing list"}</Header>}
+            {editable && <Button icon labelPosition="left" size="tiny" color="red" basic onClick={onRemove}>
+                <Icon name="trash"/> Remove list
+            </Button>}
+        </div>
+
+        {editable && <Segment basic textAlign="center">
             <Search
                 placeholder="Search for items to add"
                 loading={false}
@@ -81,40 +133,59 @@ export function PackingStep({packing, setPacking, editable = true}) {
                 results={results}
                 value={searchText}
             />
-        </Segment>
+        </Segment>}
 
-        <ProductsTable
-            products={products}
-            sortByColumn={sortByColumn}
-            sortOrder={sortOrder}
-            sortItems={sortItems}
-            onRemoveItem={(product) => mutate((next) => {
-                const i = next.indexOf(product);
-                if (i > -1) next.splice(i, 1);
-            })}
-            onAddItem={(product) => mutate((next) => next.push(product))}
-            onChangeQuantity={(product, quantity) => mutate((next) => {
-                const i = next.indexOf(product);
-                if (i > -1) next[i] = {...next[i], quantity};
-            })}
-            onChangeWeight={(product, weightIndex) => mutate((next) => {
-                const i = next.indexOf(product);
-                if (i > -1) next[i] = {...next[i], weightIndex};
-            })}
-            onChangeCustomWeight={(product, customWeight) => mutate((next) => {
-                const i = next.indexOf(product);
-                if (i > -1) next[i] = {...next[i], customWeight};
-            })}
-            onChangeFriendlyName={(product, friendlyName) => mutate((next) => {
-                const i = next.indexOf(product);
-                if (i > -1) next[i] = {...next[i], friendlyName};
-            })}
-            onChangeInPack={(product, inPack) => mutate((next) => {
-                const i = next.indexOf(product);
-                if (i > -1) next[i] = {...next[i], inPack};
-            })}
-        />
+        <ProductsTable {...tableProps}/>
         <ProductsSummaryTable products={products}/>
+    </Segment>;
+}
+
+export function PackingStep({packing, setPacking, editable = true}) {
+    const groups = normalizeGroups(packing);
+
+    function setGroup(index, next) {
+        setPacking(groups.map((g, i) => (i === index ? next : g)));
+    }
+
+    function removeGroup(index) {
+        setPacking(groups.filter((_, i) => i !== index));
+    }
+
+    function addGroup() {
+        setPacking([...groups, {name: `Packing list ${groups.length + 1}`, contents: []}]);
+    }
+
+    const allProducts = groups.reduce((acc, g) => acc.concat(g.contents || []), []);
+
+    return <>
+        <Header size={"large"}>Packing</Header>
+        {editable && <p>Organize gear into separate lists — e.g. shelter, kitchen, or per person.</p>}
+
+        {groups.length === 0 && <Segment basic>
+            <p>No packing lists yet.</p>
+        </Segment>}
+
+        {groups.map((group, index) => (
+            <PackingGroup
+                key={index}
+                group={group}
+                editable={editable}
+                onChange={(next) => setGroup(index, next)}
+                onRemove={() => removeGroup(index)}
+            />
+        ))}
+
+        {editable && <Segment basic textAlign="center">
+            <Button icon labelPosition="left" onClick={addGroup}>
+                <Icon name="add"/> Add packing list
+            </Button>
+        </Segment>}
+
+        {groups.length > 1 && <Segment basic>
+            <Divider/>
+            <Header size="small" textAlign="center">Total across all lists</Header>
+            <ProductsSummaryTable products={allProducts}/>
+        </Segment>}
     </>;
 }
 

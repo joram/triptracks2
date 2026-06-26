@@ -36,23 +36,22 @@ async def get_trip_plans(user: User = Depends(verify_access_key)) -> list[TripPl
 
 
 def string_to_date(s):
+    # Return a plain dict: GetTripPlanResponse.dates is typed Dict, and
+    # pydantic v2 will not coerce a BaseModel into a Dict field.
     data = json.loads(s)
-    return TripPlanRequest.TripPlanDate(
-        type=data["type"],
-        dates=data["dates"],
-    )
+    return {"type": data["type"], "dates": data["dates"]}
 
 
 class GetTripPlanResponse(BaseModel):
     id: str
     user_id: str
     name: str
-    packing_lists: Optional[Union[List, Dict]]
+    packing_lists: Optional[Union[List, Dict]] = None
     people: Union[List, Dict]
     trails: Union[List, Dict]
-    pins: List
-    dates: Optional[Dict]
-    itinerary: List
+    pins: List = []
+    dates: Optional[Dict] = None
+    itinerary: List = []
     editable: bool
 
 

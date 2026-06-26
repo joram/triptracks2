@@ -11,7 +11,7 @@ router = APIRouter()
 
 
 class Forecast(BaseModel):
-    avalanche: Optional[Avalanche]
+    avalanche: Optional[Avalanche] = None
     weather: WeatherForecast
 
 

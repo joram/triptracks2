@@ -120,7 +120,7 @@ function TripPlan() {
     function renderStep() {
         switch (STEPS[activeStep].key) {
             case "routes":
-                return <RoutesStep trails={trails} setTrails={setTrails}/>;
+                return <RoutesStep trails={trails} setTrails={setTrails} pins={pins}/>;
             case "pins":
                 return <PinsStep pins={pins} setPins={setPins}/>;
             case "itinerary":

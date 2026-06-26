@@ -108,7 +108,11 @@ async function updatePlan(accessToken, plan, plan_id){
         toastErrors(response)
         return response
     }).catch(err => {
-        toastErrors(err.response.data)
+        if (err && err.response && err.response.data) {
+            toastErrors(err.response.data)
+        } else {
+            console.error("updatePlan failed", err)
+        }
     })
 }
 
