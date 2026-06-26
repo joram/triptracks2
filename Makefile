@@ -20,7 +20,7 @@ start_server:
 	cd ./server/; uvicorn src:app --reload
 
 _deploy_build:
-	cd web; npm run build
+	cd web; NODE_OPTIONS=--openssl-legacy-provider npm run build
 
 _deploy_push_all:
 	aws s3 sync ./web/build s3://app2.triptracks.io
@@ -39,10 +39,10 @@ deploy:	_update_browser_list _deploy_build _deploy_push_code _flush_cloudfront
 
 
 deploy_server: build_server
-	ssh 192.168.1.220 "cd /home/john/projects/nas; docker compose pull triptracks2 && docker compose up -d triptracks2"
-	ssh 192.168.1.220 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
+	ssh 192.168.1.123 "cd /home/john/projects/nas; docker compose pull triptracks2 && docker compose up -d triptracks2"
+	ssh 192.168.1.123 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
 server_logs:
-	ssh 192.168.1.220 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
+	ssh 192.168.1.123 "cd /home/john/projects/nas; docker compose logs -f triptracks2"
 
 build_api_type_definitions:
 	cd web; npx openapi-typescript https://triptracks2.oram.ca/openapi.json --output ./src/types/triptracks.d.ts

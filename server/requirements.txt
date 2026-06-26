@@ -1,10 +1,14 @@
-fastapi
-uvicorn[standard]
-authlib
-httpx
+# Web stack pinned: an unpinned fastapi rebuild jumped to a version that
+# rejects SQLAlchemy models as response types and crash-looped the server.
+fastapi==0.136.3
+starlette==1.3.1
+pydantic==2.13.4
+uvicorn[standard]==0.49.0
+authlib==1.7.2
+httpx==0.28.1
 google-auth
 google-api-python-client
-sqlalchemy
+sqlalchemy==2.0.51
 bs4
 pytest
 suntimes

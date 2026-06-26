@@ -54,7 +54,7 @@ async def get_packing_list(packing_list_id: str) -> PackingListResponse:
     )
 
 
-@router.post("/api/v0/packing_list/{packing_list_id}")
+@router.post("/api/v0/packing_list/{packing_list_id}", response_model=None)
 async def update_packing_list(
     packing_list_id: str,
     request: PackingListRequest,
