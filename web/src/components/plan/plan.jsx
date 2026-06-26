@@ -57,10 +57,10 @@ function TripPlan() {
             const dates = tp.dates || {type: "basic", dates: null};
             if (dates.type === "range") {
                 setIsMultiDay(true);
-                setDateRange(dates.dates || []);
+                setDateRange((dates.dates || []).map((d) => (d ? new Date(d) : d)));
             } else {
                 setIsMultiDay(false);
-                setDate(dates.dates);
+                setDate(dates.dates ? new Date(dates.dates) : null);
             }
             setLoading(false);
         });
