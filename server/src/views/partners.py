@@ -9,7 +9,7 @@ from utils.users import flesh_out_people
 router = APIRouter()
 
 
-@router.get("/api/v0/partners")
+@router.get("/api/v0/partners", response_model=None)
 async def partners(user: User = Depends(verify_access_key)) -> list[Partner]:
     session = get_session()
     qs = session.query(Partner).filter(Partner.user_id == user.id)
@@ -31,7 +31,7 @@ class AddPartnerRequest(BaseModel):
     email: str
 
 
-@router.post("/api/v0/partner")
+@router.post("/api/v0/partner", response_model=None)
 async def add_partner(
     request: AddPartnerRequest, user: User = Depends(verify_access_key)
 ) -> Partner:

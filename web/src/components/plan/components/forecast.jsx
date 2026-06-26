@@ -12,11 +12,15 @@ export function Forecast({isMultiDay, date, dateRange, trails}) {
 
 
     useEffect(() => {
-        const longestGeohash = trails.sort(
+        const longestGeohash = [...trails].sort(
             function (a, b) {
                 return b.length - a.length;
             }
         )[0];
+
+        if (!longestGeohash) {
+            return;
+        }
 
         fetch(`/trail_details/${longestGeohash}.json`).then(results => results.json()).then(newDetails => {
             setDetails(newDetails)
@@ -68,6 +72,14 @@ export function Forecast({isMultiDay, date, dateRange, trails}) {
         }
         console.log(results)
         return results;
+    }
+
+    if (!trails || trails.length === 0) {
+        return <Container>
+            <Segment basic>
+                Add a trail to see the forecast.
+            </Segment>
+        </Container>
     }
 
     if (forecast === null) {

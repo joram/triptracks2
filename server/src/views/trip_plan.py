@@ -16,7 +16,7 @@ D_FORMAT = "%Y-%m-%d"
 router = APIRouter()
 
 
-@router.get("/api/v0/trip_plans")
+@router.get("/api/v0/trip_plans", response_model=None)
 async def get_trip_plans(user: User = Depends(verify_access_key)) -> list[TripPlan]:
     session = get_session()
     qs = session.query(TripPlan).filter(TripPlan.user_id == user.id)
@@ -50,8 +50,8 @@ class GetTripPlanResponse(BaseModel):
     packing_lists: Optional[Union[List, Dict]]
     people: Union[List, Dict]
     trails: Union[List, Dict]
-    dates: Dict
-    itinerary: Dict
+    dates: Optional[Dict]
+    itinerary: List
     editable: bool
 
 
@@ -113,7 +113,7 @@ def validate_user_access(user: User, trip_plan: TripPlan):
     raise HTTPException(status_code=403, detail="access denied")
 
 
-@router.patch("/api/v0/trip_plan/{trip_plan_id}")
+@router.patch("/api/v0/trip_plan/{trip_plan_id}", response_model=None)
 async def update_trip_plan(
     trip_plan_id: str, request: TripPlanRequest, user: User = Depends(verify_access_key)
 ) -> TripPlan:
