@@ -1,4 +1,5 @@
 from fastapi import APIRouter, Depends, HTTPException
+from google.auth import exceptions as google_auth_exceptions
 from google.auth.transport import requests
 from google.oauth2 import id_token
 from pydantic import BaseModel
@@ -68,9 +69,14 @@ async def _access_key_from_oauth_code(code: str) -> dict:
                 headers={"DPoP": dpop_proof},
             )
             if exchange.status_code != 200:
+                try:
+                    err_body = exchange.json()
+                    err_msg = err_body.get("error", exchange.text[:200])
+                except Exception:
+                    err_msg = exchange.text[:200]
                 raise HTTPException(
                     status_code=400,
-                    detail=f"oauth code exchange failed ({exchange.status_code})",
+                    detail=f"oauth code exchange failed ({exchange.status_code}): {err_msg}",
                 )
             payload = exchange.json()
 
@@ -122,12 +128,17 @@ async def _access_key_from_oauth_code(code: str) -> dict:
 
 @router.post("/api/v0/access_key")
 async def create_access_key(request: AccessKeyRequest):
-    if VEILSTREAM_AUTH_BROKER_URL and not _looks_like_jwt(request.token):
+    # Preview OAuth returns an authorization code (or legacy vt_ ticket), not a JWT.
+    if not _looks_like_jwt(request.token):
         return await _access_key_from_oauth_code(request.token)
 
-    userinfo = id_token.verify_oauth2_token(
-        request.token, requests.Request(), GOOGLE_CLIENT_ID
-    )
+    try:
+        userinfo = id_token.verify_oauth2_token(
+            request.token, requests.Request(), GOOGLE_CLIENT_ID
+        )
+    except (ValueError, google_auth_exceptions.GoogleAuthError) as exc:
+        raise HTTPException(status_code=400, detail="invalid google credential") from exc
+
     email = userinfo["email"]
     return _issue_access_key(email, userinfo)
 

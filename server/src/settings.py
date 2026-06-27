@@ -2,8 +2,20 @@ import os
 
 GOOGLE_CLIENT_ID = "965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
 
+def _first_env(*keys: str) -> str:
+    for key in keys:
+        value = os.environ.get(key, "").strip().rstrip("/")
+        if value:
+            return value
+    return ""
+
+
 # VeilStream auth broker (preview OAuth). Unset in production for direct Google login.
-VEILSTREAM_AUTH_BROKER_URL = os.environ.get("VEILSTREAM_AUTH_BROKER_URL", "").rstrip("/")
+VEILSTREAM_AUTH_BROKER_URL = _first_env(
+    "VEILSTREAM_AUTH_BROKER_URL",
+    "REACT_APP_VEILSTREAM_AUTH_BROKER_URL",
+    "REACT_APP_OAUTH_ISSUER",
+)
 VEILSTREAM_JWT_AUDIENCE = os.environ.get(
     "VEILSTREAM_JWT_AUDIENCE", "veilstream-preview-auth"
 )
