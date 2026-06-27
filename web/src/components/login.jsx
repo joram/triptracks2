@@ -4,10 +4,12 @@ import {useContext} from "react";
 import {GoogleLogin} from "@react-oauth/google";
 import {UserContext} from "../App";
 import {login} from "../utils/api";
+import {brokerLoginUrl} from "../utils/brokerAuth";
 
 export function LoginButton(){
     let history = useHistory()
     const { user, setUser, setAccessToken } = useContext(UserContext);
+    const brokerUrl = brokerLoginUrl("google");
 
     async function loginSuccess(credentialResponse) {
         const token = credentialResponse.credential;
@@ -41,6 +43,17 @@ export function LoginButton(){
                 </Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
+    }
+
+    if (brokerUrl) {
+        return <div style={{
+            marginTop: "15px",
+            marginBottom: "15px",
+        }}>
+            <Button primary onClick={() => { window.location.href = brokerUrl; }}>
+                Sign in with Google
+            </Button>
+        </div>
     }
 
     return <div style={{

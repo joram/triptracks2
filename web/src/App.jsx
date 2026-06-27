@@ -15,6 +15,7 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import Home from "./components/home";
 import List from "./components/partners/list";
 import Login from "./components/login";
+import AuthCallback from "./components/authCallback";
 import Cookies from "universal-cookie";
 import {Segment} from "semantic-ui-react";
 import {ToastContainer} from "react-toastify";
@@ -78,7 +79,8 @@ function App() {
               <Route path="/plan/create"><TripPlanCreate/></Route>
               <Route path="/plan/:id"><Plan/></Route>
 
-              {/* DEFAULT */}
+              {/* AUTH */}
+              <Route path="/auth/callback"><AuthCallback/></Route>
               <Route path="/login"><Login/></Route>
               <Route path="/"><Home/></Route>
             </Switch>
