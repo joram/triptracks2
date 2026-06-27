@@ -10,6 +10,8 @@ root_db_dir = settings.CONFIG_DIR
 if os.path.exists("/data"):
     root_db_dir = "/data"
 
+os.makedirs(root_db_dir, exist_ok=True)
+
 db_filepath = f"{root_db_dir}/database.db"
 db_url = f"sqlite:///{db_filepath}"
 
