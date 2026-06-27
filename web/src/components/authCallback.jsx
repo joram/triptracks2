@@ -2,16 +2,16 @@ import { useContext, useEffect, useState } from 'react';
 import { Container, Header, Message, Segment } from 'semantic-ui-react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../App';
-import { loginWithBrokerTicket } from '../utils/api';
+import { login } from '../utils/api';
 
-const ERROR_MESSAGES = {
+const OAUTH_ERROR_MESSAGES = {
   oauth_denied: 'Sign-in was cancelled.',
   invalid_state: 'Sign-in session expired. Please try again.',
   state_expired: 'Sign-in session expired. Please try again.',
-  provider_exchange_failed: 'Sign-in with the provider failed. Please try again.',
+  provider_exchange_failed: 'Sign-in with Google failed. Please try again.',
   identity_validation_failed: 'Sign-in could not be verified. Please try again.',
-  callback_not_allowed: 'This preview URL is not allowlisted for auth broker login.',
-  provider_not_configured: 'Google sign-in is not configured for this project on the auth broker.',
+  callback_not_allowed: 'This site is not configured for sign-in.',
+  provider_not_configured: 'Google sign-in is not configured for this app.',
 };
 
 export default function AuthCallback() {
@@ -22,32 +22,27 @@ export default function AuthCallback() {
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
-    const brokerError = params.get('veilstream_error');
-    if (brokerError) {
-      setError(ERROR_MESSAGES[brokerError] || 'Sign-in failed. Please try again.');
+    const oauthError = params.get('veilstream_error');
+    if (oauthError) {
+      setError(OAUTH_ERROR_MESSAGES[oauthError] || 'Sign-in failed. Please try again.');
       return;
     }
 
-    const ticket = params.get('veilstream_ticket');
-    if (!ticket) {
+    // Same shape as Google One Tap: an opaque credential string exchanged server-side.
+    const credential = params.get('veilstream_ticket');
+    if (!credential) {
       history.replace('/login');
       return;
     }
 
-    loginWithBrokerTicket(ticket)
-      .then((data) => {
-        const profile = {
-          email: data.email,
-          name: data.name || data.email,
-          sub: data.provider_subject,
-          id: data.user_id,
-        };
+    login(credential)
+      .then(({ token, profile }) => {
         setUser(profile);
-        setAccessToken(data.token);
+        setAccessToken(token);
         history.replace('/');
       })
       .catch((err) => {
-        console.error('Broker login failed', err);
+        console.error('OAuth callback login failed', err);
         setError('Sign-in failed. Please try again.');
       });
   }, [history, location.search, setAccessToken, setUser]);
