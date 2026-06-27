@@ -6,7 +6,9 @@ services:
     environment:
       TT_CONFIG_DIR: /data
       PORT: "8000"
-      VEILSTREAM_AUTH_BROKER_URL: ${VEILSTREAM_AUTH_BROKER_URL:-}
+      # Web reads this at build time; API must have the same value at runtime for /oauth/token exchange.
+      VEILSTREAM_AUTH_BROKER_URL: ${VEILSTREAM_AUTH_BROKER_URL:-https://auth.veilstream.com}
+      REACT_APP_VEILSTREAM_AUTH_BROKER_URL: ${VEILSTREAM_AUTH_BROKER_URL:-https://auth.veilstream.com}
     volumes:
       - triptracks_data:/data
     ports:
