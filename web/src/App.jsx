@@ -48,7 +48,7 @@ function App() {
   }
 
   return (
-    <GoogleOAuthProvider clientId="1013231085571-8031504v6qlh5uv6pv9rmnbd43ftfav5.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="747834684984-1oc9jk95e5n2u2dl4p8qrokc307j06qn.apps.googleusercontent.com">
     <div className="App">
       <BrowserRouter>
         <UserContext.Provider value={{
