@@ -42,26 +42,39 @@ function toastErrors(response){
     }
 }
 
-async function login(token, profile){
-    return api.getClient().then(client => {
-        return client.create_access_key_api_v0_access_key_post({}, {token, profile}).then(response => {
-            toastErrors(response)
-            return response
-        })
-    });
-}
-
-async function loginWithBrokerTicket(ticket) {
-    const response = await fetch(apiUrl('/api/v0/access_key/broker'), {
+async function login(credential) {
+    const response = await fetch(apiUrl('/api/v0/access_key'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ticket }),
+        body: JSON.stringify({ token: credential }),
     });
     if (!response.ok) {
         const detail = await response.text();
-        throw new Error(detail || `broker login failed (${response.status})`);
+        throw new Error(detail || `login failed (${response.status})`);
     }
-    return response.json();
+    const data = await response.json();
+
+    let profile = {};
+    if (credential.includes('.') && credential.split('.').length >= 3) {
+        try {
+            profile = JSON.parse(atob(credential.split('.')[1]));
+        } catch (_) {
+            profile = {};
+        }
+    }
+    profile = {
+        ...profile,
+        email: data.email ?? profile.email,
+        name: data.name ?? profile.name ?? profile.email,
+        sub: data.provider_subject ?? profile.sub,
+        id: data.user_id,
+    };
+
+    return {
+        token: data.token,
+        user_id: data.user_id,
+        profile,
+    };
 }
 
 async function getPlans(accessToken){
@@ -198,7 +211,6 @@ async function removePartner(accessToken, partner_id){
 
 export {
     login,
-    loginWithBrokerTicket,
     getPlans,
     getPlan,
     updatePlan,

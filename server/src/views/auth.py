@@ -19,10 +19,6 @@ class AccessKeyRequest(BaseModel):
     token: str
 
 
-class BrokerTicketRequest(BaseModel):
-    ticket: str
-
-
 def _issue_access_key(email: str, userinfo: dict) -> dict:
     session = get_session()
     qs = session.query(User).filter(User.email == email)
@@ -50,33 +46,22 @@ def _issue_access_key(email: str, userinfo: dict) -> dict:
     }
 
 
-@router.post("/api/v0/access_key")
-async def create_access_key(request: AccessKeyRequest):
-    userinfo = id_token.verify_oauth2_token(
-        request.token, requests.Request(), GOOGLE_CLIENT_ID
-    )
-    email = userinfo["email"]
-    result = _issue_access_key(email, userinfo)
-    return result
-
-
-@router.post("/api/v0/access_key/broker")
-async def create_access_key_from_broker(request: BrokerTicketRequest):
+async def _access_key_from_oauth_ticket(ticket: str) -> dict:
     if not VEILSTREAM_AUTH_BROKER_URL:
-        raise HTTPException(status_code=400, detail="auth broker is not configured")
+        raise HTTPException(status_code=400, detail="external oauth is not configured")
 
     try:
         dpop_proof = build_dpop_proof(VEILSTREAM_AUTH_BROKER_URL)
         async with httpx.AsyncClient(timeout=15.0) as client:
             exchange = await client.post(
                 f"{VEILSTREAM_AUTH_BROKER_URL}/auth/session/exchange",
-                json={"ticket": request.ticket},
+                json={"ticket": ticket},
                 headers={"DPoP": dpop_proof},
             )
             if exchange.status_code != 200:
                 raise HTTPException(
                     status_code=400,
-                    detail=f"broker ticket exchange failed ({exchange.status_code})",
+                    detail=f"oauth callback exchange failed ({exchange.status_code})",
                 )
             payload = exchange.json()
 
@@ -88,11 +73,11 @@ async def create_access_key_from_broker(request: BrokerTicketRequest):
     except HTTPException:
         raise
     except httpx.HTTPError as exc:
-        raise HTTPException(status_code=502, detail=f"auth broker unreachable: {exc}") from exc
+        raise HTTPException(status_code=502, detail=f"oauth service unreachable: {exc}") from exc
 
     identity_token = payload.get("identity_token")
     if not identity_token:
-        raise HTTPException(status_code=400, detail="broker response missing identity_token")
+        raise HTTPException(status_code=400, detail="oauth exchange missing identity token")
 
     try:
         key_set = JsonWebKey.import_key_set(jwks)
@@ -111,17 +96,13 @@ async def create_access_key_from_broker(request: BrokerTicketRequest):
     user = payload.get("user") or {}
     email = user.get("email")
     if not email:
-        raise HTTPException(status_code=400, detail="broker response missing user email")
+        raise HTTPException(status_code=400, detail="oauth exchange missing user email")
 
     userinfo = {
         "email": email,
         "email_verified": user.get("email_verified", True),
         "sub": user.get("provider_subject"),
         "name": email.split("@", 1)[0],
-        "auth_broker": True,
-        "provider": payload.get("provider"),
-        "project_id": payload.get("project_id"),
-        "environment_id": payload.get("environment_id"),
     }
 
     result = _issue_access_key(email, userinfo)
@@ -129,6 +110,19 @@ async def create_access_key_from_broker(request: BrokerTicketRequest):
     result["name"] = userinfo["name"]
     result["provider_subject"] = userinfo.get("sub")
     return result
+
+
+@router.post("/api/v0/access_key")
+async def create_access_key(request: AccessKeyRequest):
+    # Preview OAuth callback: hosted broker returns a one-time ticket as the credential.
+    if request.token.startswith("vt_"):
+        return await _access_key_from_oauth_ticket(request.token)
+
+    userinfo = id_token.verify_oauth2_token(
+        request.token, requests.Request(), GOOGLE_CLIENT_ID
+    )
+    email = userinfo["email"]
+    return _issue_access_key(email, userinfo)
 
 
 @router.get("/api/v0/userinfo")
