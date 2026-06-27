@@ -5,20 +5,22 @@ export function brokerLoginUrl(provider = 'google') {
     return null;
   }
 
+  const callbackPath = process.env.REACT_APP_OAUTH_CALLBACK_PATH || '/auth/callback';
+  const callbackUrl = `${window.location.origin.replace(/\/$/, '')}${callbackPath}`;
+
+  const params = new URLSearchParams({ callback_url: callbackUrl });
+
+  // Optional overrides; when omitted the broker resolves project/environment from callback_url
+  // against the allowlist (preview hostname is the source of truth).
   const projectId = process.env.REACT_APP_VEILSTREAM_PROJECT_ID;
   const environmentId = process.env.REACT_APP_ENVIRONMENT_NAME;
-  if (!projectId || !environmentId) {
-    console.error('REACT_APP_VEILSTREAM_PROJECT_ID and REACT_APP_ENVIRONMENT_NAME are required for broker login');
-    return null;
+  if (projectId) {
+    params.set('project_id', projectId);
+  }
+  if (environmentId) {
+    params.set('environment_id', environmentId);
   }
 
-  const publicUrl = (process.env.REACT_APP_PUBLIC_URL || window.location.origin).replace(/\/$/, '');
-  const callbackPath = process.env.REACT_APP_OAUTH_CALLBACK_PATH || '/auth/callback';
-  const params = new URLSearchParams({
-    project_id: projectId,
-    environment_id: environmentId,
-    callback_url: `${publicUrl}${callbackPath}`,
-  });
   return `${broker}/auth/start/${provider}?${params}`;
 }
 
