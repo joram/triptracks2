@@ -3,10 +3,12 @@ import {Header} from "semantic-ui-react";
 
 const OpenAPIClientAxios = require('openapi-client-axios').default;
 
+const apiBase = process.env.REACT_APP_API_URL ?? 'https://triptracks2.oram.ca';
+
 const api = new OpenAPIClientAxios({
-    definition: 'https://triptracks2.oram.ca/openapi.json',
+    definition: `${apiBase}/openapi.json`,
     withServer: {
-        url: 'https://triptracks2.oram.ca'
+        url: apiBase || '/'
     }
 });
 api.init({
