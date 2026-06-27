@@ -1,4 +1,8 @@
+from typing import Optional
+from urllib.parse import urlencode
+
 from fastapi import APIRouter, Depends, HTTPException
+from fastapi.responses import RedirectResponse
 from google.auth.transport import requests
 from google.oauth2 import id_token
 from pydantic import BaseModel
@@ -17,6 +21,22 @@ router = APIRouter()
 
 class AccessKeyRequest(BaseModel):
     token: str
+
+
+_BROKER_ERROR_TO_OAUTH = {
+    "oauth_denied": "access_denied",
+    "invalid_state": "invalid_request",
+    "state_expired": "invalid_request",
+    "provider_exchange_failed": "server_error",
+    "identity_validation_failed": "server_error",
+    "callback_not_allowed": "access_denied",
+    "provider_not_configured": "server_error",
+}
+
+
+def _oauth_callback_redirect(**params: str) -> RedirectResponse:
+    query = urlencode({k: v for k, v in params.items() if v})
+    return RedirectResponse(url=f"/auth/callback?{query}")
 
 
 def _issue_access_key(email: str, userinfo: dict) -> dict:
@@ -110,6 +130,22 @@ async def _access_key_from_oauth_ticket(ticket: str) -> dict:
     result["name"] = userinfo["name"]
     result["provider_subject"] = userinfo.get("sub")
     return result
+
+
+@router.get("/api/v0/oauth/google/callback")
+async def oauth_google_callback(
+    veilstream_ticket: Optional[str] = None,
+    veilstream_error: Optional[str] = None,
+):
+    """Accept the hosted OAuth broker redirect, then forward to the SPA as a Google-style callback."""
+    if veilstream_error:
+        oauth_error = _BROKER_ERROR_TO_OAUTH.get(veilstream_error, "server_error")
+        return _oauth_callback_redirect(error=oauth_error)
+
+    if not veilstream_ticket:
+        return _oauth_callback_redirect(error="invalid_request")
+
+    return _oauth_callback_redirect(code=veilstream_ticket)
 
 
 @router.post("/api/v0/access_key")
