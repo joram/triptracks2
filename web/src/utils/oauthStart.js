@@ -5,7 +5,9 @@ export function externalOAuthStartUrl(provider = 'google') {
     return null;
   }
 
-  const callbackPath = process.env.REACT_APP_OAUTH_CALLBACK_PATH || '/auth/callback';
+  // Broker lands on the API first; the API rewrites to /auth/callback?code=… for the SPA.
+  const callbackPath =
+    process.env.REACT_APP_OAUTH_CALLBACK_PATH || '/api/v0/oauth/google/callback';
   const callbackUrl = `${window.location.origin.replace(/\/$/, '')}${callbackPath}`;
 
   const params = new URLSearchParams({ callback_url: callbackUrl });
