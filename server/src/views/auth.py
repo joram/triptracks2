@@ -9,9 +9,9 @@ from authlib.jose.errors import JoseError
 
 from db.database import get_session
 from db.models import User, prefixed_id, AccessToken
-from settings import GOOGLE_CLIENT_ID, VEILSTREAM_AUTH_BROKER_URL, VEILSTREAM_JWT_AUDIENCE
+from settings import GOOGLE_CLIENT_ID, VEILSTREAM_AUTH_ROUTER_URL, VEILSTREAM_JWT_AUDIENCE
 from utils.auth import verify_access_key
-from utils.broker_dpop import build_dpop_proof
+from utils.router_dpop import build_dpop_proof
 
 router = APIRouter()
 
@@ -53,12 +53,12 @@ def _issue_access_key(email: str, userinfo: dict) -> dict:
 
 
 async def _access_key_from_oauth_code(code: str) -> dict:
-    if not VEILSTREAM_AUTH_BROKER_URL:
+    if not VEILSTREAM_AUTH_ROUTER_URL:
         raise HTTPException(status_code=400, detail="external oauth is not configured")
 
-    token_url = f"{VEILSTREAM_AUTH_BROKER_URL}/oauth/token"
+    token_url = f"{VEILSTREAM_AUTH_ROUTER_URL}/oauth/token"
     try:
-        dpop_proof = build_dpop_proof(VEILSTREAM_AUTH_BROKER_URL, "/oauth/token")
+        dpop_proof = build_dpop_proof(VEILSTREAM_AUTH_ROUTER_URL, "/oauth/token")
         async with httpx.AsyncClient(timeout=15.0) as client:
             exchange = await client.post(
                 token_url,
@@ -81,7 +81,7 @@ async def _access_key_from_oauth_code(code: str) -> dict:
             payload = exchange.json()
 
             jwks_resp = await client.get(
-                f"{VEILSTREAM_AUTH_BROKER_URL}/.well-known/jwks.json"
+                f"{VEILSTREAM_AUTH_ROUTER_URL}/.well-known/jwks.json"
             )
             jwks_resp.raise_for_status()
             jwks = jwks_resp.json()
@@ -100,7 +100,7 @@ async def _access_key_from_oauth_code(code: str) -> dict:
             identity_token,
             key_set,
             claims_options={
-                "iss": {"essential": True, "value": VEILSTREAM_AUTH_BROKER_URL},
+                "iss": {"essential": True, "value": VEILSTREAM_AUTH_ROUTER_URL},
                 "aud": {"essential": True, "value": VEILSTREAM_JWT_AUDIENCE},
             },
         )

@@ -1,7 +1,8 @@
-/** Preview OAuth issuer (VeilStream auth broker). Disabled when unset. */
+/** Preview OAuth issuer (VeilStream auth router). Disabled when unset. */
 function oauthIssuer() {
   return (
     process.env.REACT_APP_OAUTH_ISSUER ||
+    process.env.REACT_APP_VEILSTREAM_AUTH_ROUTER_URL ||
     process.env.REACT_APP_VEILSTREAM_AUTH_BROKER_URL
   )?.replace(/\/$/, '') || null;
 }
@@ -30,7 +31,10 @@ export function externalOAuthStartUrl(provider = 'google') {
   });
 
   const projectId = process.env.REACT_APP_VEILSTREAM_PROJECT_ID;
-  const environmentId = process.env.REACT_APP_ENVIRONMENT_NAME;
+  const environmentId =
+    process.env.REACT_APP_VEILSTREAM_ENVIRONMENT_ID ||
+    process.env.REACT_APP_ENVIRONMENT_NAME ||
+    process.env.ENVIRONMENT_NAME;
   if (projectId) {
     params.set('project_id', projectId);
   }
