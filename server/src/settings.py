@@ -10,8 +10,10 @@ def _first_env(*keys: str) -> str:
     return ""
 
 
-# VeilStream auth broker (preview OAuth). Unset in production for direct Google login.
-VEILSTREAM_AUTH_BROKER_URL = _first_env(
+# VeilStream auth router (preview OAuth). Unset in production for direct Google login.
+VEILSTREAM_AUTH_ROUTER_URL = _first_env(
+    "VEILSTREAM_AUTH_ROUTER_URL",
+    "REACT_APP_VEILSTREAM_AUTH_ROUTER_URL",
     "VEILSTREAM_AUTH_BROKER_URL",
     "REACT_APP_VEILSTREAM_AUTH_BROKER_URL",
     "REACT_APP_OAUTH_ISSUER",
