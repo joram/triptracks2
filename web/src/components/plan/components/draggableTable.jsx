@@ -1,4 +1,4 @@
-import {DragDropContext, Draggable, Droppable} from "react-beautiful-dnd";
+import {DragDropContext, Draggable, Droppable} from "@hello-pangea/dnd";
 import {Button, Ref, Table} from "semantic-ui-react";
 import React from "react";
 

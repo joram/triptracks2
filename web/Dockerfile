@@ -7,7 +7,6 @@ ENV REACT_APP_API_URL=$REACT_APP_API_URL
 COPY package.json package-lock.json ./
 RUN npm ci
 COPY . .
-ENV NODE_OPTIONS=--openssl-legacy-provider
 RUN npm run build
 
 FROM nginx:alpine
