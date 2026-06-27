@@ -1,7 +1,7 @@
 import {Button, Container, Dropdown, Header, Segment} from "semantic-ui-react";
 import {useHistory} from "react-router-dom/cjs/react-router-dom";
 import {useContext} from "react";
-import GoogleLogin from "react-google-login";
+import {GoogleLogin} from "@react-oauth/google";
 import {UserContext} from "../App";
 import {login} from "../utils/api";
 
@@ -9,12 +9,14 @@ export function LoginButton(){
     let history = useHistory()
     const { user, setUser, setAccessToken } = useContext(UserContext);
 
-    async function loginSuccess(response) {
-        login(response.tokenId, response.profileObj).then(data => {
-            const {token, user_id} = data.data
-            response.profileObj.id = user_id
-            setUser(response.profileObj)
-            setAccessToken(token)
+    async function loginSuccess(credentialResponse) {
+        const token = credentialResponse.credential;
+        const profileObj = JSON.parse(atob(token.split(".")[1]));
+        login(token, profileObj).then(data => {
+            const {token: accessToken, user_id} = data.data
+            profileObj.id = user_id
+            setUser(profileObj)
+            setAccessToken(accessToken)
         });
     }
 
@@ -24,8 +26,8 @@ export function LoginButton(){
         history.push("/")
     }
 
-    if (user !== undefined && user !== null && user.google_userinfo !== undefined){
-        const googleUserInfo = user.google_userinfo
+    if (user !== undefined && user !== null && (user.google_userinfo !== undefined || user.email !== undefined)){
+        const googleUserInfo = user.google_userinfo ?? user
         return <Dropdown
             item
             labeled
@@ -46,10 +48,8 @@ export function LoginButton(){
         marginBottom: "15px",
     }}>
         <GoogleLogin
-            clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
-            buttonText="Login"
             onSuccess={loginSuccess}
-            cookiePolicy={'single_host_origin'}
+            onError={() => console.log("Login Failed")}
         />
     </div>
 }

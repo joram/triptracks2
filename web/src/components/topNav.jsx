@@ -13,7 +13,7 @@ const TopNav = ({ fixed}) => {
         Sign in
     </Menu.Item>;
     if (user !== null && user !== undefined && accessToken !== null && accessToken !== undefined){
-        let username = user.name
+        let username = user.google_userinfo?.name ?? user.name
         loginInOrOut = <Dropdown
             active={window.location.pathname.startsWith("/login")}
             text={username}

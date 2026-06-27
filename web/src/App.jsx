@@ -11,10 +11,11 @@ import TripPlanList from "./components/plan/list";
 import TripPlanCreate from "./components/plan/create";
 import Plan from "./components/plan/plan";
 import React, {useState} from "react";
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import Home from "./components/home";
 import List from "./components/partners/list";
 import Login from "./components/login";
-import Cookies from "universal-cookie/es6";
+import Cookies from "universal-cookie";
 import {Segment} from "semantic-ui-react";
 import {ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
@@ -46,6 +47,7 @@ function App() {
   }
 
   return (
+    <GoogleOAuthProvider clientId="965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com">
     <div className="App">
       <BrowserRouter>
         <UserContext.Provider value={{
@@ -86,6 +88,7 @@ function App() {
         </UserContext.Provider>
       </BrowserRouter>
     </div>
+    </GoogleOAuthProvider>
   );
 }
 
