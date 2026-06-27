@@ -6,6 +6,7 @@ services:
     environment:
       TT_CONFIG_DIR: /data
       PORT: "8000"
+      VEILSTREAM_AUTH_BROKER_URL: ${VEILSTREAM_AUTH_BROKER_URL:-}
     volumes:
       - triptracks_data:/data
     ports:
@@ -19,6 +20,11 @@ services:
       args:
         # Same-origin requests; nginx proxies /api to the api service.
         REACT_APP_API_URL: ""
+        REACT_APP_VEILSTREAM_AUTH_BROKER_URL: ${VEILSTREAM_AUTH_BROKER_URL:-}
+        REACT_APP_VEILSTREAM_PROJECT_ID: ${VEILSTREAM_PROJECT_ID:-}
+        REACT_APP_ENVIRONMENT_NAME: ${ENVIRONMENT_NAME:-}
+        REACT_APP_PUBLIC_URL: ${PUBLIC_URL:-}
+        REACT_APP_OAUTH_CALLBACK_PATH: ${OAUTH_CALLBACK_PATH:-/auth/callback}
     ports:
       - "80:80"
     depends_on:

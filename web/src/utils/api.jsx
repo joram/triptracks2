@@ -5,6 +5,10 @@ const OpenAPIClientAxios = require('openapi-client-axios').default;
 
 const apiBase = process.env.REACT_APP_API_URL ?? 'https://triptracks2.oram.ca';
 
+function apiUrl(path) {
+    return `${apiBase}${path}`;
+}
+
 const api = new OpenAPIClientAxios({
     definition: `${apiBase}/openapi.json`,
     withServer: {
@@ -45,6 +49,19 @@ async function login(token, profile){
             return response
         })
     });
+}
+
+async function loginWithBrokerTicket(ticket) {
+    const response = await fetch(apiUrl('/api/v0/access_key/broker'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ticket }),
+    });
+    if (!response.ok) {
+        const detail = await response.text();
+        throw new Error(detail || `broker login failed (${response.status})`);
+    }
+    return response.json();
 }
 
 async function getPlans(accessToken){
@@ -181,6 +198,7 @@ async function removePartner(accessToken, partner_id){
 
 export {
     login,
+    loginWithBrokerTicket,
     getPlans,
     getPlan,
     updatePlan,
