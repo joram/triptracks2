@@ -1,8 +1,4 @@
-from typing import Optional
-from urllib.parse import urlencode
-
 from fastapi import APIRouter, Depends, HTTPException
-from fastapi.responses import RedirectResponse
 from google.auth.transport import requests
 from google.oauth2 import id_token
 from pydantic import BaseModel
@@ -23,20 +19,9 @@ class AccessKeyRequest(BaseModel):
     token: str
 
 
-_BROKER_ERROR_TO_OAUTH = {
-    "oauth_denied": "access_denied",
-    "invalid_state": "invalid_request",
-    "state_expired": "invalid_request",
-    "provider_exchange_failed": "server_error",
-    "identity_validation_failed": "server_error",
-    "callback_not_allowed": "access_denied",
-    "provider_not_configured": "server_error",
-}
-
-
-def _oauth_callback_redirect(**params: str) -> RedirectResponse:
-    query = urlencode({k: v for k, v in params.items() if v})
-    return RedirectResponse(url=f"/auth/callback?{query}")
+def _looks_like_jwt(value: str) -> bool:
+    parts = value.split(".")
+    return len(parts) == 3 and all(parts)
 
 
 def _issue_access_key(email: str, userinfo: dict) -> dict:
@@ -66,22 +51,26 @@ def _issue_access_key(email: str, userinfo: dict) -> dict:
     }
 
 
-async def _access_key_from_oauth_ticket(ticket: str) -> dict:
+async def _access_key_from_oauth_code(code: str) -> dict:
     if not VEILSTREAM_AUTH_BROKER_URL:
         raise HTTPException(status_code=400, detail="external oauth is not configured")
 
+    token_url = f"{VEILSTREAM_AUTH_BROKER_URL}/oauth/token"
     try:
-        dpop_proof = build_dpop_proof(VEILSTREAM_AUTH_BROKER_URL)
+        dpop_proof = build_dpop_proof(VEILSTREAM_AUTH_BROKER_URL, "/oauth/token")
         async with httpx.AsyncClient(timeout=15.0) as client:
             exchange = await client.post(
-                f"{VEILSTREAM_AUTH_BROKER_URL}/auth/session/exchange",
-                json={"ticket": ticket},
+                token_url,
+                data={
+                    "grant_type": "authorization_code",
+                    "code": code,
+                },
                 headers={"DPoP": dpop_proof},
             )
             if exchange.status_code != 200:
                 raise HTTPException(
                     status_code=400,
-                    detail=f"oauth callback exchange failed ({exchange.status_code})",
+                    detail=f"oauth code exchange failed ({exchange.status_code})",
                 )
             payload = exchange.json()
 
@@ -95,7 +84,7 @@ async def _access_key_from_oauth_ticket(ticket: str) -> dict:
     except httpx.HTTPError as exc:
         raise HTTPException(status_code=502, detail=f"oauth service unreachable: {exc}") from exc
 
-    identity_token = payload.get("identity_token")
+    identity_token = payload.get("id_token") or payload.get("access_token")
     if not identity_token:
         raise HTTPException(status_code=400, detail="oauth exchange missing identity token")
 
@@ -113,15 +102,14 @@ async def _access_key_from_oauth_ticket(ticket: str) -> dict:
     except JoseError as exc:
         raise HTTPException(status_code=400, detail=f"invalid identity token: {exc}") from exc
 
-    user = payload.get("user") or {}
-    email = user.get("email")
+    email = claims.get("email")
     if not email:
         raise HTTPException(status_code=400, detail="oauth exchange missing user email")
 
     userinfo = {
         "email": email,
-        "email_verified": user.get("email_verified", True),
-        "sub": user.get("provider_subject"),
+        "email_verified": claims.get("email_verified", True),
+        "sub": claims.get("provider_subject"),
         "name": email.split("@", 1)[0],
     }
 
@@ -132,27 +120,10 @@ async def _access_key_from_oauth_ticket(ticket: str) -> dict:
     return result
 
 
-@router.get("/api/v0/oauth/google/callback")
-async def oauth_google_callback(
-    veilstream_ticket: Optional[str] = None,
-    veilstream_error: Optional[str] = None,
-):
-    """Accept the hosted OAuth broker redirect, then forward to the SPA as a Google-style callback."""
-    if veilstream_error:
-        oauth_error = _BROKER_ERROR_TO_OAUTH.get(veilstream_error, "server_error")
-        return _oauth_callback_redirect(error=oauth_error)
-
-    if not veilstream_ticket:
-        return _oauth_callback_redirect(error="invalid_request")
-
-    return _oauth_callback_redirect(code=veilstream_ticket)
-
-
 @router.post("/api/v0/access_key")
 async def create_access_key(request: AccessKeyRequest):
-    # Preview OAuth callback: hosted broker returns a one-time ticket as the credential.
-    if request.token.startswith("vt_"):
-        return await _access_key_from_oauth_ticket(request.token)
+    if VEILSTREAM_AUTH_BROKER_URL and not _looks_like_jwt(request.token):
+        return await _access_key_from_oauth_code(request.token)
 
     userinfo = id_token.verify_oauth2_token(
         request.token, requests.Request(), GOOGLE_CLIENT_ID

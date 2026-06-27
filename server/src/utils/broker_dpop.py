@@ -1,4 +1,4 @@
-"""Build a DPoP proof (RFC 9449) for auth-broker ticket exchange."""
+"""Build a DPoP proof (RFC 9449) for auth-broker token exchange."""
 
 from __future__ import annotations
 
@@ -15,11 +15,11 @@ def _coord_b64url(value: int) -> str:
     return base64.urlsafe_b64encode(value.to_bytes(length, "big")).decode().rstrip("=")
 
 
-def build_dpop_proof(broker_url: str) -> str:
-    """Return a signed DPoP JWT for POST {broker_url}/auth/session/exchange."""
+def build_dpop_proof(broker_url: str, token_path: str = "/oauth/token") -> str:
+    """Return a signed DPoP JWT for POST {broker_url}{token_path}."""
     private_key = ec.generate_private_key(ec.SECP256R1())
     public_numbers = private_key.public_key().public_numbers()
-    htu = broker_url.rstrip("/") + "/auth/session/exchange"
+    htu = broker_url.rstrip("/") + token_path
     headers = {
         "typ": "dpop+jwt",
         "alg": "ES256",

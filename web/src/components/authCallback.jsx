@@ -3,6 +3,7 @@ import { Container, Header, Message, Segment } from 'semantic-ui-react';
 import { useHistory, useLocation } from 'react-router-dom';
 import { UserContext } from '../App';
 import { login } from '../utils/api';
+import { takeExpectedOAuthState } from '../utils/oauthStart';
 
 const OAUTH_ERROR_MESSAGES = {
   access_denied: 'Sign-in was cancelled.',
@@ -20,6 +21,7 @@ export default function AuthCallback() {
     const params = new URLSearchParams(location.search);
     const oauthError = params.get('error');
     if (oauthError) {
+      takeExpectedOAuthState();
       setError(OAUTH_ERROR_MESSAGES[oauthError] || 'Sign-in failed. Please try again.');
       return;
     }
@@ -27,6 +29,13 @@ export default function AuthCallback() {
     const code = params.get('code');
     if (!code) {
       history.replace('/login');
+      return;
+    }
+
+    const expectedState = takeExpectedOAuthState();
+    const returnedState = params.get('state');
+    if (expectedState && returnedState !== expectedState) {
+      setError('Sign-in session expired. Please try again.');
       return;
     }
 
