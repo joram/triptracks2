@@ -10,6 +10,7 @@ from db.database import get_session
 from db.models import User, prefixed_id, AccessToken
 from settings import GOOGLE_CLIENT_ID, VEILSTREAM_AUTH_BROKER_URL, VEILSTREAM_JWT_AUDIENCE
 from utils.auth import verify_access_key
+from utils.broker_dpop import build_dpop_proof
 
 router = APIRouter()
 
@@ -65,10 +66,12 @@ async def create_access_key_from_broker(request: BrokerTicketRequest):
         raise HTTPException(status_code=400, detail="auth broker is not configured")
 
     try:
+        dpop_proof = build_dpop_proof(VEILSTREAM_AUTH_BROKER_URL)
         async with httpx.AsyncClient(timeout=15.0) as client:
             exchange = await client.post(
                 f"{VEILSTREAM_AUTH_BROKER_URL}/auth/session/exchange",
                 json={"ticket": request.ticket},
+                headers={"DPoP": dpop_proof},
             )
             if exchange.status_code != 200:
                 raise HTTPException(
