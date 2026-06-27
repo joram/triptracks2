@@ -1,7 +1,7 @@
+import axios from "axios";
+import OpenAPIClientAxios from "openapi-client-axios";
 import {toast} from "react-toastify";
 import {Header} from "semantic-ui-react";
-
-const OpenAPIClientAxios = require('openapi-client-axios').default;
 
 const apiBase = process.env.REACT_APP_API_URL ?? 'https://triptracks2.oram.ca';
 
@@ -13,15 +13,15 @@ const api = new OpenAPIClientAxios({
     definition: `${apiBase}/openapi.json`,
     withServer: {
         url: apiBase || '/'
-    }
-});
-api.init({
-    axiosConfigDefaults: {
+    },
+    // CRA/webpack mishandles axios inside openapi-client-axios; pass our own instance.
+    axiosInstance: axios.create({
         headers: {
             'Access-Key': 'your2',
-        }
-    },
-})
+        },
+    }),
+});
+api.init()
     .then(client => {
         console.log('Client is ready');
     })
