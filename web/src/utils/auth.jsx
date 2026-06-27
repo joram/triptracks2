@@ -1,8 +1,8 @@
 function url(path){
-    let base = "https://triptracks2.oram.ca"
-    if (process.env.REACT_APP_ENVIRONMENT==="local")
-        base = "http://localhost:8000"
-    return base+path
+    if (process.env.REACT_APP_ENVIRONMENT === "local")
+        return "http://localhost:8000" + path
+    const base = process.env.REACT_APP_API_URL ?? "https://triptracks2.oram.ca"
+    return base + path
 }
 
 function handleApiErrors(response){
