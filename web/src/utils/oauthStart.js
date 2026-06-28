@@ -1,10 +1,17 @@
 /** Preview OAuth issuer (VeilStream auth router). Disabled when unset. */
 function oauthIssuer() {
-  return (
+  const raw =
     process.env.REACT_APP_OAUTH_ISSUER ||
     process.env.REACT_APP_VEILSTREAM_AUTH_ROUTER_URL ||
-    process.env.REACT_APP_VEILSTREAM_AUTH_BROKER_URL
-  )?.replace(/\/$/, '') || null;
+    process.env.REACT_APP_VEILSTREAM_AUTH_BROKER_URL;
+  if (!raw) {
+    return null;
+  }
+  const trimmed = raw.trim().replace(/\/$/, '');
+  if (/^https?:\/\//i.test(trimmed)) {
+    return trimmed;
+  }
+  return `https://${trimmed}`;
 }
 
 function randomState() {
