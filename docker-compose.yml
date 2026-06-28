@@ -6,9 +6,9 @@ services:
     environment:
       TT_CONFIG_DIR: /data
       PORT: "8000"
-      # Web reads this at build time; API must have the same value at runtime for /oauth/token exchange.
-      VEILSTREAM_AUTH_ROUTER_URL: ${VEILSTREAM_AUTH_ROUTER_URL:-${VEILSTREAM_AUTH_BROKER_URL:-https://auth.veilstream.com}}
-      REACT_APP_VEILSTREAM_AUTH_ROUTER_URL: ${VEILSTREAM_AUTH_ROUTER_URL:-${VEILSTREAM_AUTH_BROKER_URL:-https://auth.veilstream.com}}
+      # Plain default — VeilStream does not expand compose ${...} syntax at deploy time.
+      # Override on the api service in VeilStream env vars if needed (not just web/build args).
+      VEILSTREAM_AUTH_ROUTER_URL: https://auth.veilstream.com
     volumes:
       - triptracks_data:/data
     ports:
