@@ -15,6 +15,9 @@ def _normalize_https_url(url: str) -> str:
     url = url.strip().rstrip("/")
     if not url:
         return ""
+    # VeilStream passes compose ${VAR:-default} literals without expanding them.
+    if url.startswith("${"):
+        return ""
     if not url.startswith(("http://", "https://")):
         return f"https://{url}"
     return url
