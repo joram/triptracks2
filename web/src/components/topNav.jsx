@@ -2,6 +2,38 @@ import {Container, Dropdown, Header, Icon, Image, Menu} from "semantic-ui-react"
 import TrailsSearch from "./trails/TrailsSearch";
 import {useContext} from "react";
 import {UserContext} from "../App";
+import Gravatar from "react-gravatar";
+
+function userName(user) {
+    return user.google_userinfo?.name ?? user.name ?? user.email ?? "Account";
+}
+
+function userEmail(user) {
+    return user.google_userinfo?.email ?? user.email;
+}
+
+function userPicture(user) {
+    return user.google_userinfo?.picture ?? user.picture ?? null;
+}
+
+function UserAvatar({user, size = 24}) {
+    const picture = userPicture(user);
+    const email = userEmail(user);
+    if (picture) {
+        return <Image avatar src={picture} style={{marginRight: "0.45em"}} />;
+    }
+    if (email) {
+        return (
+            <Gravatar
+                email={email}
+                size={size}
+                style={{borderRadius: "50%", marginRight: "0.45em", verticalAlign: "middle"}}
+                default="mp"
+            />
+        );
+    }
+    return <Icon name="user" style={{marginRight: "0.35em"}} />;
+}
 
 const TopNav = ({ fixed}) => {
     const { user, setUser, accessToken, setAccessToken } = useContext(UserContext);
@@ -13,11 +45,16 @@ const TopNav = ({ fixed}) => {
         Sign in
     </Menu.Item>;
     if (user !== null && user !== undefined && accessToken !== null && accessToken !== undefined){
-        let username = user.google_userinfo?.name ?? user.name
         loginInOrOut = <Dropdown
             active={window.location.pathname.startsWith("/login")}
-            text={username}
-            pointing className='link item'
+            pointing
+            className="link item"
+            trigger={
+                <span style={{display: "inline-flex", alignItems: "center"}}>
+                    <UserAvatar user={user} />
+                    {userName(user)}
+                </span>
+            }
         >
             <Dropdown.Menu>
                 <Dropdown.Item onClick={() => {
