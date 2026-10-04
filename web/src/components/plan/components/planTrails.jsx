@@ -1,12 +1,18 @@
 import * as React from "react";
-import {useEffect, useRef, useState} from "react";
-import {RMap} from "rlayers";
+import {useEffect, useMemo, useRef, useState} from "react";
+import {RMap, RLayerVector} from "rlayers";
+import GeoJSON from "ol/format/GeoJSON";
 import LayersControl from "../../trails/LayersControl";
-import Trails from "../../trails/Trails";
+import {TrailStyle} from "../../trails/Trails";
 import {fromLonLat} from "ol/proj";
+import {getTrail, getTrailGeojson} from "../../../utils/api";
 
-function MapBox({geojson, lat, lng, geohash}) {
+function MapBox({geojson, lat, lng}) {
     const mapRef = useRef();
+    const features = useMemo(
+        () => geojson ? new GeoJSON({featureProjection: "EPSG:3857"}).readFeatures(geojson) : [],
+        [geojson]
+    );
 
     return (
         <React.Fragment>
@@ -23,7 +29,9 @@ function MapBox({geojson, lat, lng, geohash}) {
                 // onMoveEnd={onChange}
             >
                 <LayersControl />
-                <Trails viewGeohash={geohash} maxTrails={10} />
+                {features.length > 0 && <RLayerVector zIndex={5} features={features}>
+                    <TrailStyle width={4}/>
+                </RLayerVector>}
             </RMap>
         </React.Fragment>
     );
@@ -34,20 +42,21 @@ function PlanTrail({geohash}){
     let [trail, setTrail] = useState(null)
 
     useEffect(() => {
-        fetch(`/trail_details/${geohash}.json`).then(results => results.json()).then(newDetails => {
-            setDetails(newDetails)
-            fetch(`/trails/${geohash}.geojson`).then(results => results.json()).then(newTrail => {
+        // Trails without a usable line still have details, so the geometry is optional.
+        Promise.all([getTrail(geohash), getTrailGeojson(geohash).catch(() => null)])
+            .then(([newDetails, newTrail]) => {
+                setDetails(newDetails)
                 setTrail(newTrail)
                 setLoading(false)
-            });
-        })
+            })
+            .catch((error) => console.error(error))
     }, [geohash]);
 
     if(loading){
         return <></>
     }
 
-    return <MapBox geojson={trail} lat={details.center_lat} lng={details.center_lng} geohash={details.geohash}/>
+    return <MapBox geojson={trail} lat={details.center_lat} lng={details.center_lng}/>
 }
 
 function PlanTrails({ trails }) {

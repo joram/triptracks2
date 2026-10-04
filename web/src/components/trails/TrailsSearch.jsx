@@ -1,12 +1,7 @@
-import _ from 'lodash'
 import React from 'react'
 import {Search} from 'semantic-ui-react'
 import {withRouter} from "react-router-dom";
-
-let source = []
-fetch("/trails.search.json").then(r => r.json()).then(data => {
-  source = data
-})
+import {searchTrails} from "../../utils/api";
 
 const initialState = {
   loading: false,
@@ -39,18 +34,16 @@ function TrailSearch(props) {
     clearTimeout(timeoutRef.current)
     dispatch({ type: 'START_SEARCH', query: data.value })
 
+    const query = data.value.trim()
+    if (query.length < 2) {
+      dispatch({ type: 'FINISH_SEARCH', results: [] })
+      return
+    }
+
     timeoutRef.current = setTimeout(() => {
-      if (data.value.length === 0) {
-        return []
-      }
-
-      const re = new RegExp(_.escapeRegExp(data.value), 'i')
-      const isMatch = (result) => re.test(result.title)
-
-      dispatch({
-        type: 'FINISH_SEARCH',
-        results: _.filter(source, isMatch),
-      })
+      searchTrails(query)
+        .then((results) => dispatch({ type: 'FINISH_SEARCH', results }))
+        .catch(() => dispatch({ type: 'FINISH_SEARCH', results: [] }))
     }, 300)
   }, [])
 

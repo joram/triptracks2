@@ -58,7 +58,8 @@ function App() {
         }}>
           <TopNav/>
           <ToastContainer />
-          <Segment vertical style={{ margin: '0em 0em 0em', padding: '5em 0em' }}>
+          {/* Top padding matches the fixed nav's 64px height so full-width maps sit flush under it. */}
+          <Segment vertical style={{ margin: '0em 0em 0em', padding: '64px 0em 5em' }}>
             <Switch>
 
               {/* TRAILS */}

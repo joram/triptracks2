@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {getForecast} from "../../../utils/api";
+import {getForecast, getTrail} from "../../../utils/api";
 import moment from "moment";
 import {Container, Image, Segment, Table} from "semantic-ui-react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -22,7 +22,7 @@ export function Forecast({isMultiDay, date, dateRange, trails}) {
             return;
         }
 
-        fetch(`/trail_details/${longestGeohash}.json`).then(results => results.json()).then(newDetails => {
+        getTrail(longestGeohash).then(newDetails => {
             setDetails(newDetails)
             console.log("getting the forecast", newDetails)
             getForecast(newDetails.center_lat, newDetails.center_lng).then(response => {

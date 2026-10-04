@@ -1,46 +1,32 @@
-import {RControl, RLayerTile, RLayerTileJSON, ROSM} from "rlayers";
+import {RControl, RLayerTile, ROSM} from "rlayers";
 import layersIcon from "./layers.svg";
+import "./LayersControl.css";
 
 const layersButton = (
-  <div style={{marginLeft:"8px", marginTop:"80px"}}>
-    <button>
-      <img src={layersIcon} alt="layers" />
-    </button>
-  </div>
+  <button title="Map layers">
+    <img src={layersIcon} alt="layers" />
+  </button>
 );
+
+// Mute the topo base map to a sepia tone so trail lines stand out on top of it.
+const SEPIA_FILTER = "sepia(0.7) saturate(0.6) contrast(0.9) brightness(1.05)";
+const applySepia = (e) => { e.context.filter = SEPIA_FILTER; };
+const clearSepia = (e) => { e.context.filter = "none"; };
 
 export default function LayersControl(){
     return <RControl.RLayers element={layersButton}>
-        <ROSM properties={{ label: "OpenStreetMap" }} />
+        {/* RLayers shows the first child by default. */}
         <RLayerTile
           properties={{ label: "OpenTopo" }}
           url="https://{a-c}.tile.opentopomap.org/{z}/{x}/{y}.png"
           attributions="Kartendaten: © OpenStreetMap-Mitwirkende, SRTM | Kartendarstellung: © OpenTopoMap (CC-BY-SA)"
+          onPreRender={applySepia}
+          onPostRender={clearSepia}
         />
-        <RLayerTile
-          properties={{ label: "landcovercanada" }}
-          url="http://ows.geobase.ca/wms/geobase_en/{z}/{x}/{y}.png"
-          attributions="Kartendaten: © OpenStreetMap-Mitwirkende, SRTM | Kartendarstellung: © OpenTopoMap (CC-BY-SA)"
-        />
-       <RLayerTile
-          properties={{ label: "HillShading" }}
-          url="http://tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png"
-        />
-        <RLayerTile
-          properties={{ label: "Mapnik" }}
-          url="https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png"
-        />
+        <ROSM properties={{ label: "OpenStreetMap" }} />
         <RLayerTile
           properties={{ label: "Transport" }}
-          url="http://tile.thunderforest.com/transport/{z}/{x}/{y}.png"
-        />
-        <RLayerTile
-          properties={{ label: "Watercolor" }}
-          url="http://c.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg"
-        />
-        <RLayerTileJSON
-          properties={{ label: "Mapbox TileJSON" }}
-          url="https://a.tiles.mapbox.com/v3/aj.1x1-degrees.json?secure=1"
+          url="https://tile.thunderforest.com/transport/{z}/{x}/{y}.png"
         />
       </RControl.RLayers>
 }

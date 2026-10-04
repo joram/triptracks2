@@ -1,115 +1,97 @@
 import GeoJSON from "ol/format/GeoJSON";
+import {transformExtent} from "ol/proj";
 import {RLayerVector, RStyle} from "rlayers";
-import React, {useEffect} from "react";
-import {Redirect} from "react-router-dom";
+import React, {useEffect, useState} from "react";
+import {useHistory} from "react-router-dom";
+import {getTrailsInBbox} from "../../utils/api";
 
-let redirectTo = null
+const geojsonFormat = new GeoJSON({featureProjection: "EPSG:3857"});
 
-
-async function getData(url){
-    return fetch(url).then(response => {return response.text()})
+// The map's visible extent as [minLng, minLat, maxLng, maxLat], for onMoveEnd handlers.
+export function viewBbox(map) {
+    const extent = map.getView().calculateExtent(map.getSize());
+    return transformExtent(extent, "EPSG:3857", "EPSG:4326").map((v) => Number(v.toFixed(4)));
 }
 
-function Trail({geohash, url}){
-    let [features, setFeatures] = React.useState(null)
+// Blue contrasts with the warm sepia topo base; selected routes switch to magenta.
+// A light casing under each line keeps it readable over dark hillshade.
+export const TRAIL_COLOR = "#1a56db";
+export const SELECTED_TRAIL_COLOR = "#d61f84";
 
-    useEffect(() => {
-        getData(url).then(jsonDataString => {
-            let features = new GeoJSON({featureProjection: "EPSG:3857"}).readFeatures(jsonDataString)
-            setFeatures(features)
-        })
-    }, [url]);
-
-    function onClick(e){
-        e.stopPropagation()
-        redirectTo = geohash
-    }
-
-    if(features===null){
-        return null
-    }
-
-    return <RLayerVector
-        zIndex={5}
-        format={new GeoJSON({featureProjection: "EPSG:3857"})}
-        features={features}
-        onClick={onClick.bind(this)}
-    >
+export function TrailStyle({color = TRAIL_COLOR, width = 3}) {
+    return <RStyle.RStyleArray>
         <RStyle.RStyle>
-            <RStyle.RStroke color="green" width={3}/>
+            <RStyle.RStroke color="rgba(255, 255, 255, 0.85)" width={width + 3}/>
         </RStyle.RStyle>
-    </RLayerVector>
+        <RStyle.RStyle>
+            <RStyle.RStroke color={color} width={width}/>
+        </RStyle.RStyle>
+    </RStyle.RStyleArray>;
 }
 
-function Trails({viewGeohash, maxTrails}){
-    let [manifest, setManifest] = React.useState(null)
+function TrailLayer({features, layerKey, color, width, zIndex, onClick}) {
+    if (features.length === 0) {
+        return null;
+    }
+    // rlayers doesn't pick up changes to `features`, so remount when they change.
+    return <RLayerVector key={layerKey} zIndex={zIndex} features={features} onClick={onClick}>
+        <TrailStyle color={color} width={width}/>
+    </RLayerVector>;
+}
+
+// Trail lines inside `bbox`. Clicking a trail calls onTrailClick(trailId), or opens its
+// detail page when no handler is given. Trails in `selected` are drawn highlighted.
+function Trails({bbox, maxTrails, selected = [], onTrailClick}) {
+    const [loaded, setLoaded] = useState({key: null, features: []});
+    const history = useHistory();
+    const bboxKey = bbox ? bbox.join(",") : null;
 
     useEffect(() => {
-        fetch("/trails.manifest.json")
-        .then(response => response.json())
-        .then((jsonData) => {
-            setManifest(jsonData)
-        }).catch((error) => {
-            console.error(error)
-        })
-    }, []);
-
-
-    function getTrails(limit=1){
-        if(manifest===null){
-            return []
+        if (!bboxKey) {
+            return;
         }
-
-        // get node
-        let basePrefix = "trails";
-        let node = manifest;
-        for (let i = 0; i < viewGeohash.length; i++) {
-            let c = viewGeohash.charAt(i)
-            node = node[c]
-            basePrefix = basePrefix+"/"+c;
-            if(node===undefined){
-                return []
-            }
-        }
-
-        function recursive_get_trails(node, prefix) {
-            let trails = [];
-            if (node.items !== undefined) {
-                node.items.forEach(filename => {
-                    trails.push(`trails/${filename}`)
-                })
-            }
-            Object.keys(node).forEach(c => {
-                if(c!=="items"){
-                    let childTrails = recursive_get_trails(node[c], `${prefix}/${c}`)
-                    trails = trails.concat(childTrails)
-                }
+        const controller = new AbortController();
+        getTrailsInBbox(bboxKey.split(","), maxTrails, controller.signal)
+            .then((collection) => {
+                setLoaded({key: bboxKey, features: geojsonFormat.readFeatures(collection)});
             })
-            return trails
-        }
+            .catch((error) => {
+                if (error.name !== "AbortError") {
+                    console.error(error);
+                }
+            });
+        return () => controller.abort();
+    }, [bboxKey, maxTrails]);
 
-        let trails = recursive_get_trails(node, basePrefix)
-        if(trails.length>limit){
-            return trails.slice(0, limit)
+    function onClick(e) {
+        e.stopPropagation();
+        const trailId = e.target.getId();
+        if (onTrailClick) {
+            onTrailClick(trailId);
+        } else {
+            history.push(`/trail/${trailId}`);
         }
-        return trails
     }
 
-    if(redirectTo !== null){
-        return <Redirect to={`/trail/${redirectTo}`} />
-    }
-    let trails = {}
-    let filenames = getTrails(maxTrails)
+    const selectedIds = new Set(selected);
+    const plain = loaded.features.filter((f) => !selectedIds.has(f.getId()));
+    const highlighted = loaded.features.filter((f) => selectedIds.has(f.getId()));
+    const selectionKey = [...selectedIds].sort().join(",");
 
-
-    filenames.map((filename, i) => {
-        if(trails[filename] !== undefined || trails.length >= maxTrails){
-            return
-        }
-        let geohash = filename.replace("trails/", "").replace(".geojson", "")
-        trails[filename] = (<Trail key={filename+"_"+i} url={"/"+filename} geohash={geohash} />)
-    })
-    return Object.values(trails)
+    return <>
+        <TrailLayer
+            features={plain}
+            layerKey={`plain:${loaded.key}:${selectionKey}`}
+            color={TRAIL_COLOR} width={3} zIndex={5}
+            onClick={onClick}
+        />
+        <TrailLayer
+            features={highlighted}
+            layerKey={`selected:${loaded.key}:${selectionKey}`}
+            color={SELECTED_TRAIL_COLOR} width={5} zIndex={8}
+            onClick={onClick}
+        />
+    </>;
 }
 
-export default Trails
+export default Trails;

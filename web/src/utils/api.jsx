@@ -209,6 +209,34 @@ async function removePartner(accessToken, partner_id){
     });
 }
 
+async function fetchTrailJson(path, signal){
+    const response = await fetch(apiUrl(path), {signal});
+    if(!response.ok){
+        throw new Error(`${path} failed: ${response.status}`);
+    }
+    return response.json();
+}
+
+// bbox is [minLng, minLat, maxLng, maxLat]; resolves to a GeoJSON FeatureCollection.
+async function getTrailsInBbox(bbox, limit, signal){
+    const params = new URLSearchParams({bbox: bbox.join(","), limit: String(limit)});
+    return fetchTrailJson(`/api/v0/trails?${params}`, signal);
+}
+
+// Resolves to [{title, image, url}], the shape semantic-ui Search results expect.
+async function searchTrails(query, limit = 20, signal){
+    const params = new URLSearchParams({q: query, limit: String(limit)});
+    return fetchTrailJson(`/api/v0/trails/search?${params}`, signal);
+}
+
+async function getTrail(trailId, signal){
+    return fetchTrailJson(`/api/v0/trail/${encodeURIComponent(trailId)}`, signal);
+}
+
+async function getTrailGeojson(trailId, signal){
+    return fetchTrailJson(`/api/v0/trail/${encodeURIComponent(trailId)}/geojson`, signal);
+}
+
 export {
     login,
     getPlans,
@@ -218,4 +246,8 @@ export {
     getPartners,
     addPartner,
     removePartner,
+    getTrailsInBbox,
+    searchTrails,
+    getTrail,
+    getTrailGeojson,
 }

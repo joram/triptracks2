@@ -1,0 +1,315 @@
+.trail-page {
+    --ink: #1d2b26;
+    --body: #34413b;
+    --muted: #66716b;
+    --contour: #d8d2c4;
+    --route: #1a56db;
+    --route-dark: #1546b3;
+    --page-width: 1120px;
+    --gutter: max(16px, calc((100vw - var(--page-width)) / 2));
+
+    text-align: left;
+    color: var(--body);
+}
+
+.trail-page :focus-visible {
+    outline: 3px solid var(--route);
+    outline-offset: 2px;
+}
+
+.trail-message {
+    padding: 4em var(--gutter);
+    font-size: 1.1rem;
+}
+
+/* Photo strip: full-bleed row, photos at one height so portrait and landscape both fit
+   without being upscaled past their ~700px originals. */
+.trail-strip {
+    position: relative;
+}
+
+.trail-strip-track {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: var(--gutter);
+    padding-inline: var(--gutter);
+    scrollbar-width: none;
+}
+
+.trail-strip-track::-webkit-scrollbar {
+    display: none;
+}
+
+.trail-strip-photo {
+    flex: 0 0 auto;
+    height: 420px;
+    padding: 0;
+    border: 0;
+    background: var(--contour);
+    cursor: zoom-in;
+    scroll-snap-align: start;
+}
+
+.trail-strip-photo img {
+    display: block;
+    height: 100%;
+    width: auto;
+}
+
+.trail-strip-nav button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--ink);
+    font-size: 1.9rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.trail-strip-nav button:first-child {
+    left: 12px;
+}
+
+.trail-strip-nav button:last-child {
+    right: 12px;
+}
+
+.trail-strip-nav button:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Full-screen photo viewer */
+.trail-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background: rgba(16, 22, 19, 0.95);
+    cursor: zoom-out;
+}
+
+.trail-lightbox img {
+    max-width: 92vw;
+    max-height: 80vh;
+    cursor: default;
+}
+
+.trail-lightbox-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #e9ece9;
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 1.15rem;
+    cursor: default;
+}
+
+.trail-lightbox-bar button {
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 3px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.trail-lightbox-bar button:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+/* Body: header and text on the left, map and actions in a sticky column on the right. */
+.trail-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    grid-template-areas:
+        "header aside"
+        "text   aside";
+    column-gap: 56px;
+    max-width: var(--page-width);
+    margin: 36px auto 0;
+    padding: 0 16px;
+}
+
+.trail-header {
+    grid-area: header;
+}
+
+.trail-aside {
+    grid-area: aside;
+    align-self: start;
+    position: sticky;
+    top: 84px;
+}
+
+.trail-text {
+    grid-area: text;
+    max-width: 66ch;
+}
+
+.trail-page h1 {
+    margin: 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    line-height: 1;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+}
+
+.trail-place {
+    margin: 10px 0 0;
+    font-size: 1.1rem;
+    color: var(--muted);
+}
+
+.trail-place > span + span {
+    margin-left: 0.9em;
+    padding-left: 0.9em;
+    border-left: 1px solid var(--contour);
+}
+
+.trail-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 0;
+    margin: 28px 0 0;
+    padding: 18px 0;
+    border-top: 1px solid var(--contour);
+    border-bottom: 1px solid var(--contour);
+}
+
+.trail-facts > div {
+    padding: 0 28px;
+    border-left: 1px solid var(--contour);
+}
+
+.trail-facts > div:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+.trail-facts dt {
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.trail-facts dd {
+    margin: 2px 0 0;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 500;
+    font-size: 1.75rem;
+    line-height: 1.1;
+    color: var(--ink);
+}
+
+.trail-text section {
+    margin-top: 36px;
+}
+
+.trail-page h2 {
+    margin: 0 0 12px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: var(--ink);
+}
+
+.trail-text p {
+    margin: 0 0 1em;
+    font-family: "Source Serif 4", Georgia, serif;
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+.trail-page a {
+    color: var(--route);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+/* Map: in the sidebar when there are photos, as the page's lead when there aren't. */
+.trail-map {
+    height: 300px;
+    border: 1px solid var(--contour);
+}
+
+.trail-map-large {
+    height: 420px;
+    border: 0;
+    border-bottom: 1px solid var(--contour);
+}
+
+.trail-add {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    border: 0;
+    border-radius: 3px;
+    background: var(--route);
+    color: #fff;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+
+.trail-add:hover {
+    background: var(--route-dark);
+}
+
+.trail-signin,
+.trail-source {
+    margin: 14px 0 0;
+    font-size: 0.95rem;
+    color: var(--muted);
+}
+
+@media (max-width: 860px) {
+    .trail-body {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "header"
+            "aside"
+            "text";
+        margin-top: 24px;
+    }
+
+    .trail-aside {
+        position: static;
+        margin-top: 24px;
+    }
+
+    .trail-strip-photo {
+        height: 260px;
+    }
+
+    .trail-map-large {
+        height: 300px;
+    }
+
+    .trail-facts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px 18px;
+    }
+
+    .trail-facts > div {
+        padding: 0;
+        border-left: 0;
+    }
+}

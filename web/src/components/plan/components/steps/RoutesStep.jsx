@@ -1,13 +1,13 @@
 import React, {useEffect, useRef, useState} from "react";
-import _ from "lodash";
 import {Button, Header, List, Search, Segment} from "semantic-ui-react";
-import {RMap, RLayerVector, RStyle} from "rlayers";
-import GeoJSON from "ol/format/GeoJSON";
-import {fromLonLat, transformExtent} from "ol/proj";
+import {RMap} from "rlayers";
+import {fromLonLat} from "ol/proj";
 import {boundingExtent} from "ol/extent";
 import Geohash from "latlon-geohash";
 import LayersControl from "../../../trails/LayersControl";
-import ClusteredTrails from "../../../trails/ClusteredTrails";
+import TrailClusters, {TRAILS_ZOOM} from "../../../trails/TrailClusters";
+import Trails, {viewBbox} from "../../../trails/Trails";
+import {getTrail, searchTrails} from "../../../../utils/api";
 
 const DEFAULT_CENTER = [-124.594444, 49.223611];
 
@@ -34,102 +34,13 @@ function geohashFromUrl(url) {
     return url.split("/").filter(Boolean).pop();
 }
 
-function longestCommonPrefix(strs) {
-    if (!strs || strs.length === 0) return "";
-    let smallest = strs.reduce((min, str) => (min < str ? min : str), strs[0]);
-    let largest = strs.reduce((max, str) => (max > str ? max : str), strs[0]);
-    for (let i = 0; i < smallest.length; i++) {
-        if (smallest[i] !== largest[i]) return smallest.substr(0, i);
-    }
-    return smallest;
-}
-
-// A single trail polyline that toggles plan membership when clicked.
-function SelectableTrail({url, geohash, selected, onToggle}) {
-    const [features, setFeatures] = useState(null);
-
-    useEffect(() => {
-        fetch(url)
-            .then((r) => r.text())
-            .then((text) => {
-                setFeatures(new GeoJSON({featureProjection: "EPSG:3857"}).readFeatures(text));
-            })
-            .catch(() => {});
-    }, [url]);
-
-    if (features === null) {
-        return null;
-    }
-
-    return <RLayerVector
-        zIndex={selected ? 8 : 5}
-        features={features}
-        onClick={(e) => {
-            e.stopPropagation();
-            onToggle(geohash);
-        }}
-    >
-        <RStyle.RStyle>
-            <RStyle.RStroke color={selected ? "#db2828" : "green"} width={selected ? 5 : 3}/>
-        </RStyle.RStyle>
-    </RLayerVector>;
-}
-
-function SelectableTrails({viewGeohash, maxTrails, selected, onToggle}) {
-    const [manifest, setManifest] = useState(null);
-
-    useEffect(() => {
-        fetch("/trails.manifest.json")
-            .then((r) => r.json())
-            .then(setManifest)
-            .catch(() => {});
-    }, []);
-
-    if (manifest === null || !viewGeohash) {
-        return null;
-    }
-
-    let node = manifest;
-    for (let i = 0; i < viewGeohash.length; i++) {
-        node = node[viewGeohash.charAt(i)];
-        if (node === undefined) {
-            return null;
-        }
-    }
-
-    function collect(node) {
-        let trails = [];
-        if (node.items !== undefined) {
-            node.items.forEach((filename) => trails.push(`trails/${filename}`));
-        }
-        Object.keys(node).forEach((c) => {
-            if (c !== "items") {
-                trails = trails.concat(collect(node[c]));
-            }
-        });
-        return trails;
-    }
-
-    let filenames = collect(node).slice(0, maxTrails);
-    return filenames.map((filename, i) => {
-        const geohash = filename.replace("trails/", "").replace(".geojson", "");
-        return <SelectableTrail
-            key={filename + "_" + i}
-            url={"/" + filename}
-            geohash={geohash}
-            selected={selected.includes(geohash)}
-            onToggle={onToggle}
-        />;
-    });
-}
-
 export function RoutesStep({trails, setTrails, pins = [], editable = true}) {
     trails = trails || [];
     const [zoom, setZoom] = useState(10);
-    const [viewGeohash, setViewGeohash] = useState("c2");
+    const [bbox, setBbox] = useState(null);
     const [titles, setTitles] = useState({});
     const [searchState, setSearchState] = useState({loading: false, results: [], value: ""});
-    const searchSource = React.useRef([]);
+    const searchTimeout = useRef();
     const mapRef = useRef();
 
     // On entering the step, frame the map around the existing routes + pins.
@@ -155,19 +66,18 @@ export function RoutesStep({trails, setTrails, pins = [], editable = true}) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    // Look up titles for selected routes we haven't named yet.
+    const trailsKey = trails.join(",");
     useEffect(() => {
-        fetch("/trails.search.json")
-            .then((r) => r.json())
-            .then((data) => {
-                searchSource.current = data;
-                const map = {};
-                data.forEach((d) => {
-                    map[geohashFromUrl(d.url)] = d.title;
-                });
-                setTitles(map);
-            })
-            .catch(() => {});
-    }, []);
+        trails.filter((geohash) => titles[geohash] === undefined).forEach((geohash) => {
+            getTrail(geohash)
+                .then((trail) => setTitles((prev) => ({...prev, [geohash]: trail.title})))
+                .catch(() => setTitles((prev) => ({...prev, [geohash]: null})));
+        });
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [trailsKey]);
+
+    useEffect(() => () => clearTimeout(searchTimeout.current), []);
 
     function toggleTrail(geohash) {
         if (!editable) {
@@ -186,26 +96,29 @@ export function RoutesStep({trails, setTrails, pins = [], editable = true}) {
         if (z !== zoom) {
             setZoom(z);
         }
-        const extent = view.calculateExtent(e.map.getSize());
-        const bounds = transformExtent(extent, "EPSG:3857", "EPSG:4326");
-        const match = longestCommonPrefix([
-            Geohash.encode(bounds[1], bounds[0]),
-            Geohash.encode(bounds[3], bounds[2]),
-        ]);
-        if (match !== viewGeohash) {
-            setViewGeohash(match);
-        }
+        setBbox(viewBbox(e.map));
     }
 
     function handleSearchChange(e, data) {
-        const re = new RegExp(_.escapeRegExp(data.value), "i");
-        setSearchState({
-            loading: false,
-            value: data.value,
-            results: data.value.length === 0
-                ? []
-                : _.filter(searchSource.current, (r) => re.test(r.title)).slice(0, 8),
-        });
+        const value = data.value;
+        clearTimeout(searchTimeout.current);
+        if (value.trim().length < 2) {
+            setSearchState({loading: false, value, results: []});
+            return;
+        }
+        setSearchState((prev) => ({...prev, loading: true, value}));
+        searchTimeout.current = setTimeout(() => {
+            searchTrails(value.trim(), 8)
+                .then((results) => {
+                    setTitles((prev) => {
+                        const next = {...prev};
+                        results.forEach((r) => { next[geohashFromUrl(r.url)] = r.title; });
+                        return next;
+                    });
+                    setSearchState((prev) => prev.value === value ? {...prev, loading: false, results} : prev);
+                })
+                .catch(() => setSearchState((prev) => ({...prev, loading: false})));
+        }, 300);
     }
 
     return <>
@@ -235,12 +148,12 @@ export function RoutesStep({trails, setTrails, pins = [], editable = true}) {
             onMoveEnd={onMove}
         >
             <LayersControl/>
-            {zoom < 10 && <ClusteredTrails maxZoom={9.9999}/>}
-            {zoom >= 10 && <SelectableTrails
-                viewGeohash={viewGeohash}
+            {zoom < TRAILS_ZOOM && <TrailClusters maxZoom={TRAILS_ZOOM}/>}
+            {zoom >= TRAILS_ZOOM && <Trails
+                bbox={bbox}
                 maxTrails={100}
                 selected={trails}
-                onToggle={toggleTrail}
+                onTrailClick={toggleTrail}
             />}
         </RMap>
 
