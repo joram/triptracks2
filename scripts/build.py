@@ -7,6 +7,10 @@ import pygeohash
 from geojson import dump
 from trails import Peak, Trail
 
+# Generated trail files are an intermediate for `make load_trails` (PostGIS);
+# the site reads trails from the API, so they no longer live in web/public.
+TRAIL_DATA_DIR = "./trail_data"
+
 manifest = {}
 trails_per_peak = {}
 trail_search = []
@@ -32,7 +36,7 @@ def _create_trail_manifest(trail: Trail):
 
 
 def _create_geojson(trail: Trail):
-    directory = f"./web/public/trails"
+    directory = f"{TRAIL_DATA_DIR}/trails"
     if not os.path.exists(directory):
         os.makedirs(directory)
     filepath = f"{directory}/{trail.center_geohash}.geojson"
@@ -41,7 +45,7 @@ def _create_geojson(trail: Trail):
 
 
 def _create_json_details(trail: Trail):
-    directory = f"./web/public/trail_details"
+    directory = f"{TRAIL_DATA_DIR}/trail_details"
     if not os.path.exists(directory):
         os.makedirs(directory)
     filepath = f"{directory}/{trail.center_geohash}.json"
@@ -71,17 +75,17 @@ def process_trails():
             i += 1
         time.sleep(0)
 
-    with open("./web/public/trails.manifest.json", "w") as f:
+    with open(f"{TRAIL_DATA_DIR}/trails.manifest.json", "w") as f:
         f.write(json.dumps(manifest, sort_keys=True, indent=2))
 
-    with open("./web/public/trails.search.json", "w") as f:
+    with open(f"{TRAIL_DATA_DIR}/trails.search.json", "w") as f:
         f.write(json.dumps(trail_search, sort_keys=True, indent=2))
 
 
 def process_peaks():
 
     peak_trails = {}
-    trails_directory = f"./web/public/trails"
+    trails_directory = f"{TRAIL_DATA_DIR}/trails"
     for filename in os.listdir(trails_directory):
         path = os.path.join(trails_directory, filename)
         with open(path) as f:
@@ -100,7 +104,7 @@ def process_peaks():
     i = 0
     peaks = list(Peak.all_peaks())
     for peak in peaks:
-        directory = f"./web/public/peaks"
+        directory = f"{TRAIL_DATA_DIR}/peaks"
         if not os.path.exists(directory):
             os.makedirs(directory)
         filepath = f"{directory}/{peak.geohash}.json"
@@ -119,8 +123,8 @@ def process_peaks():
 
 
 def build_heatmap():
-    trails_directory = f"./web/public/trails"
-    with open(f"{trails_directory}/../../src/trails.heatmap.jsx", "w") as f:
+    trails_directory = f"{TRAIL_DATA_DIR}/trails"
+    with open("./web/src/trails.heatmap.jsx", "w") as f:
         f.write("let trailHeatmap = [\n")
         for filename in os.listdir(trails_directory):
             if filename.endswith(".geojson"):
@@ -133,7 +137,7 @@ def build_heatmap():
 
 
 def build_heatmap_geojson():
-    trails_directory = f"./web/public/trails"
+    trails_directory = f"{TRAIL_DATA_DIR}/trails"
     with open(f"./web/public/trails.heatmap.geojson", "w") as f:
         f.write("""{
     "type": "FeatureCollection",

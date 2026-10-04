@@ -7,7 +7,7 @@ from fastapi.security import OAuth2PasswordBearer
 from starlette.responses import JSONResponse
 from starlette.status import HTTP_422_UNPROCESSABLE_ENTITY
 
-from views import forecast, packing_list, trip_plan, partners, auth
+from views import forecast, packing_list, trip_plan, partners, auth, trails
 
 app = FastAPI()
 
@@ -33,5 +33,6 @@ app.include_router(packing_list.router)
 app.include_router(trip_plan.router)
 app.include_router(partners.router)
 app.include_router(auth.router)
+app.include_router(trails.router)
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")

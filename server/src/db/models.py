@@ -1,6 +1,7 @@
 import uuid
 
 from sqlalchemy.types import JSON
+from geoalchemy2 import Geometry
 from sqlalchemy import Column, String, Boolean, ForeignKey
 from sqlalchemy.testing import db
 
@@ -97,3 +98,35 @@ class AccessToken(Base):
     def new(user: User) -> "AccessToken":
         token = prefixed_id("token")
         return AccessToken(id=prefixed_id("accesstoken"), token=token, user_id=user.id)
+
+
+class Trail(Base):
+    __tablename__ = "trails"
+
+    # The trail's center geohash; the frontend's existing trail identifier.
+    id = Column(String, primary_key=True)
+    trail_id = Column(String, index=True)
+    title = Column(String)
+    description = Column(String)
+    directions = Column(String)
+    source_url = Column(String)
+    photos = Column(JSON)
+    stats = Column(JSON)
+    geohash = Column(String, index=True)
+    nearest_peak_geohash = Column(String, index=True)
+    center = Column(Geometry("POINT", srid=4326))
+    geom = Column(Geometry("MULTILINESTRING", srid=4326))
+
+    def details(self) -> dict:
+        return {
+            "center_geohash": self.id,
+            "trail_id": self.trail_id,
+            "title": self.title,
+            "description": self.description,
+            "directions": self.directions,
+            "source_url": self.source_url,
+            "photos": self.photos,
+            "stats": self.stats,
+            "geohash": self.geohash,
+            "nearest_peak_geohash": self.nearest_peak_geohash,
+        }

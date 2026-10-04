@@ -10,6 +10,8 @@ PyJWT[crypto]>=2.8.0
 google-auth
 google-api-python-client
 sqlalchemy==2.0.51
+psycopg[binary]==3.3.6
+geoalchemy2==0.20.0
 bs4
 pytest
 suntimes
