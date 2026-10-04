@@ -9,7 +9,7 @@ from authlib.jose.errors import JoseError
 
 from db.database import get_session
 from db.models import User, prefixed_id, AccessToken
-from settings import GOOGLE_CLIENT_ID, VEILSTREAM_AUTH_ROUTER_URL, VEILSTREAM_JWT_AUDIENCE
+from settings import GOOGLE_CLIENT_IDS, VEILSTREAM_AUTH_ROUTER_URL, VEILSTREAM_JWT_AUDIENCE
 from utils.auth import verify_access_key
 from utils.router_dpop import build_dpop_proof
 
@@ -134,7 +134,7 @@ async def create_access_key(request: AccessKeyRequest):
 
     try:
         userinfo = id_token.verify_oauth2_token(
-            request.token, requests.Request(), GOOGLE_CLIENT_ID
+            request.token, requests.Request(), GOOGLE_CLIENT_IDS
         )
     except (ValueError, google_auth_exceptions.GoogleAuthError) as exc:
         raise HTTPException(status_code=400, detail="invalid google credential") from exc

@@ -1,6 +1,18 @@
 import os
 
-GOOGLE_CLIENT_ID = "965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com"
+# Google OAuth client IDs whose sign-in tokens we accept. The web app signs in with
+# the triptracks client (web/src/App.jsx); the older client is kept so existing
+# integrations keep working. Override with a comma-separated GOOGLE_CLIENT_IDS.
+GOOGLE_CLIENT_IDS = [
+    client_id.strip()
+    for client_id in os.environ.get(
+        "GOOGLE_CLIENT_IDS",
+        "747834684984-1oc9jk95e5n2u2dl4p8qrokc307j06qn.apps.googleusercontent.com,"
+        "965794564715-ebal2dv5tdac3iloedmnnb9ph0lptibp.apps.googleusercontent.com",
+    ).split(",")
+    if client_id.strip()
+]
+
 
 def _first_env(*keys: str) -> str:
     for key in keys:
