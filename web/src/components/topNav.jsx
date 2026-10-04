@@ -3,6 +3,7 @@ import TrailsSearch from "./trails/TrailsSearch";
 import {useContext} from "react";
 import {UserContext} from "../App";
 import Gravatar from "react-gravatar";
+import {LoginButton} from "./login";
 
 function userName(user) {
     return user.google_userinfo?.name ?? user.name ?? user.email ?? "Account";
@@ -38,15 +39,11 @@ function UserAvatar({user, size = 24}) {
 const TopNav = ({ fixed}) => {
     const { user, setUser, accessToken, setAccessToken } = useContext(UserContext);
 
-    let loginInOrOut = <Menu.Item
-        active={window.location.pathname.startsWith("/login")}
-        href="/login"
-    >
-        Sign in
+    let loginInOrOut = <Menu.Item>
+        <LoginButton />
     </Menu.Item>;
     if (user !== null && user !== undefined && accessToken !== null && accessToken !== undefined){
         loginInOrOut = <Dropdown
-            active={window.location.pathname.startsWith("/login")}
             pointing
             className="link item"
             trigger={

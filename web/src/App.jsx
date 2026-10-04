@@ -14,7 +14,6 @@ import React, {useState} from "react";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Home from "./components/home";
 import List from "./components/partners/list";
-import Login from "./components/login";
 import AuthCallback from "./components/authCallback";
 import Cookies from "universal-cookie";
 import {Segment} from "semantic-ui-react";
@@ -81,7 +80,6 @@ function App() {
 
               {/* AUTH */}
               <Route path="/auth/callback"><AuthCallback/></Route>
-              <Route path="/login"><Login/></Route>
               <Route path="/"><Home/></Route>
             </Switch>
 

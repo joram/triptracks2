@@ -28,7 +28,7 @@ export default function AuthCallback() {
 
     const code = params.get('code');
     if (!code) {
-      history.replace('/login');
+      history.replace('/');
       return;
     }
 
