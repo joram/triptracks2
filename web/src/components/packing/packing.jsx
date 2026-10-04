@@ -1,489 +1,127 @@
-import React, {useContext, useEffect} from "react";
-import {useParams} from 'react-router-dom'
-import {Button, Container, Dropdown, Icon, Input, Search, Segment, Table} from "semantic-ui-react";
-import product_manifest from "./products_manifest.json";
+import React, {useCallback, useContext, useEffect, useRef, useState} from "react";
+import {Link, useParams} from "react-router-dom";
 import {url} from "../../utils/auth";
-import {indexOf} from "lodash/array";
 import {UserContext} from "../../App";
-import {getPackingList, packWeights, productToWeightStrings, stringToWeightString} from "./utils";
+import {getPackingList} from "./utils";
+import ItemSearch from "./ItemSearch";
+import PackingItems from "./PackingItems";
+import "./packing.css";
 
 // HINTS:
 // FOOD: On a typical day you will burn between 3,000 and 5,000 calories. Generally this amounts to about 1½ pounds of food. Your food weight distribution should optimally be around 55 to 65% carbohydrates, 15 to 20 % protein, and less than 25% fat.
 // WEIGHT: max 20% body weight
 
+const SAVE_DELAY_MS = 800;
 
+const SAVE_MESSAGES = {
+    saving: "Saving…",
+    saved: "All changes saved",
+    error: "Changes not saved. They'll be retried on your next edit.",
+};
 
-function ProductRow({product, onRemoveItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack}) {
-    const quantity =product.quantity || 1;
-    const friendlyName = product.friendlyName || product.title;
-
-    const weightOptions = product.weights.map(weight => {
-        return {
-            key: weight.value,
-            text: `${weight.key} (${weight.value})`,
-            value: weight.value,
-        }
+async function savePackingList(id, accessToken, name, contents) {
+    const response = await fetch(url("/api/v0/packing_list/" + id), {
+        method: "POST",
+        headers: {"Content-Type": "application/json", "Access-Key": accessToken},
+        body: JSON.stringify({name, contents}),
     });
-    const {weightString, totalWeight} = productToWeightStrings(product);
-
-
-    let weightInput = <Dropdown
-        placeholder='Select Weight Type'
-        selection
-        options={weightOptions}
-        defaultValue={weightString}
-        onChange={(e, {value}) => {
-            const newIndex = product.weights.findIndex(weight => weight.value === value);
-            onChangeWeight(product, newIndex);
-        }}
-    />
-    if(product.weights.length === 0){
-        weightInput = <Input
-            type={"text"}
-            value={product.customWeight}
-            style={{
-                width: "100%",
-                marginLeft: "5px",
-                marginRight: "5px",
-            }}
-            onChange={(e) => {
-                onChangeCustomWeight(product, e.target.value)
-            }}
-        />
-    }
-    return <Table.Row>
-        <Table.Cell>
-            <Input
-                type={"text"}
-                value={friendlyName}
-                style={{
-                    width: "100%",
-                    marginLeft: "5px",
-                    marginRight: "5px",
-                }}
-                onChange={(e) => {
-                    onChangeFriendlyName(product, e.target.value)
-                }}
-            />
-        </Table.Cell>
-        <Table.Cell>
-            {weightInput}
-        </Table.Cell>
-        <Table.Cell>
-            <Input
-                type="number"
-                value={quantity}
-                style={{
-                    width: "55px",
-                    marginLeft: "5px",
-                    marginRight: "5px",
-                }}
-                onChange={(e) => {
-                    onChangeQuantity(product, e.target.value)
-                }}
-            />
-        </Table.Cell>
-        <Table.Cell>{totalWeight}</Table.Cell>
-        <Table.Cell>
-            <Input
-                type="checkbox"
-                checked={product.inPack}
-                onChange={(e) => {
-                    onChangeInPack(product, e.target.checked)
-                }}
-            />
-        </Table.Cell>
-        <Table.Cell>
-            <Icon name="remove circle" onClick={(e) => {onRemoveItem(product)}}/>
-        </Table.Cell>
-    </Table.Row>
+    if (!response.ok) throw new Error(`save failed: ${response.status}`);
 }
 
+// Saves the list a moment after the owner stops editing, never on load.
+function useAutosave(id, accessToken) {
+    const [status, setStatus] = useState(null);
+    const timer = useRef(null);
+    const pending = useRef(null);
 
-function SortableHeaderCell({column, direction, itemKey, collapsing, sortItems, sortByColumn}) {
-    let icon = null;
-    if(itemKey === sortByColumn) {
-        if (direction === "descending") {
-            icon = <Icon name="caret down"/>
-        }
-        if (direction === "ascending") {
-            icon = <Icon name="caret up"/>
-        }
-    }
+    const flush = useCallback(() => {
+        clearTimeout(timer.current);
+        if (!pending.current) return;
+        const {name, contents} = pending.current;
+        pending.current = null;
+        setStatus("saving");
+        savePackingList(id, accessToken, name, contents)
+            .then(() => setStatus((s) => (pending.current ? s : "saved")))
+            .catch(() => setStatus("error"));
+    }, [id, accessToken]);
 
-    return <Table.HeaderCell
-        collapsing={collapsing}
-        sorted={null}
-        onClick={() => {
-            sortItems({column: itemKey || column })
+    const schedule = useCallback((name, contents) => {
+        pending.current = {name, contents};
+        clearTimeout(timer.current);
+        timer.current = setTimeout(flush, SAVE_DELAY_MS);
+    }, [flush]);
 
-        }}
-    >
-        {column}
-        {icon}
-    </Table.HeaderCell>
-}
+    useEffect(() => flush, [flush]); // save anything pending when leaving the page
 
-export function ProductsTable({products, onRemoveItem, onAddItem, onChangeWeight, onChangeCustomWeight, onChangeQuantity, onChangeFriendlyName, onChangeInPack, sortItems, sortOrder, sortByColumn}) {
-    let newProducts = [];
-    if (products === undefined) {
-        return null
-    }
-    products.forEach(product => {
-        if(product.quantity === undefined){
-            product.quantity = 1;
-        }
-        if(product.weightIndex === undefined){
-            product.weightIndex = 0;
-        }
-        if(product.friendlyName === undefined){
-            product.friendlyName = product.title;
-        }
-        if(product.inPack === undefined){
-            product.inPack = true;
-        }
-        newProducts.push(product);
-    })
-    products = newProducts;
-
-    if(products.length === 0){
-        return null
-    }
-
-    return <Segment basic>
-        <Table striped stackable sortable>
-            <Table.Header>
-                <Table.Row>
-                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Item"} itemKey={"friendlyName"} />
-                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Weight"} collapsing />
-                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Quantity"} collapsing />
-                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"Total Weight"} collapsing />
-                    <SortableHeaderCell sortByColumn={sortByColumn} sortOrder={sortOrder} sortItems={sortItems} column={"In Pack"} collapsing />
-                    <Table.HeaderCell></Table.HeaderCell>
-                </Table.Row>
-            </Table.Header>
-            <Table.Body>
-                {products.map(product => {return <ProductRow
-                    key={"row_"+indexOf(products, product)}
-                    product={product}
-                    onRemoveItem={onRemoveItem}
-                    onChangeWeight={onChangeWeight}
-                    onChangeCustomWeight={onChangeCustomWeight}
-                    onChangeQuantity={onChangeQuantity}
-                    onChangeFriendlyName={onChangeFriendlyName}
-                    onChangeInPack={onChangeInPack}
-                /> })}
-                <Table.Row>
-                    <Table.Cell colSpan={6} textAlign="center">
-                        <Button
-                            icon="add"
-                            label="Add Custom Item"
-                            labelPosition='left'
-                            onClick={() => {
-                                onAddItem({
-                                    title: "",
-                                    weights: [],
-                                    weightIndex: 0,
-                                    quantity: 1,
-                                    inPack: true,
-                                });
-                            }}
-                            />
-                    </Table.Cell>
-                </Table.Row>
-
-            </Table.Body>
-        </Table>
-    </Segment>
-}
-
-export function ProductsSummaryTable({products}) {
-    let {packWeight, outOfPackWeight, totalWeight} = packWeights(products);
-    totalWeight = stringToWeightString(totalWeight);
-    packWeight = stringToWeightString(packWeight);
-    outOfPackWeight = stringToWeightString(outOfPackWeight);
-
-    return <Segment textAlign="center" basic>
-        <Table striped collapsing textAlign="center" style={{margin:"auto"}}>
-            <Table.Header>
-                <Table.Row>
-                    <Table.HeaderCell>In Pack</Table.HeaderCell>
-                    <Table.HeaderCell>Out of Pack</Table.HeaderCell>
-                    <Table.HeaderCell>Total Weight</Table.HeaderCell>
-                </Table.Row>
-            </Table.Header>
-            <Table.Body>
-                <Table.Row>
-                    <Table.Cell>{packWeight}</Table.Cell>
-                    <Table.Cell>{outOfPackWeight}</Table.Cell>
-                    <Table.Cell>{totalWeight}</Table.Cell>
-                </Table.Row>
-            </Table.Body>
-        </Table>
-    </Segment>
-}
-
-
-function ReadOnlyProductsTable({products}) {
-    return <Segment basic>
-        <Table striped>
-            <Table.Header>
-                <Table.Row>
-                    <Table.HeaderCell>Item</Table.HeaderCell>
-                    <Table.HeaderCell>Weight</Table.HeaderCell>
-                    <Table.HeaderCell collapsing>Quantity</Table.HeaderCell>
-                    <Table.HeaderCell collapsing>Total Weight</Table.HeaderCell>
-                    <Table.HeaderCell collapsing>In Pack</Table.HeaderCell>
-                </Table.Row>
-            </Table.Header>
-            <Table.Body>
-                {products.map(product => {
-                    const {weightString, totalWeight} = productToWeightStrings(product);
-                    let inPack = "No";
-                    if(product.inPack){
-                        inPack = "Yes";
-                    }
-                    return <Table.Row key={"row_"+indexOf(products, product)}>
-                        <Table.Cell>{product.friendlyName}</Table.Cell>
-                        <Table.Cell>{weightString}</Table.Cell>
-                        <Table.Cell>{product.quantity}</Table.Cell>
-                        <Table.Cell>{totalWeight}</Table.Cell>
-                        <Table.Cell>{inPack}</Table.Cell>
-                    </Table.Row>
-                })}
-            </Table.Body>
-        </Table>
-    </Segment>
+    return {status, schedule};
 }
 
 function Packing() {
-    const { user, accessToken } = useContext(UserContext);
-    let [name, setName] = React.useState("");
-    let [ownerId, setOwnerId] = React.useState(undefined);
-    let [searchText, setSearchText] = React.useState("");
-    let [results, setResults] = React.useState([]);
-    let [products, setProducts] = React.useState(undefined);
-    let [loading, setLoading] = React.useState(false);
-    let [sortByColumn, setSortByColumn] = React.useState("Item");
-    let [sortOrder, setSortOrder] = React.useState("ascending");
-    let {id} = useParams()
+    const {user, accessToken} = useContext(UserContext);
+    const {id} = useParams();
+    const [list, setList] = useState(null);
+    const [missing, setMissing] = useState(false);
+    const {status, schedule} = useAutosave(id, accessToken);
 
     useEffect(() => {
-        setLoading(true)
-        getPackingList(id).then(packingList => {
-            setName(packingList.name)
-            setProducts(packingList.contents)
-            setOwnerId(packingList.ownerId)
-            setLoading(false)
-        })
+        setList(null);
+        setMissing(false);
+        getPackingList(id)
+            .then((packingList) => {
+                if (!packingList || packingList.detail) {
+                    setMissing(true);
+                    return;
+                }
+                setList({
+                    name: packingList.name || "",
+                    contents: Array.isArray(packingList.contents) ? packingList.contents : [],
+                    ownerId: packingList.ownerId,
+                });
+            })
+            .catch(() => setMissing(true));
     }, [id]);
 
-    useEffect(() => {
-        if (loading) {
-            return
-        }
-        if(products === undefined){
-            return
-        }
-
-        function setPackingList(id, name, contents){
-            if(contents === undefined){
-                return
-            }
-            fetch(url("/api/v0/packing_list/"+id), {
-                method: "POST",
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Key': accessToken,
-                },
-                body: JSON.stringify({
-                    name: name,
-                    contents: contents,
-                })
-            })
-        }
-
-        setPackingList(id, name, products)
-    }, [loading, id, products, name, accessToken]);
-
-
-
-    function sortItems({column}){
-        if(sortByColumn === column){
-            if(sortOrder === "ascending"){
-                setSortOrder("descending")
-            }else{
-                setSortOrder("ascending")
-            }
-        }
-        let newProducts = [...products];
-        newProducts.sort((a, b) => {
-            const aValue = a[column];
-            const bValue = b[column];
-            if(aValue < bValue){
-                return -1;
-            }
-            if(aValue > bValue){
-                return 1;
-            }
-            return 0;
-        })
-        if(sortOrder === "descending"){
-            newProducts.reverse();
-        }
-        setProducts(newProducts)
-        setSortByColumn(column)
+    if (missing) {
+        return <div className="packing">
+            <p className="packing-empty">This packing list doesn't exist. <Link to="/packing/list">See your packing lists</Link>.</p>
+        </div>;
+    }
+    if (list === null) {
+        return <div className="packing"><p className="packing-empty">Loading packing list…</p></div>;
     }
 
-    function updateSearchResults(value){
-        let results = [];
-        product_manifest.forEach(product => {
-            if(results.length >= 5){
-                return;
-            }
-            const title = product.title.toLowerCase();
-            const words = value.split(" ");
-            let foundWords = []
-            words.forEach(word => {
-                foundWords.push(title.includes(word.toLowerCase()));
-            })
-            const show = foundWords.length > 0 && !foundWords.includes(false)
-            if(show){
-                results.push({
-                    title: product.title,
-                    image: product.image,
-                    weights: product.weights,
-                })
-            }
-        });
-        setResults(results);
+    const isOwner = Boolean(user && accessToken && user.id === list.ownerId);
+
+    function edit(patch) {
+        const next = {...list, ...patch};
+        setList(next);
+        schedule(next.name, next.contents);
     }
 
-    function onSearchChange(e){
-        setSearchText(e.target.value)
-        updateSearchResults(e.target.value);
-    }
+    return <div className="packing">
+        <header className="packing-header">
+            {isOwner
+                ? <input
+                    className="packing-title"
+                    aria-label="Packing list name"
+                    placeholder="Name this list"
+                    value={list.name}
+                    onChange={(e) => edit({name: e.target.value})}
+                />
+                : <h1 className="packing-title">{list.name || "Packing list"}</h1>}
+            {isOwner && status && <p className={status === "error" ? "packing-status is-error" : "packing-status"} role="status">
+                {SAVE_MESSAGES[status]}
+            </p>}
+        </header>
 
-    function onResultSelect(e, {result}){
-        const newProducts = [...products];
-        newProducts.push(result);
-        setProducts(newProducts);
-        setSearchText("");
-    }
+        {isOwner && <ItemSearch onAdd={(item) => edit({contents: [...list.contents, item]})}/>}
 
-    function onRemoveItem(product){
-        const newProducts = [...products];
-        const index = newProducts.indexOf(product);
-        if(index > -1){
-            newProducts.splice(index, 1);
-        }
-        setProducts(newProducts);
-    }
-
-    function onAddItem(product){
-        const newProducts = [...products];
-        newProducts.push(product);
-        setProducts(newProducts);
-    }
-
-    function onChangeQuantity(product, quantity){
-        const newProducts = [...products];
-        const index = newProducts.indexOf(product);
-        if(index > -1){
-            newProducts[index].quantity = quantity;
-        }
-        setProducts(newProducts);
-    }
-
-    function onChangeWeight(product, weightIndex){
-        const newProducts = [...products];
-        const index = newProducts.indexOf(product);
-        if(index > -1){
-            newProducts[index].weightIndex = weightIndex;
-        }
-        setProducts(newProducts);
-    }
-
-    function onChangeCustomWeight(product, weight){
-        const newProducts = [...products];
-        const index = newProducts.indexOf(product);
-        if(index > -1){
-            newProducts[index].customWeight = weight;
-        }
-        setProducts(newProducts);
-    }
-
-    function onChangeFriendlyName(product, friendlyName){
-        const newProducts = [...products];
-        const index = newProducts.indexOf(product);
-        if(index > -1){
-            newProducts[index].friendlyName = friendlyName;
-        }
-        setProducts(newProducts);
-    }
-
-    function onChangeInPack(product, inPack){
-        const newProducts = [...products];
-        const index = newProducts.indexOf(product);
-        if(index > -1){
-            newProducts[index].inPack = inPack;
-        }
-        setProducts(newProducts);
-    }
-
-    function isOwner(){
-        return user !== null && user !== undefined && ownerId === user.id;
-    }
-
-    if (!isOwner()) {
-        return <Container style={{paddingTop:"15px"}}>
-            <Segment textAlign="center" basic>
-                <h1>{name}</h1>
-                <ReadOnlyProductsTable products={products || []} />
-                <ProductsSummaryTable products={products || []} />
-            </Segment>
-        </Container>
-    }
-
-
-    return <Container>
-        <Input
-            value={name}
-            placeholder="placeholder name"
-            onChange={(e) => {
-                setName(e.target.value)
-            }}
-            size="huge"
-            style={{width:"100%"}}
-            label="Packing List Name"
+        <PackingItems
+            items={list.contents}
+            editable={isOwner}
+            onChange={(contents) => edit({contents})}
         />
-
-        <Segment textAlign="center" basic>
-            <Search
-                placeholder="Search for items to add"
-                loading={false}
-                onResultSelect={onResultSelect.bind(this)}
-                onSearchChange={onSearchChange.bind(this)}
-                results={results}
-                value={searchText}
-            />
-        </Segment>
-
-        <ProductsTable
-            products={products}
-            onRemoveItem={onRemoveItem}
-            onAddItem={onAddItem}
-            onChangeQuantity={onChangeQuantity}
-            onChangeWeight={onChangeWeight}
-            onChangeCustomWeight={onChangeCustomWeight}
-            onChangeFriendlyName={onChangeFriendlyName}
-            onChangeInPack={onChangeInPack}
-            sortByColumn={sortByColumn}
-            sortOrder={sortOrder}
-            sortItems={sortItems}
-        />
-        <ProductsSummaryTable products={products} />
-    </Container>;
+    </div>;
 }
 
 export default Packing;
